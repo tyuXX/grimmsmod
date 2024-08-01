@@ -1,0 +1,31 @@
+{
+  "mod_elements": [],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {}
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "grimmsmod",
+    "modName": "Grimm\u0027s Mod",
+    "version": "1.0.0",
+    "author": "Tyuxx",
+    "websiteURL": "https://gsdistance.org",
+    "license": "GNU Lesser General Public License version 3 (LGPLv3)",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.20.6",
+    "credits": "Cheesecake",
+    "modElementsPackage": "gsd.tyuxx.grimmsmod"
+  },
+  "mcreatorVersion": 202400229712
+}
