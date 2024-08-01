@@ -7,8 +7,10 @@ modId="grimmsmod"
 version="1.0.0"
 displayName="Grimm's Mod"
 displayURL="https://gsdistance.org"
+logoFile="logo.png"
 credits="Cheesecake"
 authors="Tyuxx"
+description="Grimm's newest and bestest Mod!"
 
 # Start of user code block mod configuration
 # End of user code block mod configuration
@@ -28,6 +30,12 @@ authors="Tyuxx"
     side="BOTH"
 
 
+[[dependencies.grimmsmod]]
+    modId="jei"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
 
 # Start of user code block dependencies configuration

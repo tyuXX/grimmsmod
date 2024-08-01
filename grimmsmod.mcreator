@@ -1,28 +1,217 @@
 {
-  "mod_elements": [],
-  "variable_elements": [],
+  "mod_elements": [
+    {
+      "name": "OnGameStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_game_start",
+      "metadata": {
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/procedures/OnGameStartProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Events"
+    },
+    {
+      "name": "CommonConfig",
+      "type": "config",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "common_config",
+      "metadata": {
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/configuration/CommonConfigConfiguration.java"
+        ]
+      },
+      "path": "~/Config"
+    },
+    {
+      "name": "ClientConfig",
+      "type": "config",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "client_config",
+      "metadata": {
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/configuration/ClientConfigConfiguration.java"
+        ]
+      },
+      "path": "~/Config"
+    },
+    {
+      "name": "ServerConfig",
+      "type": "config",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "server_config",
+      "metadata": {
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/configuration/ServerConfigConfiguration.java"
+        ]
+      },
+      "path": "~/Config"
+    },
+    {
+      "name": "OnXpPickup",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_xp_pickup",
+      "metadata": {
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/procedures/OnXpPickupProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Events"
+    },
+    {
+      "name": "XpHandle",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_handle",
+      "metadata": {
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/procedures/XpHandleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "xpamount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "StatsGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stats_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/world/inventory/StatsGUIMenu.java",
+          "src/main/java/gsd/tyuxx/grimmsmod/client/gui/StatsGUIScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "LevelTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_text_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/procedures/LevelTextValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "XpTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_text_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/procedures/XpTextValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "level",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "xp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    }
+  ],
   "sound_elements": [],
   "tag_elements": {},
   "tab_element_order": {},
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "gui.grimmsmod.stats_gui.label_empty": "/"
+    }
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Config",
+        "children": []
+      },
+      {
+        "name": "Events",
+        "children": []
+      },
+      {
+        "name": "Procs",
+        "children": []
+      },
+      {
+        "name": "Gui",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "grimmsmod",
     "modName": "Grimm\u0027s Mod",
     "version": "1.0.0",
+    "description": "Grimm\u0027s newest and bestest Mod!",
     "author": "Tyuxx",
     "websiteURL": "https://gsdistance.org",
     "license": "GNU Lesser General Public License version 3 (LGPLv3)",
     "serverSideOnly": false,
+    "modPicture": "grimsmod",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "jei"
+    ],
     "currentGenerator": "neoforge-1.20.6",
     "credits": "Cheesecake",
     "modElementsPackage": "gsd.tyuxx.grimmsmod"

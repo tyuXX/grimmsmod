@@ -1,0 +1,7 @@
+{
+  "_fv": 66,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">player_xp_change</field><next><block type=\"call_procedure\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"2\"></mutation><field name=\"procedure\">XpHandle</field><field name=\"name0\">xpamount</field><field name=\"name1\">entity</field><value name=\"arg0\"><block type=\"custom_dependency_number\"><field name=\"NAME\">amount</field></block></value><value name=\"arg1\"><block type=\"entity_from_deps\"></block></value></block></next></block></xml>"
+  }
+}

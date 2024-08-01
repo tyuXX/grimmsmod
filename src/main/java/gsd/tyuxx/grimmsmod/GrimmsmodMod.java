@@ -25,6 +25,9 @@ import java.util.HashMap;
 import java.util.Collection;
 import java.util.ArrayList;
 
+import gsd.tyuxx.grimmsmod.network.GrimmsmodModVariables;
+import gsd.tyuxx.grimmsmod.init.GrimmsmodModMenus;
+
 @Mod("grimmsmod")
 public class GrimmsmodMod {
 	public static final Logger LOGGER = LogManager.getLogger(GrimmsmodMod.class);
@@ -35,6 +38,10 @@ public class GrimmsmodMod {
 		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
+
+		GrimmsmodModVariables.ATTACHMENT_TYPES.register(modEventBus);
+
+		GrimmsmodModMenus.REGISTRY.register(modEventBus);
 
 		// Start of user code block mod init
 		// End of user code block mod init
