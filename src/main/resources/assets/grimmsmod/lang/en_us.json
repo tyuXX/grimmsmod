@@ -2,6 +2,9 @@
   "key.categories.grimmsmod": "Grimm\u0027s Mod Keybinds",
   "gui.grimmsmod.stats_gui.label_empty1": "/",
   "key.grimmsmod.open_stats": "Open Stats",
+  "item.grimmsmod.fancier_clock": "Fancier Clock",
   "gui.grimmsmod.stats_gui.label_empty": "/",
-  "gui.grimmsmod.stats_gui.button_prestige": "Prestige"
+  "item_group.grimmsmod.grimms_mod": "Grimm\u0027s Mod",
+  "gui.grimmsmod.stats_gui.button_prestige": "Prestige",
+  "item.grimmsmod.fancy_clock": "Fancy Clock"
 }

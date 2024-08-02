@@ -26,7 +26,9 @@ import java.util.Collection;
 import java.util.ArrayList;
 
 import gsd.tyuxx.grimmsmod.network.GrimmsmodModVariables;
+import gsd.tyuxx.grimmsmod.init.GrimmsmodModTabs;
 import gsd.tyuxx.grimmsmod.init.GrimmsmodModMenus;
+import gsd.tyuxx.grimmsmod.init.GrimmsmodModItems;
 
 @Mod("grimmsmod")
 public class GrimmsmodMod {
@@ -39,6 +41,9 @@ public class GrimmsmodMod {
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
 
+		GrimmsmodModItems.REGISTRY.register(modEventBus);
+
+		GrimmsmodModTabs.REGISTRY.register(modEventBus);
 		GrimmsmodModVariables.ATTACHMENT_TYPES.register(modEventBus);
 
 		GrimmsmodModMenus.REGISTRY.register(modEventBus);

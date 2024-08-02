@@ -3,6 +3,7 @@ package gsd.tyuxx.grimmsmod.procedures;
 import net.minecraft.world.entity.Entity;
 
 import gsd.tyuxx.grimmsmod.network.GrimmsmodModVariables;
+import gsd.tyuxx.grimmsmod.configuration.CommonConfigConfiguration;
 
 public class XpHandleProcedure {
 	public static void execute(Entity entity, double xpamount) {
@@ -13,16 +14,31 @@ public class XpHandleProcedure {
 			_vars.xp = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).xp + xpamount;
 			_vars.syncPlayerVariables(entity);
 		}
-		if (entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).xp >= Math.round(Math.pow(entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).level * 10, 1.3))) {
-			{
-				GrimmsmodModVariables.PlayerVariables _vars = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES);
-				_vars.level = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).level + 1;
-				_vars.syncPlayerVariables(entity);
+		if (CommonConfigConfiguration.INSTLEVELUP.get()) {
+			while (entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).xp >= Math.round(Math.pow(entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).level * 10, 1.3))) {
+				{
+					GrimmsmodModVariables.PlayerVariables _vars = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES);
+					_vars.xp = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).xp - Math.round(Math.pow(entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).level * 10, 1.3));
+					_vars.syncPlayerVariables(entity);
+				}
+				{
+					GrimmsmodModVariables.PlayerVariables _vars = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES);
+					_vars.level = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).level + 1;
+					_vars.syncPlayerVariables(entity);
+				}
 			}
-			{
-				GrimmsmodModVariables.PlayerVariables _vars = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES);
-				_vars.xp = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).xp - Math.round(Math.pow(entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).level * 10, 1.3));
-				_vars.syncPlayerVariables(entity);
+		} else {
+			if (entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).xp >= Math.round(Math.pow(entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).level * 10, 1.3))) {
+				{
+					GrimmsmodModVariables.PlayerVariables _vars = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES);
+					_vars.xp = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).xp - Math.round(Math.pow(entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).level * 10, 1.3));
+					_vars.syncPlayerVariables(entity);
+				}
+				{
+					GrimmsmodModVariables.PlayerVariables _vars = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES);
+					_vars.level = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).level + 1;
+					_vars.syncPlayerVariables(entity);
+				}
 			}
 		}
 	}

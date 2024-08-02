@@ -300,6 +300,45 @@
         ]
       },
       "path": "~/Procs"
+    },
+    {
+      "name": "GrimmsMod",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grimms_mod",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/CreativeTabs"
+    },
+    {
+      "name": "FancyClock",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fancy_clock",
+      "metadata": {
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/item/FancyClockItem.java",
+          "src/main/resources/assets/grimmsmod/models/item/fancy_clock.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "FancierClock",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fancier_clock",
+      "metadata": {
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/item/FancierClockItem.java",
+          "src/main/resources/assets/grimmsmod/models/item/fancier_clock.json"
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -330,8 +369,11 @@
       "key.categories.grimmsmod": "Grimm\u0027s Mod Keybinds",
       "gui.grimmsmod.stats_gui.label_empty1": "/",
       "key.grimmsmod.open_stats": "Open Stats",
+      "item.grimmsmod.fancier_clock": "Fancier Clock",
       "gui.grimmsmod.stats_gui.label_empty": "/",
-      "gui.grimmsmod.stats_gui.button_prestige": "Prestige"
+      "item_group.grimmsmod.grimms_mod": "Grimm\u0027s Mod",
+      "gui.grimmsmod.stats_gui.button_prestige": "Prestige",
+      "item.grimmsmod.fancy_clock": "Fancy Clock"
     }
   },
   "foldersRoot": {
@@ -355,6 +397,14 @@
       },
       {
         "name": "Keybinds",
+        "children": []
+      },
+      {
+        "name": "Items",
+        "children": []
+      },
+      {
+        "name": "CreativeTabs",
         "children": []
       }
     ]

@@ -11,17 +11,17 @@ public class PrestigeHandleProcedure {
 		if (IsPrestigeReadyProcedure.execute(entity)) {
 			{
 				GrimmsmodModVariables.PlayerVariables _vars = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES);
-				_vars.prestige = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).prestige + 1;
-				_vars.syncPlayerVariables(entity);
-			}
-			{
-				GrimmsmodModVariables.PlayerVariables _vars = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES);
 				_vars.level = 1;
 				_vars.syncPlayerVariables(entity);
 			}
 			{
 				GrimmsmodModVariables.PlayerVariables _vars = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES);
 				_vars.xp = 0;
+				_vars.syncPlayerVariables(entity);
+			}
+			{
+				GrimmsmodModVariables.PlayerVariables _vars = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES);
+				_vars.prestige = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).prestige + 1;
 				_vars.syncPlayerVariables(entity);
 			}
 		}
