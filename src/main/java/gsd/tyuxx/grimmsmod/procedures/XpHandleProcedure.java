@@ -3,7 +3,7 @@ package gsd.tyuxx.grimmsmod.procedures;
 import net.minecraft.world.entity.Entity;
 
 import gsd.tyuxx.grimmsmod.network.GrimmsmodModVariables;
-import gsd.tyuxx.grimmsmod.configuration.CommonConfigConfiguration;
+import gsd.tyuxx.grimmsmod.configuration.ServerConfigConfiguration;
 
 public class XpHandleProcedure {
 	public static void execute(Entity entity, double xpamount) {
@@ -14,7 +14,7 @@ public class XpHandleProcedure {
 			_vars.xp = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).xp + xpamount;
 			_vars.syncPlayerVariables(entity);
 		}
-		if (CommonConfigConfiguration.INSTLEVELUP.get()) {
+		if (ServerConfigConfiguration.INSTLEVELUP.get()) {
 			while (entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).xp >= Math.round(Math.pow(entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES).level * 10, 1.3))) {
 				{
 					GrimmsmodModVariables.PlayerVariables _vars = entity.getData(GrimmsmodModVariables.PLAYER_VARIABLES);

@@ -3,18 +3,18 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "builderswand",
+    "texture": "placeholder",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Builders Wand",
+    "name": "Placeholder",
     "rarity": "COMMON",
     "creativeTabs": [
       {
         "value": "CUSTOM:GrimmsModSpecial"
       }
     ],
-    "stackSize": 1,
+    "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
@@ -29,8 +29,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "BuildersWandSpecialInformation"
+      "fixedValue": []
     },
     "glowCondition": {
       "fixedValue": false
@@ -38,12 +37,6 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onRightClickedOnBlock": {
-      "name": "BuildersWandRightclicked"
-    },
-    "onItemInUseTick": {
-      "name": "BuildersWandItemInHandTickProcedure"
-    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

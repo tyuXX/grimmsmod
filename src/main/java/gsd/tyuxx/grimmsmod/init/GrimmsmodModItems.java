@@ -9,6 +9,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 
 import net.minecraft.world.item.Item;
 
+import gsd.tyuxx.grimmsmod.item.PlaceholderItem;
 import gsd.tyuxx.grimmsmod.item.FancyClockItem;
 import gsd.tyuxx.grimmsmod.item.FancierClockItem;
 import gsd.tyuxx.grimmsmod.item.BuildersWandItem;
@@ -19,6 +20,7 @@ public class GrimmsmodModItems {
 	public static final DeferredHolder<Item, Item> FANCY_CLOCK = REGISTRY.register("fancy_clock", FancyClockItem::new);
 	public static final DeferredHolder<Item, Item> FANCIER_CLOCK = REGISTRY.register("fancier_clock", FancierClockItem::new);
 	public static final DeferredHolder<Item, Item> BUILDERS_WAND = REGISTRY.register("builders_wand", BuildersWandItem::new);
+	public static final DeferredHolder<Item, Item> PLACEHOLDER = REGISTRY.register("placeholder", PlaceholderItem::new);
 	// Start of user code block custom items
 	// End of user code block custom items
 }

@@ -107,8 +107,8 @@
       "registry_name": "stats_gui",
       "metadata": {
         "files": [
-          "src/main/java/gsd/tyuxx/grimmsmod/network/StatsGUIButtonMessage.java",
           "src/main/java/gsd/tyuxx/grimmsmod/world/inventory/StatsGUIMenu.java",
+          "src/main/java/gsd/tyuxx/grimmsmod/network/StatsGUIButtonMessage.java",
           "src/main/java/gsd/tyuxx/grimmsmod/client/gui/StatsGUIScreen.java"
         ]
       },
@@ -334,8 +334,8 @@
       "registry_name": "fancier_clock",
       "metadata": {
         "files": [
-          "src/main/java/gsd/tyuxx/grimmsmod/item/FancierClockItem.java",
-          "src/main/resources/assets/grimmsmod/models/item/fancier_clock.json"
+          "src/main/resources/assets/grimmsmod/models/item/fancier_clock.json",
+          "src/main/java/gsd/tyuxx/grimmsmod/item/FancierClockItem.java"
         ]
       },
       "path": "~/Items"
@@ -348,10 +348,11 @@
       "registry_name": "builders_wand",
       "metadata": {
         "files": [
-          "src/main/resources/assets/grimmsmod/models/item/builders_wand.json",
-          "src/main/java/gsd/tyuxx/grimmsmod/item/BuildersWandItem.java"
+          "src/main/java/gsd/tyuxx/grimmsmod/item/BuildersWandItem.java",
+          "src/main/resources/assets/grimmsmod/models/item/builders_wand.json"
         ]
-      }
+      },
+      "path": "~/Special"
     },
     {
       "name": "BuildersWandSpecialInformation",
@@ -370,7 +371,8 @@
             "type": "itemstack"
           }
         ]
-      }
+      },
+      "path": "~/Procs"
     },
     {
       "name": "BuildersWandRightclicked",
@@ -408,7 +410,75 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "GrimmsModSpecial",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grimms_mod_special",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/CreativeTabs"
+    },
+    {
+      "name": "Placeholder",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "placeholder",
+      "metadata": {
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/item/PlaceholderItem.java",
+          "src/main/resources/assets/grimmsmod/models/item/placeholder.json"
+        ]
+      },
+      "path": "~/Special"
+    },
+    {
+      "name": "OnWorldTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_world_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/procedures/OnWorldTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Events"
+    },
+    {
+      "name": "BuildersWandItemInHandTickProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "builders_wand_item_in_hand_tick_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/procedures/BuildersWandItemInHandTickProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procs"
     }
   ],
   "variable_elements": [
@@ -435,6 +505,12 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "worldtick",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
     }
   ],
   "sound_elements": [],
@@ -445,12 +521,14 @@
       "key.categories.grimmsmod": "Grimm\u0027s Mod Keybinds",
       "gui.grimmsmod.stats_gui.label_empty1": "/",
       "key.grimmsmod.open_stats": "Open Stats",
+      "item_group.grimmsmod.grimms_mod_special": "Grimms Mod Special",
       "item.grimmsmod.fancier_clock": "Fancier Clock",
       "gui.grimmsmod.stats_gui.label_empty": "/",
       "item_group.grimmsmod.grimms_mod": "Grimm\u0027s Mod",
       "gui.grimmsmod.stats_gui.button_prestige": "Prestige",
       "item.grimmsmod.builders_wand": "Builders Wand",
-      "item.grimmsmod.fancy_clock": "Fancy Clock"
+      "item.grimmsmod.fancy_clock": "Fancy Clock",
+      "item.grimmsmod.placeholder": "Placeholder"
     }
   },
   "foldersRoot": {

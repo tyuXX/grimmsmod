@@ -2,9 +2,9 @@
   "_fv": 66,
   "_type": "tab",
   "definition": {
-    "name": "Grimm's Mod",
+    "name": "Grimms Mod Special",
     "icon": {
-      "value": "CUSTOM:FancyClock"
+      "value": "CUSTOM:BuildersWand"
     },
     "showSearch": false
   }

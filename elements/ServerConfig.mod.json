@@ -2,7 +2,47 @@
   "_fv": 66,
   "_type": "config",
   "definition": {
-    "pools": [],
+    "pools": [
+      {
+        "category": "performance",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "Use a while loop so no leftover xp is left",
+            "vardisplay": "Instant Level Up",
+            "varname": "instlevelup",
+            "enablecomment": true,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 1,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "Wands don't run on ticks but are instant",
+            "vardisplay": "Instant wands",
+            "varname": "instwand",
+            "enablecomment": true,
+            "stringlist": []
+          }
+        ]
+      }
+    ],
     "file": "grimmsmod_server",
     "configType": 1
   }

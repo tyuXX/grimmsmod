@@ -2,30 +2,7 @@
   "_fv": 66,
   "_type": "config",
   "definition": {
-    "pools": [
-      {
-        "category": "leveling",
-        "entries": [
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 0,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.0,
-            "textDefault": "",
-            "comment": "Use a while loop so no leftover xp is left",
-            "vardisplay": "Instant Level Up",
-            "varname": "instlevelup",
-            "enablecomment": false,
-            "stringlist": []
-          }
-        ]
-      }
-    ],
+    "pools": [],
     "file": "grimmsmod_common",
     "configType": 0
   }
