@@ -64,6 +64,7 @@ public class GrimmsmodModVariables {
 			clone.xp = original.xp;
 			clone.prestige = original.prestige;
 			if (!event.isWasDeath()) {
+				clone.lobotomized = original.lobotomized;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -73,6 +74,7 @@ public class GrimmsmodModVariables {
 		public double level = 1.0;
 		public double xp = 0.0;
 		public double prestige = 1.0;
+		public boolean lobotomized = false;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -80,6 +82,7 @@ public class GrimmsmodModVariables {
 			nbt.putDouble("level", level);
 			nbt.putDouble("xp", xp);
 			nbt.putDouble("prestige", prestige);
+			nbt.putBoolean("lobotomized", lobotomized);
 			return nbt;
 		}
 
@@ -88,6 +91,7 @@ public class GrimmsmodModVariables {
 			level = nbt.getDouble("level");
 			xp = nbt.getDouble("xp");
 			prestige = nbt.getDouble("prestige");
+			lobotomized = nbt.getBoolean("lobotomized");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

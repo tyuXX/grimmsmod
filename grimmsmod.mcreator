@@ -339,6 +339,76 @@
         ]
       },
       "path": "~/Items"
+    },
+    {
+      "name": "BuildersWand",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "builders_wand",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/grimmsmod/models/item/builders_wand.json",
+          "src/main/java/gsd/tyuxx/grimmsmod/item/BuildersWandItem.java"
+        ]
+      }
+    },
+    {
+      "name": "BuildersWandSpecialInformation",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "builders_wand_special_information",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/procedures/BuildersWandSpecialInformationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BuildersWandRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "builders_wand_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/procedures/BuildersWandRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -359,6 +429,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "1.0"
+    },
+    {
+      "name": "lobotomized",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -373,6 +449,7 @@
       "gui.grimmsmod.stats_gui.label_empty": "/",
       "item_group.grimmsmod.grimms_mod": "Grimm\u0027s Mod",
       "gui.grimmsmod.stats_gui.button_prestige": "Prestige",
+      "item.grimmsmod.builders_wand": "Builders Wand",
       "item.grimmsmod.fancy_clock": "Fancy Clock"
     }
   },
@@ -405,6 +482,14 @@
       },
       {
         "name": "CreativeTabs",
+        "children": []
+      },
+      {
+        "name": "Blocks",
+        "children": []
+      },
+      {
+        "name": "Special",
         "children": []
       }
     ]
