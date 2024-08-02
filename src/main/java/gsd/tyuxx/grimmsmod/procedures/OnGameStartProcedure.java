@@ -22,6 +22,5 @@ public class OnGameStartProcedure {
 
 	private static void execute(@Nullable Event event) {
 		GrimmsmodMod.LOGGER.info("Grimm's Mod loaded succsesfully!");
-		GrimmsmodMod.LOGGER.fatal("Prepare to die!");
 	}
 }
