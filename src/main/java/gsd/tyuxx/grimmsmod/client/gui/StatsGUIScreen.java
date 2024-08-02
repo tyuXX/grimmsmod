@@ -1,18 +1,25 @@
 package gsd.tyuxx.grimmsmod.client.gui;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import java.util.HashMap;
 
 import gsd.tyuxx.grimmsmod.world.inventory.StatsGUIMenu;
 import gsd.tyuxx.grimmsmod.procedures.XpTextValueProcedure;
+import gsd.tyuxx.grimmsmod.procedures.XpReqTextValueProcedure;
+import gsd.tyuxx.grimmsmod.procedures.PrestigeTextValueProcedure;
+import gsd.tyuxx.grimmsmod.procedures.PrestigeReqTextValueProcedure;
 import gsd.tyuxx.grimmsmod.procedures.LevelTextValueProcedure;
+import gsd.tyuxx.grimmsmod.network.StatsGUIButtonMessage;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
@@ -21,6 +28,7 @@ public class StatsGUIScreen extends AbstractContainerScreen<StatsGUIMenu> {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	Button button_prestige;
 
 	public StatsGUIScreen(StatsGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -29,7 +37,7 @@ public class StatsGUIScreen extends AbstractContainerScreen<StatsGUIMenu> {
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 176;
+		this.imageWidth = 230;
 		this.imageHeight = 166;
 	}
 
@@ -64,15 +72,36 @@ public class StatsGUIScreen extends AbstractContainerScreen<StatsGUIMenu> {
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font,
 
-				LevelTextValueProcedure.execute(entity), 47, 39, -12829636, false);
+				LevelTextValueProcedure.execute(entity), 31, 11, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				XpTextValueProcedure.execute(entity), 16, 90, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.grimmsmod.stats_gui.label_empty"), 76, 90, -12829636, false);
+				XpTextValueProcedure.execute(entity), 33, 27, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.grimmsmod.stats_gui.label_empty"), 93, 28, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				XpReqTextValueProcedure.execute(entity), 100, 28, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				PrestigeTextValueProcedure.execute(entity), 30, 67, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				PrestigeReqTextValueProcedure.execute(entity), 114, 83, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				LevelTextValueProcedure.execute(entity), 31, 83, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.grimmsmod.stats_gui.label_empty1"), 107, 85, -12829636, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
+		button_prestige = Button.builder(Component.translatable("gui.grimmsmod.stats_gui.button_prestige"), e -> {
+			if (true) {
+				PacketDistributor.sendToServer(new StatsGUIButtonMessage(0, x, y, z));
+				StatsGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
+		}).bounds(this.leftPos + 30, this.topPos + 102, 67, 20).build();
+		guistate.put("button:button_prestige", button_prestige);
+		this.addRenderableWidget(button_prestige);
 	}
 }

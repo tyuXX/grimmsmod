@@ -62,6 +62,7 @@ public class GrimmsmodModVariables {
 			PlayerVariables clone = new PlayerVariables();
 			clone.level = original.level;
 			clone.xp = original.xp;
+			clone.prestige = original.prestige;
 			if (!event.isWasDeath()) {
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
@@ -71,12 +72,14 @@ public class GrimmsmodModVariables {
 	public static class PlayerVariables implements INBTSerializable<CompoundTag> {
 		public double level = 1.0;
 		public double xp = 0.0;
+		public double prestige = 1.0;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putDouble("level", level);
 			nbt.putDouble("xp", xp);
+			nbt.putDouble("prestige", prestige);
 			return nbt;
 		}
 
@@ -84,6 +87,7 @@ public class GrimmsmodModVariables {
 		public void deserializeNBT(HolderLookup.Provider lookupProvider, CompoundTag nbt) {
 			level = nbt.getDouble("level");
 			xp = nbt.getDouble("xp");
+			prestige = nbt.getDouble("prestige");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

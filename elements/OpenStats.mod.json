@@ -1,0 +1,12 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "Z",
+    "keyBindingName": "Open Stats",
+    "keyBindingCategoryKey": "grimmsmod",
+    "onKeyPressed": {
+      "name": "OpenStatsOnKeyPressed"
+    }
+  }
+}

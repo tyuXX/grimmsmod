@@ -107,10 +107,12 @@
       "registry_name": "stats_gui",
       "metadata": {
         "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/network/StatsGUIButtonMessage.java",
           "src/main/java/gsd/tyuxx/grimmsmod/world/inventory/StatsGUIMenu.java",
           "src/main/java/gsd/tyuxx/grimmsmod/client/gui/StatsGUIScreen.java"
         ]
-      }
+      },
+      "path": "~/Gui"
     },
     {
       "name": "LevelTextValue",
@@ -151,6 +153,153 @@
         ]
       },
       "path": "~/Procs"
+    },
+    {
+      "name": "XpReqTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_req_text_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/procedures/XpReqTextValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "OpenStatsOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_stats_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/procedures/OpenStatsOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "OpenStats",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_stats",
+      "metadata": {
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/network/OpenStatsMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "IsPrestigeReady",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_prestige_ready",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/procedures/IsPrestigeReadyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "PrestigeHandle",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prestige_handle",
+      "metadata": {
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/procedures/PrestigeHandleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "PrestigeTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prestige_text_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/procedures/PrestigeTextValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "PrestigeReqTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prestige_req_text_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/procedures/PrestigeReqTextValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
     }
   ],
   "variable_elements": [
@@ -165,6 +314,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0.0"
+    },
+    {
+      "name": "prestige",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
     }
   ],
   "sound_elements": [],
@@ -172,7 +327,11 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "gui.grimmsmod.stats_gui.label_empty": "/"
+      "key.categories.grimmsmod": "Grimm\u0027s Mod Keybinds",
+      "gui.grimmsmod.stats_gui.label_empty1": "/",
+      "key.grimmsmod.open_stats": "Open Stats",
+      "gui.grimmsmod.stats_gui.label_empty": "/",
+      "gui.grimmsmod.stats_gui.button_prestige": "Prestige"
     }
   },
   "foldersRoot": {
@@ -192,6 +351,10 @@
       },
       {
         "name": "Gui",
+        "children": []
+      },
+      {
+        "name": "Keybinds",
         "children": []
       }
     ]

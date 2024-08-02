@@ -1,3 +1,7 @@
 {
-  "gui.grimmsmod.stats_gui.label_empty": "/"
+  "key.categories.grimmsmod": "Grimm\u0027s Mod Keybinds",
+  "gui.grimmsmod.stats_gui.label_empty1": "/",
+  "key.grimmsmod.open_stats": "Open Stats",
+  "gui.grimmsmod.stats_gui.label_empty": "/",
+  "gui.grimmsmod.stats_gui.button_prestige": "Prestige"
 }
