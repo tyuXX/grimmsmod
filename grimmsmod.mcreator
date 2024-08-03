@@ -479,6 +479,46 @@
         ]
       },
       "path": "~/Procs"
+    },
+    {
+      "name": "FancyClockSpecialInformation",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fancy_clock_special_information",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/procedures/FancyClockSpecialInformationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "FancierClockSpecialInformation",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fancier_clock_special_information",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/gsd/tyuxx/grimmsmod/procedures/FancierClockSpecialInformationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -514,7 +554,13 @@
     }
   ],
   "sound_elements": [],
-  "tag_elements": {},
+  "tag_elements": {
+    "ENTITIES:mod:bloodmoonentity": [
+      "EntityZombie",
+      "EntitySkeleton",
+      "EntityCreeper"
+    ]
+  },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
