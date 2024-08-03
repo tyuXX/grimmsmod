@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "grimms:wooden_hammer",
+    "grimms:iron_hammer",
+    "grimms:diamond_hammer",
+    "grimms:netherite_hammer"
+  ]
+}

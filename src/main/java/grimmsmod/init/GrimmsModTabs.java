@@ -25,6 +25,11 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.SCALPEL.get());
 				tabData.accept(GrimmsModItems.MULTI_USE_SCALPEL.get());
 				tabData.accept(GrimmsModItems.DISINFECTANT_SCALPEL.get());
+				tabData.accept(GrimmsModItems.WOODEN_HAMMER.get());
+				tabData.accept(GrimmsModItems.IRON_HAMMER.get());
+				tabData.accept(GrimmsModItems.DIAMOND_HAMMER.get());
+				tabData.accept(GrimmsModItems.NETHERITE_HAMMER.get());
+				tabData.accept(GrimmsModItems.STEEL.get());
 			})
 
 					.build());

@@ -649,6 +649,76 @@
         ]
       },
       "path": "~/Special"
+    },
+    {
+      "name": "WoodenHammer",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wooden_hammer",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/item/WoodenHammerItem.java",
+          "src/main/resources/assets/grimms/models/item/wooden_hammer.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "IronHammer",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_hammer",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/item/IronHammerItem.java",
+          "src/main/resources/assets/grimms/models/item/iron_hammer.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "DiamondHammer",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamond_hammer",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/item/DiamondHammerItem.java",
+          "src/main/resources/assets/grimms/models/item/diamond_hammer.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "NetheriteHammer",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_hammer",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/grimms/models/item/netherite_hammer.json",
+          "src/main/java/grimmsmod/item/NetheriteHammerItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Steel",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/item/SteelItem.java",
+          "src/main/resources/assets/grimms/models/item/steel.json"
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -691,6 +761,13 @@
   ],
   "sound_elements": [],
   "tag_elements": {
+    "ITEMS:minecraft:pickaxes": [],
+    "ITEMS:mod:hammers": [
+      "CUSTOM:WoodenHammer",
+      "CUSTOM:IronHammer",
+      "CUSTOM:DiamondHammer",
+      "CUSTOM:NetheriteHammer"
+    ],
     "ENTITIES:mod:bloodmoonentity": [
       "EntityZombie",
       "EntitySkeleton",
@@ -708,25 +785,28 @@
       "item_group.grimmsmod.grimms_mod": "Grimm\u0027s Mod",
       "item_group.grimms.grimms_mod": "Grimm\u0027s Mod",
       "item.grimms.handheld_microscope": "Handheld Microscope",
-      "item.grimmsmod.placeholder": "Placeholder",
       "item.grimmsmod.fancy_clock": "Fancy Clock",
-      "gui.grimmsmod.stats_gui.label_empty1": "/",
+      "item.grimmsmod.placeholder": "Placeholder",
       "key.grimms.open_stats": "Open Stats",
+      "gui.grimmsmod.stats_gui.label_empty1": "/",
       "key.grimmsmod.open_stats": "Open Stats",
       "item.grimmsmod.fancier_clock": "Fancier Clock",
       "item_group.grimms.grimms_mod_special": "Grimms Mod Special",
       "item.grimms.disinfectant_scalpel": "Disinfectant Scalpel",
       "gui.grimmsmod.stats_gui.button_prestige": "Prestige",
       "item.grimmsmod.builders_wand": "Builders Wand",
+      "item.grimms.iron_hammer": "Wooden Hammer",
       "item.grimms.thrash": "Thrash",
       "item.grimmsmod.multi_use_scalpel": "Multi Use Scalpel",
       "gui.grimms.stats_gui.button_prestige": "Prestige",
+      "item.grimms.diamond_hammer": "Wooden Hammer",
       "gui.grimms.stats_gui.label_empty": "/",
       "key.categories.grimmsmod": "Grimm\u0027s Mod Keybinds",
       "item.grimms.builders_wand": "Builders Wand",
       "item.grimms.placeholder": "Placeholder",
       "item_group.grimmsmod.grimms_mod_special": "Grimms Mod Special",
       "gui.grimmsmod.stats_gui.label_empty": "/",
+      "item.grimms.steel": "Steel",
       "item.grimmsmod.logo": "Logo",
       "advancements.install_grimms_mod.descr": "Install Grimm\u0027s Mod on minecraft, reworked, remade, updated",
       "item.grimms.logo": "Logo",
@@ -734,7 +814,9 @@
       "item.grimms.multi_use_scalpel": "Multi Use Scalpel",
       "item.grimms.fancy_clock": "Fancy Clock",
       "gui.grimms.stats_gui.label_empty1": "/",
-      "advancements.install_grimms_mod.title": "Install Grimm\u0027s Mod"
+      "item.grimms.wooden_hammer": "Wooden Hammer",
+      "advancements.install_grimms_mod.title": "Install Grimm\u0027s Mod",
+      "item.grimms.netherite_hammer": "Wooden Hammer"
     }
   },
   "foldersRoot": {
