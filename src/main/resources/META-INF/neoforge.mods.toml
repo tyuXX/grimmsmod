@@ -3,26 +3,26 @@ loaderVersion="[2,)"
 license="GNU Lesser General Public License version 3 (LGPLv3)"
 
 [[mods]]
-modId="grimmsmod"
+modId="grimms"
 version="1.0.0"
 displayName="Grimm's Mod"
 displayURL="https://gsdistance.org"
 logoFile="logo.png"
 credits="Cheesecake"
-authors="Tyuxx"
+authors="tyuXX"
 description="Grimm's newest and bestest Mod!"
 
 # Start of user code block mod configuration
 # End of user code block mod configuration
 
-[[dependencies.grimmsmod]]
+[[dependencies.grimms]]
     modId="neoforge"
     type="required"
     versionRange="[20.6.117,)"
     ordering="AFTER"
     side="BOTH"
 
-[[dependencies.grimmsmod]]
+[[dependencies.grimms]]
     modId="minecraft"
     type="required"
     versionRange="[1.20.6]"
@@ -30,7 +30,7 @@ description="Grimm's newest and bestest Mod!"
     side="BOTH"
 
 
-[[dependencies.grimmsmod]]
+[[dependencies.grimms]]
     modId="jei"
     type="optional"
     versionRange="[0,)"

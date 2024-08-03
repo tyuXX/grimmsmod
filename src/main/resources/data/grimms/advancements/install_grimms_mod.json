@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "grimms:textures/screens/grimsmod.png",
+    "icon": {
+      "id": "grimms:fancy_clock"
+    },
+    "title": {
+      "translate": "advancements.install_grimms_mod.title"
+    },
+    "description": {
+      "translate": "advancements.install_grimms_mod.descr"
+    },
+    "frame": "challenge",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "install_grimms_mod_0": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
