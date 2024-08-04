@@ -41,6 +41,45 @@
             "stringlist": []
           }
         ]
+      },
+      {
+        "category": "itemleveling",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 100.0,
+            "textDefault": "",
+            "comment": "Item level xp requirement multiplier.",
+            "vardisplay": "Item LvL Mult",
+            "varname": "lvlmult",
+            "enablecomment": true,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 1.1,
+            "textDefault": "",
+            "comment": "Item level xp requirement multiplier.",
+            "vardisplay": "Item LvL Expo",
+            "varname": "lvlexpo",
+            "enablecomment": true,
+            "stringlist": []
+          }
+        ]
       }
     ],
     "file": "grimmsmod_server",

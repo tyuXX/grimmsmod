@@ -30,6 +30,7 @@ import grimmsmod.network.GrimmsModVariables;
 import grimmsmod.init.GrimmsModTabs;
 import grimmsmod.init.GrimmsModMenus;
 import grimmsmod.init.GrimmsModItems;
+import grimmsmod.init.GrimmsModEnchantments;
 
 @Mod("grimms")
 public class GrimmsMod {
@@ -47,6 +48,7 @@ public class GrimmsMod {
 		GrimmsModTabs.REGISTRY.register(modEventBus);
 		GrimmsModVariables.ATTACHMENT_TYPES.register(modEventBus);
 
+		GrimmsModEnchantments.REGISTRY.register(modEventBus);
 		GrimmsModMenus.REGISTRY.register(modEventBus);
 
 		// Start of user code block mod init

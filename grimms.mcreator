@@ -781,6 +781,92 @@
         ]
       },
       "path": "~/Procs"
+    },
+    {
+      "name": "ItemXpHandle",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "item_xp_handle",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/ItemXpHandleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "xpamount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "OnTooltipRendered",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_tooltip_rendered",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/OnTooltipRenderedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "tooltip",
+            "type": "tooltip"
+          }
+        ]
+      },
+      "path": "~/Events"
+    },
+    {
+      "name": "OnEntityAttacked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_entity_attacked",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/OnEntityAttackedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Events"
+    },
+    {
+      "name": "Lifesteal",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lifesteal",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/enchantment/LifestealEnchantment.java"
+        ]
+      },
+      "path": "~/Enchantments"
     }
   ],
   "variable_elements": [
@@ -823,6 +909,7 @@
   ],
   "sound_elements": [],
   "tag_elements": {
+    "ITEMS:mod:customlevelable": [],
     "ITEMS:minecraft:pickaxes": [
       "~CUSTOM:NetheriteHammer",
       "~CUSTOM:DiamondHammer",
@@ -844,16 +931,16 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "item.grimms.microscope": "Microscope",
-      "item.grimmsmod.handheld_microscope": "Handheld Microscope",
       "item.grimmsmod.microscope": "Microscope",
+      "item.grimmsmod.handheld_microscope": "Handheld Microscope",
+      "item.grimms.microscope": "Microscope",
       "item.grimms.scalpel": "Scalpel",
       "item.grimmsmod.scalpel": "Scalpel",
       "item_group.grimmsmod.grimms_mod": "Grimm\u0027s Mod",
       "item_group.grimms.grimms_mod": "Grimm\u0027s Mod",
       "item.grimms.handheld_microscope": "Handheld Microscope",
-      "item.grimmsmod.placeholder": "Placeholder",
       "item.grimmsmod.fancy_clock": "Fancy Clock",
+      "item.grimmsmod.placeholder": "Placeholder",
       "key.grimms.open_stats": "Open Stats",
       "gui.grimmsmod.stats_gui.label_empty1": "/",
       "key.grimmsmod.open_stats": "Open Stats",
@@ -866,6 +953,7 @@
       "item.grimms.thrash": "Thrash",
       "item.grimmsmod.multi_use_scalpel": "Multi Use Scalpel",
       "gui.grimms.stats_gui.button_prestige": "Prestige",
+      "enchantment.grimms.lifesteal": "Lifesteal",
       "item.grimms.diamond_hammer": "Wooden Hammer",
       "gui.grimms.stats_gui.label_empty": "/",
       "key.categories.grimmsmod": "Grimm\u0027s Mod Keybinds",
@@ -939,6 +1027,10 @@
       },
       {
         "name": "Block",
+        "children": []
+      },
+      {
+        "name": "Enchantments",
         "children": []
       }
     ]
