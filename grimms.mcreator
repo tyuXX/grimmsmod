@@ -840,6 +840,10 @@
         ],
         "dependencies": [
           {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
             "name": "entity",
             "type": "entity"
           },
@@ -1339,6 +1343,20 @@
     ],
     "ITEMS:minecraft:swords": [
       "~CUSTOM:Katana"
+    ],
+    "DAMAGE_TYPES:mod:sharpdamage": [
+      "ANVIL",
+      "ARROW",
+      "CACTUS",
+      "FALL",
+      "FLY_INTO_WALL",
+      "GENERIC",
+      "MOB_ATTACK",
+      "PLAYER_ATTACK",
+      "STALAGMITE",
+      "SWEET_BERRY_BUSH",
+      "THORNS",
+      "TRIDENT"
     ]
   },
   "tab_element_order": {},

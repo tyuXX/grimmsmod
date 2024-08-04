@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "falling_anvil",
+    "arrow",
+    "cactus",
+    "fall",
+    "fly_into_wall",
+    "generic",
+    "mob_attack",
+    "player_attack",
+    "stalagmite",
+    "sweet_berry_bush",
+    "thorns",
+    "trident"
+  ]
+}

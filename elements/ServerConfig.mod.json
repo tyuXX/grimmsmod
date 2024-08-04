@@ -4,7 +4,7 @@
   "definition": {
     "pools": [
       {
-        "category": "performance",
+        "category": "Performance",
         "entries": [
           {
             "item": {
@@ -43,7 +43,7 @@
         ]
       },
       {
-        "category": "itemleveling",
+        "category": "Item Leveling",
         "entries": [
           {
             "item": {
@@ -76,6 +76,62 @@
             "comment": "Item level xp requirement multiplier.",
             "vardisplay": "Item LvL Expo",
             "varname": "lvlexpo",
+            "enablecomment": true,
+            "stringlist": []
+          }
+        ]
+      },
+      {
+        "category": "Shoutouts",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "Sends chat message to all players when someone prestiges.",
+            "vardisplay": "Shout Prestige",
+            "varname": "sprestige",
+            "enablecomment": true,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "Sends chat message to all players when someone levels up.",
+            "vardisplay": "Shout Level",
+            "varname": "slevel",
+            "enablecomment": true,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 10.0,
+            "textDefault": "",
+            "comment": "Shouts every <value> levels",
+            "vardisplay": "Level for shout",
+            "varname": "snlevel",
             "enablecomment": true,
             "stringlist": []
           }
