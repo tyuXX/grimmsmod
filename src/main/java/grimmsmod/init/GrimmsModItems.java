@@ -6,6 +6,8 @@ package grimmsmod.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
+import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -19,6 +21,7 @@ import net.minecraft.client.renderer.item.ItemProperties;
 import grimmsmod.procedures.SteelPropertyValueProviderProcedure;
 import grimmsmod.procedures.SteelPropertyValueProvider2Procedure;
 
+import grimmsmod.item.inventory.DeathPackageInventoryCapability;
 import grimmsmod.item.WoodenHammerItem;
 import grimmsmod.item.ThrashItem;
 import grimmsmod.item.SteelItem;
@@ -35,10 +38,12 @@ import grimmsmod.item.FancyClockItem;
 import grimmsmod.item.FancierClockItem;
 import grimmsmod.item.DisinfectantScalpelItem;
 import grimmsmod.item.DiamondHammerItem;
+import grimmsmod.item.DeathPackageItem;
 import grimmsmod.item.BuildersWandItem;
 
 import grimmsmod.GrimmsMod;
 
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class GrimmsModItems {
 	public static final DeferredRegister.Items REGISTRY = DeferredRegister.createItems(GrimmsMod.MODID);
 	public static final DeferredHolder<Item, Item> FANCY_CLOCK = REGISTRY.register("fancy_clock", FancyClockItem::new);
@@ -58,9 +63,15 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> NETHERITE_HAMMER = REGISTRY.register("netherite_hammer", NetheriteHammerItem::new);
 	public static final DeferredHolder<Item, Item> STEEL = REGISTRY.register("steel", SteelItem::new);
 	public static final DeferredHolder<Item, Item> KATANA = REGISTRY.register("katana", KatanaItem::new);
+	public static final DeferredHolder<Item, Item> DEATH_PACKAGE = REGISTRY.register("death_package", DeathPackageItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
+	@SubscribeEvent
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new DeathPackageInventoryCapability(stack), DEATH_PACKAGE.get());
+	}
+
 	@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ItemsClientSideHandler {
 		@SubscribeEvent

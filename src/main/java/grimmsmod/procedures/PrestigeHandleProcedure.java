@@ -24,6 +24,11 @@ public class PrestigeHandleProcedure {
 				_vars.prestige = entity.getData(GrimmsModVariables.PLAYER_VARIABLES).prestige + 1;
 				_vars.syncPlayerVariables(entity);
 			}
+			{
+				GrimmsModVariables.PlayerVariables _vars = entity.getData(GrimmsModVariables.PLAYER_VARIABLES);
+				_vars.prestigepoints = entity.getData(GrimmsModVariables.PLAYER_VARIABLES).prestigepoints + 1;
+				_vars.syncPlayerVariables(entity);
+			}
 		}
 	}
 }

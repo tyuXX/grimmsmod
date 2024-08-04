@@ -7,13 +7,13 @@
     {
       "predicate": {
         "grimms:steel_hot": 1,
-        "grimms:steel_tempered": 0
+        "grimms:steel_tempered": 0.5
       },
       "model": "grimms:item/steel_0"
     },
     {
       "predicate": {
-        "grimms:steel_tempered": 0
+        "grimms:steel_tempered": 0.5
       },
       "model": "grimms:item/steel_1"
     }

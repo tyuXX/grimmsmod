@@ -1,0 +1,25 @@
+{
+  "_fv": 66,
+  "_type": "achievement",
+  "definition": {
+    "achievementName": "Level Up",
+    "achievementDescription": "Level up for the first time",
+    "achievementIcon": {
+      "value": "Items.EXPERIENCE_BOTTLE"
+    },
+    "background": "Default",
+    "disableDisplay": false,
+    "showPopup": true,
+    "announceToChat": true,
+    "hideIfNotCompleted": false,
+    "rewardLoot": [],
+    "rewardRecipes": [],
+    "rewardFunction": "No function",
+    "rewardXP": 135,
+    "achievementType": "task",
+    "parent": {
+      "value": "CUSTOM:InstallGrimmsMod"
+    },
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"advancement_trigger\" deletable=\"false\" x=\"115\" y=\"100\"><next><block type=\"custom_trigger\"></block></next></block></xml>"
+  }
+}

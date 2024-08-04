@@ -26,6 +26,11 @@ public class XpHandleProcedure {
 				_vars.level = entity.getData(GrimmsModVariables.PLAYER_VARIABLES).level + 1;
 				_vars.syncPlayerVariables(entity);
 			}
+			{
+				GrimmsModVariables.PlayerVariables _vars = entity.getData(GrimmsModVariables.PLAYER_VARIABLES);
+				_vars.money = entity.getData(GrimmsModVariables.PLAYER_VARIABLES).money + entity.getData(GrimmsModVariables.PLAYER_VARIABLES).level * entity.getData(GrimmsModVariables.PLAYER_VARIABLES).prestige;
+				_vars.syncPlayerVariables(entity);
+			}
 		}
 	}
 }

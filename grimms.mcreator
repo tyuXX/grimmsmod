@@ -881,6 +881,382 @@
         ]
       },
       "path": "~/Items"
+    },
+    {
+      "name": "OnPlayerDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_player_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/OnPlayerDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Events"
+    },
+    {
+      "name": "DeathPackage",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "death_package",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/item/DeathPackageItem.java",
+          "src/main/java/grimmsmod/item/inventory/DeathPackageInventoryCapability.java",
+          "src/main/resources/assets/grimms/models/item/death_package.json"
+        ]
+      },
+      "path": "~/Special"
+    },
+    {
+      "name": "DeathPackageGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "death_package_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/client/gui/DeathPackageGUIScreen.java",
+          "src/main/java/grimmsmod/world/inventory/DeathPackageGUIMenu.java"
+        ]
+      },
+      "path": "~/Gui"
+    },
+    {
+      "name": "DeathPackageRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "death_package_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/DeathPackageRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "OnPlayerRespawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_player_respawn",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/OnPlayerRespawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Events"
+    },
+    {
+      "name": "Soulbound",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soulbound",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/enchantment/SoulboundEnchantment.java"
+        ]
+      },
+      "path": "~/Enchantments"
+    },
+    {
+      "name": "LevelUp",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_up",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/advancements/level_up.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "LevelUp2",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_up_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/advancements/level_up_2.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "Prestige",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prestige",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/advancements/prestige.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "OnPlayerTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_player_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/OnPlayerTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Events"
+    },
+    {
+      "name": "StatsHUD",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stats_hud",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/client/screens/StatsHUDOverlay.java"
+        ]
+      },
+      "path": "~/HUD"
+    },
+    {
+      "name": "MoneyTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "money_text_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/grimmsmod/procedures/MoneyTextValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "GetShowHUD",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_show_hud",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/grimmsmod/procedures/GetShowHUDProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "GetShowCorHUD",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_show_cor_hud",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/grimmsmod/procedures/GetShowCorHUDProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "GetShowMoneyHUD",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_show_money_hud",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/grimmsmod/procedures/GetShowMoneyHUDProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "GetShowPlayerHUD",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_show_player_hud",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/grimmsmod/procedures/GetShowPlayerHUDProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "GetPlayerAsEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_player_as_entity",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/grimmsmod/procedures/GetPlayerAsEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "CoordsTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coords_text_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/grimmsmod/procedures/CoordsTextValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "Sharp",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sharp",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/enchantment/SharpEnchantment.java"
+        ]
+      },
+      "path": "~/Enchantments"
+    },
+    {
+      "name": "Bleeding",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bleeding",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/potion/BleedingMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "BleedingDamage",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bleeding_damage",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/damage_type/bleeding_damage.json"
+        ]
+      },
+      "path": "~/DamageTypes"
+    },
+    {
+      "name": "BleedingOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bleeding_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/BleedingOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amplifier",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procs"
     }
   ],
   "variable_elements": [
@@ -919,19 +1295,36 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "keepinventory",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "deathpackage",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "prestigepoints",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
   "tag_elements": {
-    "ITEMS:mod:notlevelable": [],
     "ITEMS:mod:customlevelable": [
       "CUSTOM:Katana"
     ],
     "ITEMS:minecraft:pickaxes": [
       "~CUSTOM:NetheriteHammer",
       "~CUSTOM:DiamondHammer",
-      "~CUSTOM:WoodenHammer",
-      "~CUSTOM:IronHammer"
+      "~CUSTOM:IronHammer",
+      "~CUSTOM:WoodenHammer"
     ],
     "ITEMS:mod:hammers": [
       "CUSTOM:WoodenHammer",
@@ -951,48 +1344,61 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "item.grimmsmod.microscope": "Microscope",
       "item.grimmsmod.handheld_microscope": "Handheld Microscope",
-      "item.grimms.microscope": "Microscope",
+      "item.grimmsmod.microscope": "Microscope",
+      "advancements.level_up_2.descr": "Level up to level 45",
       "item.grimms.scalpel": "Scalpel",
       "item.grimmsmod.scalpel": "Scalpel",
       "item_group.grimmsmod.grimms_mod": "Grimm\u0027s Mod",
-      "item_group.grimms.grimms_mod": "Grimm\u0027s Mod",
-      "item.grimms.handheld_microscope": "Handheld Microscope",
-      "item.grimmsmod.fancy_clock": "Fancy Clock",
+      "advancements.prestige.title": "Prestige",
       "item.grimmsmod.placeholder": "Placeholder",
-      "key.grimms.open_stats": "Open Stats",
+      "death.attack.bleeding_damage.player": "%1$s lost too much blood whilst trying to escape %2$s",
       "gui.grimmsmod.stats_gui.label_empty1": "/",
-      "key.grimmsmod.open_stats": "Open Stats",
       "item.grimmsmod.fancier_clock": "Fancier Clock",
-      "item_group.grimms.grimms_mod_special": "Grimms Mod Special",
-      "item.grimms.disinfectant_scalpel": "Disinfectant Scalpel",
+      "advancements.level_up_2.title": "Level Up 2",
       "gui.grimmsmod.stats_gui.button_prestige": "Prestige",
       "item.grimmsmod.builders_wand": "Builders Wand",
-      "item.grimms.iron_hammer": "Wooden Hammer",
-      "item.grimms.thrash": "Thrash",
+      "advancements.level_up.descr": "Level up for the first time",
       "item.grimms.katana": "Katana",
-      "item.grimmsmod.multi_use_scalpel": "Multi Use Scalpel",
+      "effect.grimms.bleeding": "Bleeding",
       "gui.grimms.stats_gui.button_prestige": "Prestige",
-      "enchantment.grimms.lifesteal": "Lifesteal",
       "item.grimms.diamond_hammer": "Wooden Hammer",
-      "gui.grimms.stats_gui.label_empty": "/",
-      "key.categories.grimmsmod": "Grimm\u0027s Mod Keybinds",
       "item.grimms.builders_wand": "Builders Wand",
       "item.grimms.placeholder": "Placeholder",
-      "item_group.grimmsmod.grimms_mod_special": "Grimms Mod Special",
-      "gui.grimmsmod.stats_gui.label_empty": "/",
-      "item.grimms.steel": "Steel",
-      "item.grimmsmod.logo": "Logo",
       "advancements.install_grimms_mod.descr": "Install Grimm\u0027s Mod on minecraft, reworked, remade, updated",
-      "item.grimms.logo": "Logo",
+      "enchantment.grimms.soulbound": "Soulbound",
       "item.grimms.fancier_clock": "Fancier Clock",
       "item.grimms.multi_use_scalpel": "Multi Use Scalpel",
       "item.grimms.fancy_clock": "Fancy Clock",
       "gui.grimms.stats_gui.label_empty1": "/",
       "item.grimms.wooden_hammer": "Wooden Hammer",
-      "advancements.install_grimms_mod.title": "Install Grimm\u0027s Mod",
-      "item.grimms.netherite_hammer": "Wooden Hammer"
+      "item.grimms.netherite_hammer": "Wooden Hammer",
+      "item.grimms.microscope": "Microscope",
+      "enchantment.grimms.sharp": "Sharp",
+      "item_group.grimms.grimms_mod": "Grimm\u0027s Mod",
+      "item.grimms.handheld_microscope": "Handheld Microscope",
+      "item.grimmsmod.fancy_clock": "Fancy Clock",
+      "key.grimms.open_stats": "Open Stats",
+      "key.grimmsmod.open_stats": "Open Stats",
+      "item_group.grimms.grimms_mod_special": "Grimms Mod Special",
+      "advancements.level_up.title": "Level Up",
+      "item.grimms.death_package": "Death Package",
+      "item.grimms.disinfectant_scalpel": "Disinfectant Scalpel",
+      "item.grimms.iron_hammer": "Wooden Hammer",
+      "death.attack.bleeding_damage.item": "%1$s was bled to death by %2$s using %3$s",
+      "item.grimms.thrash": "Thrash",
+      "item.grimmsmod.multi_use_scalpel": "Multi Use Scalpel",
+      "enchantment.grimms.lifesteal": "Lifesteal",
+      "advancements.prestige.descr": "Prestige for the first time for special benefits!",
+      "death.attack.bleeding_damage": "%1$s lost too much blood",
+      "gui.grimms.stats_gui.label_empty": "/",
+      "key.categories.grimmsmod": "Grimm\u0027s Mod Keybinds",
+      "item_group.grimmsmod.grimms_mod_special": "Grimms Mod Special",
+      "gui.grimmsmod.stats_gui.label_empty": "/",
+      "item.grimms.steel": "Steel",
+      "item.grimmsmod.logo": "Logo",
+      "item.grimms.logo": "Logo",
+      "advancements.install_grimms_mod.title": "Install Grimm\u0027s Mod"
     }
   },
   "foldersRoot": {
@@ -1052,6 +1458,18 @@
       },
       {
         "name": "Enchantments",
+        "children": []
+      },
+      {
+        "name": "HUD",
+        "children": []
+      },
+      {
+        "name": "Effects",
+        "children": []
+      },
+      {
+        "name": "DamageTypes",
         "children": []
       }
     ]

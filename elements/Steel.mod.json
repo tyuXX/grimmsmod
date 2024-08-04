@@ -35,7 +35,7 @@
               "name": "CUSTOM:tempered",
               "type": "number"
             },
-            "value": 0.0
+            "value": 0.5
           }
         ]
       },
@@ -51,7 +51,7 @@
               "name": "CUSTOM:tempered",
               "type": "number"
             },
-            "value": 0.0
+            "value": 0.5
           }
         ]
       }

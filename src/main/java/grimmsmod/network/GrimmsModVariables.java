@@ -15,6 +15,7 @@ import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
@@ -70,6 +71,9 @@ public class GrimmsModVariables {
 			clone.xp = original.xp;
 			clone.prestige = original.prestige;
 			clone.money = original.money;
+			clone.keepinventory = original.keepinventory;
+			clone.deathpackage = original.deathpackage;
+			clone.prestigepoints = original.prestigepoints;
 			if (!event.isWasDeath()) {
 				clone.lobotomized = original.lobotomized;
 			}
@@ -215,6 +219,9 @@ public class GrimmsModVariables {
 		public double prestige = 1.0;
 		public boolean lobotomized = false;
 		public double money = 0;
+		public boolean keepinventory = false;
+		public ItemStack deathpackage = ItemStack.EMPTY;
+		public double prestigepoints = 0;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -224,6 +231,9 @@ public class GrimmsModVariables {
 			nbt.putDouble("prestige", prestige);
 			nbt.putBoolean("lobotomized", lobotomized);
 			nbt.putDouble("money", money);
+			nbt.putBoolean("keepinventory", keepinventory);
+			nbt.put("deathpackage", deathpackage.saveOptional(lookupProvider));
+			nbt.putDouble("prestigepoints", prestigepoints);
 			return nbt;
 		}
 
@@ -234,6 +244,9 @@ public class GrimmsModVariables {
 			prestige = nbt.getDouble("prestige");
 			lobotomized = nbt.getBoolean("lobotomized");
 			money = nbt.getDouble("money");
+			keepinventory = nbt.getBoolean("keepinventory");
+			deathpackage = ItemStack.parseOptional(lookupProvider, nbt.getCompound("deathpackage"));
+			prestigepoints = nbt.getDouble("prestigepoints");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

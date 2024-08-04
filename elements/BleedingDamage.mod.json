@@ -1,0 +1,12 @@
+{
+  "_fv": 66,
+  "_type": "damagetype",
+  "definition": {
+    "exhaustion": 0.1,
+    "scaling": "always",
+    "effects": "thorns",
+    "normalDeathMessage": "%1$s lost too much blood",
+    "itemDeathMessage": "%1$s was bled to death by %2$s using %3$s",
+    "playerDeathMessage": "%1$s lost too much blood whilst trying to escape %2$s"
+  }
+}

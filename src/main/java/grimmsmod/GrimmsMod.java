@@ -28,6 +28,7 @@ import java.util.ArrayList;
 import grimmsmod.network.GrimmsModVariables;
 
 import grimmsmod.init.GrimmsModTabs;
+import grimmsmod.init.GrimmsModMobEffects;
 import grimmsmod.init.GrimmsModMenus;
 import grimmsmod.init.GrimmsModItems;
 import grimmsmod.init.GrimmsModEnchantments;
@@ -48,6 +49,7 @@ public class GrimmsMod {
 		GrimmsModTabs.REGISTRY.register(modEventBus);
 		GrimmsModVariables.ATTACHMENT_TYPES.register(modEventBus);
 
+		GrimmsModMobEffects.REGISTRY.register(modEventBus);
 		GrimmsModEnchantments.REGISTRY.register(modEventBus);
 		GrimmsModMenus.REGISTRY.register(modEventBus);
 

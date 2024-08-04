@@ -1,0 +1,72 @@
+{
+  "_fv": 66,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_money_text_value",
+          "text": {
+            "fixedValue": "",
+            "name": "MoneyTextValue"
+          },
+          "color": {
+            "value": -16738048,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER",
+          "x": 6,
+          "y": 8
+        }
+      },
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": {
+            "name": "GetPlayerAsEntity"
+          },
+          "displayCondition": {
+            "name": "GetShowPlayerHUD"
+          },
+          "scale": 30,
+          "rotationX": 0,
+          "followMouseMovement": false,
+          "anchorPoint": "CENTER",
+          "x": 384,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_coords_text_value",
+          "text": {
+            "fixedValue": "",
+            "name": "CoordsTextValue"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "GetShowCorHUD"
+          },
+          "anchorPoint": "CENTER",
+          "x": 6,
+          "y": 17
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}
