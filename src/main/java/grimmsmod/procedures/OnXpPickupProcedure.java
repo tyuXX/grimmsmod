@@ -5,6 +5,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 
 import javax.annotation.Nullable;
@@ -14,17 +15,17 @@ public class OnXpPickupProcedure {
 	@SubscribeEvent
 	public static void onPlayerXPChange(PlayerXpEvent.XpChange event) {
 		if (event.getEntity() != null) {
-			execute(event, event.getEntity(), event.getAmount());
+			execute(event, event.getEntity().level(), event.getEntity(), event.getAmount());
 		}
 	}
 
-	public static void execute(Entity entity, double amount) {
-		execute(null, entity, amount);
+	public static void execute(LevelAccessor world, Entity entity, double amount) {
+		execute(null, world, entity, amount);
 	}
 
-	private static void execute(@Nullable Event event, Entity entity, double amount) {
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, double amount) {
 		if (entity == null)
 			return;
-		XpHandleProcedure.execute(entity, amount);
+		XpHandleProcedure.execute(world, entity, amount);
 	}
 }

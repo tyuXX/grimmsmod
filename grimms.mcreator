@@ -71,6 +71,10 @@
           {
             "name": "amount",
             "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -94,6 +98,10 @@
           {
             "name": "xpamount",
             "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -256,6 +264,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },

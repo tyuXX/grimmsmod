@@ -63,7 +63,7 @@ public record StatsGUIButtonMessage(int buttonID, int x, int y, int z) implement
 			return;
 		if (buttonID == 0) {
 
-			PrestigeHandleProcedure.execute(entity);
+			PrestigeHandleProcedure.execute(world, entity);
 		}
 	}
 

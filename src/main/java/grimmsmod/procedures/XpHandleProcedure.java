@@ -1,13 +1,15 @@
 package grimmsmod.procedures;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.network.chat.Component;
 
 import grimmsmod.network.GrimmsModVariables;
 
 import grimmsmod.configuration.ServerConfigConfiguration;
 
 public class XpHandleProcedure {
-	public static void execute(Entity entity, double xpamount) {
+	public static void execute(LevelAccessor world, Entity entity, double xpamount) {
 		if (entity == null)
 			return;
 		{
@@ -30,6 +32,11 @@ public class XpHandleProcedure {
 				GrimmsModVariables.PlayerVariables _vars = entity.getData(GrimmsModVariables.PLAYER_VARIABLES);
 				_vars.money = entity.getData(GrimmsModVariables.PLAYER_VARIABLES).money + entity.getData(GrimmsModVariables.PLAYER_VARIABLES).level * entity.getData(GrimmsModVariables.PLAYER_VARIABLES).prestige;
 				_vars.syncPlayerVariables(entity);
+			}
+			if (ServerConfigConfiguration.SLEVEL.get() && entity.getData(GrimmsModVariables.PLAYER_VARIABLES).level % (double) ServerConfigConfiguration.SNLEVEL.get() == 0) {
+				if (!world.isClientSide() && world.getServer() != null)
+					world.getServer().getPlayerList()
+							.broadcastSystemMessage(Component.literal((entity.getDisplayName().getString() + " has reached level " + new java.text.DecimalFormat("##").format(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).level))), false);
 			}
 		}
 	}
