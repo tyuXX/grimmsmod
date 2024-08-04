@@ -1,0 +1,7 @@
+{
+  "parent": "grimms:custom/katana",
+  "textures": {
+    "0": "grimms:block/katana",
+    "particle": "grimms:item/placeholder"
+  }
+}

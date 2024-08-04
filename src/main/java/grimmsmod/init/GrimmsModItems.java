@@ -28,6 +28,7 @@ import grimmsmod.item.NetheriteHammerItem;
 import grimmsmod.item.MultiUseScalpelItem;
 import grimmsmod.item.MicroscopeItem;
 import grimmsmod.item.LogoItem;
+import grimmsmod.item.KatanaItem;
 import grimmsmod.item.IronHammerItem;
 import grimmsmod.item.HandheldMicroscopeItem;
 import grimmsmod.item.FancyClockItem;
@@ -56,6 +57,7 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> DIAMOND_HAMMER = REGISTRY.register("diamond_hammer", DiamondHammerItem::new);
 	public static final DeferredHolder<Item, Item> NETHERITE_HAMMER = REGISTRY.register("netherite_hammer", NetheriteHammerItem::new);
 	public static final DeferredHolder<Item, Item> STEEL = REGISTRY.register("steel", SteelItem::new);
+	public static final DeferredHolder<Item, Item> KATANA = REGISTRY.register("katana", KatanaItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -15,7 +15,7 @@ import net.minecraft.core.BlockPos;
 
 public class NetheriteHammerItem extends Item {
 	public NetheriteHammerItem() {
-		super(new Item.Properties().durability(2000)
+		super(new Item.Properties().durability(2000).fireResistant()
 				.attributes(ItemAttributeModifiers.builder().add(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", 3, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND)
 						.add(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Tool modifier", -3, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).build()));
 	}

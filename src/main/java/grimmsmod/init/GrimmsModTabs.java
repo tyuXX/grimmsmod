@@ -30,6 +30,7 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.DIAMOND_HAMMER.get());
 				tabData.accept(GrimmsModItems.NETHERITE_HAMMER.get());
 				tabData.accept(GrimmsModItems.STEEL.get());
+				tabData.accept(GrimmsModItems.KATANA.get());
 			})
 
 					.build());
