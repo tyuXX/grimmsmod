@@ -5,8 +5,57 @@
     "renderType": 0,
     "texture": "steel",
     "customModelName": "Normal",
-    "customProperties": {},
-    "states": [],
+    "customProperties": {
+      "hot": {
+        "name": "SteelPropertyValueProvider"
+      },
+      "tempered": {
+        "name": "SteelPropertyValueProvider2"
+      }
+    },
+    "states": [
+      {
+        "renderType": 0,
+        "texture": "hotsteel",
+        "customModelName": "Normal",
+        "stateMap": [
+          {
+            "property": {
+              "min": -1.7976931348623157E308,
+              "max": 1.7976931348623157E308,
+              "name": "CUSTOM:hot",
+              "type": "number"
+            },
+            "value": 1.0
+          },
+          {
+            "property": {
+              "min": -1.7976931348623157E308,
+              "max": 1.7976931348623157E308,
+              "name": "CUSTOM:tempered",
+              "type": "number"
+            },
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "renderType": 0,
+        "texture": "temperedsteel",
+        "customModelName": "Normal",
+        "stateMap": [
+          {
+            "property": {
+              "min": -1.7976931348623157E308,
+              "max": 1.7976931348623157E308,
+              "name": "CUSTOM:tempered",
+              "type": "number"
+            },
+            "value": 0.0
+          }
+        ]
+      }
+    ],
     "name": "Steel",
     "rarity": "COMMON",
     "creativeTabs": [

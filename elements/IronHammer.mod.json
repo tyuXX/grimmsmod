@@ -29,7 +29,7 @@
     "immuneToFire": false,
     "blockDropsTier": "WOOD",
     "blocksAffected": [],
-    "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false
+    "stayInGridWhenCrafting": true,
+    "damageOnCrafting": true
   }
 }

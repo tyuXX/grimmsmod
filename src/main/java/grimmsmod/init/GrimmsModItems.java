@@ -6,8 +6,18 @@ package grimmsmod.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.item.ItemProperties;
+
+import grimmsmod.procedures.SteelPropertyValueProviderProcedure;
+import grimmsmod.procedures.SteelPropertyValueProvider2Procedure;
 
 import grimmsmod.item.WoodenHammerItem;
 import grimmsmod.item.ThrashItem;
@@ -46,6 +56,18 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> DIAMOND_HAMMER = REGISTRY.register("diamond_hammer", DiamondHammerItem::new);
 	public static final DeferredHolder<Item, Item> NETHERITE_HAMMER = REGISTRY.register("netherite_hammer", NetheriteHammerItem::new);
 	public static final DeferredHolder<Item, Item> STEEL = REGISTRY.register("steel", SteelItem::new);
+
 	// Start of user code block custom items
 	// End of user code block custom items
+	@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+	public static class ItemsClientSideHandler {
+		@SubscribeEvent
+		@OnlyIn(Dist.CLIENT)
+		public static void clientLoad(FMLClientSetupEvent event) {
+			event.enqueueWork(() -> {
+				ItemProperties.register(STEEL.get(), new ResourceLocation("grimms:steel_hot"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) SteelPropertyValueProviderProcedure.execute(itemStackToRender));
+				ItemProperties.register(STEEL.get(), new ResourceLocation("grimms:steel_tempered"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) SteelPropertyValueProvider2Procedure.execute(itemStackToRender));
+			});
+		}
+	}
 }

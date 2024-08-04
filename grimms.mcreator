@@ -714,11 +714,73 @@
       "registry_name": "steel",
       "metadata": {
         "files": [
+          "src/main/resources/assets/grimms/models/item/steel_0.json",
+          "src/main/resources/assets/grimms/models/item/steel_1.json",
           "src/main/java/grimmsmod/item/SteelItem.java",
           "src/main/resources/assets/grimms/models/item/steel.json"
         ]
       },
       "path": "~/Items"
+    },
+    {
+      "name": "SteelPropertyValueProvider",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_property_value_provider",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/grimmsmod/procedures/SteelPropertyValueProviderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "SteelSpecialInformation",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_special_information",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/grimmsmod/procedures/SteelSpecialInformationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "SteelPropertyValueProvider2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_property_value_provider_2",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/grimmsmod/procedures/SteelPropertyValueProvider2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Procs"
     }
   ],
   "variable_elements": [
@@ -761,7 +823,12 @@
   ],
   "sound_elements": [],
   "tag_elements": {
-    "ITEMS:minecraft:pickaxes": [],
+    "ITEMS:minecraft:pickaxes": [
+      "~CUSTOM:NetheriteHammer",
+      "~CUSTOM:DiamondHammer",
+      "~CUSTOM:WoodenHammer",
+      "~CUSTOM:IronHammer"
+    ],
     "ITEMS:mod:hammers": [
       "CUSTOM:WoodenHammer",
       "CUSTOM:IronHammer",
@@ -777,16 +844,16 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "item.grimmsmod.microscope": "Microscope",
-      "item.grimmsmod.handheld_microscope": "Handheld Microscope",
       "item.grimms.microscope": "Microscope",
+      "item.grimmsmod.handheld_microscope": "Handheld Microscope",
+      "item.grimmsmod.microscope": "Microscope",
       "item.grimms.scalpel": "Scalpel",
       "item.grimmsmod.scalpel": "Scalpel",
       "item_group.grimmsmod.grimms_mod": "Grimm\u0027s Mod",
       "item_group.grimms.grimms_mod": "Grimm\u0027s Mod",
       "item.grimms.handheld_microscope": "Handheld Microscope",
-      "item.grimmsmod.fancy_clock": "Fancy Clock",
       "item.grimmsmod.placeholder": "Placeholder",
+      "item.grimmsmod.fancy_clock": "Fancy Clock",
       "key.grimms.open_stats": "Open Stats",
       "gui.grimmsmod.stats_gui.label_empty1": "/",
       "key.grimmsmod.open_stats": "Open Stats",
