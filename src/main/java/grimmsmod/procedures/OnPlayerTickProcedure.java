@@ -9,6 +9,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.nbt.DoubleTag;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.AdvancementHolder;
 
@@ -31,7 +32,7 @@ public class OnPlayerTickProcedure {
 		if (entity == null)
 			return;
 		if (GrimmsModVariables.MapVariables.get(world).worldtick % 2000 == 0) {
-			if (entity.getData(GrimmsModVariables.PLAYER_VARIABLES).level >= 2) {
+			if (((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:level")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) >= 2) {
 				if (entity instanceof ServerPlayer _player) {
 					AdvancementHolder _adv = _player.server.getAdvancements().get(new ResourceLocation("grimms:level_up"));
 					if (_adv != null) {
@@ -42,7 +43,7 @@ public class OnPlayerTickProcedure {
 						}
 					}
 				}
-				if (entity.getData(GrimmsModVariables.PLAYER_VARIABLES).level >= 45) {
+				if (((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:level")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) >= 45) {
 					if (entity instanceof ServerPlayer _player) {
 						AdvancementHolder _adv = _player.server.getAdvancements().get(new ResourceLocation("grimms:level_up_2"));
 						if (_adv != null) {
@@ -55,7 +56,7 @@ public class OnPlayerTickProcedure {
 					}
 				}
 			}
-			if (entity.getData(GrimmsModVariables.PLAYER_VARIABLES).prestige >= 2) {
+			if (((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:prestige")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) >= 2) {
 				if (entity instanceof ServerPlayer _player) {
 					AdvancementHolder _adv = _player.server.getAdvancements().get(new ResourceLocation("grimms:prestige"));
 					if (_adv != null) {

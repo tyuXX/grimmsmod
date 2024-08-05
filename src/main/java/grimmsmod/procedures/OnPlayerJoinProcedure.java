@@ -8,6 +8,7 @@ import net.neoforged.bus.api.Event;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.AdvancementHolder;
 
@@ -27,6 +28,8 @@ public class OnPlayerJoinProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
+		CompoundTag tmp;
+		InitPlayerDatamapProcedure.execute(entity);
 		if (entity instanceof ServerPlayer _player) {
 			AdvancementHolder _adv = _player.server.getAdvancements().get(new ResourceLocation("grimms:install_grimms_mod"));
 			if (_adv != null) {

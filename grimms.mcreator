@@ -914,6 +914,10 @@
             "type": "entity"
           },
           {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -1273,50 +1277,331 @@
         ]
       },
       "path": "~/Procs"
+    },
+    {
+      "name": "InitPlayerDatamap",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "init_player_datamap",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/InitPlayerDatamapProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "SetAbilitiesCommand",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_abilities_command",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/SetAbilitiesCommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "SetAbilitiesCommandLogic",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_abilities_command_logic",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/SetAbilitiesCommandLogicProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "GetAbilities",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_abilities",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/GetAbilitiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "GetAllAbilities",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_all_abilities",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/GetAllAbilitiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "GetAllAbilitiesCommand",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_all_abilities_command",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/command/GetAllAbilitiesCommandCommand.java"
+        ]
+      },
+      "path": "~/Command"
+    },
+    {
+      "name": "GetAbilityCommand",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_ability_command",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/command/GetAbilityCommandCommand.java"
+        ]
+      },
+      "path": "~/Command"
+    },
+    {
+      "name": "SetAbilityNumberCommand",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_ability_number_command",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/command/SetAbilityNumberCommandCommand.java"
+        ]
+      },
+      "path": "~/Command"
+    },
+    {
+      "name": "SetAbilityLogicCommand",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_ability_logic_command",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/command/SetAbilityLogicCommandCommand.java"
+        ]
+      },
+      "path": "~/Command"
+    },
+    {
+      "name": "SetDataElement",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_data_element",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/SetDataElementProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "dataelement",
+            "type": "dataelement"
+          },
+          {
+            "name": "datamap",
+            "type": "datamap"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sync",
+            "type": "logic"
+          },
+          {
+            "name": "key",
+            "type": "string"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "ChangeNumberDataElement",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "change_number_data_element",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/ChangeNumberDataElementProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "datamap",
+            "type": "datamap"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sync",
+            "type": "logic"
+          },
+          {
+            "name": "value",
+            "type": "number"
+          },
+          {
+            "name": "key",
+            "type": "string"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "PrestigepointsTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prestigepoints_text_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/grimmsmod/procedures/PrestigepointsTextValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "GetAllStats",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_all_stats",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/GetAllStatsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "GetAllStatsCommand",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_all_stats_command",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/command/GetAllStatsCommandCommand.java"
+        ]
+      },
+      "path": "~/Command"
+    },
+    {
+      "name": "GetStat",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_stat",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/GetStatProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "GetStatCommand",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_stat_command",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/command/GetStatCommandCommand.java"
+        ]
+      },
+      "path": "~/Command"
     }
   ],
   "variable_elements": [
-    {
-      "name": "level",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "1.0"
-    },
-    {
-      "name": "xp",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0.0"
-    },
-    {
-      "name": "prestige",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "1.0"
-    },
-    {
-      "name": "lobotomized",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
     {
       "name": "worldtick",
       "type": "number",
       "scope": "map",
       "value": "0"
-    },
-    {
-      "name": "money",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "keepinventory",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
     },
     {
       "name": "deathpackage",
@@ -1325,10 +1610,34 @@
       "value": "ItemStack.EMPTY"
     },
     {
-      "name": "prestigepoints",
+      "name": "persistentabilities",
+      "type": "datamap",
+      "scope": "player_persistent",
+      "value": "new CompoundTag()"
+    },
+    {
+      "name": "isplayerinitialized",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "persistentstats",
+      "type": "datamap",
+      "scope": "player_persistent",
+      "value": "new CompoundTag()"
+    },
+    {
+      "name": "placeholder",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "lifetimestats",
+      "type": "datamap",
+      "scope": "player_lifetime",
+      "value": "new CompoundTag()"
     }
   ],
   "sound_elements": [],
@@ -1374,23 +1683,23 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "item.grimmsmod.handheld_microscope": "Handheld Microscope",
-      "item.grimmsmod.microscope": "Microscope",
       "advancements.level_up_2.descr": "Level up to level 45",
+      "item.grimmsmod.microscope": "Microscope",
+      "item.grimmsmod.handheld_microscope": "Handheld Microscope",
       "item.grimms.scalpel": "Scalpel",
       "item.grimmsmod.scalpel": "Scalpel",
       "item_group.grimmsmod.grimms_mod": "Grimm\u0027s Mod",
       "advancements.prestige.title": "Prestige",
-      "item.grimmsmod.placeholder": "Placeholder",
       "death.attack.bleeding_damage.player": "%1$s lost too much blood whilst trying to escape %2$s",
+      "item.grimmsmod.placeholder": "Placeholder",
       "gui.grimmsmod.stats_gui.label_empty1": "/",
       "item.grimmsmod.fancier_clock": "Fancier Clock",
       "advancements.level_up_2.title": "Level Up 2",
       "gui.grimmsmod.stats_gui.button_prestige": "Prestige",
       "item.grimmsmod.builders_wand": "Builders Wand",
       "advancements.level_up.descr": "Level up for the first time",
-      "item.grimms.katana": "Katana",
       "effect.grimms.bleeding": "Bleeding",
+      "item.grimms.katana": "Katana",
       "gui.grimms.stats_gui.button_prestige": "Prestige",
       "item.grimms.diamond_hammer": "Wooden Hammer",
       "item.grimms.builders_wand": "Builders Wand",
@@ -1500,6 +1809,10 @@
       },
       {
         "name": "DamageTypes",
+        "children": []
+      },
+      {
+        "name": "Command",
         "children": []
       }
     ]

@@ -67,15 +67,13 @@ public class GrimmsModVariables {
 		public static void clonePlayer(PlayerEvent.Clone event) {
 			PlayerVariables original = event.getOriginal().getData(PLAYER_VARIABLES);
 			PlayerVariables clone = new PlayerVariables();
-			clone.level = original.level;
-			clone.xp = original.xp;
-			clone.prestige = original.prestige;
-			clone.money = original.money;
-			clone.keepinventory = original.keepinventory;
 			clone.deathpackage = original.deathpackage;
-			clone.prestigepoints = original.prestigepoints;
+			clone.persistentabilities = original.persistentabilities;
+			clone.isplayerinitialized = original.isplayerinitialized;
+			clone.persistentstats = original.persistentstats;
+			clone.placeholder = original.placeholder;
 			if (!event.isWasDeath()) {
-				clone.lobotomized = original.lobotomized;
+				clone.lifetimestats = original.lifetimestats;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -214,39 +212,33 @@ public class GrimmsModVariables {
 	}
 
 	public static class PlayerVariables implements INBTSerializable<CompoundTag> {
-		public double level = 1.0;
-		public double xp = 0.0;
-		public double prestige = 1.0;
-		public boolean lobotomized = false;
-		public double money = 0;
-		public boolean keepinventory = false;
 		public ItemStack deathpackage = ItemStack.EMPTY;
-		public double prestigepoints = 0;
+		public CompoundTag persistentabilities = new CompoundTag();
+		public boolean isplayerinitialized = false;
+		public CompoundTag persistentstats = new CompoundTag();
+		public double placeholder = 0;
+		public CompoundTag lifetimestats = new CompoundTag();
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
 			CompoundTag nbt = new CompoundTag();
-			nbt.putDouble("level", level);
-			nbt.putDouble("xp", xp);
-			nbt.putDouble("prestige", prestige);
-			nbt.putBoolean("lobotomized", lobotomized);
-			nbt.putDouble("money", money);
-			nbt.putBoolean("keepinventory", keepinventory);
 			nbt.put("deathpackage", deathpackage.saveOptional(lookupProvider));
-			nbt.putDouble("prestigepoints", prestigepoints);
+			nbt.put("persistentabilities", this.persistentabilities);
+			nbt.putBoolean("isplayerinitialized", isplayerinitialized);
+			nbt.put("persistentstats", this.persistentstats);
+			nbt.putDouble("placeholder", placeholder);
+			nbt.put("lifetimestats", this.lifetimestats);
 			return nbt;
 		}
 
 		@Override
 		public void deserializeNBT(HolderLookup.Provider lookupProvider, CompoundTag nbt) {
-			level = nbt.getDouble("level");
-			xp = nbt.getDouble("xp");
-			prestige = nbt.getDouble("prestige");
-			lobotomized = nbt.getBoolean("lobotomized");
-			money = nbt.getDouble("money");
-			keepinventory = nbt.getBoolean("keepinventory");
 			deathpackage = ItemStack.parseOptional(lookupProvider, nbt.getCompound("deathpackage"));
-			prestigepoints = nbt.getDouble("prestigepoints");
+			this.persistentabilities = nbt.get("persistentabilities") instanceof CompoundTag persistentabilities ? persistentabilities : new CompoundTag();
+			isplayerinitialized = nbt.getBoolean("isplayerinitialized");
+			this.persistentstats = nbt.get("persistentstats") instanceof CompoundTag persistentstats ? persistentstats : new CompoundTag();
+			placeholder = nbt.getDouble("placeholder");
+			this.lifetimestats = nbt.get("lifetimestats") instanceof CompoundTag lifetimestats ? lifetimestats : new CompoundTag();
 		}
 
 		public void syncPlayerVariables(Entity entity) {

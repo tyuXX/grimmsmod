@@ -3,6 +3,7 @@ package grimmsmod.procedures;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
+import net.minecraft.nbt.DoubleTag;
 
 import grimmsmod.network.GrimmsModVariables;
 
@@ -13,30 +14,17 @@ public class PrestigeHandleProcedure {
 		if (entity == null)
 			return;
 		if (IsPrestigeReadyProcedure.execute(entity)) {
-			{
-				GrimmsModVariables.PlayerVariables _vars = entity.getData(GrimmsModVariables.PLAYER_VARIABLES);
-				_vars.level = 1;
-				_vars.syncPlayerVariables(entity);
-			}
-			{
-				GrimmsModVariables.PlayerVariables _vars = entity.getData(GrimmsModVariables.PLAYER_VARIABLES);
-				_vars.xp = 0;
-				_vars.syncPlayerVariables(entity);
-			}
-			{
-				GrimmsModVariables.PlayerVariables _vars = entity.getData(GrimmsModVariables.PLAYER_VARIABLES);
-				_vars.prestige = entity.getData(GrimmsModVariables.PLAYER_VARIABLES).prestige + 1;
-				_vars.syncPlayerVariables(entity);
-			}
-			{
-				GrimmsModVariables.PlayerVariables _vars = entity.getData(GrimmsModVariables.PLAYER_VARIABLES);
-				_vars.prestigepoints = entity.getData(GrimmsModVariables.PLAYER_VARIABLES).prestigepoints + 1;
-				_vars.syncPlayerVariables(entity);
-			}
+			SetDataElementProcedure.execute(DoubleTag.valueOf(1), entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, false, "grimm:level");
+			SetDataElementProcedure.execute(DoubleTag.valueOf(0), entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, false, "grimm:xp");
+			ChangeNumberDataElementProcedure.execute(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, false, 1, "grimm:prestige");
+			ChangeNumberDataElementProcedure.execute(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, true, 1, "grimm:prestigepoints");
 			if (ServerConfigConfiguration.SPRESTIGE.get()) {
 				if (!world.isClientSide() && world.getServer() != null)
-					world.getServer().getPlayerList().broadcastSystemMessage(
-							Component.literal((entity.getDisplayName().getString() + " has prestiged to prestige " + new java.text.DecimalFormat("##").format(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).prestige))), false);
+					world.getServer().getPlayerList()
+							.broadcastSystemMessage(
+									Component.literal((entity.getDisplayName().getString() + " has prestiged to prestige "
+											+ (new java.text.DecimalFormat("##").format((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:prestige")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D)))),
+									false);
 			}
 		}
 	}

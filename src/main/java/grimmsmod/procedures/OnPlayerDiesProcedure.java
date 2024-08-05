@@ -12,6 +12,7 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.nbt.ByteTag;
 
 import javax.annotation.Nullable;
 
@@ -25,16 +26,16 @@ public class OnPlayerDiesProcedure {
 	@SubscribeEvent
 	public static void onEntityDeath(LivingDeathEvent event) {
 		if (event.getEntity() != null) {
-			execute(event, event.getEntity().level(), event.getEntity());
+			execute(event, event.getEntity().level(), event.getEntity(), event.getSource().getEntity());
 		}
 	}
 
-	public static void execute(LevelAccessor world, Entity entity) {
-		execute(null, world, entity);
+	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity) {
+		execute(null, world, entity, sourceentity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
-		if (entity == null)
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, Entity sourceentity) {
+		if (entity == null || sourceentity == null)
 			return;
 		ItemStack tmp = ItemStack.EMPTY;
 		double itemid = 0;
@@ -44,7 +45,7 @@ public class OnPlayerDiesProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 100, _player.inventoryMenu.getCraftSlots());
 			}
 		}
-		if (entity.getData(GrimmsModVariables.PLAYER_VARIABLES).keepinventory) {
+		if ((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.get("prestige:keepinventory")) instanceof ByteTag _byteTag ? _byteTag.getAsByte() == 1 : false) {
 			tmp = new ItemStack(GrimmsModItems.DEATH_PACKAGE.get());
 			if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler) {
 				for (int _idx = 0; _idx < _modHandler.getSlots(); _idx++) {
@@ -88,5 +89,7 @@ public class OnPlayerDiesProcedure {
 				}
 			}
 		}
+		ChangeNumberDataElementProcedure.execute(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, false, 1, "deaths");
+		ChangeNumberDataElementProcedure.execute(sourceentity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, true, 1, "kills");
 	}
 }
