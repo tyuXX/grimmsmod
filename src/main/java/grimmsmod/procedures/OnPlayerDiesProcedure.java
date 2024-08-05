@@ -1,6 +1,7 @@
 package grimmsmod.procedures;
 
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
+import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -9,10 +10,13 @@ import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.nbt.ByteTag;
+import net.minecraft.core.component.DataComponents;
 
 import javax.annotation.Nullable;
 
@@ -39,6 +43,13 @@ public class OnPlayerDiesProcedure {
 			return;
 		ItemStack tmp = ItemStack.EMPTY;
 		double itemid = 0;
+		double tmp2 = 0;
+		double tmp3 = 0;
+		{
+			final String _tagName = "grimms:kills";
+			final double _tagValue = ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:kills") + 1);
+			CustomData.update(DataComponents.CUSTOM_DATA, (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+		}
 		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(GrimmsModItems.DEATH_PACKAGE.get())) : false) {
 			if (entity instanceof Player _player) {
 				ItemStack _stktoremove = new ItemStack(GrimmsModItems.DEATH_PACKAGE.get());
@@ -76,7 +87,6 @@ public class OnPlayerDiesProcedure {
 							_setstack.setCount(itemstackiterator.getCount());
 							_modHandlerItemSetSlot.setStackInSlot((int) itemid, _setstack);
 						}
-						itemstackiterator.setCount(0);
 						itemid = itemid + 1;
 					}
 				}
@@ -88,8 +98,28 @@ public class OnPlayerDiesProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
+			itemid = 0;
+			for (int index0 = 0; index0 < 44; index0++) {
+				if (entity instanceof Player _player) {
+					ItemStack _stktoremove = (new Object() {
+						public ItemStack getItemStack(int sltid, ItemStack _isc) {
+							IItemHandler _itemHandler = _isc.getCapability(Capabilities.ItemHandler.ITEM, null);
+							if (_itemHandler != null)
+								return _itemHandler.getStackInSlot(sltid).copy();
+							return ItemStack.EMPTY;
+						}
+					}.getItemStack((int) itemid, tmp));
+					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (new Object() {
+						public ItemStack getItemStack(int sltid, ItemStack _isc) {
+							IItemHandler _itemHandler = _isc.getCapability(Capabilities.ItemHandler.ITEM, null);
+							if (_itemHandler != null)
+								return _itemHandler.getStackInSlot(sltid).copy();
+							return ItemStack.EMPTY;
+						}
+					}.getItemStack((int) itemid, tmp)).getCount(), _player.inventoryMenu.getCraftSlots());
+				}
+				itemid = itemid + 1;
+			}
 		}
-		ChangeNumberDataElementProcedure.execute(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, false, 1, "deaths");
-		ChangeNumberDataElementProcedure.execute(sourceentity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, true, 1, "kills");
 	}
 }

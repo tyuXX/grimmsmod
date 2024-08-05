@@ -8,7 +8,7 @@
     "texture": "netheritehammer",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
-    "name": "Wooden Hammer",
+    "name": "Netherite Hammer",
     "specialInformation": {
       "fixedValue": []
     },

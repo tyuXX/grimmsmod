@@ -2,6 +2,8 @@ package grimmsmod.configuration;
 
 import net.neoforged.neoforge.common.ModConfigSpec;
 
+import java.util.List;
+
 public class ServerConfigConfiguration {
 	public static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
 	public static final ModConfigSpec SPEC;
@@ -12,6 +14,7 @@ public class ServerConfigConfiguration {
 	public static final ModConfigSpec.ConfigValue<Boolean> SPRESTIGE;
 	public static final ModConfigSpec.ConfigValue<Boolean> SLEVEL;
 	public static final ModConfigSpec.ConfigValue<Double> SNLEVEL;
+	public static final ModConfigSpec.ConfigValue<List<? extends String>> CTVALUES;
 	static {
 		BUILDER.push("Performance");
 		INSTLEVELUP = BUILDER.comment("Use a while loop so no leftover xp is left").define("Instant Level Up", true);
@@ -25,6 +28,9 @@ public class ServerConfigConfiguration {
 		SPRESTIGE = BUILDER.comment("Sends chat message to all players when someone prestiges.").define("Shout Prestige", true);
 		SLEVEL = BUILDER.comment("Sends chat message to all players when someone levels up.").define("Shout Level", true);
 		SNLEVEL = BUILDER.comment("Shouts every <value> levels").define("Level for shout", (double) 10);
+		BUILDER.pop();
+		BUILDER.push("Transmutation");
+		CTVALUES = BUILDER.defineList("Custom TV's", List.of(), entry -> true);
 		BUILDER.pop();
 
 		SPEC = BUILDER.build();

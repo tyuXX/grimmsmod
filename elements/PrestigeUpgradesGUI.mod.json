@@ -1,0 +1,103 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 179,
+    "height": 121,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_next",
+          "text": "Next",
+          "isUndecorated": false,
+          "width": 46,
+          "height": 20,
+          "x": 204,
+          "y": 143
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_upgrade",
+          "text": "Upgrade",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "UpgradePrestigeAbiliy"
+          },
+          "width": 61,
+          "height": 20,
+          "x": 132,
+          "y": 143
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_prestigepoints_text_value",
+          "text": {
+            "fixedValue": "",
+            "name": "PrestigepointsTextValue"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 132,
+          "y": 71
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "N/A",
+          "name": "prestigeupgradeid",
+          "width": 120,
+          "height": 20,
+          "x": 132,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_prestige_upgrade_text_value",
+          "text": {
+            "fixedValue": "",
+            "name": "PrestigeUpgradeTextValue"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 132,
+          "y": 89
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "0",
+          "name": "sid",
+          "width": 120,
+          "height": 20,
+          "x": -1227,
+          "y": -316
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

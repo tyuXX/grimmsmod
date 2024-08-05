@@ -136,6 +136,28 @@
             "stringlist": []
           }
         ]
+      },
+      {
+        "category": "Transmutation",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 5,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "Use format {registry name}/{TV}",
+            "vardisplay": "Custom TV's",
+            "varname": "ctvalues",
+            "enablecomment": false,
+            "stringlist": []
+          }
+        ]
       }
     ],
     "file": "grimmsmod_server",

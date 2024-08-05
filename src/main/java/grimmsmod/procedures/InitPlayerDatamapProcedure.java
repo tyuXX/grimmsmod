@@ -2,6 +2,7 @@ package grimmsmod.procedures;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.nbt.StringTag;
 import net.minecraft.nbt.DoubleTag;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ByteTag;
@@ -17,6 +18,7 @@ public class InitPlayerDatamapProcedure {
 		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).isplayerinitialized) {
 			tmp2 = new CompoundTag();
 			tmp2.put("prestige:keepinventory", ByteTag.valueOf(false));
+			tmp2.put("name:prestige:keepinventory", StringTag.valueOf("Keep inventory upgrade"));
 			if (entity instanceof Player _player) {
 				GrimmsModVariables.PlayerVariables _vars = _player.getData(GrimmsModVariables.PLAYER_VARIABLES);
 				_vars.persistentabilities = tmp2;

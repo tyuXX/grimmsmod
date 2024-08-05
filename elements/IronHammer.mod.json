@@ -8,7 +8,7 @@
     "texture": "ironhammer",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
-    "name": "Wooden Hammer",
+    "name": "Iron Hammer",
     "specialInformation": {
       "fixedValue": []
     },
