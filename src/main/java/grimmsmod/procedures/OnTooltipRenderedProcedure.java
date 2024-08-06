@@ -46,8 +46,13 @@ public class OnTooltipRenderedProcedure {
 			tooltip.add(Component.literal(("\u00A77Item Kills: " + new java.text.DecimalFormat("##").format(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:kills")))));
 		}
 		if (GrimmsModVariables.ctvalues.contains((BuiltInRegistries.ITEM.getKey(itemstack.getItem()).toString()))) {
-			tooltip.add(Component.literal(("\u00A7eTV:\u00A7r"
-					+ (new java.text.DecimalFormat("##").format((GrimmsModVariables.ctvalues.get((BuiltInRegistries.ITEM.getKey(itemstack.getItem()).toString()))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D)))));
+			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("grimms:itemlvlinit")) {
+				tooltip.add(Component.literal(("\u00A7eTV:\u00A7r" + (new java.text.DecimalFormat("##").format(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:lvl")
+						* ((GrimmsModVariables.ctvalues.get((BuiltInRegistries.ITEM.getKey(itemstack.getItem()).toString()))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D))))));
+			} else {
+				tooltip.add(Component.literal(("\u00A7eTV:\u00A7r"
+						+ (new java.text.DecimalFormat("##").format((GrimmsModVariables.ctvalues.get((BuiltInRegistries.ITEM.getKey(itemstack.getItem()).toString()))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D)))));
+			}
 		}
 	}
 }

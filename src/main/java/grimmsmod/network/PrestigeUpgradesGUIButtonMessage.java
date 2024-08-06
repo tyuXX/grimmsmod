@@ -21,6 +21,7 @@ import java.util.HashMap;
 import grimmsmod.world.inventory.PrestigeUpgradesGUIMenu;
 
 import grimmsmod.procedures.UpgradePrestigeAbiliyProcedure;
+import grimmsmod.procedures.PrestigeUpgradeGUINextProcedure;
 
 import grimmsmod.GrimmsMod;
 
@@ -61,6 +62,10 @@ public record PrestigeUpgradesGUIButtonMessage(int buttonID, int x, int y, int z
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 0) {
+
+			PrestigeUpgradeGUINextProcedure.execute(entity, guistate);
+		}
 		if (buttonID == 1) {
 
 			UpgradePrestigeAbiliyProcedure.execute(entity, guistate);

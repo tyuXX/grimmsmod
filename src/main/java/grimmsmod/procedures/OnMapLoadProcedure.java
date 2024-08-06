@@ -38,6 +38,8 @@ public class OnMapLoadProcedure {
 			GrimmsModVariables.ctvalues.put((BuiltInRegistries.ITEM.getKey(Blocks.DIRT.asItem()).toString()), DoubleTag.valueOf(1));
 			GrimmsModVariables.ctvalues.put((BuiltInRegistries.ITEM.getKey(Blocks.COBBLESTONE.asItem()).toString()), DoubleTag.valueOf(1));
 			GrimmsModVariables.ctvalues.put((BuiltInRegistries.ITEM.getKey(Blocks.STONE.asItem()).toString()), DoubleTag.valueOf(2));
+			GrimmsModVariables.ctvalues.put((BuiltInRegistries.ITEM.getKey(Blocks.OAK_LOG.asItem()).toString()), DoubleTag.valueOf(4));
+			GrimmsModVariables.ctvalues.put((BuiltInRegistries.ITEM.getKey(Blocks.OAK_PLANKS.asItem()).toString()), DoubleTag.valueOf(1));
 			GrimmsMod.LOGGER.info("Initializing custom transmutation values");
 			for (String stringiterator : ServerConfigConfiguration.CTVALUES.get()) {
 				if (stringiterator.contains("/")) {
@@ -58,7 +60,7 @@ public class OnMapLoadProcedure {
 					}
 				}
 			}
-			GrimmsMod.LOGGER.info("Done! Took ");
+			GrimmsMod.LOGGER.info("Done!");
 		}
 	}
 }

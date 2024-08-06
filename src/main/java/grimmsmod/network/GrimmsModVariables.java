@@ -73,6 +73,7 @@ public class GrimmsModVariables {
 			clone.isplayerinitialized = original.isplayerinitialized;
 			clone.persistentstats = original.persistentstats;
 			clone.placeholder = original.placeholder;
+			clone.learnedtvs = original.learnedtvs;
 			if (!event.isWasDeath()) {
 				clone.lifetimestats = original.lifetimestats;
 			}
@@ -219,6 +220,7 @@ public class GrimmsModVariables {
 		public CompoundTag persistentstats = new CompoundTag();
 		public double placeholder = 0;
 		public CompoundTag lifetimestats = new CompoundTag();
+		public CompoundTag learnedtvs = new CompoundTag();
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -229,6 +231,7 @@ public class GrimmsModVariables {
 			nbt.put("persistentstats", this.persistentstats);
 			nbt.putDouble("placeholder", placeholder);
 			nbt.put("lifetimestats", this.lifetimestats);
+			nbt.put("learnedtvs", this.learnedtvs);
 			return nbt;
 		}
 
@@ -240,6 +243,7 @@ public class GrimmsModVariables {
 			this.persistentstats = nbt.get("persistentstats") instanceof CompoundTag persistentstats ? persistentstats : new CompoundTag();
 			placeholder = nbt.getDouble("placeholder");
 			this.lifetimestats = nbt.get("lifetimestats") instanceof CompoundTag lifetimestats ? lifetimestats : new CompoundTag();
+			this.learnedtvs = nbt.get("learnedtvs") instanceof CompoundTag learnedtvs ? learnedtvs : new CompoundTag();
 		}
 
 		public void syncPlayerVariables(Entity entity) {

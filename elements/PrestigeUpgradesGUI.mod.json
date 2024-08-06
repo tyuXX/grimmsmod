@@ -3,8 +3,8 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 179,
-    "height": 121,
+    "width": 278,
+    "height": 129,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -16,9 +16,12 @@
           "name": "button_next",
           "text": "Next",
           "isUndecorated": false,
+          "onClick": {
+            "name": "PrestigeUpgradeGUINext"
+          },
           "width": 46,
           "height": 20,
-          "x": 204,
+          "x": 177,
           "y": 143
         }
       },
@@ -33,7 +36,7 @@
           },
           "width": 61,
           "height": 20,
-          "x": 132,
+          "x": 87,
           "y": 143
         }
       },
@@ -49,8 +52,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 132,
-          "y": 71
+          "x": 87,
+          "y": 62
         }
       },
       {
@@ -60,8 +63,8 @@
           "name": "prestigeupgradeid",
           "width": 120,
           "height": 20,
-          "x": 132,
-          "y": 116
+          "x": 87,
+          "y": 107
         }
       },
       {
@@ -76,8 +79,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 132,
-          "y": 89
+          "x": 87,
+          "y": 80
         }
       },
       {

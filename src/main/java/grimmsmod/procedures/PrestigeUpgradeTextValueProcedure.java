@@ -16,8 +16,8 @@ public class PrestigeUpgradeTextValueProcedure {
 			return "Name:"
 					+ ((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities
 							.get(("name:" + (guistate.containsKey("text:prestigeupgradeid") ? ((EditBox) guistate.get("text:prestigeupgradeid")).getValue() : "")))) instanceof StringTag _stringTag ? _stringTag.getAsString() : "")
-					+ " Level:" + ((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities
-							.get((guistate.containsKey("text:prestigeupgradeid") ? ((EditBox) guistate.get("text:prestigeupgradeid")).getValue() : ""))) instanceof StringTag _stringTag ? _stringTag.getAsString() : "");
+					+ " Level:" + entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.get((guistate.containsKey("text:prestigeupgradeid") ? ((EditBox) guistate.get("text:prestigeupgradeid")).getValue() : "")) + " Max Level:"
+					+ entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.get(("max:" + (guistate.containsKey("text:prestigeupgradeid") ? ((EditBox) guistate.get("text:prestigeupgradeid")).getValue() : "")));
 		}
 		return "N/A";
 	}

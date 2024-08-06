@@ -860,12 +860,20 @@
             "type": "entity"
           },
           {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
             "name": "sourceentity",
             "type": "entity"
           },
           {
             "name": "amount",
             "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1669,7 +1677,312 @@
           }
         ]
       },
+      "path": "~/Procs"
+    },
+    {
+      "name": "XpBoost",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_boost",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/enchantment/XpBoostEnchantment.java"
+        ]
+      },
+      "path": "~/Enchantments"
+    },
+    {
+      "name": "PrestigeUpgradeGUINext",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prestige_upgrade_gui_next",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/PrestigeUpgradeGUINextProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "OpenPrestigeUpgradeGUI",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_prestige_upgrade_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/OpenPrestigeUpgradeGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "TestDummy",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_dummy",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/client/renderer/TestDummyRenderer.java",
+          "src/main/java/grimmsmod/entity/TestDummyEntity.java",
+          "src/main/resources/assets/grimms/models/item/test_dummy_spawn_egg.json"
+        ]
+      },
+      "path": "~/Entities"
+    },
+    {
+      "name": "TestDummyEntityIsHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_dummy_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/TestDummyEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "TransmutationGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transmutation_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/network/TransmutationGUISlotMessage.java",
+          "src/main/java/grimmsmod/client/gui/TransmutationGUIScreen.java",
+          "src/main/java/grimmsmod/world/inventory/TransmutationGUIMenu.java"
+        ]
+      },
       "path": "~/Gui"
+    },
+    {
+      "name": "TVTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tv_text_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/grimmsmod/procedures/TVTextValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "TransmutationGUIWhileThisGUIIsOpenTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transmutation_gui_while_this_gui_is_open_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/TransmutationGUIWhileThisGUIIsOpenTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "TransmutationGUIItemTakenFromSlot",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transmutation_gui_item_taken_from_slot",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/TransmutationGUIItemTakenFromSlotProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "OpenTransmutationGUI",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_transmutation_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/OpenTransmutationGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "TransmutationTablet",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transmutation_tablet",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/item/TransmutationTabletItem.java",
+          "src/main/resources/assets/grimms/models/item/transmutation_tablet.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "PrestigeDamageBoost",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prestige_damage_boost",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/damage_type/prestige_damage_boost.json"
+        ]
+      },
+      "path": "~/DamageTypes"
+    },
+    {
+      "name": "ItemLevelDamageBoost",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "item_level_damage_boost",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/damage_type/item_level_damage_boost.json"
+        ]
+      },
+      "path": "~/DamageTypes"
+    },
+    {
+      "name": "AddXpToItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_xp_to_item",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/AddXpToItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "AddXpToItemCommand",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_xp_to_item_command",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/command/AddXpToItemCommandCommand.java"
+        ]
+      },
+      "path": "~/Command"
     }
   ],
   "variable_elements": [
@@ -1720,6 +2033,12 @@
       "type": "datamap",
       "scope": "global",
       "value": "new CompoundTag()"
+    },
+    {
+      "name": "learnedtvs",
+      "type": "datamap",
+      "scope": "player_persistent",
+      "value": "new CompoundTag()"
     }
   ],
   "sound_elements": [],
@@ -1764,32 +2083,42 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "item.grimmsmod.handheld_microscope": "Handheld Microscope",
-      "item.grimmsmod.microscope": "Microscope",
+      "death.attack.prestige_damage_boost.player": "%1$s was killed by while trying to escape %2$s\u0027s prestige boost",
       "advancements.level_up_2.descr": "Level up to level 45",
+      "item.grimmsmod.microscope": "Microscope",
+      "item.grimmsmod.handheld_microscope": "Handheld Microscope",
       "item.grimms.scalpel": "Scalpel",
       "item.grimmsmod.scalpel": "Scalpel",
       "item_group.grimmsmod.grimms_mod": "Grimm\u0027s Mod",
+      "gui.grimms.transmutation_gui.itemid": "Item registry name",
       "advancements.prestige.title": "Prestige",
-      "item.grimmsmod.placeholder": "Placeholder",
       "death.attack.bleeding_damage.player": "%1$s lost too much blood whilst trying to escape %2$s",
+      "item.grimmsmod.placeholder": "Placeholder",
       "gui.grimmsmod.stats_gui.label_empty1": "/",
-      "item.grimmsmod.fancier_clock": "Fancier Clock",
       "gui.grimms.prestige_upgrades_gui.label_name_na_level0_maxlevel0": "Name: N/A Level:0 MaxLevel:0",
+      "item.grimmsmod.fancier_clock": "Fancier Clock",
+      "death.attack.item_level_damage_boost.item": "%1$s was killed by %2$s using %3$s",
       "advancements.level_up_2.title": "Level Up 2",
+      "death.attack.item_level_damage_boost.player": "%1$s died whilst trying to escape %2$s",
       "gui.grimmsmod.stats_gui.button_prestige": "Prestige",
+      "entity.grimms.test_dummy": "Test Dummy",
       "item.grimmsmod.builders_wand": "Builders Wand",
       "gui.grimms.prestige_upgrades_gui.button_upgrade": "Upgrade",
       "advancements.level_up.descr": "Level up for the first time",
       "gui.grimms.prestige_upgrades_gui.button_next": "Next",
-      "item.grimms.katana": "Katana",
+      "gui.grimms.transmutation_gui.label_liquidate_item": "Liquidate Item",
       "effect.grimms.bleeding": "Bleeding",
+      "item.grimms.katana": "Katana",
       "gui.grimms.stats_gui.button_prestige": "Prestige",
       "item.grimms.diamond_hammer": "Diamond Hammer",
+      "item.grimms.test_dummy_spawn_egg": "Test Dummy Spawn Egg",
       "item.grimms.builders_wand": "Builders Wand",
       "item.grimms.placeholder": "Placeholder",
+      "enchantment.grimms.xp_boost": "Xp Boost",
+      "death.attack.item_level_damage_boost": "%1$s died",
       "advancements.install_grimms_mod.descr": "Install Grimm\u0027s Mod on minecraft, reworked, remade, updated",
       "enchantment.grimms.soulbound": "Soulbound",
+      "gui.grimms.stats_gui.button_open_prestige_upgrades": "Open Prestige Upgrades",
       "item.grimms.fancier_clock": "Fancier Clock",
       "item.grimms.multi_use_scalpel": "Multi Use Scalpel",
       "item.grimms.fancy_clock": "Fancy Clock",
@@ -1797,7 +2126,9 @@
       "item.grimms.wooden_hammer": "Wooden Hammer",
       "item.grimms.netherite_hammer": "Netherite Hammer",
       "item.grimms.microscope": "Microscope",
+      "item.grimms.transmutation_tablet": "Transmutation Tablet",
       "gui.grimms.prestige_upgrades_gui.sid": "0",
+      "gui.grimms.transmutation_gui.label_tv": "TV:",
       "enchantment.grimms.sharp": "Sharp",
       "item_group.grimms.grimms_mod": "Grimm\u0027s Mod",
       "item.grimms.handheld_microscope": "Handheld Microscope",
@@ -1805,10 +2136,12 @@
       "item.grimmsmod.fancy_clock": "Fancy Clock",
       "key.grimms.open_stats": "Open Stats",
       "key.grimmsmod.open_stats": "Open Stats",
+      "death.attack.prestige_damage_boost": "%1$s died",
       "item_group.grimms.grimms_mod_special": "Grimms Mod Special",
       "advancements.level_up.title": "Level Up",
       "item.grimms.death_package": "Death Package",
       "item.grimms.disinfectant_scalpel": "Disinfectant Scalpel",
+      "death.attack.prestige_damage_boost.item": "%1$s was killed by %2$s\u0027s prestige boost using %3$s",
       "item.grimms.iron_hammer": "Iron Hammer",
       "death.attack.bleeding_damage.item": "%1$s was bled to death by %2$s using %3$s",
       "item.grimms.thrash": "Thrash",
@@ -1900,6 +2233,10 @@
       {
         "name": "Command",
         "children": []
+      },
+      {
+        "name": "Entities",
+        "children": []
       }
     ]
   },
@@ -1923,5 +2260,5 @@
     "credits": "Cheesecake",
     "modElementsPackage": "grimmsmod"
   },
-  "mcreatorVersion": 202400229712
+  "mcreatorVersion": 202400232117
 }

@@ -41,8 +41,8 @@ public class PrestigeUpgradesGUIScreen extends AbstractContainerScreen<PrestigeU
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 179;
-		this.imageHeight = 121;
+		this.imageWidth = 278;
+		this.imageHeight = 129;
 	}
 
 	private static final ResourceLocation texture = new ResourceLocation("grimms:textures/screens/prestige_upgrades_gui.png");
@@ -91,16 +91,16 @@ public class PrestigeUpgradesGUIScreen extends AbstractContainerScreen<PrestigeU
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font,
 
-				PrestigepointsTextValueProcedure.execute(entity), 8, 11, -12829636, false);
+				PrestigepointsTextValueProcedure.execute(entity), 12, 6, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				PrestigeUpgradeTextValueProcedure.execute(entity, guistate), 8, 29, -12829636, false);
+				PrestigeUpgradeTextValueProcedure.execute(entity, guistate), 12, 24, -12829636, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		prestigeupgradeid = new EditBox(this.font, this.leftPos + 9, this.topPos + 57, 118, 18, Component.translatable("gui.grimms.prestige_upgrades_gui.prestigeupgradeid")) {
+		prestigeupgradeid = new EditBox(this.font, this.leftPos + 13, this.topPos + 52, 118, 18, Component.translatable("gui.grimms.prestige_upgrades_gui.prestigeupgradeid")) {
 			@Override
 			public void insertText(String text) {
 				super.insertText(text);
@@ -123,7 +123,7 @@ public class PrestigeUpgradesGUIScreen extends AbstractContainerScreen<PrestigeU
 		prestigeupgradeid.setSuggestion(Component.translatable("gui.grimms.prestige_upgrades_gui.prestigeupgradeid").getString());
 		guistate.put("text:prestigeupgradeid", prestigeupgradeid);
 		this.addWidget(this.prestigeupgradeid);
-		sid = new EditBox(this.font, this.leftPos + -1350, this.topPos + -375, 118, 18, Component.translatable("gui.grimms.prestige_upgrades_gui.sid")) {
+		sid = new EditBox(this.font, this.leftPos + -1301, this.topPos + -371, 118, 18, Component.translatable("gui.grimms.prestige_upgrades_gui.sid")) {
 			@Override
 			public void insertText(String text) {
 				super.insertText(text);
@@ -147,7 +147,11 @@ public class PrestigeUpgradesGUIScreen extends AbstractContainerScreen<PrestigeU
 		guistate.put("text:sid", sid);
 		this.addWidget(this.sid);
 		button_next = Button.builder(Component.translatable("gui.grimms.prestige_upgrades_gui.button_next"), e -> {
-		}).bounds(this.leftPos + 80, this.topPos + 83, 46, 20).build();
+			if (true) {
+				PacketDistributor.sendToServer(new PrestigeUpgradesGUIButtonMessage(0, x, y, z));
+				PrestigeUpgradesGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
+		}).bounds(this.leftPos + 102, this.topPos + 87, 46, 20).build();
 		guistate.put("button:button_next", button_next);
 		this.addRenderableWidget(button_next);
 		button_upgrade = Button.builder(Component.translatable("gui.grimms.prestige_upgrades_gui.button_upgrade"), e -> {
@@ -155,7 +159,7 @@ public class PrestigeUpgradesGUIScreen extends AbstractContainerScreen<PrestigeU
 				PacketDistributor.sendToServer(new PrestigeUpgradesGUIButtonMessage(1, x, y, z));
 				PrestigeUpgradesGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		}).bounds(this.leftPos + 8, this.topPos + 83, 61, 20).build();
+		}).bounds(this.leftPos + 12, this.topPos + 87, 61, 20).build();
 		guistate.put("button:button_upgrade", button_upgrade);
 		this.addRenderableWidget(button_upgrade);
 	}

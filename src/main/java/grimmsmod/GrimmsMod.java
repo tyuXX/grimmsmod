@@ -31,6 +31,7 @@ import grimmsmod.init.GrimmsModTabs;
 import grimmsmod.init.GrimmsModMobEffects;
 import grimmsmod.init.GrimmsModMenus;
 import grimmsmod.init.GrimmsModItems;
+import grimmsmod.init.GrimmsModEntities;
 import grimmsmod.init.GrimmsModEnchantments;
 
 @Mod("grimms")
@@ -45,7 +46,7 @@ public class GrimmsMod {
 		modEventBus.addListener(this::registerNetworking);
 
 		GrimmsModItems.REGISTRY.register(modEventBus);
-
+		GrimmsModEntities.REGISTRY.register(modEventBus);
 		GrimmsModTabs.REGISTRY.register(modEventBus);
 		GrimmsModVariables.ATTACHMENT_TYPES.register(modEventBus);
 

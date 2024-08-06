@@ -31,6 +31,7 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.NETHERITE_HAMMER.get());
 				tabData.accept(GrimmsModItems.STEEL.get());
 				tabData.accept(GrimmsModItems.KATANA.get());
+				tabData.accept(GrimmsModItems.TRANSMUTATION_TABLET.get());
 			})
 
 					.build());
@@ -40,6 +41,7 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.PLACEHOLDER.get());
 				tabData.accept(GrimmsModItems.LOGO.get());
 				tabData.accept(GrimmsModItems.THRASH.get());
+				tabData.accept(GrimmsModItems.TEST_DUMMY_SPAWN_EGG.get());
 			})
 
 					.build());

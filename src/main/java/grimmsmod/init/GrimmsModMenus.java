@@ -11,6 +11,7 @@ import net.neoforged.neoforge.common.extensions.IMenuTypeExtension;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.core.registries.Registries;
 
+import grimmsmod.world.inventory.TransmutationGUIMenu;
 import grimmsmod.world.inventory.StatsGUIMenu;
 import grimmsmod.world.inventory.PrestigeUpgradesGUIMenu;
 import grimmsmod.world.inventory.DeathPackageGUIMenu;
@@ -22,4 +23,5 @@ public class GrimmsModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<StatsGUIMenu>> STATS_GUI = REGISTRY.register("stats_gui", () -> IMenuTypeExtension.create(StatsGUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<DeathPackageGUIMenu>> DEATH_PACKAGE_GUI = REGISTRY.register("death_package_gui", () -> IMenuTypeExtension.create(DeathPackageGUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<PrestigeUpgradesGUIMenu>> PRESTIGE_UPGRADES_GUI = REGISTRY.register("prestige_upgrades_gui", () -> IMenuTypeExtension.create(PrestigeUpgradesGUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<TransmutationGUIMenu>> TRANSMUTATION_GUI = REGISTRY.register("transmutation_gui", () -> IMenuTypeExtension.create(TransmutationGUIMenu::new));
 }

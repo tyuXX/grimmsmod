@@ -6,6 +6,7 @@ package grimmsmod.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
@@ -23,6 +24,7 @@ import grimmsmod.procedures.SteelPropertyValueProvider2Procedure;
 
 import grimmsmod.item.inventory.DeathPackageInventoryCapability;
 import grimmsmod.item.WoodenHammerItem;
+import grimmsmod.item.TransmutationTabletItem;
 import grimmsmod.item.ThrashItem;
 import grimmsmod.item.SteelItem;
 import grimmsmod.item.ScalpelItem;
@@ -64,6 +66,8 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> STEEL = REGISTRY.register("steel", SteelItem::new);
 	public static final DeferredHolder<Item, Item> KATANA = REGISTRY.register("katana", KatanaItem::new);
 	public static final DeferredHolder<Item, Item> DEATH_PACKAGE = REGISTRY.register("death_package", DeathPackageItem::new);
+	public static final DeferredHolder<Item, Item> TEST_DUMMY_SPAWN_EGG = REGISTRY.register("test_dummy_spawn_egg", () -> new DeferredSpawnEggItem(GrimmsModEntities.TEST_DUMMY, -10092391, -1, new Item.Properties()));
+	public static final DeferredHolder<Item, Item> TRANSMUTATION_TABLET = REGISTRY.register("transmutation_tablet", TransmutationTabletItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

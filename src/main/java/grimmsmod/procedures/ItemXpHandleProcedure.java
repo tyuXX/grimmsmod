@@ -53,8 +53,20 @@ public class ItemXpHandleProcedure {
 			if (levelups > 0) {
 				if (!itemstack.is(ItemTags.create(new ResourceLocation("grimms:customlevelable")))) {
 					if (itemstack.getItem() instanceof AxeItem || itemstack.getItem() instanceof ShovelItem || itemstack.getItem() instanceof PickaxeItem) {/*todo fill this in*/
-					} else if (itemstack.getItem() instanceof SwordItem || itemstack.getItem() instanceof AxeItem) {/*todo fill this in*/
-					} else if (itemstack.getItem() instanceof ArmorItem) {/*todo fill this in*/
+					} else if (itemstack.getItem() instanceof SwordItem || itemstack.getItem() instanceof AxeItem) {
+						{
+							final String _tagName = "grimms:itemdamageboost";
+							final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:itemdamageboost") + 1);
+							CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
+						}
+					} else if (itemstack.getItem() instanceof ArmorItem) {
+						if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:dodgechance") < 0.1) {
+							{
+								final String _tagName = "grimms:dodgechance";
+								final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:dodgechance") + 0.01);
+								CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
+							}
+						}
 					}
 				}
 				itemstack.setDamageValue(0);

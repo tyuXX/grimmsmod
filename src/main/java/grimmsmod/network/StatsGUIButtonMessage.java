@@ -21,6 +21,7 @@ import java.util.HashMap;
 import grimmsmod.world.inventory.StatsGUIMenu;
 
 import grimmsmod.procedures.PrestigeHandleProcedure;
+import grimmsmod.procedures.OpenPrestigeUpgradeGUIProcedure;
 
 import grimmsmod.GrimmsMod;
 
@@ -64,6 +65,10 @@ public record StatsGUIButtonMessage(int buttonID, int x, int y, int z) implement
 		if (buttonID == 0) {
 
 			PrestigeHandleProcedure.execute(world, entity);
+		}
+		if (buttonID == 1) {
+
+			OpenPrestigeUpgradeGUIProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

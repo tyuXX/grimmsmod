@@ -150,6 +150,21 @@
           "x": 129,
           "y": 139
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_open_prestige_upgrades",
+          "text": "Open Prestige Upgrades",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OpenPrestigeUpgradeGUI"
+          },
+          "width": 140,
+          "height": 20,
+          "x": 127,
+          "y": 163
+        }
       }
     ],
     "gridSettings": {

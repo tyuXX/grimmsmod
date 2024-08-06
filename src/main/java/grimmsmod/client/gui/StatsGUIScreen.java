@@ -31,6 +31,7 @@ public class StatsGUIScreen extends AbstractContainerScreen<StatsGUIMenu> {
 	private final int x, y, z;
 	private final Player entity;
 	Button button_prestige;
+	Button button_open_prestige_upgrades;
 
 	public StatsGUIScreen(StatsGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -105,5 +106,13 @@ public class StatsGUIScreen extends AbstractContainerScreen<StatsGUIMenu> {
 		}).bounds(this.leftPos + 30, this.topPos + 102, 67, 20).build();
 		guistate.put("button:button_prestige", button_prestige);
 		this.addRenderableWidget(button_prestige);
+		button_open_prestige_upgrades = Button.builder(Component.translatable("gui.grimms.stats_gui.button_open_prestige_upgrades"), e -> {
+			if (true) {
+				PacketDistributor.sendToServer(new StatsGUIButtonMessage(1, x, y, z));
+				StatsGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
+		}).bounds(this.leftPos + 28, this.topPos + 126, 140, 20).build();
+		guistate.put("button:button_open_prestige_upgrades", button_open_prestige_upgrades);
+		this.addRenderableWidget(button_open_prestige_upgrades);
 	}
 }
