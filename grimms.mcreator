@@ -2066,6 +2066,10 @@
     "ITEMS:minecraft:swords": [
       "~CUSTOM:Katana"
     ],
+    "DAMAGE_TYPES:mod:nonrecurrabledamage": [
+      "CUSTOM:ItemLevelDamageBoost",
+      "CUSTOM:PrestigeDamageBoost"
+    ],
     "DAMAGE_TYPES:mod:sharpdamage": [
       "ANVIL",
       "ARROW",
@@ -2243,7 +2247,7 @@
   "workspaceSettings": {
     "modid": "grimms",
     "modName": "Grimm\u0027s Mod",
-    "version": "1.0.0",
+    "version": "1",
     "description": "Grimm\u0027s newest and bestest Mod!",
     "author": "tyuXX",
     "websiteURL": "https://gsdistance.org",

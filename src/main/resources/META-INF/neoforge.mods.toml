@@ -4,7 +4,7 @@ license="GNU Lesser General Public License version 3 (LGPLv3)"
 
 [[mods]]
 modId="grimms"
-version="1.0.0"
+version="1"
 displayName="Grimm's Mod"
 displayURL="https://gsdistance.org"
 logoFile="logo.png"

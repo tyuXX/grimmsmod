@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "grimms:item_level_damage_boost",
+    "grimms:prestige_damage_boost"
+  ]
+}
