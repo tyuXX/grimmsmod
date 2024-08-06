@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "experience": 1,
+  "cookingtime": 750,
+  "ingredient": {
+    "item": "grimms:steel_dust"
+  },
+  "result": {
+    "id": "grimms:steel"
+  }
+}

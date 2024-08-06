@@ -1,0 +1,9 @@
+{
+  "parent": "grimms:custom/landmine",
+  "textures": {
+    "all": "grimms:block/landminestatic",
+    "particle": "grimms:block/landminestatic",
+    "0": "grimms:block/landminestatic"
+  },
+  "render_type": "solid"
+}

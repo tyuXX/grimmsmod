@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "id": "grimms:diamond_hammer"
+    },
+    "title": {
+      "translate": "advancements.subpar_hammeration.title"
+    },
+    "description": {
+      "translate": "advancements.subpar_hammeration.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "subpar_hammeration_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "grimms:diamond_hammer"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 250
+  },
+  "parent": "grimms:install_grimms_mod"
+}

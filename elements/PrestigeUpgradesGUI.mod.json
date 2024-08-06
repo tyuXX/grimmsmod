@@ -3,8 +3,8 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 278,
-    "height": 129,
+    "width": 436,
+    "height": 141,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -21,7 +21,7 @@
           },
           "width": 46,
           "height": 20,
-          "x": 177,
+          "x": 96,
           "y": 143
         }
       },
@@ -36,7 +36,7 @@
           },
           "width": 61,
           "height": 20,
-          "x": 87,
+          "x": 15,
           "y": 143
         }
       },
@@ -52,7 +52,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 87,
+          "x": 15,
           "y": 62
         }
       },
@@ -63,7 +63,7 @@
           "name": "prestigeupgradeid",
           "width": 120,
           "height": 20,
-          "x": 87,
+          "x": 15,
           "y": 107
         }
       },
@@ -79,7 +79,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 87,
+          "x": 15,
           "y": 80
         }
       },

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:smooth_stone"
+    },
+    "b": {
+      "tag": "grimms:hammers"
+    }
+  },
+  "result": {
+    "id": "grimms:mortar",
+    "count": 1
+  }
+}

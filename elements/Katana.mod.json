@@ -31,7 +31,7 @@
       }
     ],
     "immuneToFire": true,
-    "blockDropsTier": "WOOD",
+    "blockDropsTier": "NETHERITE",
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false

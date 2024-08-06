@@ -726,33 +726,11 @@
       "registry_name": "steel",
       "metadata": {
         "files": [
-          "src/main/resources/assets/grimms/models/item/steel_0.json",
-          "src/main/resources/assets/grimms/models/item/steel_1.json",
           "src/main/java/grimmsmod/item/SteelItem.java",
           "src/main/resources/assets/grimms/models/item/steel.json"
         ]
       },
       "path": "~/Items"
-    },
-    {
-      "name": "SteelPropertyValueProvider",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "steel_property_value_provider",
-      "metadata": {
-        "return_type": "number",
-        "files": [
-          "src/main/java/grimmsmod/procedures/SteelPropertyValueProviderProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/Procs"
     },
     {
       "name": "SteelSpecialInformation",
@@ -764,26 +742,6 @@
         "return_type": "string",
         "files": [
           "src/main/java/grimmsmod/procedures/SteelSpecialInformationProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/Procs"
-    },
-    {
-      "name": "SteelPropertyValueProvider2",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "steel_property_value_provider_2",
-      "metadata": {
-        "return_type": "number",
-        "files": [
-          "src/main/java/grimmsmod/procedures/SteelPropertyValueProvider2Procedure.java"
         ],
         "dependencies": [
           {
@@ -875,7 +833,8 @@
             "name": "world",
             "type": "world"
           }
-        ]
+        ],
+        "return_type": "actionresulttype"
       },
       "path": "~/Events"
     },
@@ -1613,7 +1572,12 @@
         "files": [
           "src/main/java/grimmsmod/procedures/OnMapLoadProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Events"
     },
@@ -1983,6 +1947,393 @@
         ]
       },
       "path": "~/Command"
+    },
+    {
+      "name": "LandMine",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "land_mine",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/loot_tables/blocks/land_mine.json",
+          "src/main/java/grimmsmod/block/LandMineBlock.java",
+          "src/main/resources/assets/grimms/models/block/land_mine.json",
+          "src/main/resources/assets/grimms/blockstates/land_mine.json",
+          "src/main/resources/assets/grimms/models/item/land_mine.json"
+        ]
+      },
+      "path": "~/Block"
+    },
+    {
+      "name": "LandMineEntityCollidesInTheBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "land_mine_entity_collides_in_the_block",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/LandMineEntityCollidesInTheBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "SeriousHammeration",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "serious_hammeration",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/advancements/serious_hammeration.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "SubparHammeration",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "subpar_hammeration",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/advancements/subpar_hammeration.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "InstallGrimmsModSpecial",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "install_grimms_mod_special",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/advancements/install_grimms_mod_special.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "ForgeryTable",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forgery_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/grimms/blockstates/forgery_table.json",
+          "src/main/resources/assets/grimms/models/item/forgery_table.json",
+          "src/main/java/grimmsmod/block/ForgeryTableBlock.java",
+          "src/main/resources/assets/grimms/models/block/forgery_table.json",
+          "src/main/resources/data/grimms/loot_tables/blocks/forgery_table.json"
+        ]
+      },
+      "path": "~/Block"
+    },
+    {
+      "name": "ForgeryTableGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forgery_table_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/world/inventory/ForgeryTableGUIMenu.java",
+          "src/main/java/grimmsmod/client/gui/ForgeryTableGUIScreen.java"
+        ]
+      },
+      "path": "~/Gui"
+    },
+    {
+      "name": "WoodHammerRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wood_hammer_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/wood_hammer_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "IronHammerRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_hammer_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/iron_hammer_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "DiamondHammerRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamond_hammer_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/diamond_hammer_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "NetheriteHammerRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_hammer_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/netherite_hammer_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "InitTransmutationValues",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "init_transmutation_values",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/InitTransmutationValuesProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "InitCraftingsCache",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "init_craftings_cache",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/InitCraftingsCacheProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "SteelDust",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_dust",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/item/SteelDustItem.java",
+          "src/main/resources/assets/grimms/models/item/steel_dust.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "CoalDust",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coal_dust",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/item/CoalDustItem.java",
+          "src/main/resources/assets/grimms/models/item/coal_dust.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "IronDust",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_dust",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/grimms/models/item/iron_dust.json",
+          "src/main/java/grimmsmod/item/IronDustItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "MortarAndPestle",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mortar_and_pestle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/grimms/models/item/mortar_and_pestle.json",
+          "src/main/java/grimmsmod/item/MortarAndPestleItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Mortar",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mortar",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/item/MortarItem.java",
+          "src/main/resources/assets/grimms/models/item/mortar.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "MortarRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mortar_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/mortar_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "MortarAndPestleRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mortar_and_pestle_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/mortar_and_pestle_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "CoaldustRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coaldust_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/coaldust_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "IronDustRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_dust_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/iron_dust_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "SteelDustRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_dust_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/steel_dust_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "SteelRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/steel_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "ForgeryTableRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forgery_table_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/forgery_table_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "ForgeryTableRecipeType",
+      "type": "jeirecipetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forgery_table_recipe_type",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/jei_recipes/ForgeryTableRecipeTypeRecipeCategory.java",
+          "src/main/java/grimmsmod/jei_recipes/ForgeryTableRecipeTypeRecipe.java"
+        ]
+      },
+      "path": "~/JeiIntegration"
+    },
+    {
+      "name": "ForgeryTableForgeButton",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forgery_table_forge_button",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/ForgeryTableForgeButtonProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs"
     }
   ],
   "variable_elements": [
@@ -2039,12 +2390,18 @@
       "type": "datamap",
       "scope": "player_persistent",
       "value": "new CompoundTag()"
+    },
+    {
+      "name": "craftingscache",
+      "type": "datalist",
+      "scope": "global",
+      "value": "new ListTag()"
     }
   ],
   "sound_elements": [],
   "tag_elements": {
-    "ITEMS:mod:customlevelable": [
-      "CUSTOM:Katana"
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:LandMine"
     ],
     "ITEMS:minecraft:pickaxes": [
       "~CUSTOM:NetheriteHammer",
@@ -2063,12 +2420,12 @@
       "EntitySkeleton",
       "EntityCreeper"
     ],
-    "ITEMS:minecraft:swords": [
-      "~CUSTOM:Katana"
-    ],
     "DAMAGE_TYPES:mod:nonrecurrabledamage": [
       "CUSTOM:ItemLevelDamageBoost",
       "CUSTOM:PrestigeDamageBoost"
+    ],
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:Katana"
     ],
     "DAMAGE_TYPES:mod:sharpdamage": [
       "ANVIL",
@@ -2091,17 +2448,22 @@
       "advancements.level_up_2.descr": "Level up to level 45",
       "item.grimmsmod.microscope": "Microscope",
       "item.grimmsmod.handheld_microscope": "Handheld Microscope",
+      "advancements.subpar_hammeration.title": "Subpar Hammeration",
       "item.grimms.scalpel": "Scalpel",
       "item.grimmsmod.scalpel": "Scalpel",
       "item_group.grimmsmod.grimms_mod": "Grimm\u0027s Mod",
       "gui.grimms.transmutation_gui.itemid": "Item registry name",
       "advancements.prestige.title": "Prestige",
+      "gui.grimms.forgery_table_gui.button_forge": "Forge",
+      "advancements.subpar_hammeration.descr": "Not there yet!",
       "death.attack.bleeding_damage.player": "%1$s lost too much blood whilst trying to escape %2$s",
       "item.grimmsmod.placeholder": "Placeholder",
       "gui.grimmsmod.stats_gui.label_empty1": "/",
+      "item.grimms.mortar_and_pestle": "Mortar And Pestle",
       "gui.grimms.prestige_upgrades_gui.label_name_na_level0_maxlevel0": "Name: N/A Level:0 MaxLevel:0",
       "item.grimmsmod.fancier_clock": "Fancier Clock",
       "death.attack.item_level_damage_boost.item": "%1$s was killed by %2$s using %3$s",
+      "advancements.install_grimms_mod_special.descr": "I wonder what this could be?",
       "advancements.level_up_2.title": "Level Up 2",
       "death.attack.item_level_damage_boost.player": "%1$s died whilst trying to escape %2$s",
       "gui.grimmsmod.stats_gui.button_prestige": "Prestige",
@@ -2116,6 +2478,7 @@
       "gui.grimms.stats_gui.button_prestige": "Prestige",
       "item.grimms.diamond_hammer": "Diamond Hammer",
       "item.grimms.test_dummy_spawn_egg": "Test Dummy Spawn Egg",
+      "advancements.serious_hammeration.descr": "Get it? Serious dedication, but hammer? ...? I will see myself out now...",
       "item.grimms.builders_wand": "Builders Wand",
       "item.grimms.placeholder": "Placeholder",
       "enchantment.grimms.xp_boost": "Xp Boost",
@@ -2128,6 +2491,7 @@
       "item.grimms.fancy_clock": "Fancy Clock",
       "gui.grimms.stats_gui.label_empty1": "/",
       "item.grimms.wooden_hammer": "Wooden Hammer",
+      "item.grimms.iron_dust": "Iron Dust",
       "item.grimms.netherite_hammer": "Netherite Hammer",
       "item.grimms.microscope": "Microscope",
       "item.grimms.transmutation_tablet": "Transmutation Tablet",
@@ -2141,17 +2505,24 @@
       "key.grimms.open_stats": "Open Stats",
       "key.grimmsmod.open_stats": "Open Stats",
       "death.attack.prestige_damage_boost": "%1$s died",
+      "item.grimms.mortar": "Mortar",
       "item_group.grimms.grimms_mod_special": "Grimms Mod Special",
       "advancements.level_up.title": "Level Up",
       "item.grimms.death_package": "Death Package",
       "item.grimms.disinfectant_scalpel": "Disinfectant Scalpel",
+      "block.grimms.forgery_table": "Forgery Table",
+      "block.grimms.land_mine": "Land Mine",
       "death.attack.prestige_damage_boost.item": "%1$s was killed by %2$s\u0027s prestige boost using %3$s",
+      "advancements.install_grimms_mod_special.title": "Grimms Mod Specials",
       "item.grimms.iron_hammer": "Iron Hammer",
       "death.attack.bleeding_damage.item": "%1$s was bled to death by %2$s using %3$s",
+      "advancements.serious_hammeration.title": "Serious Hammeration",
       "item.grimms.thrash": "Thrash",
       "item.grimmsmod.multi_use_scalpel": "Multi Use Scalpel",
       "enchantment.grimms.lifesteal": "Lifesteal",
+      "item.grimms.steel_dust": "Steel Dust",
       "advancements.prestige.descr": "Prestige for the first time for special benefits!",
+      "item.grimms.coal_dust": "Coal Dust",
       "death.attack.bleeding_damage": "%1$s lost too much blood",
       "gui.grimms.stats_gui.label_empty": "/",
       "key.categories.grimmsmod": "Grimm\u0027s Mod Keybinds",
@@ -2240,6 +2611,10 @@
       },
       {
         "name": "Entities",
+        "children": []
+      },
+      {
+        "name": "JeiIntegration",
         "children": []
       }
     ]

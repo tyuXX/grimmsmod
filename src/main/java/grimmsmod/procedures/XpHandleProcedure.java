@@ -14,7 +14,7 @@ public class XpHandleProcedure {
 		if (entity == null)
 			return;
 		ChangeNumberDataElementProcedure.execute(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, false, xpamount, "grimm:xp");
-		while (ServerConfigConfiguration.INSTLEVELUP.get() && ((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:xp")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) >= Math
+		while (((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:xp")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) >= Math
 				.round(Math.pow(((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:level")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) * 10, 1.3))) {
 			ChangeNumberDataElementProcedure.execute(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, false,
 					(-1) * Math.round(Math.pow(((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:level")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) * 10, 1.3)), "grimm:xp");
@@ -31,6 +31,9 @@ public class XpHandleProcedure {
 									Component.literal((entity.getDisplayName().getString() + " has reached level "
 											+ (new java.text.DecimalFormat("##").format((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:level")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D)))),
 									false);
+			}
+			if (!ServerConfigConfiguration.INSTLEVELUP.get()) {
+				break;
 			}
 		}
 		{

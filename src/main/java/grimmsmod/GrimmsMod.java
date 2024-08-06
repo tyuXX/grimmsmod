@@ -33,6 +33,7 @@ import grimmsmod.init.GrimmsModMenus;
 import grimmsmod.init.GrimmsModItems;
 import grimmsmod.init.GrimmsModEntities;
 import grimmsmod.init.GrimmsModEnchantments;
+import grimmsmod.init.GrimmsModBlocks;
 
 @Mod("grimms")
 public class GrimmsMod {
@@ -44,6 +45,8 @@ public class GrimmsMod {
 		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
+
+		GrimmsModBlocks.REGISTRY.register(modEventBus);
 
 		GrimmsModItems.REGISTRY.register(modEventBus);
 		GrimmsModEntities.REGISTRY.register(modEventBus);

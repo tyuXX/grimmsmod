@@ -5,7 +5,7 @@
     "name": "Xp Boost",
     "type": "SHARP",
     "rarity": "RARE",
-    "maxLevel": 13,
+    "maxLevel": 10,
     "damageModifier": 0,
     "compatibleEnchantments": [],
     "excludeEnchantments": false,

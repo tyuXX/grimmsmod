@@ -138,7 +138,7 @@
         ]
       },
       {
-        "category": "Transmutation",
+        "category": "Caches",
         "entries": [
           {
             "item": {
@@ -154,6 +154,23 @@
             "comment": "Use format {registry name}/{TV}",
             "vardisplay": "Custom TV's",
             "varname": "ctvalues",
+            "enablecomment": true,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 5,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Custom Crafting's",
+            "varname": "customcraftvalues",
             "enablecomment": false,
             "stringlist": []
           }

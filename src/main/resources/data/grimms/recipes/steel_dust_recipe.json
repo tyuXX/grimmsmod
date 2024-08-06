@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "grimms:mortar_and_pestle"
+    },
+    {
+      "item": "grimms:coal_dust"
+    },
+    {
+      "item": "grimms:iron_dust"
+    }
+  ],
+  "result": {
+    "id": "grimms:steel_dust",
+    "count": 1
+  }
+}

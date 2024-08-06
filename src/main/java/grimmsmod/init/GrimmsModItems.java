@@ -9,38 +9,37 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
 
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.item.ItemProperties;
-
-import grimmsmod.procedures.SteelPropertyValueProviderProcedure;
-import grimmsmod.procedures.SteelPropertyValueProvider2Procedure;
+import net.minecraft.world.item.BlockItem;
 
 import grimmsmod.item.inventory.DeathPackageInventoryCapability;
 import grimmsmod.item.WoodenHammerItem;
 import grimmsmod.item.TransmutationTabletItem;
 import grimmsmod.item.ThrashItem;
 import grimmsmod.item.SteelItem;
+import grimmsmod.item.SteelDustItem;
 import grimmsmod.item.ScalpelItem;
 import grimmsmod.item.PlaceholderItem;
 import grimmsmod.item.NetheriteHammerItem;
 import grimmsmod.item.MultiUseScalpelItem;
+import grimmsmod.item.MortarItem;
+import grimmsmod.item.MortarAndPestleItem;
 import grimmsmod.item.MicroscopeItem;
 import grimmsmod.item.LogoItem;
 import grimmsmod.item.KatanaItem;
 import grimmsmod.item.IronHammerItem;
+import grimmsmod.item.IronDustItem;
 import grimmsmod.item.HandheldMicroscopeItem;
 import grimmsmod.item.FancyClockItem;
 import grimmsmod.item.FancierClockItem;
 import grimmsmod.item.DisinfectantScalpelItem;
 import grimmsmod.item.DiamondHammerItem;
 import grimmsmod.item.DeathPackageItem;
+import grimmsmod.item.CoalDustItem;
 import grimmsmod.item.BuildersWandItem;
 
 import grimmsmod.GrimmsMod;
@@ -68,6 +67,13 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> DEATH_PACKAGE = REGISTRY.register("death_package", DeathPackageItem::new);
 	public static final DeferredHolder<Item, Item> TEST_DUMMY_SPAWN_EGG = REGISTRY.register("test_dummy_spawn_egg", () -> new DeferredSpawnEggItem(GrimmsModEntities.TEST_DUMMY, -10092391, -1, new Item.Properties()));
 	public static final DeferredHolder<Item, Item> TRANSMUTATION_TABLET = REGISTRY.register("transmutation_tablet", TransmutationTabletItem::new);
+	public static final DeferredHolder<Item, Item> LAND_MINE = block(GrimmsModBlocks.LAND_MINE);
+	public static final DeferredHolder<Item, Item> FORGERY_TABLE = block(GrimmsModBlocks.FORGERY_TABLE);
+	public static final DeferredHolder<Item, Item> STEEL_DUST = REGISTRY.register("steel_dust", SteelDustItem::new);
+	public static final DeferredHolder<Item, Item> COAL_DUST = REGISTRY.register("coal_dust", CoalDustItem::new);
+	public static final DeferredHolder<Item, Item> IRON_DUST = REGISTRY.register("iron_dust", IronDustItem::new);
+	public static final DeferredHolder<Item, Item> MORTAR_AND_PESTLE = REGISTRY.register("mortar_and_pestle", MortarAndPestleItem::new);
+	public static final DeferredHolder<Item, Item> MORTAR = REGISTRY.register("mortar", MortarItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
@@ -76,15 +82,7 @@ public class GrimmsModItems {
 		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new DeathPackageInventoryCapability(stack), DEATH_PACKAGE.get());
 	}
 
-	@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-	public static class ItemsClientSideHandler {
-		@SubscribeEvent
-		@OnlyIn(Dist.CLIENT)
-		public static void clientLoad(FMLClientSetupEvent event) {
-			event.enqueueWork(() -> {
-				ItemProperties.register(STEEL.get(), new ResourceLocation("grimms:steel_hot"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) SteelPropertyValueProviderProcedure.execute(itemStackToRender));
-				ItemProperties.register(STEEL.get(), new ResourceLocation("grimms:steel_tempered"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) SteelPropertyValueProvider2Procedure.execute(itemStackToRender));
-			});
-		}
+	private static DeferredHolder<Item, Item> block(DeferredHolder<Block, Block> block) {
+		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
 	}
 }

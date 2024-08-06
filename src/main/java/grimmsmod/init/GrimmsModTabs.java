@@ -32,6 +32,13 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.STEEL.get());
 				tabData.accept(GrimmsModItems.KATANA.get());
 				tabData.accept(GrimmsModItems.TRANSMUTATION_TABLET.get());
+				tabData.accept(GrimmsModBlocks.LAND_MINE.get().asItem());
+				tabData.accept(GrimmsModBlocks.FORGERY_TABLE.get().asItem());
+				tabData.accept(GrimmsModItems.STEEL_DUST.get());
+				tabData.accept(GrimmsModItems.COAL_DUST.get());
+				tabData.accept(GrimmsModItems.IRON_DUST.get());
+				tabData.accept(GrimmsModItems.MORTAR_AND_PESTLE.get());
+				tabData.accept(GrimmsModItems.MORTAR.get());
 			})
 
 					.build());

@@ -21,6 +21,7 @@ public class OnGameStartProcedure {
 	}
 
 	private static void execute(@Nullable Event event) {
+		InitCraftingsCacheProcedure.execute();
 		GrimmsMod.LOGGER.info("Grimm's Mod loaded succsesfully!");
 	}
 }

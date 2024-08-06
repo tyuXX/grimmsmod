@@ -17,6 +17,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.tags.TagKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
@@ -40,13 +41,13 @@ public class OnEntityAttackedProcedure {
 		}
 	}
 
-	public static void execute(LevelAccessor world, DamageSource damagesource, Entity entity, Entity immediatesourceentity, Entity sourceentity, double amount) {
-		execute(null, world, damagesource, entity, immediatesourceentity, sourceentity, amount);
+	public static InteractionResult execute(LevelAccessor world, DamageSource damagesource, Entity entity, Entity immediatesourceentity, Entity sourceentity, double amount) {
+		return execute(null, world, damagesource, entity, immediatesourceentity, sourceentity, amount);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, DamageSource damagesource, Entity entity, Entity immediatesourceentity, Entity sourceentity, double amount) {
+	private static InteractionResult execute(@Nullable Event event, LevelAccessor world, DamageSource damagesource, Entity entity, Entity immediatesourceentity, Entity sourceentity, double amount) {
 		if (damagesource == null || entity == null || immediatesourceentity == null || sourceentity == null)
-			return;
+			return InteractionResult.PASS;
 		double tmp = 0;
 		if (!((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
 			tmp = tmp + (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:dodgechance");
@@ -65,46 +66,47 @@ public class OnEntityAttackedProcedure {
 				if (event instanceof ICancellableEvent _cancellable) {
 					_cancellable.setCanceled(true);
 				}
+				return InteractionResult.PASS;
 			}
-		} else {
-			if (EnchantmentHelper.getItemEnchantmentLevel(GrimmsModEnchantments.LIFESTEAL.get(), (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0) {
-				if (sourceentity instanceof LivingEntity _entity)
-					_entity.setHealth((float) ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)
-							+ (amount * (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(GrimmsModEnchantments.LIFESTEAL.get())) / 30));
-			}
-			if (EnchantmentHelper.getItemEnchantmentLevel(GrimmsModEnchantments.SHARP.get(), (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0) {
-				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(
-							new MobEffectInstance(GrimmsModMobEffects.BLEEDING, (int) (60 * (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(GrimmsModEnchantments.SHARP.get())),
-									(int) Math.ceil((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(GrimmsModEnchantments.SHARP.get())
-											/ (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0)),
-									true, false));
-			} else if (damagesource.is(TagKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("grimms:sharpdamage")))) {
-				if (Math.random() < 0.2 / (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0)) {
-					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(GrimmsModMobEffects.BLEEDING, 120, 1, true, false));
-				}
-			}
-			if (EnchantmentHelper.getItemEnchantmentLevel(GrimmsModEnchantments.XP_BOOST.get(), (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0) {
-				if (sourceentity instanceof Player _player)
-					_player.giveExperiencePoints((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(GrimmsModEnchantments.XP_BOOST.get()));
-			}
-			if (!damagesource.is(TagKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("grimms:nonrecurrabledamage")))) {
-				entity.hurt(
-						new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("grimms:prestige_damage_boost"))), immediatesourceentity,
-								sourceentity),
-						(float) ((((sourceentity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:level")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D)
-								* ((sourceentity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.get("prestige:powerful")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D)) / 10));
-				entity.hurt(
-						new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("grimms:item_level_damage_boost"))), immediatesourceentity,
-								sourceentity),
-						(float) ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:itemdamageboost")));
-			}
-			ItemXpHandleProcedure.execute(sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY, amount);
-			ItemXpHandleProcedure.execute(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY, amount);
-			ItemXpHandleProcedure.execute(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY, amount);
-			ItemXpHandleProcedure.execute(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY, amount);
-			ItemXpHandleProcedure.execute(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY, amount);
+			return InteractionResult.PASS;
 		}
+		if (EnchantmentHelper.getItemEnchantmentLevel(GrimmsModEnchantments.LIFESTEAL.get(), (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0) {
+			if (sourceentity instanceof LivingEntity _entity)
+				_entity.setHealth((float) ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)
+						+ (amount * (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(GrimmsModEnchantments.LIFESTEAL.get())) / 30));
+		}
+		if (EnchantmentHelper.getItemEnchantmentLevel(GrimmsModEnchantments.SHARP.get(), (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0) {
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(GrimmsModMobEffects.BLEEDING, (int) (60 * (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(GrimmsModEnchantments.SHARP.get())),
+						(int) Math.ceil((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(GrimmsModEnchantments.SHARP.get())
+								/ (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0)),
+						true, false));
+		} else if (damagesource.is(TagKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("grimms:sharpdamage")))) {
+			if (Math.random() < 0.2 / (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0)) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(GrimmsModMobEffects.BLEEDING, 120, 1, true, false));
+			}
+		}
+		if (EnchantmentHelper.getItemEnchantmentLevel(GrimmsModEnchantments.XP_BOOST.get(), (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0) {
+			if (sourceentity instanceof Player _player)
+				_player.giveExperiencePoints((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(GrimmsModEnchantments.XP_BOOST.get()));
+		}
+		if (!damagesource.is(TagKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("grimms:nonrecurrabledamage")))) {
+			entity.hurt(
+					new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("grimms:prestige_damage_boost"))), immediatesourceentity,
+							sourceentity),
+					(float) ((((sourceentity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:level")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D)
+							* ((sourceentity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.get("prestige:powerful")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D)) / 10));
+			entity.hurt(
+					new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("grimms:item_level_damage_boost"))), immediatesourceentity,
+							sourceentity),
+					(float) ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:itemdamageboost")));
+		}
+		ItemXpHandleProcedure.execute(sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY, amount);
+		ItemXpHandleProcedure.execute(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY, amount);
+		ItemXpHandleProcedure.execute(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY, amount);
+		ItemXpHandleProcedure.execute(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY, amount);
+		ItemXpHandleProcedure.execute(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY, amount);
+		return InteractionResult.SUCCESS;
 	}
 }

@@ -15,6 +15,7 @@ public class ServerConfigConfiguration {
 	public static final ModConfigSpec.ConfigValue<Boolean> SLEVEL;
 	public static final ModConfigSpec.ConfigValue<Double> SNLEVEL;
 	public static final ModConfigSpec.ConfigValue<List<? extends String>> CTVALUES;
+	public static final ModConfigSpec.ConfigValue<List<? extends String>> CUSTOMCRAFTVALUES;
 	static {
 		BUILDER.push("Performance");
 		INSTLEVELUP = BUILDER.comment("Use a while loop so no leftover xp is left").define("Instant Level Up", true);
@@ -29,8 +30,9 @@ public class ServerConfigConfiguration {
 		SLEVEL = BUILDER.comment("Sends chat message to all players when someone levels up.").define("Shout Level", true);
 		SNLEVEL = BUILDER.comment("Shouts every <value> levels").define("Level for shout", (double) 10);
 		BUILDER.pop();
-		BUILDER.push("Transmutation");
-		CTVALUES = BUILDER.defineList("Custom TV's", List.of(), entry -> true);
+		BUILDER.push("Caches");
+		CTVALUES = BUILDER.comment("Use format {registry name}/{TV}").defineList("Custom TV's", List.of(), entry -> true);
+		CUSTOMCRAFTVALUES = BUILDER.defineList("Custom Crafting's", List.of(), entry -> true);
 		BUILDER.pop();
 
 		SPEC = BUILDER.build();

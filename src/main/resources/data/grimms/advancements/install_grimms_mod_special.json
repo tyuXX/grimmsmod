@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "grimms:textures/screens/grimsmod.png",
+    "icon": {
+      "id": "grimms:builders_wand"
+    },
+    "title": {
+      "translate": "advancements.install_grimms_mod_special.title"
+    },
+    "description": {
+      "translate": "advancements.install_grimms_mod_special.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "install_grimms_mod_special_0": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

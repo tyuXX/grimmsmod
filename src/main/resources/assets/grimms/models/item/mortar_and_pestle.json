@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "grimms:item/hotsteel"
+    "layer0": "grimms:item/mortarandpestle"
   }
 }

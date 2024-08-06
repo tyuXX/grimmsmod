@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "grimms:blocks/forgery_table",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "grimms:forgery_table"
+        }
+      ]
+    }
+  ]
+}

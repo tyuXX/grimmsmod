@@ -1,0 +1,18 @@
+{
+  "_fv": 66,
+  "_type": "jeirecipetype",
+  "definition": {
+    "textureSelector": "forgery_table_gui.png",
+    "width": 0,
+    "height": 0,
+    "icon": {
+      "value": "CUSTOM:ForgeryTable"
+    },
+    "craftingtable": {
+      "value": "CUSTOM:ForgeryTable"
+    },
+    "enableCraftingtable": true,
+    "title": "Forgery Table",
+    "slotList": []
+  }
+}

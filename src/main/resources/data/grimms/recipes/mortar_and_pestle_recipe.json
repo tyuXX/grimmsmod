@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "grimms:mortar"
+    },
+    {
+      "item": "grimms:iron_hammer"
+    }
+  ],
+  "result": {
+    "id": "grimms:mortar_and_pestle",
+    "count": 1
+  }
+}

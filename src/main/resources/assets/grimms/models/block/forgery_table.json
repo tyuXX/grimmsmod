@@ -1,0 +1,9 @@
+{
+  "parent": "grimms:custom/forgerytable",
+  "textures": {
+    "all": "grimms:block/forgerytable",
+    "particle": "grimms:block/forgerytable",
+    "0": "grimms:block/forgerytable"
+  },
+  "render_type": "solid"
+}

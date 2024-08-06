@@ -18,7 +18,7 @@ import grimmsmod.procedures.FancyClockSpecialInformationProcedure;
 
 public class FancyClockItem extends Item {
 	public FancyClockItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC));
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE));
 	}
 
 	@Override

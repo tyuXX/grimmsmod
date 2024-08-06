@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "minecraft:crafting_table"
+    },
+    {
+      "item": "minecraft:anvil"
+    },
+    {
+      "item": "grimms:netherite_hammer"
+    }
+  ],
+  "result": {
+    "id": "grimms:forgery_table",
+    "count": 1
+  }
+}
