@@ -43,6 +43,7 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModBlocks.DISTILLERY.get().asItem());
 				tabData.accept(GrimmsModItems.TIN_CAN.get());
 				tabData.accept(GrimmsModItems.METAL_PIPE.get());
+				tabData.accept(GrimmsModBlocks.TV_LIQUIDATOR.get().asItem());
 			})
 
 					.build());

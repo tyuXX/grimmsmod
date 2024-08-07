@@ -80,6 +80,7 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> DISTILLERY = block(GrimmsModBlocks.DISTILLERY);
 	public static final DeferredHolder<Item, Item> TIN_CAN = REGISTRY.register("tin_can", TinCanItem::new);
 	public static final DeferredHolder<Item, Item> METAL_PIPE = REGISTRY.register("metal_pipe", MetalPipeItem::new);
+	public static final DeferredHolder<Item, Item> TV_LIQUIDATOR = block(GrimmsModBlocks.TV_LIQUIDATOR);
 
 	// Start of user code block custom items
 	// End of user code block custom items

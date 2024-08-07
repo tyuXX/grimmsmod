@@ -33,10 +33,10 @@ public class TransmutationGUIWhileThisGUIIsOpenTickProcedure {
 				return 0;
 			}
 		}.getAmount(0) > 0) {
-			if (GrimmsModVariables.ctvalues.contains((BuiltInRegistries.ITEM
-					.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem()).toString()))) {
-				SetDataElementProcedure.execute(ByteTag.valueOf(true), entity.getData(GrimmsModVariables.PLAYER_VARIABLES).learnedtvs, entity, false, BuiltInRegistries.ITEM
-						.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem()).toString());
+			if (GrimmsModVariables.ctvalues.contains(("tv:" + (BuiltInRegistries.ITEM
+					.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem()).toString())))) {
+				SetDataElementProcedure.execute(ByteTag.valueOf(true), entity.getData(GrimmsModVariables.PLAYER_VARIABLES).learnedtvs, entity, false, "tv:" + (BuiltInRegistries.ITEM
+						.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem()).toString()));
 				if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
 						.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("grimms:itemlvlinit")) {
 					ChangeNumberDataElementProcedure.execute(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, true,
@@ -51,9 +51,9 @@ public class TransmutationGUIWhileThisGUIIsOpenTickProcedure {
 											return 0;
 										}
 									}.getAmount(0)
-									* ((GrimmsModVariables.ctvalues.get((BuiltInRegistries.ITEM
+									* ((GrimmsModVariables.ctvalues.get(("tv:" + (BuiltInRegistries.ITEM
 											.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem())
-											.toString()))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D),
+											.toString())))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D),
 							"grimm:totaltv");
 				} else {
 					ChangeNumberDataElementProcedure.execute(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, true, new Object() {
@@ -65,9 +65,9 @@ public class TransmutationGUIWhileThisGUIIsOpenTickProcedure {
 							}
 							return 0;
 						}
-					}.getAmount(0) * ((GrimmsModVariables.ctvalues.get((BuiltInRegistries.ITEM
+					}.getAmount(0) * ((GrimmsModVariables.ctvalues.get(("tv:" + (BuiltInRegistries.ITEM
 							.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem())
-							.toString()))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D), "grimm:totaltv");
+							.toString())))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D), "grimm:totaltv");
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 					((Slot) _slots.get(0)).set(ItemStack.EMPTY);
@@ -76,12 +76,19 @@ public class TransmutationGUIWhileThisGUIIsOpenTickProcedure {
 			}
 		}
 		if (!(BuiltInRegistries.ITEM.get(new ResourceLocation(((guistate.containsKey("text:itemid") ? ((EditBox) guistate.get("text:itemid")).getValue() : "")).toLowerCase(java.util.Locale.ENGLISH))) == Blocks.AIR.asItem())) {
-			if (entity.getData(GrimmsModVariables.PLAYER_VARIABLES).learnedtvs.contains((guistate.containsKey("text:itemid") ? ((EditBox) guistate.get("text:itemid")).getValue() : ""))) {
-				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(BuiltInRegistries.ITEM.get(new ResourceLocation(((guistate.containsKey("text:itemid") ? ((EditBox) guistate.get("text:itemid")).getValue() : "")).toLowerCase(java.util.Locale.ENGLISH)))).copy();
-					_setstack.setCount(1);
-					((Slot) _slots.get(1)).set(_setstack);
-					_player.containerMenu.broadcastChanges();
+			if (((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:totaltv")) instanceof DoubleTag _doubleTag
+					? _doubleTag.getAsDouble()
+					: 0.0D) >= ((GrimmsModVariables.ctvalues.get(("tv:" + (BuiltInRegistries.ITEM
+							.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem())
+							.toString())))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D)) {
+				if (entity.getData(GrimmsModVariables.PLAYER_VARIABLES).learnedtvs.contains((guistate.containsKey("text:itemid") ? ((EditBox) guistate.get("text:itemid")).getValue() : ""))) {
+					if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+						ItemStack _setstack = new ItemStack(BuiltInRegistries.ITEM.get(new ResourceLocation(((guistate.containsKey("text:itemid") ? ((EditBox) guistate.get("text:itemid")).getValue() : "")).toLowerCase(java.util.Locale.ENGLISH))))
+								.copy();
+						_setstack.setCount(1);
+						((Slot) _slots.get(1)).set(_setstack);
+						_player.containerMenu.broadcastChanges();
+					}
 				}
 			}
 		} else {

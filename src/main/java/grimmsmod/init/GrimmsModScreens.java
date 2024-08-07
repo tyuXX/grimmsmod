@@ -10,6 +10,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
 import grimmsmod.client.gui.TransmutationGUIScreen;
+import grimmsmod.client.gui.TVLiquidatorGUIScreen;
 import grimmsmod.client.gui.StatsGUIScreen;
 import grimmsmod.client.gui.RefineryGUIScreen;
 import grimmsmod.client.gui.PrestigeUpgradesGUIScreen;
@@ -28,5 +29,6 @@ public class GrimmsModScreens {
 		event.register(GrimmsModMenus.FORGERY_TABLE_GUI.get(), ForgeryTableGUIScreen::new);
 		event.register(GrimmsModMenus.REFINERY_GUI.get(), RefineryGUIScreen::new);
 		event.register(GrimmsModMenus.DISTILLERY_GUI.get(), DistilleryGUIScreen::new);
+		event.register(GrimmsModMenus.TV_LIQUIDATOR_GUI.get(), TVLiquidatorGUIScreen::new);
 	}
 }

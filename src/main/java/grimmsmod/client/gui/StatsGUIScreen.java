@@ -75,24 +75,24 @@ public class StatsGUIScreen extends AbstractContainerScreen<StatsGUIMenu> {
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font,
 
-				LevelTextValueProcedure.execute(entity), 31, 11, -12829636, false);
+				LevelTextValueProcedure.execute(entity), 15, 7, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				XpTextValueProcedure.execute(entity), 33, 27, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.grimms.stats_gui.label_empty"), 93, 28, -12829636, false);
+				XpTextValueProcedure.execute(entity), 15, 25, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.grimms.stats_gui.label_empty"), 78, 25, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				XpReqTextValueProcedure.execute(entity), 100, 28, -12829636, false);
+				XpReqTextValueProcedure.execute(entity), 87, 25, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				PrestigeTextValueProcedure.execute(entity), 30, 67, -12829636, false);
+				PrestigeTextValueProcedure.execute(entity), 15, 52, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				PrestigeReqTextValueProcedure.execute(entity), 114, 83, -12829636, false);
+				PrestigeReqTextValueProcedure.execute(entity), 105, 70, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				LevelTextValueProcedure.execute(entity), 31, 83, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.grimms.stats_gui.label_empty1"), 107, 85, -12829636, false);
+				LevelTextValueProcedure.execute(entity), 15, 70, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.grimms.stats_gui.label_empty1"), 96, 70, -12829636, false);
 	}
 
 	@Override
@@ -103,7 +103,7 @@ public class StatsGUIScreen extends AbstractContainerScreen<StatsGUIMenu> {
 				PacketDistributor.sendToServer(new StatsGUIButtonMessage(0, x, y, z));
 				StatsGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 30, this.topPos + 102, 67, 20).build();
+		}).bounds(this.leftPos + 15, this.topPos + 106, 67, 20).build();
 		guistate.put("button:button_prestige", button_prestige);
 		this.addRenderableWidget(button_prestige);
 		button_open_prestige_upgrades = Button.builder(Component.translatable("gui.grimms.stats_gui.button_open_prestige_upgrades"), e -> {
@@ -111,7 +111,7 @@ public class StatsGUIScreen extends AbstractContainerScreen<StatsGUIMenu> {
 				PacketDistributor.sendToServer(new StatsGUIButtonMessage(1, x, y, z));
 				StatsGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		}).bounds(this.leftPos + 28, this.topPos + 126, 140, 20).build();
+		}).bounds(this.leftPos + 15, this.topPos + 133, 140, 20).build();
 		guistate.put("button:button_open_prestige_upgrades", button_open_prestige_upgrades);
 		this.addRenderableWidget(button_open_prestige_upgrades);
 	}

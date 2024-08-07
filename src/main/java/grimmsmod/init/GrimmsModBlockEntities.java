@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import grimmsmod.block.entity.TVLiquidatorBlockEntity;
 import grimmsmod.block.entity.RefineryBlockEntity;
 import grimmsmod.block.entity.ForgeryTableBlockEntity;
 import grimmsmod.block.entity.DistilleryBlockEntity;
@@ -27,6 +28,7 @@ public class GrimmsModBlockEntities {
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> FORGERY_TABLE = register("forgery_table", GrimmsModBlocks.FORGERY_TABLE, ForgeryTableBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> REFINERY = register("refinery", GrimmsModBlocks.REFINERY, RefineryBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> DISTILLERY = register("distillery", GrimmsModBlocks.DISTILLERY, DistilleryBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> TV_LIQUIDATOR = register("tv_liquidator", GrimmsModBlocks.TV_LIQUIDATOR, TVLiquidatorBlockEntity::new);
 
 	private static DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> register(String registryname, DeferredHolder<Block, Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));
@@ -37,5 +39,6 @@ public class GrimmsModBlockEntities {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, FORGERY_TABLE.get(), (blockEntity, side) -> ((ForgeryTableBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, REFINERY.get(), (blockEntity, side) -> ((RefineryBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, DISTILLERY.get(), (blockEntity, side) -> ((DistilleryBlockEntity) blockEntity).getItemHandler());
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, TV_LIQUIDATOR.get(), (blockEntity, side) -> ((TVLiquidatorBlockEntity) blockEntity).getItemHandler());
 	}
 }

@@ -12,6 +12,7 @@ import net.minecraft.world.inventory.MenuType;
 import net.minecraft.core.registries.Registries;
 
 import grimmsmod.world.inventory.TransmutationGUIMenu;
+import grimmsmod.world.inventory.TVLiquidatorGUIMenu;
 import grimmsmod.world.inventory.StatsGUIMenu;
 import grimmsmod.world.inventory.RefineryGUIMenu;
 import grimmsmod.world.inventory.PrestigeUpgradesGUIMenu;
@@ -30,4 +31,5 @@ public class GrimmsModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<ForgeryTableGUIMenu>> FORGERY_TABLE_GUI = REGISTRY.register("forgery_table_gui", () -> IMenuTypeExtension.create(ForgeryTableGUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<RefineryGUIMenu>> REFINERY_GUI = REGISTRY.register("refinery_gui", () -> IMenuTypeExtension.create(RefineryGUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<DistilleryGUIMenu>> DISTILLERY_GUI = REGISTRY.register("distillery_gui", () -> IMenuTypeExtension.create(DistilleryGUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<TVLiquidatorGUIMenu>> TV_LIQUIDATOR_GUI = REGISTRY.register("tv_liquidator_gui", () -> IMenuTypeExtension.create(TVLiquidatorGUIMenu::new));
 }

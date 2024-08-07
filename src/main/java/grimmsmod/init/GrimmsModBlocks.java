@@ -9,6 +9,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 
 import net.minecraft.world.level.block.Block;
 
+import grimmsmod.block.TVLiquidatorBlock;
 import grimmsmod.block.RefineryBlock;
 import grimmsmod.block.LandMineBlock;
 import grimmsmod.block.ForgeryTableBlock;
@@ -22,6 +23,7 @@ public class GrimmsModBlocks {
 	public static final DeferredHolder<Block, Block> FORGERY_TABLE = REGISTRY.register("forgery_table", ForgeryTableBlock::new);
 	public static final DeferredHolder<Block, Block> REFINERY = REGISTRY.register("refinery", RefineryBlock::new);
 	public static final DeferredHolder<Block, Block> DISTILLERY = REGISTRY.register("distillery", DistilleryBlock::new);
+	public static final DeferredHolder<Block, Block> TV_LIQUIDATOR = REGISTRY.register("tv_liquidator", TVLiquidatorBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }
