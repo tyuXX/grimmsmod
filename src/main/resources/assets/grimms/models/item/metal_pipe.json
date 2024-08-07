@@ -1,0 +1,7 @@
+{
+  "parent": "grimms:custom/metalpipe",
+  "textures": {
+    "0": "grimms:block/metalpipe",
+    "particle": "grimms:item/placeholder"
+  }
+}

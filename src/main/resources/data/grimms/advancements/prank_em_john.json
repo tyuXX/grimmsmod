@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "id": "grimms:metal_pipe"
+    },
+    "title": {
+      "translate": "advancements.prank_em_john.title"
+    },
+    "description": {
+      "translate": "advancements.prank_em_john.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "prank_em_john_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "grimms:metal_pipe"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "grimms:install_grimms_mod_special"
+}

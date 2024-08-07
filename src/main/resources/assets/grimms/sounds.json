@@ -1,0 +1,11 @@
+{
+  "metalpipehit": {
+    "subtitle": "subtitles.metalpipehit",
+    "sounds": [
+      {
+        "name": "grimms:metalpipehit",
+        "stream": false
+      }
+    ]
+  }
+}

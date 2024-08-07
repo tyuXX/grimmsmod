@@ -3,8 +3,6 @@ package grimmsmod.procedures;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.nbt.StringTag;
 import net.minecraft.nbt.DoubleTag;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.ByteTag;
 
 import grimmsmod.network.GrimmsModVariables;
 
@@ -14,8 +12,6 @@ public class InitPlayerDatamapProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		CompoundTag tmp;
-		CompoundTag tmp2;
 		double init = 0;
 		GrimmsMod.LOGGER.info(("Initializing Datamap for " + entity.getStringUUID()));
 		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.contains("prestige:keepinventory")) {
@@ -66,6 +62,22 @@ public class InitPlayerDatamapProcedure {
 			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.put("2", StringTag.valueOf("prestige:powerful"));
 			init = init + 1;
 		}
+		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.contains("prestige:cure")) {
+			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.put("prestige:cure", DoubleTag.valueOf(0));
+			init = init + 1;
+		}
+		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.contains("name:prestige:cure")) {
+			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.put("name:prestige:cure", StringTag.valueOf("Cure (Removes bad potion effects)"));
+			init = init + 1;
+		}
+		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.contains("max:presige:cure")) {
+			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.put("max:presige:cure", DoubleTag.valueOf(1));
+			init = init + 1;
+		}
+		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.contains("3")) {
+			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.put("3", StringTag.valueOf("presige:cure"));
+			init = init + 1;
+		}
 		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.contains("grimm:level")) {
 			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.put("grimm:level", DoubleTag.valueOf(1));
 			init = init + 1;
@@ -92,10 +104,6 @@ public class InitPlayerDatamapProcedure {
 		}
 		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.contains("grimm:money")) {
 			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.put("grimm:money", DoubleTag.valueOf(0));
-			init = init + 1;
-		}
-		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.contains("grimm:lobotomized")) {
-			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.put("grimm:lobotomized", ByteTag.valueOf(false));
 			init = init + 1;
 		}
 		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.contains("grimm:totaltv")) {

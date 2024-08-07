@@ -41,6 +41,8 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.MORTAR.get());
 				tabData.accept(GrimmsModBlocks.REFINERY.get().asItem());
 				tabData.accept(GrimmsModBlocks.DISTILLERY.get().asItem());
+				tabData.accept(GrimmsModItems.TIN_CAN.get());
+				tabData.accept(GrimmsModItems.METAL_PIPE.get());
 			})
 
 					.build());

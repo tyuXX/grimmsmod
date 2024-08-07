@@ -26,7 +26,7 @@ public class GrimmsModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<TestDummyEntity>> TEST_DUMMY = register("test_dummy",
 			EntityType.Builder.<TestDummyEntity>of(TestDummyEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3)
 
-					.sized(0.6f, 1.8f));
+					.sized(0.6f, 1.95f));
 
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

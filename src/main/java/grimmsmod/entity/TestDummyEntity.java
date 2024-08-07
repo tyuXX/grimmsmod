@@ -3,7 +3,6 @@ package grimmsmod.entity;
 
 import net.neoforged.neoforge.event.entity.SpawnPlacementRegisterEvent;
 
-import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -36,11 +35,6 @@ public class TestDummyEntity extends PathfinderMob {
 	@Override
 	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
 		return false;
-	}
-
-	@Override
-	public Vec3 getPassengerRidingPosition(Entity entity) {
-		return super.getPassengerRidingPosition(entity).add(0, -0.35F, 0);
 	}
 
 	@Override

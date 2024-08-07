@@ -19,6 +19,7 @@ import net.minecraft.world.item.BlockItem;
 import grimmsmod.item.inventory.DeathPackageInventoryCapability;
 import grimmsmod.item.WoodenHammerItem;
 import grimmsmod.item.TransmutationTabletItem;
+import grimmsmod.item.TinCanItem;
 import grimmsmod.item.ThrashItem;
 import grimmsmod.item.SteelItem;
 import grimmsmod.item.SteelDustItem;
@@ -29,6 +30,7 @@ import grimmsmod.item.MultiUseScalpelItem;
 import grimmsmod.item.MortarItem;
 import grimmsmod.item.MortarAndPestleItem;
 import grimmsmod.item.MicroscopeItem;
+import grimmsmod.item.MetalPipeItem;
 import grimmsmod.item.LogoItem;
 import grimmsmod.item.KatanaItem;
 import grimmsmod.item.IronHammerItem;
@@ -76,6 +78,8 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> MORTAR = REGISTRY.register("mortar", MortarItem::new);
 	public static final DeferredHolder<Item, Item> REFINERY = block(GrimmsModBlocks.REFINERY);
 	public static final DeferredHolder<Item, Item> DISTILLERY = block(GrimmsModBlocks.DISTILLERY);
+	public static final DeferredHolder<Item, Item> TIN_CAN = REGISTRY.register("tin_can", TinCanItem::new);
+	public static final DeferredHolder<Item, Item> METAL_PIPE = REGISTRY.register("metal_pipe", MetalPipeItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

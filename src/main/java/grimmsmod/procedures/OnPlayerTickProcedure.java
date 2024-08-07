@@ -6,16 +6,22 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.nbt.DoubleTag;
+import net.minecraft.client.Minecraft;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.AdvancementHolder;
 
 import javax.annotation.Nullable;
 
 import grimmsmod.network.GrimmsModVariables;
+
+import grimmsmod.init.GrimmsModMobEffects;
 
 @EventBusSubscriber
 public class OnPlayerTickProcedure {
@@ -31,6 +37,7 @@ public class OnPlayerTickProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
+		String ShaderLocation = "";
 		if (GrimmsModVariables.MapVariables.get(world).worldtick % 2000 == 0) {
 			if (((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:level")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) >= 2) {
 				if (entity instanceof ServerPlayer _player) {
@@ -66,6 +73,36 @@ public class OnPlayerTickProcedure {
 								_player.getAdvancements().award(_adv, criteria);
 						}
 					}
+				}
+			}
+		}
+		if (((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.get("presige:cure")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) > 0) {
+			if (entity instanceof LivingEntity _mobEffectContext) {
+				for (MobEffectInstance mobeffectiterator : _mobEffectContext.getActiveEffects()) {
+					if (mobeffectiterator.getEffect().value().getCategory() == MobEffectCategory.HARMFUL) {/*TODO: Add this*/
+					}
+				}
+			}
+		}
+		if (world.isClientSide()) {
+			if (entity instanceof LivingEntity _livEnt15 && _livEnt15.hasEffect(GrimmsModMobEffects.SEIZURE)) {
+				if (GrimmsModVariables.MapVariables.get(world).worldtick % 5 == 0) {
+					ShaderLocation = "minecraft:shaders/post/invert.json";
+				} else {
+					ShaderLocation = "n/a";
+				}
+			} else if (entity instanceof LivingEntity _livEnt16 && _livEnt16.hasEffect(GrimmsModMobEffects.SUPER_DIZZINESS)) {
+				ShaderLocation = "minecraft:shaders/post/blur.json";
+			} else if (entity instanceof LivingEntity _livEnt17 && _livEnt17.hasEffect(GrimmsModMobEffects.DIZZINESS)) {
+				ShaderLocation = "minecraft:shaders/post/invert.json";
+			} else {
+				ShaderLocation = "n/a";
+			}
+			if ((ShaderLocation).equals("n/a")) {
+				Minecraft.getInstance().gameRenderer.shutdownEffect();
+			} else {
+				if (Minecraft.getInstance().gameRenderer.currentEffect() == null || !(Minecraft.getInstance().gameRenderer.currentEffect().getName()).equals(ShaderLocation)) {
+					Minecraft.getInstance().gameRenderer.loadEffect(new ResourceLocation((ShaderLocation).toLowerCase(java.util.Locale.ENGLISH)));
 				}
 			}
 		}

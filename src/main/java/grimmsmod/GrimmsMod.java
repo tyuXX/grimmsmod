@@ -28,6 +28,7 @@ import java.util.ArrayList;
 import grimmsmod.network.GrimmsModVariables;
 
 import grimmsmod.init.GrimmsModTabs;
+import grimmsmod.init.GrimmsModSounds;
 import grimmsmod.init.GrimmsModMobEffects;
 import grimmsmod.init.GrimmsModMenus;
 import grimmsmod.init.GrimmsModItems;
@@ -46,7 +47,7 @@ public class GrimmsMod {
 		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
-
+		GrimmsModSounds.REGISTRY.register(modEventBus);
 		GrimmsModBlocks.REGISTRY.register(modEventBus);
 		GrimmsModBlockEntities.REGISTRY.register(modEventBus);
 		GrimmsModItems.REGISTRY.register(modEventBus);

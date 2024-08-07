@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Test Dummy",
     "mobLabel": "Test Dummy",
-    "mobModelName": "Biped",
+    "mobModelName": "Villager",
     "mobModelTexture": "grimsmod.png",
     "transparentModelCondition": {
       "fixedValue": true
@@ -23,7 +23,7 @@
     },
     "modelLayers": [],
     "modelWidth": 0.6,
-    "modelHeight": 1.8,
+    "modelHeight": 1.95,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,

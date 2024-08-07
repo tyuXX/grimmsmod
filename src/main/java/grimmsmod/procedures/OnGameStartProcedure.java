@@ -2,6 +2,7 @@ package grimmsmod.procedures;
 
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.ModList;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
@@ -21,7 +22,9 @@ public class OnGameStartProcedure {
 	}
 
 	private static void execute(@Nullable Event event) {
-		InitCraftingsCacheProcedure.execute();
+		if (!ModList.get().isLoaded("jei")) {
+			GrimmsMod.LOGGER.info("JEI is recommended for use with this mod, currently JEI is not installed.");
+		}
 		GrimmsMod.LOGGER.info("Grimm's Mod loaded succsesfully!");
 	}
 }

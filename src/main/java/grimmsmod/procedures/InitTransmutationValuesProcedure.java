@@ -4,6 +4,7 @@ import org.checkerframework.checker.units.qual.s;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.nbt.DoubleTag;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
 import grimmsmod.network.GrimmsModVariables;
@@ -16,6 +17,7 @@ public class InitTransmutationValuesProcedure {
 	public static void execute() {
 		double id = 0;
 		GrimmsMod.LOGGER.info("Initializing hardcoded transmutation values");
+		GrimmsModVariables.ctvalues = new CompoundTag();
 		GrimmsModVariables.ctvalues.put((BuiltInRegistries.ITEM.getKey(Blocks.DIRT.asItem()).toString()), DoubleTag.valueOf(1));
 		GrimmsModVariables.ctvalues.put((BuiltInRegistries.ITEM.getKey(Blocks.COBBLESTONE.asItem()).toString()), DoubleTag.valueOf(1));
 		GrimmsModVariables.ctvalues.put((BuiltInRegistries.ITEM.getKey(Blocks.STONE.asItem()).toString()), DoubleTag.valueOf(2));

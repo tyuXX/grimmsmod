@@ -24,7 +24,7 @@ public class OnMapLoadProcedure {
 	}
 
 	private static void execute(@Nullable Event event, LevelAccessor world) {
-		double id = 0;
+		InitCraftingsCacheProcedure.execute();
 		InitTransmutationValuesProcedure.execute();
 		GrimmsMod.LOGGER
 				.info(("Grimm's mod succsessfully loaded in World:" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())));
