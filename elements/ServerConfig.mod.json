@@ -168,10 +168,10 @@
             "logicField": 0,
             "numberField": 0.0,
             "textDefault": "",
-            "comment": "",
+            "comment": "Use format {recipe type}${registry name}/{registry name}/{registry name}/{registry name}/{registry name}/{registry name}/{registry name}/{registry name}/{registry name}:{output registry name}",
             "vardisplay": "Custom Crafting's",
-            "varname": "customcraftvalues",
-            "enablecomment": false,
+            "varname": "ccvalues",
+            "enablecomment": true,
             "stringlist": []
           }
         ]

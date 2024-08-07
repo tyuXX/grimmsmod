@@ -1,9 +1,6 @@
 
 package grimmsmod.block;
 
-import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraft.world.phys.shapes.Shapes;
-import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
@@ -34,41 +31,21 @@ import net.minecraft.core.BlockPos;
 
 import io.netty.buffer.Unpooled;
 
-import grimmsmod.world.inventory.ForgeryTableGUIMenu;
+import grimmsmod.world.inventory.DistilleryGUIMenu;
 
-import grimmsmod.block.entity.ForgeryTableBlockEntity;
+import grimmsmod.block.entity.DistilleryBlockEntity;
 
-public class ForgeryTableBlock extends Block implements EntityBlock {
+public class DistilleryBlock extends Block implements EntityBlock {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
-	public ForgeryTableBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.ANVIL).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+	public DistilleryBlock() {
+		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.METAL).strength(1f, 10f));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
 	@Override
-	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
-		return true;
-	}
-
-	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 0;
-	}
-
-	@Override
-	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return Shapes.empty();
-	}
-
-	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return switch (state.getValue(FACING)) {
-			default -> Shapes.or(box(10, 0, 7, 14, 1, 13), box(11, 1, 8, 13, 3, 12), box(10, 3, 7, 14, 6, 13), box(1, 0, 4, 7, 6, 10), box(11, 0, 1, 13, 2, 5), box(11.5, 2, 2.5, 12.5, 6, 3.5));
-			case NORTH -> Shapes.or(box(2, 0, 3, 6, 1, 9), box(3, 1, 4, 5, 3, 8), box(2, 3, 3, 6, 6, 9), box(9, 0, 6, 15, 6, 12), box(3, 0, 11, 5, 2, 15), box(3.5, 2, 12.5, 4.5, 6, 13.5));
-			case EAST -> Shapes.or(box(7, 0, 2, 13, 1, 6), box(8, 1, 3, 12, 3, 5), box(7, 3, 2, 13, 6, 6), box(4, 0, 9, 10, 6, 15), box(1, 0, 3, 5, 2, 5), box(2.5, 2, 3.5, 3.5, 6, 4.5));
-			case WEST -> Shapes.or(box(3, 0, 10, 9, 1, 14), box(4, 1, 11, 8, 3, 13), box(3, 3, 10, 9, 6, 14), box(6, 0, 1, 12, 6, 7), box(11, 0, 11, 15, 2, 13), box(12.5, 2, 11.5, 13.5, 6, 12.5));
-		};
+		return 15;
 	}
 
 	@Override
@@ -96,12 +73,12 @@ public class ForgeryTableBlock extends Block implements EntityBlock {
 			player.openMenu(new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return Component.literal("Forgery Table");
+					return Component.literal("Distillery");
 				}
 
 				@Override
 				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-					return new ForgeryTableGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(pos));
+					return new DistilleryGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(pos));
 				}
 			}, pos);
 		}
@@ -116,7 +93,7 @@ public class ForgeryTableBlock extends Block implements EntityBlock {
 
 	@Override
 	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-		return new ForgeryTableBlockEntity(pos, state);
+		return new DistilleryBlockEntity(pos, state);
 	}
 
 	@Override
@@ -130,7 +107,7 @@ public class ForgeryTableBlock extends Block implements EntityBlock {
 	public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean isMoving) {
 		if (state.getBlock() != newState.getBlock()) {
 			BlockEntity blockEntity = world.getBlockEntity(pos);
-			if (blockEntity instanceof ForgeryTableBlockEntity be) {
+			if (blockEntity instanceof DistilleryBlockEntity be) {
 				Containers.dropContents(world, pos, be);
 				world.updateNeighbourForOutputSignal(pos, this);
 			}
@@ -146,7 +123,7 @@ public class ForgeryTableBlock extends Block implements EntityBlock {
 	@Override
 	public int getAnalogOutputSignal(BlockState blockState, Level world, BlockPos pos) {
 		BlockEntity tileentity = world.getBlockEntity(pos);
-		if (tileentity instanceof ForgeryTableBlockEntity be)
+		if (tileentity instanceof DistilleryBlockEntity be)
 			return AbstractContainerMenu.getRedstoneSignalFromContainer(be);
 		else
 			return 0;

@@ -10,7 +10,9 @@ import net.neoforged.bus.api.IEventBus;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import grimmsmod.jei_recipes.RefineryRecipeTypeRecipe;
 import grimmsmod.jei_recipes.ForgeryTableRecipeTypeRecipe;
+import grimmsmod.jei_recipes.DistilleryRecipeTypeRecipe;
 
 import grimmsmod.GrimmsMod;
 
@@ -24,6 +26,8 @@ public class GrimmsModRecipeTypes {
 		event.enqueueWork(() -> {
 			SERIALIZERS.register(bus);
 			SERIALIZERS.register("forgery_table_recipe_type", () -> ForgeryTableRecipeTypeRecipe.Serializer.INSTANCE);
+			SERIALIZERS.register("refinery_recipe_type", () -> RefineryRecipeTypeRecipe.Serializer.INSTANCE);
+			SERIALIZERS.register("distillery_recipe_type", () -> DistilleryRecipeTypeRecipe.Serializer.INSTANCE);
 		});
 	}
 }

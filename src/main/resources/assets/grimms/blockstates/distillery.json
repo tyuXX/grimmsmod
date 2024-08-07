@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=north": {
-      "model": "grimms:block/forgery_table"
+      "model": "grimms:block/distillery"
     },
     "facing=east": {
-      "model": "grimms:block/forgery_table",
+      "model": "grimms:block/distillery",
       "y": 90
     },
     "facing=south": {
-      "model": "grimms:block/forgery_table",
+      "model": "grimms:block/distillery",
       "y": 180
     },
     "facing=west": {
-      "model": "grimms:block/forgery_table",
+      "model": "grimms:block/distillery",
       "y": 270
     }
   }

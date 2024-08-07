@@ -29,6 +29,7 @@ public class OnPlayerRespawnProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
+		InitLifetimeStatsProcedure.execute();
 		if (entity instanceof Player _player) {
 			ItemStack _setstack = entity.getData(GrimmsModVariables.PLAYER_VARIABLES).deathpackage.copy();
 			_setstack.setCount(1);

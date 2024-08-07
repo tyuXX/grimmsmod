@@ -13,8 +13,10 @@ import net.minecraft.core.registries.Registries;
 
 import grimmsmod.world.inventory.TransmutationGUIMenu;
 import grimmsmod.world.inventory.StatsGUIMenu;
+import grimmsmod.world.inventory.RefineryGUIMenu;
 import grimmsmod.world.inventory.PrestigeUpgradesGUIMenu;
 import grimmsmod.world.inventory.ForgeryTableGUIMenu;
+import grimmsmod.world.inventory.DistilleryGUIMenu;
 import grimmsmod.world.inventory.DeathPackageGUIMenu;
 
 import grimmsmod.GrimmsMod;
@@ -26,4 +28,6 @@ public class GrimmsModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<PrestigeUpgradesGUIMenu>> PRESTIGE_UPGRADES_GUI = REGISTRY.register("prestige_upgrades_gui", () -> IMenuTypeExtension.create(PrestigeUpgradesGUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<TransmutationGUIMenu>> TRANSMUTATION_GUI = REGISTRY.register("transmutation_gui", () -> IMenuTypeExtension.create(TransmutationGUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<ForgeryTableGUIMenu>> FORGERY_TABLE_GUI = REGISTRY.register("forgery_table_gui", () -> IMenuTypeExtension.create(ForgeryTableGUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<RefineryGUIMenu>> REFINERY_GUI = REGISTRY.register("refinery_gui", () -> IMenuTypeExtension.create(RefineryGUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<DistilleryGUIMenu>> DISTILLERY_GUI = REGISTRY.register("distillery_gui", () -> IMenuTypeExtension.create(DistilleryGUIMenu::new));
 }

@@ -15,7 +15,7 @@ public class ServerConfigConfiguration {
 	public static final ModConfigSpec.ConfigValue<Boolean> SLEVEL;
 	public static final ModConfigSpec.ConfigValue<Double> SNLEVEL;
 	public static final ModConfigSpec.ConfigValue<List<? extends String>> CTVALUES;
-	public static final ModConfigSpec.ConfigValue<List<? extends String>> CUSTOMCRAFTVALUES;
+	public static final ModConfigSpec.ConfigValue<List<? extends String>> CCVALUES;
 	static {
 		BUILDER.push("Performance");
 		INSTLEVELUP = BUILDER.comment("Use a while loop so no leftover xp is left").define("Instant Level Up", true);
@@ -32,7 +32,8 @@ public class ServerConfigConfiguration {
 		BUILDER.pop();
 		BUILDER.push("Caches");
 		CTVALUES = BUILDER.comment("Use format {registry name}/{TV}").defineList("Custom TV's", List.of(), entry -> true);
-		CUSTOMCRAFTVALUES = BUILDER.defineList("Custom Crafting's", List.of(), entry -> true);
+		CCVALUES = BUILDER.comment("Use format {recipe type}${registry name}/{registry name}/{registry name}/{registry name}/{registry name}/{registry name}/{registry name}/{registry name}/{registry name}:{output registry name}")
+				.defineList("Custom Crafting's", List.of(), entry -> true);
 		BUILDER.pop();
 
 		SPEC = BUILDER.build();

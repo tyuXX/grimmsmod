@@ -74,6 +74,8 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> IRON_DUST = REGISTRY.register("iron_dust", IronDustItem::new);
 	public static final DeferredHolder<Item, Item> MORTAR_AND_PESTLE = REGISTRY.register("mortar_and_pestle", MortarAndPestleItem::new);
 	public static final DeferredHolder<Item, Item> MORTAR = REGISTRY.register("mortar", MortarItem::new);
+	public static final DeferredHolder<Item, Item> REFINERY = block(GrimmsModBlocks.REFINERY);
+	public static final DeferredHolder<Item, Item> DISTILLERY = block(GrimmsModBlocks.DISTILLERY);
 
 	// Start of user code block custom items
 	// End of user code block custom items

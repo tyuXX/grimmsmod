@@ -39,6 +39,8 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.IRON_DUST.get());
 				tabData.accept(GrimmsModItems.MORTAR_AND_PESTLE.get());
 				tabData.accept(GrimmsModItems.MORTAR.get());
+				tabData.accept(GrimmsModBlocks.REFINERY.get().asItem());
+				tabData.accept(GrimmsModBlocks.DISTILLERY.get().asItem());
 			})
 
 					.build());

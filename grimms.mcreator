@@ -2045,6 +2045,7 @@
         "files": [
           "src/main/resources/assets/grimms/blockstates/forgery_table.json",
           "src/main/resources/assets/grimms/models/item/forgery_table.json",
+          "src/main/java/grimmsmod/block/entity/ForgeryTableBlockEntity.java",
           "src/main/java/grimmsmod/block/ForgeryTableBlock.java",
           "src/main/resources/assets/grimms/models/block/forgery_table.json",
           "src/main/resources/data/grimms/loot_tables/blocks/forgery_table.json"
@@ -2334,6 +2335,112 @@
         "dependencies": []
       },
       "path": "~/Procs"
+    },
+    {
+      "name": "Refinery",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "refinery",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/grimms/blockstates/refinery.json",
+          "src/main/resources/assets/grimms/models/block/refinery.json",
+          "src/main/resources/data/grimms/loot_tables/blocks/refinery.json",
+          "src/main/java/grimmsmod/block/entity/RefineryBlockEntity.java",
+          "src/main/resources/assets/grimms/models/item/refinery.json",
+          "src/main/java/grimmsmod/block/RefineryBlock.java"
+        ]
+      },
+      "path": "~/Block"
+    },
+    {
+      "name": "RefineryGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "refinery_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/world/inventory/RefineryGUIMenu.java",
+          "src/main/java/grimmsmod/client/gui/RefineryGUIScreen.java"
+        ]
+      },
+      "path": "~/Gui"
+    },
+    {
+      "name": "DistilleryGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "distillery_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/world/inventory/DistilleryGUIMenu.java",
+          "src/main/java/grimmsmod/client/gui/DistilleryGUIScreen.java"
+        ]
+      },
+      "path": "~/Gui"
+    },
+    {
+      "name": "Distillery",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "distillery",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/block/entity/DistilleryBlockEntity.java",
+          "src/main/resources/assets/grimms/models/item/distillery.json",
+          "src/main/resources/data/grimms/loot_tables/blocks/distillery.json",
+          "src/main/resources/assets/grimms/blockstates/distillery.json",
+          "src/main/java/grimmsmod/block/DistilleryBlock.java",
+          "src/main/resources/assets/grimms/models/block/distillery.json"
+        ]
+      },
+      "path": "~/Block"
+    },
+    {
+      "name": "RefineryRecipeType",
+      "type": "jeirecipetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "refinery_recipe_type",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/jei_recipes/RefineryRecipeTypeRecipe.java",
+          "src/main/java/grimmsmod/jei_recipes/RefineryRecipeTypeRecipeCategory.java"
+        ]
+      },
+      "path": "~/JeiIntegration"
+    },
+    {
+      "name": "DistilleryRecipeType",
+      "type": "jeirecipetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "distillery_recipe_type",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/jei_recipes/DistilleryRecipeTypeRecipe.java",
+          "src/main/java/grimmsmod/jei_recipes/DistilleryRecipeTypeRecipeCategory.java"
+        ]
+      },
+      "path": "~/JeiIntegration"
+    },
+    {
+      "name": "InitLifetimeStats",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "init_lifetime_stats",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/InitLifetimeStatsProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs"
     }
   ],
   "variable_elements": [
@@ -2354,12 +2461,6 @@
       "type": "datamap",
       "scope": "player_persistent",
       "value": "new CompoundTag()"
-    },
-    {
-      "name": "isplayerinitialized",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
     },
     {
       "name": "persistentstats",
@@ -2393,9 +2494,9 @@
     },
     {
       "name": "craftingscache",
-      "type": "datalist",
+      "type": "datamap",
       "scope": "global",
-      "value": "new ListTag()"
+      "value": "new CompoundTag()"
     }
   ],
   "sound_elements": [],
@@ -2483,6 +2584,7 @@
       "item.grimms.placeholder": "Placeholder",
       "enchantment.grimms.xp_boost": "Xp Boost",
       "death.attack.item_level_damage_boost": "%1$s died",
+      "block.grimms.distillery": "Distillery",
       "advancements.install_grimms_mod.descr": "Install Grimm\u0027s Mod on minecraft, reworked, remade, updated",
       "enchantment.grimms.soulbound": "Soulbound",
       "gui.grimms.stats_gui.button_open_prestige_upgrades": "Open Prestige Upgrades",
@@ -2492,6 +2594,7 @@
       "gui.grimms.stats_gui.label_empty1": "/",
       "item.grimms.wooden_hammer": "Wooden Hammer",
       "item.grimms.iron_dust": "Iron Dust",
+      "block.grimms.refinery": "Refinery",
       "item.grimms.netherite_hammer": "Netherite Hammer",
       "item.grimms.microscope": "Microscope",
       "item.grimms.transmutation_tablet": "Transmutation Tablet",

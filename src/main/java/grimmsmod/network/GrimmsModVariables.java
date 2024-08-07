@@ -25,7 +25,6 @@ import net.minecraft.network.protocol.PacketFlow;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
-import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.HolderLookup;
 
@@ -38,7 +37,7 @@ public class GrimmsModVariables {
 	public static final DeferredRegister<AttachmentType<?>> ATTACHMENT_TYPES = DeferredRegister.create(NeoForgeRegistries.Keys.ATTACHMENT_TYPES, GrimmsMod.MODID);
 	public static final Supplier<AttachmentType<PlayerVariables>> PLAYER_VARIABLES = ATTACHMENT_TYPES.register("player_variables", () -> AttachmentType.serializable(() -> new PlayerVariables()).build());
 	public static CompoundTag ctvalues = new CompoundTag();
-	public static ListTag craftingscache = new ListTag();
+	public static CompoundTag craftingscache = new CompoundTag();
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
@@ -72,7 +71,6 @@ public class GrimmsModVariables {
 			PlayerVariables clone = new PlayerVariables();
 			clone.deathpackage = original.deathpackage;
 			clone.persistentabilities = original.persistentabilities;
-			clone.isplayerinitialized = original.isplayerinitialized;
 			clone.persistentstats = original.persistentstats;
 			clone.placeholder = original.placeholder;
 			clone.learnedtvs = original.learnedtvs;
@@ -218,7 +216,6 @@ public class GrimmsModVariables {
 	public static class PlayerVariables implements INBTSerializable<CompoundTag> {
 		public ItemStack deathpackage = ItemStack.EMPTY;
 		public CompoundTag persistentabilities = new CompoundTag();
-		public boolean isplayerinitialized = false;
 		public CompoundTag persistentstats = new CompoundTag();
 		public double placeholder = 0;
 		public CompoundTag lifetimestats = new CompoundTag();
@@ -229,7 +226,6 @@ public class GrimmsModVariables {
 			CompoundTag nbt = new CompoundTag();
 			nbt.put("deathpackage", deathpackage.saveOptional(lookupProvider));
 			nbt.put("persistentabilities", this.persistentabilities);
-			nbt.putBoolean("isplayerinitialized", isplayerinitialized);
 			nbt.put("persistentstats", this.persistentstats);
 			nbt.putDouble("placeholder", placeholder);
 			nbt.put("lifetimestats", this.lifetimestats);
@@ -241,7 +237,6 @@ public class GrimmsModVariables {
 		public void deserializeNBT(HolderLookup.Provider lookupProvider, CompoundTag nbt) {
 			deathpackage = ItemStack.parseOptional(lookupProvider, nbt.getCompound("deathpackage"));
 			this.persistentabilities = nbt.get("persistentabilities") instanceof CompoundTag persistentabilities ? persistentabilities : new CompoundTag();
-			isplayerinitialized = nbt.getBoolean("isplayerinitialized");
 			this.persistentstats = nbt.get("persistentstats") instanceof CompoundTag persistentstats ? persistentstats : new CompoundTag();
 			placeholder = nbt.getDouble("placeholder");
 			this.lifetimestats = nbt.get("lifetimestats") instanceof CompoundTag lifetimestats ? lifetimestats : new CompoundTag();

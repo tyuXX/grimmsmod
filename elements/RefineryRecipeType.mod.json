@@ -1,0 +1,31 @@
+{
+  "_fv": 66,
+  "_type": "jeirecipetype",
+  "definition": {
+    "textureSelector": "refinery_gui.png",
+    "width": 0,
+    "height": 0,
+    "icon": {
+      "value": "CUSTOM:Refinery"
+    },
+    "craftingtable": {
+      "value": "CUSTOM:Refinery"
+    },
+    "enableCraftingtable": true,
+    "title": "Refinery",
+    "slotList": [
+      {
+        "type": "INPUT",
+        "x": 0,
+        "y": 0,
+        "slotid": 0
+      },
+      {
+        "type": "OUTPUT",
+        "x": 0,
+        "y": 0,
+        "slotid": 0
+      }
+    ]
+  }
+}
