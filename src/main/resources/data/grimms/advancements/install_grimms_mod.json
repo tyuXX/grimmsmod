@@ -1,6 +1,6 @@
 {
   "display": {
-    "background": "grimms:textures/screens/grimsmod.png",
+    "background": "minecraft:textures/block/stone.png",
     "icon": {
       "id": "grimms:fancy_clock"
     },

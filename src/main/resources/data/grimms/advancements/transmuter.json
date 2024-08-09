@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "grimms:transmutation_tablet"
+    },
+    "title": {
+      "translate": "advancements.transmuter.title"
+    },
+    "description": {
+      "translate": "advancements.transmuter.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "transmuter_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "grimms:install_grimms_mod"
+}

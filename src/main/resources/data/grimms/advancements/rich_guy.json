@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:gold_ingot"
+    },
+    "title": {
+      "translate": "advancements.rich_guy.title"
+    },
+    "description": {
+      "translate": "advancements.rich_guy.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "rich_guy_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "grimms:install_grimms_mod"
+}

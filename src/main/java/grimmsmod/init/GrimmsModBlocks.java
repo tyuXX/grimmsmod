@@ -14,6 +14,7 @@ import grimmsmod.block.RefineryBlock;
 import grimmsmod.block.LandMineBlock;
 import grimmsmod.block.ForgeryTableBlock;
 import grimmsmod.block.DistilleryBlock;
+import grimmsmod.block.BasicCobblestoneGeneratorBlock;
 
 import grimmsmod.GrimmsMod;
 
@@ -24,6 +25,7 @@ public class GrimmsModBlocks {
 	public static final DeferredHolder<Block, Block> REFINERY = REGISTRY.register("refinery", RefineryBlock::new);
 	public static final DeferredHolder<Block, Block> DISTILLERY = REGISTRY.register("distillery", DistilleryBlock::new);
 	public static final DeferredHolder<Block, Block> TV_LIQUIDATOR = REGISTRY.register("tv_liquidator", TVLiquidatorBlock::new);
+	public static final DeferredHolder<Block, Block> BASIC_COBBLESTONE_GENERATOR = REGISTRY.register("basic_cobblestone_generator", BasicCobblestoneGeneratorBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

@@ -79,7 +79,7 @@ public class TransmutationGUIScreen extends AbstractContainerScreen<Transmutatio
 		guiGraphics.drawString(this.font, Component.translatable("gui.grimms.transmutation_gui.label_tv"), 6, 7, -256, false);
 		guiGraphics.drawString(this.font,
 
-				TVTextValueProcedure.execute(entity), 24, 7, -12829636, false);
+				TVTextValueProcedure.execute(world, entity), 24, 7, -12829636, false);
 	}
 
 	@Override

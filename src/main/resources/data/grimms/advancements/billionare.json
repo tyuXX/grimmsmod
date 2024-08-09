@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:netherite_ingot"
+    },
+    "title": {
+      "translate": "advancements.billionare.title"
+    },
+    "description": {
+      "translate": "advancements.billionare.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "billionare_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "grimms:rich_guy"
+}

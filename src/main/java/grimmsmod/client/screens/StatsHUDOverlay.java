@@ -45,7 +45,7 @@ public class StatsHUDOverlay {
 		if (true) {
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					MoneyTextValueProcedure.execute(entity), w / 2 + -207, h / 2 + -112, -16738048, false);
+					MoneyTextValueProcedure.execute(world, entity), w / 2 + -207, h / 2 + -112, -16738048, false);
 			if (GetShowCorHUDProcedure.execute())
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 

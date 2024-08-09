@@ -44,6 +44,8 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.TIN_CAN.get());
 				tabData.accept(GrimmsModItems.METAL_PIPE.get());
 				tabData.accept(GrimmsModBlocks.TV_LIQUIDATOR.get().asItem());
+				tabData.accept(GrimmsModBlocks.BASIC_COBBLESTONE_GENERATOR.get().asItem());
+				tabData.accept(GrimmsModItems.HEAVY_METAL_PIPE.get());
 			})
 
 					.build());

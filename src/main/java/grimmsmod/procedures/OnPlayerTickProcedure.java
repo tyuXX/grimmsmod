@@ -75,6 +75,66 @@ public class OnPlayerTickProcedure {
 					}
 				}
 			}
+			if (((GrimmsModVariables.MapVariables.get(world).mapstats.get((entity.getStringUUID() + "/grimm:money"))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) >= 10000) {
+				if (entity instanceof ServerPlayer _player) {
+					AdvancementHolder _adv = _player.server.getAdvancements().get(new ResourceLocation("grimms:rich_guy"));
+					if (_adv != null) {
+						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+						if (!_ap.isDone()) {
+							for (String criteria : _ap.getRemainingCriteria())
+								_player.getAdvancements().award(_adv, criteria);
+						}
+					}
+				}
+				if (((GrimmsModVariables.MapVariables.get(world).mapstats.get((entity.getStringUUID() + "/grimm:money"))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) >= 1000000) {
+					if (entity instanceof ServerPlayer _player) {
+						AdvancementHolder _adv = _player.server.getAdvancements().get(new ResourceLocation("grimms:millionare"));
+						if (_adv != null) {
+							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+							if (!_ap.isDone()) {
+								for (String criteria : _ap.getRemainingCriteria())
+									_player.getAdvancements().award(_adv, criteria);
+							}
+						}
+					}
+					if (((GrimmsModVariables.MapVariables.get(world).mapstats.get((entity.getStringUUID() + "/grimm:money"))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) >= 1000000000) {
+						if (entity instanceof ServerPlayer _player) {
+							AdvancementHolder _adv = _player.server.getAdvancements().get(new ResourceLocation("grimms:billionare"));
+							if (_adv != null) {
+								AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+								if (!_ap.isDone()) {
+									for (String criteria : _ap.getRemainingCriteria())
+										_player.getAdvancements().award(_adv, criteria);
+								}
+							}
+						}
+					}
+				}
+			}
+			if (((GrimmsModVariables.MapVariables.get(world).mapstats.get((entity.getStringUUID() + "/grimm:totaltv"))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) >= 1000) {
+				if (entity instanceof ServerPlayer _player) {
+					AdvancementHolder _adv = _player.server.getAdvancements().get(new ResourceLocation("grimms:transmuter"));
+					if (_adv != null) {
+						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+						if (!_ap.isDone()) {
+							for (String criteria : _ap.getRemainingCriteria())
+								_player.getAdvancements().award(_adv, criteria);
+						}
+					}
+				}
+				if (((GrimmsModVariables.MapVariables.get(world).mapstats.get((entity.getStringUUID() + "/grimm:totaltv"))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) >= 1000000) {
+					if (entity instanceof ServerPlayer _player) {
+						AdvancementHolder _adv = _player.server.getAdvancements().get(new ResourceLocation("grimms:transmutation_professor"));
+						if (_adv != null) {
+							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+							if (!_ap.isDone()) {
+								for (String criteria : _ap.getRemainingCriteria())
+									_player.getAdvancements().award(_adv, criteria);
+							}
+						}
+					}
+				}
+			}
 		}
 		if (((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.get("presige:cure")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) > 0) {
 			if (entity instanceof LivingEntity _mobEffectContext) {
@@ -85,15 +145,15 @@ public class OnPlayerTickProcedure {
 			}
 		}
 		if (world.isClientSide()) {
-			if (entity instanceof LivingEntity _livEnt15 && _livEnt15.hasEffect(GrimmsModMobEffects.SEIZURE)) {
+			if (entity instanceof LivingEntity _livEnt35 && _livEnt35.hasEffect(GrimmsModMobEffects.SEIZURE)) {
 				if (GrimmsModVariables.MapVariables.get(world).worldtick % 5 == 0) {
 					ShaderLocation = "minecraft:shaders/post/invert.json";
 				} else {
 					ShaderLocation = "n/a";
 				}
-			} else if (entity instanceof LivingEntity _livEnt16 && _livEnt16.hasEffect(GrimmsModMobEffects.SUPER_DIZZINESS)) {
+			} else if (entity instanceof LivingEntity _livEnt36 && _livEnt36.hasEffect(GrimmsModMobEffects.SUPER_DIZZINESS)) {
 				ShaderLocation = "minecraft:shaders/post/blur.json";
-			} else if (entity instanceof LivingEntity _livEnt17 && _livEnt17.hasEffect(GrimmsModMobEffects.DIZZINESS)) {
+			} else if (entity instanceof LivingEntity _livEnt37 && _livEnt37.hasEffect(GrimmsModMobEffects.DIZZINESS)) {
 				ShaderLocation = "minecraft:shaders/post/invert.json";
 			} else {
 				ShaderLocation = "n/a";

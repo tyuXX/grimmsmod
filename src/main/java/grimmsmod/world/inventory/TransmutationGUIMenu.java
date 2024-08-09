@@ -255,7 +255,7 @@ public class TransmutationGUIMenu extends AbstractContainerMenu implements Suppl
 			double x = entity.getX();
 			double y = entity.getY();
 			double z = entity.getZ();
-			TransmutationGUIWhileThisGUIIsOpenTickProcedure.execute(entity, guistate);
+			TransmutationGUIWhileThisGUIIsOpenTickProcedure.execute(world, entity, guistate);
 		}
 	}
 }

@@ -1,10 +1,10 @@
 modLoader="javafml"
 loaderVersion="[2,)"
-license="MIT License"
+license="All Rights Reserved"
 
 [[mods]]
 modId="grimms"
-version="1"
+version="3"
 displayName="Grimm's Mod"
 displayURL="https://gsdistance.org"
 logoFile="logo.png"

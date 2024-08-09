@@ -35,6 +35,7 @@ import grimmsmod.item.LogoItem;
 import grimmsmod.item.KatanaItem;
 import grimmsmod.item.IronHammerItem;
 import grimmsmod.item.IronDustItem;
+import grimmsmod.item.HeavyMetalPipeItem;
 import grimmsmod.item.HandheldMicroscopeItem;
 import grimmsmod.item.FancyClockItem;
 import grimmsmod.item.FancierClockItem;
@@ -81,6 +82,8 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> TIN_CAN = REGISTRY.register("tin_can", TinCanItem::new);
 	public static final DeferredHolder<Item, Item> METAL_PIPE = REGISTRY.register("metal_pipe", MetalPipeItem::new);
 	public static final DeferredHolder<Item, Item> TV_LIQUIDATOR = block(GrimmsModBlocks.TV_LIQUIDATOR);
+	public static final DeferredHolder<Item, Item> BASIC_COBBLESTONE_GENERATOR = block(GrimmsModBlocks.BASIC_COBBLESTONE_GENERATOR);
+	public static final DeferredHolder<Item, Item> HEAVY_METAL_PIPE = REGISTRY.register("heavy_metal_pipe", HeavyMetalPipeItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

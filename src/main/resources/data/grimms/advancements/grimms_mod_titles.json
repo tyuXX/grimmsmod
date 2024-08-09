@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "id": "grimms:fancier_clock"
+    },
+    "title": {
+      "translate": "advancements.grimms_mod_titles.title"
+    },
+    "description": {
+      "translate": "advancements.grimms_mod_titles.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "grimms_mod_titles_0": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

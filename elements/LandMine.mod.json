@@ -48,7 +48,7 @@
     },
     "hardness": 1.0,
     "resistance": 10.0,
-    "hasGravity": false,
+    "hasGravity": true,
     "isWaterloggable": false,
     "creativeTabs": [
       {
@@ -130,10 +130,10 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onDestroyedByPlayer": {
+    "onDestroyedByExplosion": {
       "name": "LandMineEntityCollidesInTheBlock"
     },
-    "onDestroyedByExplosion": {
+    "onStartToDestroy": {
       "name": "LandMineEntityCollidesInTheBlock"
     },
     "onEntityCollides": {

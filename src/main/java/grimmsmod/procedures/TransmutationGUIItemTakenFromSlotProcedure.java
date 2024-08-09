@@ -16,9 +16,9 @@ public class TransmutationGUIItemTakenFromSlotProcedure {
 		if (entity == null || guistate == null)
 			return;
 		if (!(Blocks.AIR.asItem() == BuiltInRegistries.ITEM.get(new ResourceLocation(((guistate.containsKey("text:itemid") ? ((EditBox) guistate.get("text:itemid")).getValue() : "")).toLowerCase(java.util.Locale.ENGLISH))))) {
-			ChangeNumberDataElementProcedure.execute(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, true,
+			ChangeNumberDataElementProcedure.execute(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, false,
 					(-1) * ((GrimmsModVariables.ctvalues.get(("tv:" + (guistate.containsKey("text:itemid") ? ((EditBox) guistate.get("text:itemid")).getValue() : "")))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D),
-					"grimm:totaltv");
+					entity.getStringUUID() + "/grimm:totaltv");
 		}
 	}
 }

@@ -19,10 +19,10 @@ public class XpHandleProcedure {
 			ChangeNumberDataElementProcedure.execute(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, false,
 					(-1) * Math.round(Math.pow(((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:level")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) * 10, 1.3)), "grimm:xp");
 			ChangeNumberDataElementProcedure.execute(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, false, 1, "grimm:level");
-			ChangeNumberDataElementProcedure.execute(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, false,
+			ChangeNumberDataElementProcedure.execute(GrimmsModVariables.MapVariables.get(world).mapstats, entity, false,
 					((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:prestige")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D)
 							* ((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:level")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D),
-					"grimm:money");
+					entity.getStringUUID() + "/grimm:money");
 			if (ServerConfigConfiguration.SLEVEL.get()
 					&& Math.round((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:level")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) % (double) ServerConfigConfiguration.SNLEVEL.get() == 0) {
 				if (!world.isClientSide() && world.getServer() != null)

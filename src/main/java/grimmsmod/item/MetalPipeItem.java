@@ -49,7 +49,7 @@ public class MetalPipeItem extends SwordItem {
 	};
 
 	public MetalPipeItem() {
-		super(TOOL_TIER, new Item.Properties().attributes(SwordItem.createAttributes(TOOL_TIER, 7f, -3f)));
+		super(TOOL_TIER, new Item.Properties().attributes(SwordItem.createAttributes(TOOL_TIER, 5f, -3f)));
 	}
 
 	@Override

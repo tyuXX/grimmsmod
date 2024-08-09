@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "grimms:heavy_metal_pipe",
     "grimms:metal_pipe",
     "grimms:katana"
   ]

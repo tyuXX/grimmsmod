@@ -1,5 +1,6 @@
 package grimmsmod.procedures;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.nbt.StringTag;
 import net.minecraft.nbt.DoubleTag;
@@ -9,7 +10,7 @@ import grimmsmod.network.GrimmsModVariables;
 import grimmsmod.GrimmsMod;
 
 public class InitPlayerDatamapProcedure {
-	public static void execute(Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		double init = 0;
@@ -102,12 +103,12 @@ public class InitPlayerDatamapProcedure {
 			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.put("deaths", DoubleTag.valueOf(0));
 			init = init + 1;
 		}
-		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.contains("grimm:money")) {
-			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.put("grimm:money", DoubleTag.valueOf(0));
+		if (!GrimmsModVariables.MapVariables.get(world).mapstats.contains((entity.getStringUUID() + "/grimm:totaltv"))) {
+			GrimmsModVariables.MapVariables.get(world).mapstats.put((entity.getStringUUID() + "/grimm:totaltv"), DoubleTag.valueOf(0));
 			init = init + 1;
 		}
-		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.contains("grimm:totaltv")) {
-			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.put("grimm:totaltv", DoubleTag.valueOf(0));
+		if (!GrimmsModVariables.MapVariables.get(world).mapstats.contains((entity.getStringUUID() + "/grimm:money"))) {
+			GrimmsModVariables.MapVariables.get(world).mapstats.put((entity.getStringUUID() + "/grimm:money"), DoubleTag.valueOf(0));
 			init = init + 1;
 		}
 		if (init < 1) {

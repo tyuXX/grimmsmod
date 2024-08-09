@@ -1,6 +1,7 @@
 package grimmsmod.procedures;
 
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
@@ -20,7 +21,7 @@ import java.util.HashMap;
 import grimmsmod.network.GrimmsModVariables;
 
 public class TransmutationGUIWhileThisGUIIsOpenTickProcedure {
-	public static void execute(Entity entity, HashMap guistate) {
+	public static void execute(LevelAccessor world, Entity entity, HashMap guistate) {
 		if (entity == null || guistate == null)
 			return;
 		if (new Object() {
@@ -39,7 +40,7 @@ public class TransmutationGUIWhileThisGUIIsOpenTickProcedure {
 						.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem()).toString()));
 				if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
 						.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("grimms:itemlvlinit")) {
-					ChangeNumberDataElementProcedure.execute(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, true,
+					ChangeNumberDataElementProcedure.execute(GrimmsModVariables.MapVariables.get(world).mapstats, entity, false,
 							(entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
 									.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:lvl") * new Object() {
 										public int getAmount(int sltid) {
@@ -54,9 +55,9 @@ public class TransmutationGUIWhileThisGUIIsOpenTickProcedure {
 									* ((GrimmsModVariables.ctvalues.get(("tv:" + (BuiltInRegistries.ITEM
 											.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem())
 											.toString())))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D),
-							"grimm:totaltv");
+							entity.getStringUUID() + "/grimm:totaltv");
 				} else {
-					ChangeNumberDataElementProcedure.execute(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, true, new Object() {
+					ChangeNumberDataElementProcedure.execute(GrimmsModVariables.MapVariables.get(world).mapstats, entity, false, new Object() {
 						public int getAmount(int sltid) {
 							if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 								ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
@@ -67,7 +68,7 @@ public class TransmutationGUIWhileThisGUIIsOpenTickProcedure {
 						}
 					}.getAmount(0) * ((GrimmsModVariables.ctvalues.get(("tv:" + (BuiltInRegistries.ITEM
 							.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem())
-							.toString())))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D), "grimm:totaltv");
+							.toString())))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D), entity.getStringUUID() + "/grimm:totaltv");
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 					((Slot) _slots.get(0)).set(ItemStack.EMPTY);
@@ -76,7 +77,7 @@ public class TransmutationGUIWhileThisGUIIsOpenTickProcedure {
 			}
 		}
 		if (!(BuiltInRegistries.ITEM.get(new ResourceLocation(((guistate.containsKey("text:itemid") ? ((EditBox) guistate.get("text:itemid")).getValue() : "")).toLowerCase(java.util.Locale.ENGLISH))) == Blocks.AIR.asItem())) {
-			if (((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:totaltv")) instanceof DoubleTag _doubleTag
+			if (((GrimmsModVariables.MapVariables.get(world).mapstats.get((entity.getStringUUID() + "/grimm:totaltv"))) instanceof DoubleTag _doubleTag
 					? _doubleTag.getAsDouble()
 					: 0.0D) >= ((GrimmsModVariables.ctvalues.get(("tv:" + (BuiltInRegistries.ITEM
 							.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem())

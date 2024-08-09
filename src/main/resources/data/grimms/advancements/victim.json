@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:player_head"
+    },
+    "title": {
+      "translate": "advancements.victim.title"
+    },
+    "description": {
+      "translate": "advancements.victim.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "victim_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "grimms:grimms_mod_titles"
+}

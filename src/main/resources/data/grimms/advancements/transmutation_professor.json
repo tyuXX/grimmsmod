@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "grimms:tv_liquidator"
+    },
+    "title": {
+      "translate": "advancements.transmutation_professor.title"
+    },
+    "description": {
+      "translate": "advancements.transmutation_professor.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "transmutation_professor_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "grimms:transmuter"
+}

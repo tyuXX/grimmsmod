@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:diamond"
+    },
+    "title": {
+      "translate": "advancements.millionare.title"
+    },
+    "description": {
+      "translate": "advancements.millionare.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "millionare_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "grimms:rich_guy"
+}

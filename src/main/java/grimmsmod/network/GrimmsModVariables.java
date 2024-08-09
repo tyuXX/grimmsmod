@@ -139,6 +139,7 @@ public class GrimmsModVariables {
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "grimms_mapvars";
 		public double worldtick = 0;
+		public CompoundTag mapstats = new CompoundTag();
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -148,11 +149,13 @@ public class GrimmsModVariables {
 
 		public void read(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
 			worldtick = nbt.getDouble("worldtick");
+			this.mapstats = nbt.get("mapstats") instanceof CompoundTag mapstats ? mapstats : new CompoundTag();
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
 			nbt.putDouble("worldtick", worldtick);
+			nbt.put("mapstats", this.mapstats);
 			return nbt;
 		}
 
