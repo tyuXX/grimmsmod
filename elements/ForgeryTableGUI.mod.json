@@ -190,6 +190,9 @@
           "name": "button_forge",
           "text": "Forge",
           "isUndecorated": false,
+          "onClick": {
+            "name": "ForgeryTableForgeButton"
+          },
           "width": 51,
           "height": 20,
           "x": 222,

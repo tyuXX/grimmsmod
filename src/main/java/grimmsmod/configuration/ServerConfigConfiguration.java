@@ -14,8 +14,8 @@ public class ServerConfigConfiguration {
 	public static final ModConfigSpec.ConfigValue<Boolean> SPRESTIGE;
 	public static final ModConfigSpec.ConfigValue<Boolean> SLEVEL;
 	public static final ModConfigSpec.ConfigValue<Double> SNLEVEL;
-	public static final ModConfigSpec.ConfigValue<List<? extends String>> CTVALUES;
-	public static final ModConfigSpec.ConfigValue<List<? extends String>> CCVALUES;
+	public static final ModConfigSpec.ConfigValue<List<? extends String>> TVVALUES;
+	public static final ModConfigSpec.ConfigValue<List<? extends String>> CVALUES;
 	static {
 		BUILDER.push("Performance");
 		INSTLEVELUP = BUILDER.comment("Use a while loop so no leftover xp is left").define("Instant Level Up", true);
@@ -31,9 +31,9 @@ public class ServerConfigConfiguration {
 		SNLEVEL = BUILDER.comment("Shouts every <value> levels").define("Level for shout", (double) 10);
 		BUILDER.pop();
 		BUILDER.push("Caches");
-		CTVALUES = BUILDER.comment("Use format {registry name}/{TV}").defineList("Custom TV's", List.of(), entry -> true);
-		CCVALUES = BUILDER.comment("Use format {recipe type}${registry name}/{registry name}/{registry name}/{registry name}/{registry name}/{registry name}/{registry name}/{registry name}/{registry name}:{output registry name}")
-				.defineList("Custom Crafting's", List.of(), entry -> true);
+		TVVALUES = BUILDER.comment("Use format {registry name}/{TV}").defineList("TV's", List.of("minecraft:cobblestone/1", "minecraft:stone/1", "minecraft:oak_log/4", "minecraft:oak_planks/1"), entry -> true);
+		CVALUES = BUILDER.comment("Use format {recipe type}${supported number of {input registry name}/{input registry name}}>{output registry name}").defineList("Crafting's",
+				List.of("forgery$minecraft:air/minecraft:air/minecraft:air/grimms:steel/grimms:steel/minecraft:stick/minecraft:air/minecraft:air/minecraft:air>grimms:katana"), entry -> true);
 		BUILDER.pop();
 
 		SPEC = BUILDER.build();

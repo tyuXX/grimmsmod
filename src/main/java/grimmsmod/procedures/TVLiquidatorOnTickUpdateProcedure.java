@@ -54,7 +54,7 @@ public class TVLiquidatorOnTickUpdateProcedure {
 					return 0;
 				}
 			}.getAmount(world, BlockPos.containing(x, y, z), 0) > 0) {
-				if (GrimmsModVariables.ctvalues.contains(("tv:" + (BuiltInRegistries.ITEM.getKey((new Object() {
+				if (GrimmsModVariables.cache.contains(("tv:" + (BuiltInRegistries.ITEM.getKey((new Object() {
 					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						if (world instanceof ILevelExtension _ext) {
 							IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
@@ -92,7 +92,7 @@ public class TVLiquidatorOnTickUpdateProcedure {
 								}
 								return 0;
 							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 0) * ((GrimmsModVariables.ctvalues.get(("tv:" + (BuiltInRegistries.ITEM.getKey((new Object() {
+						}.getAmount(world, BlockPos.containing(x, y, z), 0) * ((GrimmsModVariables.cache.get(("tv:" + (BuiltInRegistries.ITEM.getKey((new Object() {
 							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 								if (world instanceof ILevelExtension _ext) {
 									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
@@ -112,7 +112,7 @@ public class TVLiquidatorOnTickUpdateProcedure {
 								}
 								return 0;
 							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 0) * ((GrimmsModVariables.ctvalues.get(("tv:" + (BuiltInRegistries.ITEM.getKey((new Object() {
+						}.getAmount(world, BlockPos.containing(x, y, z), 0) * ((GrimmsModVariables.cache.get(("tv:" + (BuiltInRegistries.ITEM.getKey((new Object() {
 							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 								if (world instanceof ILevelExtension _ext) {
 									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);

@@ -1,7 +1,7 @@
 {
-  "advancements.victim.title": "Victim",
-  "item.grimmsmod.handheld_microscope": "Handheld Microscope",
   "item.grimmsmod.microscope": "Microscope",
+  "item.grimmsmod.handheld_microscope": "Handheld Microscope",
+  "advancements.victim.title": "Victim",
   "item.grimmsmod.scalpel": "Scalpel",
   "advancements.millionare.title": "Millionare",
   "gui.grimms.transmutation_gui.itemid": "Item registry name",

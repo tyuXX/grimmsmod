@@ -2082,6 +2082,7 @@
       "metadata": {
         "files": [
           "src/main/java/grimmsmod/world/inventory/ForgeryTableGUIMenu.java",
+          "src/main/java/grimmsmod/network/ForgeryTableGUIButtonMessage.java",
           "src/main/java/grimmsmod/client/gui/ForgeryTableGUIScreen.java"
         ]
       },
@@ -2352,7 +2353,12 @@
         "files": [
           "src/main/java/grimmsmod/procedures/ForgeryTableForgeButtonProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Procs"
     },
@@ -2906,6 +2912,38 @@
         ]
       },
       "path": "~/Procs"
+    },
+    {
+      "name": "DumpCache",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dump_cache",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/DumpCacheProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "DumpCacheCommand",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dump_cache_command",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/command/DumpCacheCommandCommand.java"
+        ]
+      },
+      "path": "~/Command"
     }
   ],
   "variable_elements": [
@@ -2946,27 +2984,21 @@
       "value": "new CompoundTag()"
     },
     {
-      "name": "ctvalues",
-      "type": "datamap",
-      "scope": "global",
-      "value": "new CompoundTag()"
-    },
-    {
       "name": "learnedtvs",
       "type": "datamap",
       "scope": "player_persistent",
       "value": "new CompoundTag()"
     },
     {
-      "name": "craftingscache",
-      "type": "datamap",
-      "scope": "global",
-      "value": "new CompoundTag()"
-    },
-    {
       "name": "mapstats",
       "type": "datamap",
       "scope": "map",
+      "value": "new CompoundTag()"
+    },
+    {
+      "name": "cache",
+      "type": "datamap",
+      "scope": "global",
       "value": "new CompoundTag()"
     }
   ],
@@ -3027,9 +3059,9 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "advancements.victim.title": "Victim",
-      "item.grimmsmod.handheld_microscope": "Handheld Microscope",
       "item.grimmsmod.microscope": "Microscope",
+      "item.grimmsmod.handheld_microscope": "Handheld Microscope",
+      "advancements.victim.title": "Victim",
       "item.grimmsmod.scalpel": "Scalpel",
       "advancements.millionare.title": "Millionare",
       "gui.grimms.transmutation_gui.itemid": "Item registry name",
@@ -3236,7 +3268,7 @@
   "workspaceSettings": {
     "modid": "grimms",
     "modName": "Grimm\u0027s Mod",
-    "version": "3",
+    "version": "4",
     "description": "Grimm\u0027s newest and bestest Mod!",
     "author": "tyuXX",
     "websiteURL": "https://gsdistance.org",
@@ -3250,7 +3282,7 @@
       "jei"
     ],
     "currentGenerator": "neoforge-1.20.6",
-    "credits": "tyuXX, no more :(",
+    "credits": "tyuXX",
     "modElementsPackage": "grimmsmod"
   },
   "mcreatorVersion": 202400232117

@@ -36,8 +36,7 @@ import grimmsmod.GrimmsMod;
 public class GrimmsModVariables {
 	public static final DeferredRegister<AttachmentType<?>> ATTACHMENT_TYPES = DeferredRegister.create(NeoForgeRegistries.Keys.ATTACHMENT_TYPES, GrimmsMod.MODID);
 	public static final Supplier<AttachmentType<PlayerVariables>> PLAYER_VARIABLES = ATTACHMENT_TYPES.register("player_variables", () -> AttachmentType.serializable(() -> new PlayerVariables()).build());
-	public static CompoundTag ctvalues = new CompoundTag();
-	public static CompoundTag craftingscache = new CompoundTag();
+	public static CompoundTag cache = new CompoundTag();
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {

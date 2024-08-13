@@ -152,10 +152,15 @@
             "numberField": 0.0,
             "textDefault": "",
             "comment": "Use format {registry name}/{TV}",
-            "vardisplay": "Custom TV's",
-            "varname": "ctvalues",
+            "vardisplay": "TV's",
+            "varname": "tvvalues",
             "enablecomment": true,
-            "stringlist": []
+            "stringlist": [
+              "minecraft:cobblestone/1",
+              "minecraft:stone/1",
+              "minecraft:oak_log/4",
+              "minecraft:oak_planks/1"
+            ]
           },
           {
             "item": {
@@ -168,11 +173,13 @@
             "logicField": 0,
             "numberField": 0.0,
             "textDefault": "",
-            "comment": "Use format {recipe type}${registry name}/{registry name}/{registry name}/{registry name}/{registry name}/{registry name}/{registry name}/{registry name}/{registry name}:{output registry name}",
-            "vardisplay": "Custom Crafting's",
-            "varname": "ccvalues",
+            "comment": "Use format {recipe type}${supported number of {input registry name}/{input registry name}}>{output registry name}",
+            "vardisplay": "Crafting's",
+            "varname": "cvalues",
             "enablecomment": true,
-            "stringlist": []
+            "stringlist": [
+              "forgery$minecraft:air/minecraft:air/minecraft:air/grimms:steel/grimms:steel/minecraft:stick/minecraft:air/minecraft:air/minecraft:air>grimms:katana"
+            ]
           }
         ]
       }

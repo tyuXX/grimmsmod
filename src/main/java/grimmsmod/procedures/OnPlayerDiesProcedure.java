@@ -15,6 +15,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.nbt.DoubleTag;
@@ -107,7 +108,7 @@ public class OnPlayerDiesProcedure {
 			if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler) {
 				for (int _idx = 0; _idx < _modHandler.getSlots(); _idx++) {
 					ItemStack itemstackiterator = _modHandler.getStackInSlot(_idx).copy();
-					if (EnchantmentHelper.getItemEnchantmentLevel(GrimmsModEnchantments.SOULBOUND.get(), itemstackiterator) != 0) {
+					if (EnchantmentHelper.getItemEnchantmentLevel(GrimmsModEnchantments.SOULBOUND.get(), itemstackiterator) != 0 || itemstackiterator.is(ItemTags.create(new ResourceLocation("grimms:forcesoulbound")))) {
 						if (tmp.getCapability(Capabilities.ItemHandler.ITEM, null) instanceof IItemHandlerModifiable _modHandlerItemSetSlot) {
 							ItemStack _setstack = itemstackiterator.copy();
 							_setstack.setCount(itemstackiterator.getCount());

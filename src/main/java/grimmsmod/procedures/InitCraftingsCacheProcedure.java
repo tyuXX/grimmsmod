@@ -1,7 +1,6 @@
 package grimmsmod.procedures;
 
 import net.minecraft.nbt.StringTag;
-import net.minecraft.nbt.CompoundTag;
 
 import grimmsmod.network.GrimmsModVariables;
 
@@ -11,12 +10,22 @@ import grimmsmod.GrimmsMod;
 
 public class InitCraftingsCacheProcedure {
 	public static void execute() {
-		GrimmsMod.LOGGER.info("Initializing hardcoded Grimm's mod crafting cache.");
-		GrimmsModVariables.craftingscache = new CompoundTag();
-		GrimmsMod.LOGGER.info("Initializing custom Grimm's mod crafting cache.");
-		for (String stringiterator : ServerConfigConfiguration.CCVALUES.get()) {
-			GrimmsModVariables.craftingscache.put("key", StringTag.valueOf("key"));
+		double id = 0;
+		double regi = 0;
+		GrimmsMod.LOGGER.info("Initializing Grimm's mod crafting cache.");
+		for (String stringiterator : ServerConfigConfiguration.CVALUES.get()) {
+			if (stringiterator.contains(":") && stringiterator.contains(">") && stringiterator.contains("$")) {
+				id = 0;
+				for (int index0 = 0; index0 < (int) (stringiterator).length(); index0++) {
+					if ((stringiterator.substring(0, (int) id)).contains(">")) {
+						GrimmsModVariables.cache.put(("craft:" + stringiterator.substring(0, (int) (id - 1))), StringTag.valueOf((stringiterator.substring((int) id, (int) (stringiterator).length()))));
+						regi = regi + 1;
+						break;
+					}
+					id = id + 1;
+				}
+			}
 		}
-		GrimmsMod.LOGGER.info("Initialized Grimm's mod crafting cache.");
+		GrimmsMod.LOGGER.info(("Initialized " + new java.text.DecimalFormat("##").format(regi) + " crafting recipes."));
 	}
 }

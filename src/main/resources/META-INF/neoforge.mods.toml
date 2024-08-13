@@ -4,11 +4,11 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="grimms"
-version="3"
+version="4"
 displayName="Grimm's Mod"
 displayURL="https://gsdistance.org"
 logoFile="logo.png"
-credits="tyuXX, no more :("
+credits="tyuXX"
 authors="tyuXX"
 description="Grimm's newest and bestest Mod!"
 

@@ -1,5 +1,7 @@
 package grimmsmod.client.gui;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -12,6 +14,8 @@ import net.minecraft.client.gui.GuiGraphics;
 import java.util.HashMap;
 
 import grimmsmod.world.inventory.ForgeryTableGUIMenu;
+
+import grimmsmod.network.ForgeryTableGUIButtonMessage;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
@@ -68,6 +72,10 @@ public class ForgeryTableGUIScreen extends AbstractContainerScreen<ForgeryTableG
 	public void init() {
 		super.init();
 		button_forge = Button.builder(Component.translatable("gui.grimms.forgery_table_gui.button_forge"), e -> {
+			if (true) {
+				PacketDistributor.sendToServer(new ForgeryTableGUIButtonMessage(0, x, y, z));
+				ForgeryTableGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		}).bounds(this.leftPos + 96, this.topPos + 52, 51, 20).build();
 		guistate.put("button:button_forge", button_forge);
 		this.addRenderableWidget(button_forge);

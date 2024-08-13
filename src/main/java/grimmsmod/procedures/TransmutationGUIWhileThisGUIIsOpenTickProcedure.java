@@ -34,7 +34,7 @@ public class TransmutationGUIWhileThisGUIIsOpenTickProcedure {
 				return 0;
 			}
 		}.getAmount(0) > 0) {
-			if (GrimmsModVariables.ctvalues.contains(("tv:" + (BuiltInRegistries.ITEM
+			if (GrimmsModVariables.cache.contains(("tv:" + (BuiltInRegistries.ITEM
 					.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem()).toString())))) {
 				SetDataElementProcedure.execute(ByteTag.valueOf(true), entity.getData(GrimmsModVariables.PLAYER_VARIABLES).learnedtvs, entity, false, "tv:" + (BuiltInRegistries.ITEM
 						.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem()).toString()));
@@ -52,7 +52,7 @@ public class TransmutationGUIWhileThisGUIIsOpenTickProcedure {
 											return 0;
 										}
 									}.getAmount(0)
-									* ((GrimmsModVariables.ctvalues.get(("tv:" + (BuiltInRegistries.ITEM
+									* ((GrimmsModVariables.cache.get(("tv:" + (BuiltInRegistries.ITEM
 											.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem())
 											.toString())))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D),
 							entity.getStringUUID() + "/grimm:totaltv");
@@ -66,7 +66,7 @@ public class TransmutationGUIWhileThisGUIIsOpenTickProcedure {
 							}
 							return 0;
 						}
-					}.getAmount(0) * ((GrimmsModVariables.ctvalues.get(("tv:" + (BuiltInRegistries.ITEM
+					}.getAmount(0) * ((GrimmsModVariables.cache.get(("tv:" + (BuiltInRegistries.ITEM
 							.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem())
 							.toString())))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D), entity.getStringUUID() + "/grimm:totaltv");
 				}
@@ -79,7 +79,7 @@ public class TransmutationGUIWhileThisGUIIsOpenTickProcedure {
 		if (!(BuiltInRegistries.ITEM.get(new ResourceLocation(((guistate.containsKey("text:itemid") ? ((EditBox) guistate.get("text:itemid")).getValue() : "")).toLowerCase(java.util.Locale.ENGLISH))) == Blocks.AIR.asItem())) {
 			if (((GrimmsModVariables.MapVariables.get(world).mapstats.get((entity.getStringUUID() + "/grimm:totaltv"))) instanceof DoubleTag _doubleTag
 					? _doubleTag.getAsDouble()
-					: 0.0D) >= ((GrimmsModVariables.ctvalues.get(("tv:" + (BuiltInRegistries.ITEM
+					: 0.0D) >= ((GrimmsModVariables.cache.get(("tv:" + (BuiltInRegistries.ITEM
 							.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem())
 							.toString())))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D)) {
 				if (entity.getData(GrimmsModVariables.PLAYER_VARIABLES).learnedtvs.contains((guistate.containsKey("text:itemid") ? ((EditBox) guistate.get("text:itemid")).getValue() : ""))) {
