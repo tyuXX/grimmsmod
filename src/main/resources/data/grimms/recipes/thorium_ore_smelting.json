@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "experience": 4.55,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "grimms:thorium_ore"
+  },
+  "result": {
+    "id": "grimms:thorium_ingot"
+  }
+}

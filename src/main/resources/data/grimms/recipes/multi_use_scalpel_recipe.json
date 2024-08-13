@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "abb"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:diamond"
+    },
+    "b": {
+      "item": "grimms:steel"
+    }
+  },
+  "result": {
+    "id": "grimms:multi_use_scalpel",
+    "count": 1
+  }
+}

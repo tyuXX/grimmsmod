@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "grimms:iridium_block"
+    }
+  ],
+  "result": {
+    "id": "grimms:iridium_ingot",
+    "count": 9
+  }
+}

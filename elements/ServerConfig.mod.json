@@ -151,7 +151,7 @@
             "logicField": 0,
             "numberField": 0.0,
             "textDefault": "",
-            "comment": "Use format {registry name}/{TV}",
+            "comment": "Use format {registry name}/{value}",
             "vardisplay": "TV's",
             "varname": "tvvalues",
             "enablecomment": true,
@@ -178,7 +178,28 @@
             "varname": "cvalues",
             "enablecomment": true,
             "stringlist": [
-              "forgery$minecraft:air/minecraft:air/minecraft:air/grimms:steel/grimms:steel/minecraft:stick/minecraft:air/minecraft:air/minecraft:air>grimms:katana"
+              "forgery$minecraft:air/minecraft:air/minecraft:air/grimms:steel/grimms:steel/minecraft:stick/minecraft:air/minecraft:air/minecraft:air>grimms:katana",
+              "forgery$minecraft:air/minecraft:air/minecraft:air/grimms:tempered_steel/grimms:tempered_steel/grimms:tempered_steel/minecraft:air/minecraft:air/minecraft:air>grimms:heavy_metal_pipe"
+            ]
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 5,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "Use format {registry name}/{value}",
+            "vardisplay": "Radiation Value's",
+            "varname": "radvalues",
+            "enablecomment": true,
+            "stringlist": [
+              "grimms:uranium_ingot/0.01",
+              "grimms:thorium_ingot/0.02"
             ]
           }
         ]

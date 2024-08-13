@@ -16,6 +16,7 @@ public class ServerConfigConfiguration {
 	public static final ModConfigSpec.ConfigValue<Double> SNLEVEL;
 	public static final ModConfigSpec.ConfigValue<List<? extends String>> TVVALUES;
 	public static final ModConfigSpec.ConfigValue<List<? extends String>> CVALUES;
+	public static final ModConfigSpec.ConfigValue<List<? extends String>> RADVALUES;
 	static {
 		BUILDER.push("Performance");
 		INSTLEVELUP = BUILDER.comment("Use a while loop so no leftover xp is left").define("Instant Level Up", true);
@@ -31,9 +32,12 @@ public class ServerConfigConfiguration {
 		SNLEVEL = BUILDER.comment("Shouts every <value> levels").define("Level for shout", (double) 10);
 		BUILDER.pop();
 		BUILDER.push("Caches");
-		TVVALUES = BUILDER.comment("Use format {registry name}/{TV}").defineList("TV's", List.of("minecraft:cobblestone/1", "minecraft:stone/1", "minecraft:oak_log/4", "minecraft:oak_planks/1"), entry -> true);
+		TVVALUES = BUILDER.comment("Use format {registry name}/{value}").defineList("TV's", List.of("minecraft:cobblestone/1", "minecraft:stone/1", "minecraft:oak_log/4", "minecraft:oak_planks/1"), entry -> true);
 		CVALUES = BUILDER.comment("Use format {recipe type}${supported number of {input registry name}/{input registry name}}>{output registry name}").defineList("Crafting's",
-				List.of("forgery$minecraft:air/minecraft:air/minecraft:air/grimms:steel/grimms:steel/minecraft:stick/minecraft:air/minecraft:air/minecraft:air>grimms:katana"), entry -> true);
+				List.of("forgery$minecraft:air/minecraft:air/minecraft:air/grimms:steel/grimms:steel/minecraft:stick/minecraft:air/minecraft:air/minecraft:air>grimms:katana",
+						"forgery$minecraft:air/minecraft:air/minecraft:air/grimms:tempered_steel/grimms:tempered_steel/grimms:tempered_steel/minecraft:air/minecraft:air/minecraft:air>grimms:heavy_metal_pipe"),
+				entry -> true);
+		RADVALUES = BUILDER.comment("Use format {registry name}/{value}").defineList("Radiation Value's", List.of("grimms:uranium_ingot/0.01", "grimms:thorium_ingot/0.02"), entry -> true);
 		BUILDER.pop();
 
 		SPEC = BUILDER.build();

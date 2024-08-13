@@ -46,6 +46,24 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModBlocks.TV_LIQUIDATOR.get().asItem());
 				tabData.accept(GrimmsModBlocks.BASIC_COBBLESTONE_GENERATOR.get().asItem());
 				tabData.accept(GrimmsModItems.HEAVY_METAL_PIPE.get());
+				tabData.accept(GrimmsModItems.TEMPERED_STEEL.get());
+				tabData.accept(GrimmsModBlocks.HEAVY_BLASTER.get().asItem());
+				tabData.accept(GrimmsModItems.SUPERIOR_EXPERIANCE_BOTTLE.get());
+				tabData.accept(GrimmsModItems.IRIDIUM_INGOT.get());
+				tabData.accept(GrimmsModBlocks.IRIDIUM_ORE.get().asItem());
+				tabData.accept(GrimmsModBlocks.IRIDIUM_BLOCK.get().asItem());
+				tabData.accept(GrimmsModItems.SILVER_INGOT.get());
+				tabData.accept(GrimmsModBlocks.SILVER_ORE.get().asItem());
+				tabData.accept(GrimmsModBlocks.SILVER_BLOCK.get().asItem());
+				tabData.accept(GrimmsModItems.URANIUM_INGOT.get());
+				tabData.accept(GrimmsModBlocks.URANIUM_ORE.get().asItem());
+				tabData.accept(GrimmsModBlocks.URANIUM_BLOCK.get().asItem());
+				tabData.accept(GrimmsModItems.THORIUM_INGOT.get());
+				tabData.accept(GrimmsModBlocks.THORIUM_ORE.get().asItem());
+				tabData.accept(GrimmsModBlocks.THORIUM_BLOCK.get().asItem());
+				tabData.accept(GrimmsModItems.LEAD_INGOT.get());
+				tabData.accept(GrimmsModBlocks.LEAD_ORE.get().asItem());
+				tabData.accept(GrimmsModBlocks.LEAD_BLOCK.get().asItem());
 			})
 
 					.build());
@@ -56,6 +74,7 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.LOGO.get());
 				tabData.accept(GrimmsModItems.THRASH.get());
 				tabData.accept(GrimmsModItems.TEST_DUMMY_SPAWN_EGG.get());
+				tabData.accept(GrimmsModBlocks.LOOT_CRATE.get().asItem());
 			})
 
 					.build());

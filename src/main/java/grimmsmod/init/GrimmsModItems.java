@@ -18,11 +18,17 @@ import net.minecraft.world.item.BlockItem;
 
 import grimmsmod.item.inventory.DeathPackageInventoryCapability;
 import grimmsmod.item.WoodenHammerItem;
+import grimmsmod.item.VoltMeterItem;
+import grimmsmod.item.UraniumIngotItem;
 import grimmsmod.item.TransmutationTabletItem;
 import grimmsmod.item.TinCanItem;
 import grimmsmod.item.ThrashItem;
+import grimmsmod.item.ThoriumIngotItem;
+import grimmsmod.item.TemperedSteelItem;
+import grimmsmod.item.SuperiorExperianceBottleItem;
 import grimmsmod.item.SteelItem;
 import grimmsmod.item.SteelDustItem;
+import grimmsmod.item.SilverIngotItem;
 import grimmsmod.item.ScalpelItem;
 import grimmsmod.item.PlaceholderItem;
 import grimmsmod.item.NetheriteHammerItem;
@@ -32,9 +38,11 @@ import grimmsmod.item.MortarAndPestleItem;
 import grimmsmod.item.MicroscopeItem;
 import grimmsmod.item.MetalPipeItem;
 import grimmsmod.item.LogoItem;
+import grimmsmod.item.LeadIngotItem;
 import grimmsmod.item.KatanaItem;
 import grimmsmod.item.IronHammerItem;
 import grimmsmod.item.IronDustItem;
+import grimmsmod.item.IridiumIngotItem;
 import grimmsmod.item.HeavyMetalPipeItem;
 import grimmsmod.item.HandheldMicroscopeItem;
 import grimmsmod.item.FancyClockItem;
@@ -84,6 +92,26 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> TV_LIQUIDATOR = block(GrimmsModBlocks.TV_LIQUIDATOR);
 	public static final DeferredHolder<Item, Item> BASIC_COBBLESTONE_GENERATOR = block(GrimmsModBlocks.BASIC_COBBLESTONE_GENERATOR);
 	public static final DeferredHolder<Item, Item> HEAVY_METAL_PIPE = REGISTRY.register("heavy_metal_pipe", HeavyMetalPipeItem::new);
+	public static final DeferredHolder<Item, Item> TEMPERED_STEEL = REGISTRY.register("tempered_steel", TemperedSteelItem::new);
+	public static final DeferredHolder<Item, Item> VOLT_METER = REGISTRY.register("volt_meter", VoltMeterItem::new);
+	public static final DeferredHolder<Item, Item> HEAVY_BLASTER = block(GrimmsModBlocks.HEAVY_BLASTER);
+	public static final DeferredHolder<Item, Item> LOOT_CRATE = block(GrimmsModBlocks.LOOT_CRATE);
+	public static final DeferredHolder<Item, Item> SUPERIOR_EXPERIANCE_BOTTLE = REGISTRY.register("superior_experiance_bottle", SuperiorExperianceBottleItem::new);
+	public static final DeferredHolder<Item, Item> IRIDIUM_INGOT = REGISTRY.register("iridium_ingot", IridiumIngotItem::new);
+	public static final DeferredHolder<Item, Item> IRIDIUM_ORE = block(GrimmsModBlocks.IRIDIUM_ORE);
+	public static final DeferredHolder<Item, Item> IRIDIUM_BLOCK = block(GrimmsModBlocks.IRIDIUM_BLOCK);
+	public static final DeferredHolder<Item, Item> SILVER_INGOT = REGISTRY.register("silver_ingot", SilverIngotItem::new);
+	public static final DeferredHolder<Item, Item> SILVER_ORE = block(GrimmsModBlocks.SILVER_ORE);
+	public static final DeferredHolder<Item, Item> SILVER_BLOCK = block(GrimmsModBlocks.SILVER_BLOCK);
+	public static final DeferredHolder<Item, Item> URANIUM_INGOT = REGISTRY.register("uranium_ingot", UraniumIngotItem::new);
+	public static final DeferredHolder<Item, Item> URANIUM_ORE = block(GrimmsModBlocks.URANIUM_ORE);
+	public static final DeferredHolder<Item, Item> URANIUM_BLOCK = block(GrimmsModBlocks.URANIUM_BLOCK);
+	public static final DeferredHolder<Item, Item> THORIUM_INGOT = REGISTRY.register("thorium_ingot", ThoriumIngotItem::new);
+	public static final DeferredHolder<Item, Item> THORIUM_ORE = block(GrimmsModBlocks.THORIUM_ORE);
+	public static final DeferredHolder<Item, Item> THORIUM_BLOCK = block(GrimmsModBlocks.THORIUM_BLOCK);
+	public static final DeferredHolder<Item, Item> LEAD_INGOT = REGISTRY.register("lead_ingot", LeadIngotItem::new);
+	public static final DeferredHolder<Item, Item> LEAD_ORE = block(GrimmsModBlocks.LEAD_ORE);
+	public static final DeferredHolder<Item, Item> LEAD_BLOCK = block(GrimmsModBlocks.LEAD_BLOCK);
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -1,0 +1,9 @@
+{
+  "parent": "grimms:custom/heavyblaster",
+  "textures": {
+    "all": "grimms:block/heavyblaster",
+    "particle": "grimms:block/heavyblaster",
+    "0": "grimms:block/heavyblaster"
+  },
+  "render_type": "solid"
+}

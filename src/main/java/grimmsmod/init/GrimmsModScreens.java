@@ -17,6 +17,7 @@ import grimmsmod.client.gui.PrestigeUpgradesGUIScreen;
 import grimmsmod.client.gui.ForgeryTableGUIScreen;
 import grimmsmod.client.gui.DistilleryGUIScreen;
 import grimmsmod.client.gui.DeathPackageGUIScreen;
+import grimmsmod.client.gui.BasicCobblestoneGeneratorGUIScreen;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class GrimmsModScreens {
@@ -30,5 +31,6 @@ public class GrimmsModScreens {
 		event.register(GrimmsModMenus.REFINERY_GUI.get(), RefineryGUIScreen::new);
 		event.register(GrimmsModMenus.DISTILLERY_GUI.get(), DistilleryGUIScreen::new);
 		event.register(GrimmsModMenus.TV_LIQUIDATOR_GUI.get(), TVLiquidatorGUIScreen::new);
+		event.register(GrimmsModMenus.BASIC_COBBLESTONE_GENERATOR_GUI.get(), BasicCobblestoneGeneratorGUIScreen::new);
 	}
 }

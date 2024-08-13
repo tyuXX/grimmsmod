@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "grimms:lead_block",
+    "grimms:lead_ore",
+    "grimms:thorium_block",
+    "grimms:thorium_ore",
+    "grimms:uranium_block",
+    "grimms:uranium_ore",
+    "grimms:silver_block",
+    "grimms:silver_ore",
+    "grimms:iridium_block",
+    "grimms:iridium_ore"
+  ]
+}

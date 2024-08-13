@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "experience": 4.9,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "grimms:uranium_ore"
+  },
+  "result": {
+    "id": "grimms:uranium_ingot"
+  }
+}

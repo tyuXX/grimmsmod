@@ -1,11 +1,14 @@
 package grimmsmod.procedures;
 
+import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -13,6 +16,7 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.nbt.DoubleTag;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.client.Minecraft;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.AdvancementHolder;
@@ -163,6 +167,15 @@ public class OnPlayerTickProcedure {
 			} else {
 				if (Minecraft.getInstance().gameRenderer.currentEffect() == null || !(Minecraft.getInstance().gameRenderer.currentEffect().getName()).equals(ShaderLocation)) {
 					Minecraft.getInstance().gameRenderer.loadEffect(new ResourceLocation((ShaderLocation).toLowerCase(java.util.Locale.ENGLISH)));
+				}
+			}
+		}
+		if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler) {
+			for (int _idx = 0; _idx < _modHandler.getSlots(); _idx++) {
+				ItemStack itemstackiterator = _modHandler.getStackInSlot(_idx).copy();
+				if (GrimmsModVariables.cache.contains(("rad:" + BuiltInRegistries.ITEM.getKey(itemstackiterator.getItem()).toString()))) {
+					ChangeNumberDataElementProcedure.execute(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).lifetimestats, entity, false,
+							(GrimmsModVariables.cache.get(("rad:" + BuiltInRegistries.ITEM.getKey(itemstackiterator.getItem()).toString()))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D, "grimm:rads");
 				}
 			}
 		}

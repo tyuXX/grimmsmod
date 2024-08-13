@@ -92,8 +92,8 @@
             "type": "entity"
           },
           {
-            "name": "xpamount",
-            "type": "number"
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -125,12 +125,7 @@
         "files": [
           "src/main/java/grimmsmod/procedures/LevelTextValueProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procs"
     },
@@ -145,12 +140,7 @@
         "files": [
           "src/main/java/grimmsmod/procedures/XpTextValueProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procs"
     },
@@ -165,12 +155,7 @@
         "files": [
           "src/main/java/grimmsmod/procedures/XpReqTextValueProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procs"
     },
@@ -233,12 +218,7 @@
         "files": [
           "src/main/java/grimmsmod/procedures/IsPrestigeReadyProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procs"
     },
@@ -256,6 +236,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -272,12 +256,7 @@
         "files": [
           "src/main/java/grimmsmod/procedures/PrestigeTextValueProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procs"
     },
@@ -292,12 +271,7 @@
         "files": [
           "src/main/java/grimmsmod/procedures/PrestigeReqTextValueProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procs"
     },
@@ -730,6 +704,7 @@
       "item.grimmsmod.logo": "Logo",
       "advancements.install_grimms_mod.descr": "Install Grimm\u0027s Mod on minecraft, reworked, remade, updated",
       "item.grimms.logo": "Logo",
+      "gui.grimms.stats_gui.button_open_prestige_upgrades": "Open Prestige Upgrades",
       "item.grimms.fancier_clock": "Fancier Clock",
       "item.grimms.multi_use_scalpel": "Multi Use Scalpel",
       "item.grimms.fancy_clock": "Fancy Clock",
@@ -814,5 +789,5 @@
     "credits": "Cheesecake",
     "modElementsPackage": "grimmsmod"
   },
-  "mcreatorVersion": 202400229712
+  "mcreatorVersion": 202400232117
 }

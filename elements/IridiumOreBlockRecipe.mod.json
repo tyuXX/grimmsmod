@@ -1,0 +1,48 @@
+{
+  "_fv": 66,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "BUILDING",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:IridiumIngot"
+      },
+      {
+        "value": "CUSTOM:IridiumIngot"
+      },
+      {
+        "value": "CUSTOM:IridiumIngot"
+      },
+      {
+        "value": "CUSTOM:IridiumIngot"
+      },
+      {
+        "value": "CUSTOM:IridiumIngot"
+      },
+      {
+        "value": "CUSTOM:IridiumIngot"
+      },
+      {
+        "value": "CUSTOM:IridiumIngot"
+      },
+      {
+        "value": "CUSTOM:IridiumIngot"
+      },
+      {
+        "value": "CUSTOM:IridiumIngot"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:IridiumBlock"
+    },
+    "name": "iridium_ore_block_recipe",
+    "namespace": "mod"
+  }
+}

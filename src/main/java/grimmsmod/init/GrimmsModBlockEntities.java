@@ -19,6 +19,7 @@ import grimmsmod.block.entity.TVLiquidatorBlockEntity;
 import grimmsmod.block.entity.RefineryBlockEntity;
 import grimmsmod.block.entity.ForgeryTableBlockEntity;
 import grimmsmod.block.entity.DistilleryBlockEntity;
+import grimmsmod.block.entity.BasicCobblestoneGeneratorBlockEntity;
 
 import grimmsmod.GrimmsMod;
 
@@ -29,6 +30,7 @@ public class GrimmsModBlockEntities {
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> REFINERY = register("refinery", GrimmsModBlocks.REFINERY, RefineryBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> DISTILLERY = register("distillery", GrimmsModBlocks.DISTILLERY, DistilleryBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> TV_LIQUIDATOR = register("tv_liquidator", GrimmsModBlocks.TV_LIQUIDATOR, TVLiquidatorBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> BASIC_COBBLESTONE_GENERATOR = register("basic_cobblestone_generator", GrimmsModBlocks.BASIC_COBBLESTONE_GENERATOR, BasicCobblestoneGeneratorBlockEntity::new);
 
 	private static DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> register(String registryname, DeferredHolder<Block, Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));
@@ -40,5 +42,6 @@ public class GrimmsModBlockEntities {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, REFINERY.get(), (blockEntity, side) -> ((RefineryBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, DISTILLERY.get(), (blockEntity, side) -> ((DistilleryBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, TV_LIQUIDATOR.get(), (blockEntity, side) -> ((TVLiquidatorBlockEntity) blockEntity).getItemHandler());
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, BASIC_COBBLESTONE_GENERATOR.get(), (blockEntity, side) -> ((BasicCobblestoneGeneratorBlockEntity) blockEntity).getItemHandler());
 	}
 }

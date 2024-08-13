@@ -53,6 +53,11 @@ public class OnTooltipRenderedProcedure {
 				tooltip.add(Component.literal(("\u00A7eTV:\u00A7r"
 						+ (new java.text.DecimalFormat("##").format((GrimmsModVariables.cache.get(("tv:" + BuiltInRegistries.ITEM.getKey(itemstack.getItem()).toString()))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D)))));
 			}
+			tooltip.add(Component.literal(("\u00A7eTT:\u00A7r"
+					+ (new java.text.DecimalFormat("##").format(Math.log((GrimmsModVariables.cache.get(("tv:" + BuiltInRegistries.ITEM.getKey(itemstack.getItem()).toString()))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D))))));
+		}
+		if (GrimmsModVariables.cache.contains(("rad:" + BuiltInRegistries.ITEM.getKey(itemstack.getItem()).toString()))) {
+			tooltip.add(Component.literal(("\u00A7eRAD:\u00A7r" + ((GrimmsModVariables.cache.get(("rad:" + BuiltInRegistries.ITEM.getKey(itemstack.getItem()).toString()))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) + "/t")));
 		}
 	}
 }

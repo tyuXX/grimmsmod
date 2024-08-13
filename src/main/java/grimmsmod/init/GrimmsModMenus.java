@@ -19,6 +19,7 @@ import grimmsmod.world.inventory.PrestigeUpgradesGUIMenu;
 import grimmsmod.world.inventory.ForgeryTableGUIMenu;
 import grimmsmod.world.inventory.DistilleryGUIMenu;
 import grimmsmod.world.inventory.DeathPackageGUIMenu;
+import grimmsmod.world.inventory.BasicCobblestoneGeneratorGUIMenu;
 
 import grimmsmod.GrimmsMod;
 
@@ -32,4 +33,6 @@ public class GrimmsModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<RefineryGUIMenu>> REFINERY_GUI = REGISTRY.register("refinery_gui", () -> IMenuTypeExtension.create(RefineryGUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<DistilleryGUIMenu>> DISTILLERY_GUI = REGISTRY.register("distillery_gui", () -> IMenuTypeExtension.create(DistilleryGUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<TVLiquidatorGUIMenu>> TV_LIQUIDATOR_GUI = REGISTRY.register("tv_liquidator_gui", () -> IMenuTypeExtension.create(TVLiquidatorGUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<BasicCobblestoneGeneratorGUIMenu>> BASIC_COBBLESTONE_GENERATOR_GUI = REGISTRY.register("basic_cobblestone_generator_gui",
+			() -> IMenuTypeExtension.create(BasicCobblestoneGeneratorGUIMenu::new));
 }
