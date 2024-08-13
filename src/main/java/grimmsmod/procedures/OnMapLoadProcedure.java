@@ -27,6 +27,7 @@ public class OnMapLoadProcedure {
 		InitCraftingsCacheProcedure.execute();
 		InitTransmutationValuesProcedure.execute();
 		InitRadiationCacheProcedure.execute();
+		InitMiscCacheProcedure.execute();
 		GrimmsMod.LOGGER
 				.info(("Grimm's mod succsessfully loaded in World:" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())));
 	}

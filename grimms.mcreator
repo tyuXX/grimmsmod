@@ -1508,10 +1508,6 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "guistate",
             "type": "map"
           }
@@ -3484,6 +3480,20 @@
       "metadata": {
         "files": [
           "src/main/java/grimmsmod/procedures/InitRadiationCacheProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "InitMiscCache",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "init_misc_cache",
+      "metadata": {
+        "files": [
+          "src/main/java/grimmsmod/procedures/InitMiscCacheProcedure.java"
         ],
         "dependencies": []
       },

@@ -64,7 +64,7 @@ public record PrestigeUpgradesGUIButtonMessage(int buttonID, int x, int y, int z
 			return;
 		if (buttonID == 0) {
 
-			PrestigeUpgradeGUINextProcedure.execute(entity, guistate);
+			PrestigeUpgradeGUINextProcedure.execute(guistate);
 		}
 		if (buttonID == 1) {
 

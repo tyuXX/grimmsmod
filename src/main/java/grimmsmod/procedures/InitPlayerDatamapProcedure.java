@@ -63,6 +63,18 @@ public class InitPlayerDatamapProcedure {
 			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.put("max:presige:cure", DoubleTag.valueOf(1));
 			init = init + 1;
 		}
+		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.contains("prestige:forger")) {
+			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.put("prestige:forger", DoubleTag.valueOf(0));
+			init = init + 1;
+		}
+		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.contains("name:prestige:forger")) {
+			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.put("name:prestige:forger", StringTag.valueOf("Unlocks the forgery block"));
+			init = init + 1;
+		}
+		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.contains("max:prestige:forger")) {
+			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.put("max:prestige:forger", DoubleTag.valueOf(1));
+			init = init + 1;
+		}
 		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.contains("grimm:level")) {
 			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.put("grimm:level", DoubleTag.valueOf(1));
 			init = init + 1;
