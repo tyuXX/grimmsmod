@@ -16,7 +16,7 @@ public class MathExamQuestionTextValueProcedure {
 		double num1 = 0;
 		double num2 = 0;
 		if (!((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("grimms:examinit"))) {
-			tmp = Mth.nextDouble(RandomSource.create(), 1, 5);
+			tmp = Math.round(Mth.nextDouble(RandomSource.create(), 1, 5));
 			if (tmp == 1) {
 				num1 = Mth.nextDouble(RandomSource.create(), 1, 1000000000);
 				num2 = Mth.nextDouble(RandomSource.create(), 1, 1000000000);

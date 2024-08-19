@@ -20,7 +20,10 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 import net.minecraft.tags.TagKey;
+import net.minecraft.tags.EntityTypeTags;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -95,7 +98,7 @@ public class OnEntityAttackedProcedure {
 								/ (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0)),
 						true, false));
 		} else if (damagesource.is(TagKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("grimms:sharpdamage")))) {
-			if (Math.random() < 0.2 / (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0)) {
+			if (!entity.getType().is(EntityTypeTags.UNDEAD) && Mth.nextInt(RandomSource.create(), 1, 1000) < Math.max(2, 50 / ((entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) + 1))) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(GrimmsModMobEffects.BLEEDING, 120, 1, true, false));
 			}

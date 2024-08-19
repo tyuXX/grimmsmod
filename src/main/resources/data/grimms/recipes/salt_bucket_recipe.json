@@ -1,0 +1,12 @@
+{
+  "type": "grimms:distillery_recipe_type",
+  "ingredients": [
+    {
+      "item": "minecraft:water_bucket"
+    }
+  ],
+  "output": {
+    "id": "grimms:salt_bucket",
+    "count": 1
+  }
+}

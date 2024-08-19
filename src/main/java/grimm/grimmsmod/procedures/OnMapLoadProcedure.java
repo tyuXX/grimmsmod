@@ -6,10 +6,12 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
 
+import grimm.grimmsmod.network.GrimmsModVariables;
 import grimm.grimmsmod.GrimmsMod;
 
 @EventBusSubscriber
@@ -24,6 +26,7 @@ public class OnMapLoadProcedure {
 	}
 
 	private static void execute(@Nullable Event event, LevelAccessor world) {
+		GrimmsModVariables.cache = new CompoundTag();
 		InitCraftingsCacheProcedure.execute();
 		InitTransmutationValuesProcedure.execute();
 		InitRadiationCacheProcedure.execute();

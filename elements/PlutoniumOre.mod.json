@@ -48,7 +48,7 @@
     ],
     "destroyTool": "pickaxe",
     "customDrop": {
-      "value": "CUSTOM:PlutoniumIngot"
+      "value": ""
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
@@ -134,7 +134,7 @@
     ],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 1,
-    "frequencyOnChunk": 0,
+    "frequencyOnChunk": 1,
     "minGenerateHeight": 1,
     "maxGenerateHeight": 8
   }

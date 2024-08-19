@@ -11,8 +11,6 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.nbt.DoubleTag;
@@ -141,24 +139,16 @@ public class OnPlayerTickProcedure {
 				}
 			}
 		}
-		if (((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.get("presige:cure")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) > 0) {
-			if (entity instanceof LivingEntity _mobEffectContext) {
-				for (MobEffectInstance mobeffectiterator : _mobEffectContext.getActiveEffects()) {
-					if (mobeffectiterator.getEffect().value().getCategory() == MobEffectCategory.HARMFUL) {/*TODO: Add this*/
-					}
-				}
-			}
-		}
 		if (world.isClientSide()) {
-			if (entity instanceof LivingEntity _livEnt35 && _livEnt35.hasEffect(GrimmsModMobEffects.SEIZURE)) {
+			if (entity instanceof LivingEntity _livEnt30 && _livEnt30.hasEffect(GrimmsModMobEffects.SEIZURE)) {
 				if (GrimmsModVariables.MapVariables.get(world).worldtick % 5 == 0) {
 					ShaderLocation = "minecraft:shaders/post/invert.json";
 				} else {
 					ShaderLocation = "n/a";
 				}
-			} else if (entity instanceof LivingEntity _livEnt36 && _livEnt36.hasEffect(GrimmsModMobEffects.SUPER_DIZZINESS)) {
+			} else if (entity instanceof LivingEntity _livEnt31 && _livEnt31.hasEffect(GrimmsModMobEffects.SUPER_DIZZINESS)) {
 				ShaderLocation = "minecraft:shaders/post/blur.json";
-			} else if (entity instanceof LivingEntity _livEnt37 && _livEnt37.hasEffect(GrimmsModMobEffects.DIZZINESS)) {
+			} else if (entity instanceof LivingEntity _livEnt32 && _livEnt32.hasEffect(GrimmsModMobEffects.DIZZINESS)) {
 				ShaderLocation = "minecraft:shaders/post/invert.json";
 			} else {
 				ShaderLocation = "n/a";

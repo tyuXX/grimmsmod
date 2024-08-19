@@ -1,0 +1,16 @@
+{
+  "_fv": 66,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "distillery_recipe_type",
+    "result": {
+      "value": "CUSTOM:SaltBucket"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "Items.WATER_BUCKET"
+      }
+    ]
+  }
+}

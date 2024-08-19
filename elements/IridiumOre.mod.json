@@ -48,7 +48,7 @@
     ],
     "destroyTool": "pickaxe",
     "customDrop": {
-      "value": "CUSTOM:IridiumIngot"
+      "value": ""
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,

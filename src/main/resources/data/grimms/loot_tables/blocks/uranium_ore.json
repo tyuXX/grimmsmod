@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "grimms:uranium_ingot"
+          "name": "grimms:uranium_ore"
         }
       ]
     }
