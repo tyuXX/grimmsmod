@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "grimms:plutonium_block",
+    "grimms:plutonium_ore",
     "grimms:lead_block",
     "grimms:lead_ore",
     "grimms:thorium_block",

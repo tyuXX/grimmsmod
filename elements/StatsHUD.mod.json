@@ -16,7 +16,7 @@
             "value": -16738048,
             "falpha": 0.0
           },
-          "anchorPoint": "CENTER",
+          "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 8
         }
@@ -33,7 +33,7 @@
           "scale": 30,
           "rotationX": 0,
           "followMouseMovement": false,
-          "anchorPoint": "CENTER",
+          "anchorPoint": "TOP_RIGHT",
           "x": 384,
           "y": 35
         }
@@ -53,7 +53,7 @@
           "displayCondition": {
             "name": "GetShowCorHUD"
           },
-          "anchorPoint": "CENTER",
+          "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 17
         }

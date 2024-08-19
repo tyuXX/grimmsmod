@@ -1,0 +1,58 @@
+{
+  "_fv": 66,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_radiation_text_value",
+          "text": {
+            "fixedValue": "",
+            "name": "GetRadiationTextValue"
+          },
+          "color": {
+            "value": -10040320,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "PlayerHasDosimeter"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 6,
+          "y": 224
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_last_tick_rads_text_val",
+          "text": {
+            "fixedValue": "",
+            "name": "GetLastTickRadsTextValue"
+          },
+          "color": {
+            "value": -10040320,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "PlayerHasDosimeter"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 6,
+          "y": 215
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

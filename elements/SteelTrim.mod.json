@@ -1,0 +1,42 @@
+{
+  "_fv": 66,
+  "_type": "trimmaterial",
+  "definition": {
+    "name": "Steel",
+    "item": {
+      "value": "CUSTOM:Steel"
+    },
+    "color1": {
+      "value": -10066330,
+      "falpha": 0.0
+    },
+    "color2": {
+      "value": -10066330,
+      "falpha": 0.0
+    },
+    "color3": {
+      "value": -10066330,
+      "falpha": 0.0
+    },
+    "color4": {
+      "value": -10066330,
+      "falpha": 0.0
+    },
+    "color5": {
+      "value": -10066330,
+      "falpha": 0.0
+    },
+    "color6": {
+      "value": -10066330,
+      "falpha": 0.0
+    },
+    "color7": {
+      "value": -10066330,
+      "falpha": 0.0
+    },
+    "color8": {
+      "value": -10066330,
+      "falpha": 0.0
+    }
+  }
+}

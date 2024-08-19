@@ -1,0 +1,9 @@
+{
+  "asset_name": "uranium_trim",
+  "description": {
+    "color": "#336600",
+    "translate": "trim_material.grimms.uranium_trim"
+  },
+  "ingredient": "grimms:uranium_ingot",
+  "item_model_index": 0.0
+}

@@ -57,6 +57,21 @@
           "x": 240,
           "y": 71
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_blaze_powder",
+          "text": {
+            "fixedValue": "<== Blaze Powder"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 98
+        }
       }
     ],
     "gridSettings": {

@@ -9,7 +9,7 @@
     "description": {
       "translate": "advancements.prank_em_john.descr"
     },
-    "frame": "goal",
+    "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false

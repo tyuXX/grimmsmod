@@ -1,0 +1,9 @@
+{
+  "asset_name": "steel_trim",
+  "description": {
+    "color": "#666666",
+    "translate": "trim_material.grimms.steel_trim"
+  },
+  "ingredient": "grimms:steel",
+  "item_model_index": 0.0
+}

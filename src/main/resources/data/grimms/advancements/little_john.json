@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "id": "grimms:galvanized_steel"
+    },
+    "title": {
+      "translate": "advancements.little_john.title"
+    },
+    "description": {
+      "translate": "advancements.little_john.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "little_john_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "grimms:galvanized_steel"
+            ],
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "grimms:install_grimms_mod_special"
+}

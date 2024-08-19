@@ -82,17 +82,6 @@
           "x": 15,
           "y": 80
         }
-      },
-      {
-        "type": "textfield",
-        "data": {
-          "placeholder": "0",
-          "name": "sid",
-          "width": 120,
-          "height": 20,
-          "x": -1227,
-          "y": -316
-        }
       }
     ],
     "gridSettings": {

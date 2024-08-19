@@ -1,0 +1,9 @@
+{
+  "asset_name": "lead_trim",
+  "description": {
+    "color": "#999999",
+    "translate": "trim_material.grimms.lead_trim"
+  },
+  "ingredient": "grimms:lead_ingot",
+  "item_model_index": 0.0
+}

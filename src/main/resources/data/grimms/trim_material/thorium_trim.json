@@ -1,0 +1,9 @@
+{
+  "asset_name": "thorium_trim",
+  "description": {
+    "color": "#663300",
+    "translate": "trim_material.grimms.thorium_trim"
+  },
+  "ingredient": "grimms:thorium_ingot",
+  "item_model_index": 0.0
+}

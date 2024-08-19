@@ -179,7 +179,10 @@
             "enablecomment": true,
             "stringlist": [
               "forgery$minecraft:air/minecraft:air/minecraft:air/grimms:steel/grimms:steel/minecraft:stick/minecraft:air/minecraft:air/minecraft:air>grimms:katana",
-              "forgery$minecraft:air/minecraft:air/minecraft:air/grimms:tempered_steel/grimms:tempered_steel/grimms:tempered_steel/minecraft:air/minecraft:air/minecraft:air>grimms:heavy_metal_pipe"
+              "forgery$minecraft:air/minecraft:air/minecraft:air/grimms:tempered_steel/grimms:tempered_steel/grimms:tempered_steel/minecraft:air/minecraft:air/minecraft:air>grimms:heavy_metal_pipe",
+              "distillery$minecraft:water_bucket>grimms:salt_bucket",
+              "heavyblaster$grimms:steel>grimms:tempered_steel",
+              "heavyblaster$grimms:tempered_steel>grimms:galvanized_steel"
             ]
           },
           {
@@ -199,8 +202,34 @@
             "enablecomment": true,
             "stringlist": [
               "grimms:uranium_ingot/0.01",
-              "grimms:thorium_ingot/0.02"
+              "grimms:thorium_ingot/0.02",
+              "grimms:plutonium_ingot/0.1",
+              "grimms:uranium_block/0.09",
+              "grimms:thorium_block/0.18",
+              "grimms:plutonium_block/0.9"
             ]
+          }
+        ]
+      },
+      {
+        "category": "Modules",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Enable Radiation",
+            "varname": "radenable",
+            "enablecomment": false,
+            "stringlist": []
           }
         ]
       }

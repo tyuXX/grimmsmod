@@ -1,0 +1,9 @@
+{
+  "asset_name": "galvanized_steel_trim",
+  "description": {
+    "color": "#333333",
+    "translate": "trim_material.grimms.galvanized_steel_trim"
+  },
+  "ingredient": "grimms:galvanized_steel",
+  "item_model_index": 0.0
+}

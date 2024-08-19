@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "grimms:math_exam"
+    },
+    "title": {
+      "translate": "advancements.little_timmy.title"
+    },
+    "description": {
+      "translate": "advancements.little_timmy.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "little_timmy_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "grimms:install_grimms_mod_special"
+}

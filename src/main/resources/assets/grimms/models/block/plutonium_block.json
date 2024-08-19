@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "grimms:block/plutonium_ore_block",
+    "particle": "grimms:block/plutonium_ore_block"
+  },
+  "render_type": "solid"
+}

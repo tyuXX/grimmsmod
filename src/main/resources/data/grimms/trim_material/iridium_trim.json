@@ -1,0 +1,9 @@
+{
+  "asset_name": "iridium_trim",
+  "description": {
+    "color": "#CCCCCC",
+    "translate": "trim_material.grimms.iridium_trim"
+  },
+  "ingredient": "grimms:iridium_ingot",
+  "item_model_index": 0.0
+}

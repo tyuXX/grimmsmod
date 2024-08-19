@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "id": "grimms:photograph_of_motorcar"
+    },
+    "title": {
+      "translate": "advancements.comrade.title"
+    },
+    "description": {
+      "translate": "advancements.comrade.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "comrade_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "grimms:photograph_of_motorcar"
+            ],
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "grimms:install_grimms_mod_special"
+}

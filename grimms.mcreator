@@ -8,7 +8,7 @@
       "registry_name": "on_game_start",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/OnGameStartProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/OnGameStartProcedure.java"
         ],
         "dependencies": []
       },
@@ -22,7 +22,7 @@
       "registry_name": "common_config",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/configuration/CommonConfigConfiguration.java"
+          "src/main/java/grimm/grimmsmod/configuration/CommonConfigConfiguration.java"
         ]
       },
       "path": "~/Config"
@@ -35,7 +35,7 @@
       "registry_name": "client_config",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/configuration/ClientConfigConfiguration.java"
+          "src/main/java/grimm/grimmsmod/configuration/ClientConfigConfiguration.java"
         ]
       },
       "path": "~/Config"
@@ -48,7 +48,7 @@
       "registry_name": "server_config",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/configuration/ServerConfigConfiguration.java"
+          "src/main/java/grimm/grimmsmod/configuration/ServerConfigConfiguration.java"
         ]
       },
       "path": "~/Config"
@@ -61,7 +61,7 @@
       "registry_name": "on_xp_pickup",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/OnXpPickupProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/OnXpPickupProcedure.java"
         ],
         "dependencies": [
           {
@@ -88,7 +88,7 @@
       "registry_name": "xp_handle",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/XpHandleProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/XpHandleProcedure.java"
         ],
         "dependencies": [
           {
@@ -115,9 +115,9 @@
       "registry_name": "stats_gui",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/world/inventory/StatsGUIMenu.java",
-          "src/main/java/grimmsmod/network/StatsGUIButtonMessage.java",
-          "src/main/java/grimmsmod/client/gui/StatsGUIScreen.java"
+          "src/main/java/grimm/grimmsmod/client/gui/StatsGUIScreen.java",
+          "src/main/java/grimm/grimmsmod/world/inventory/StatsGUIMenu.java",
+          "src/main/java/grimm/grimmsmod/network/StatsGUIButtonMessage.java"
         ]
       },
       "path": "~/Gui"
@@ -131,7 +131,7 @@
       "metadata": {
         "return_type": "string",
         "files": [
-          "src/main/java/grimmsmod/procedures/LevelTextValueProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/LevelTextValueProcedure.java"
         ],
         "dependencies": [
           {
@@ -151,7 +151,7 @@
       "metadata": {
         "return_type": "string",
         "files": [
-          "src/main/java/grimmsmod/procedures/XpTextValueProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/XpTextValueProcedure.java"
         ],
         "dependencies": [
           {
@@ -171,7 +171,7 @@
       "metadata": {
         "return_type": "string",
         "files": [
-          "src/main/java/grimmsmod/procedures/XpReqTextValueProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/XpReqTextValueProcedure.java"
         ],
         "dependencies": [
           {
@@ -190,7 +190,7 @@
       "registry_name": "open_stats_on_key_pressed",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/OpenStatsOnKeyPressedProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/OpenStatsOnKeyPressedProcedure.java"
         ],
         "dependencies": [
           {
@@ -225,7 +225,7 @@
       "registry_name": "open_stats",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/network/OpenStatsMessage.java"
+          "src/main/java/grimm/grimmsmod/network/OpenStatsMessage.java"
         ]
       },
       "path": "~/Keybinds"
@@ -239,7 +239,7 @@
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/grimmsmod/procedures/IsPrestigeReadyProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/IsPrestigeReadyProcedure.java"
         ],
         "dependencies": [
           {
@@ -258,7 +258,7 @@
       "registry_name": "prestige_handle",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/PrestigeHandleProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/PrestigeHandleProcedure.java"
         ],
         "dependencies": [
           {
@@ -282,7 +282,7 @@
       "metadata": {
         "return_type": "string",
         "files": [
-          "src/main/java/grimmsmod/procedures/PrestigeTextValueProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/PrestigeTextValueProcedure.java"
         ],
         "dependencies": [
           {
@@ -302,7 +302,7 @@
       "metadata": {
         "return_type": "string",
         "files": [
-          "src/main/java/grimmsmod/procedures/PrestigeReqTextValueProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/PrestigeReqTextValueProcedure.java"
         ],
         "dependencies": [
           {
@@ -332,7 +332,7 @@
       "registry_name": "fancy_clock",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/FancyClockItem.java",
+          "src/main/java/grimm/grimmsmod/item/FancyClockItem.java",
           "src/main/resources/assets/grimms/models/item/fancy_clock.json"
         ]
       },
@@ -347,7 +347,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/grimms/models/item/fancier_clock.json",
-          "src/main/java/grimmsmod/item/FancierClockItem.java"
+          "src/main/java/grimm/grimmsmod/item/FancierClockItem.java"
         ]
       },
       "path": "~/Items"
@@ -361,7 +361,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/grimms/models/item/builders_wand.json",
-          "src/main/java/grimmsmod/item/BuildersWandItem.java"
+          "src/main/java/grimm/grimmsmod/item/BuildersWandItem.java"
         ]
       },
       "path": "~/Special"
@@ -375,7 +375,7 @@
       "metadata": {
         "return_type": "string",
         "files": [
-          "src/main/java/grimmsmod/procedures/BuildersWandSpecialInformationProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/BuildersWandSpecialInformationProcedure.java"
         ],
         "dependencies": [
           {
@@ -394,7 +394,7 @@
       "registry_name": "builders_wand_rightclicked",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/BuildersWandRightclickedProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/BuildersWandRightclickedProcedure.java"
         ],
         "dependencies": [
           {
@@ -444,8 +444,8 @@
       "registry_name": "placeholder",
       "metadata": {
         "files": [
-          "src/main/resources/assets/grimms/models/item/placeholder.json",
-          "src/main/java/grimmsmod/item/PlaceholderItem.java"
+          "src/main/java/grimm/grimmsmod/item/PlaceholderItem.java",
+          "src/main/resources/assets/grimms/models/item/placeholder.json"
         ]
       },
       "path": "~/Special"
@@ -458,7 +458,7 @@
       "registry_name": "on_world_tick",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/OnWorldTickProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/OnWorldTickProcedure.java"
         ],
         "dependencies": [
           {
@@ -477,7 +477,7 @@
       "registry_name": "builders_wand_item_in_hand_tick_procedure",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/BuildersWandItemInHandTickProcedureProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/BuildersWandItemInHandTickProcedureProcedure.java"
         ],
         "dependencies": [
           {
@@ -501,7 +501,7 @@
       "metadata": {
         "return_type": "string",
         "files": [
-          "src/main/java/grimmsmod/procedures/FancyClockSpecialInformationProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/FancyClockSpecialInformationProcedure.java"
         ],
         "dependencies": [
           {
@@ -521,7 +521,7 @@
       "metadata": {
         "return_type": "string",
         "files": [
-          "src/main/java/grimmsmod/procedures/FancierClockSpecialInformationProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/FancierClockSpecialInformationProcedure.java"
         ],
         "dependencies": [
           {
@@ -553,7 +553,7 @@
       "registry_name": "on_player_join",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/OnPlayerJoinProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/OnPlayerJoinProcedure.java"
         ],
         "dependencies": [
           {
@@ -576,7 +576,7 @@
       "registry_name": "logo",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/LogoItem.java",
+          "src/main/java/grimm/grimmsmod/item/LogoItem.java",
           "src/main/resources/assets/grimms/models/item/logo.json"
         ]
       },
@@ -590,7 +590,7 @@
       "registry_name": "microscope",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/MicroscopeItem.java",
+          "src/main/java/grimm/grimmsmod/item/MicroscopeItem.java",
           "src/main/resources/assets/grimms/models/item/microscope.json"
         ]
       },
@@ -604,8 +604,8 @@
       "registry_name": "handheld_microscope",
       "metadata": {
         "files": [
-          "src/main/resources/assets/grimms/models/item/handheld_microscope.json",
-          "src/main/java/grimmsmod/item/HandheldMicroscopeItem.java"
+          "src/main/java/grimm/grimmsmod/item/HandheldMicroscopeItem.java",
+          "src/main/resources/assets/grimms/models/item/handheld_microscope.json"
         ]
       },
       "path": "~/Items"
@@ -618,7 +618,7 @@
       "registry_name": "scalpel",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/ScalpelItem.java",
+          "src/main/java/grimm/grimmsmod/item/ScalpelItem.java",
           "src/main/resources/assets/grimms/models/item/scalpel.json"
         ]
       },
@@ -633,7 +633,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/grimms/models/item/multi_use_scalpel.json",
-          "src/main/java/grimmsmod/item/MultiUseScalpelItem.java"
+          "src/main/java/grimm/grimmsmod/item/MultiUseScalpelItem.java"
         ]
       },
       "path": "~/Items"
@@ -647,7 +647,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/grimms/models/item/disinfectant_scalpel.json",
-          "src/main/java/grimmsmod/item/DisinfectantScalpelItem.java"
+          "src/main/java/grimm/grimmsmod/item/DisinfectantScalpelItem.java"
         ]
       },
       "path": "~/Items"
@@ -661,7 +661,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/grimms/models/item/thrash.json",
-          "src/main/java/grimmsmod/item/ThrashItem.java"
+          "src/main/java/grimm/grimmsmod/item/ThrashItem.java"
         ]
       },
       "path": "~/Special"
@@ -674,8 +674,8 @@
       "registry_name": "wooden_hammer",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/WoodenHammerItem.java",
-          "src/main/resources/assets/grimms/models/item/wooden_hammer.json"
+          "src/main/resources/assets/grimms/models/item/wooden_hammer.json",
+          "src/main/java/grimm/grimmsmod/item/WoodenHammerItem.java"
         ]
       },
       "path": "~/Items"
@@ -688,7 +688,7 @@
       "registry_name": "iron_hammer",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/IronHammerItem.java",
+          "src/main/java/grimm/grimmsmod/item/IronHammerItem.java",
           "src/main/resources/assets/grimms/models/item/iron_hammer.json"
         ]
       },
@@ -702,7 +702,7 @@
       "registry_name": "diamond_hammer",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/DiamondHammerItem.java",
+          "src/main/java/grimm/grimmsmod/item/DiamondHammerItem.java",
           "src/main/resources/assets/grimms/models/item/diamond_hammer.json"
         ]
       },
@@ -717,7 +717,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/grimms/models/item/netherite_hammer.json",
-          "src/main/java/grimmsmod/item/NetheriteHammerItem.java"
+          "src/main/java/grimm/grimmsmod/item/NetheriteHammerItem.java"
         ]
       },
       "path": "~/Items"
@@ -730,7 +730,7 @@
       "registry_name": "steel",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/SteelItem.java",
+          "src/main/java/grimm/grimmsmod/item/SteelItem.java",
           "src/main/resources/assets/grimms/models/item/steel.json"
         ]
       },
@@ -745,7 +745,7 @@
       "metadata": {
         "return_type": "string",
         "files": [
-          "src/main/java/grimmsmod/procedures/SteelSpecialInformationProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/SteelSpecialInformationProcedure.java"
         ],
         "dependencies": [
           {
@@ -764,7 +764,7 @@
       "registry_name": "item_xp_handle",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/ItemXpHandleProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/ItemXpHandleProcedure.java"
         ],
         "dependencies": [
           {
@@ -787,7 +787,7 @@
       "registry_name": "on_tooltip_rendered",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/OnTooltipRenderedProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/OnTooltipRenderedProcedure.java"
         ],
         "dependencies": [
           {
@@ -810,7 +810,7 @@
       "registry_name": "on_entity_attacked",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/OnEntityAttackedProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/OnEntityAttackedProcedure.java"
         ],
         "dependencies": [
           {
@@ -850,7 +850,7 @@
       "registry_name": "lifesteal",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/enchantment/LifestealEnchantment.java"
+          "src/main/java/grimm/grimmsmod/enchantment/LifestealEnchantment.java"
         ]
       },
       "path": "~/Enchantments"
@@ -863,7 +863,7 @@
       "registry_name": "katana",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/KatanaItem.java",
+          "src/main/java/grimm/grimmsmod/item/KatanaItem.java",
           "src/main/resources/assets/grimms/models/item/katana.json"
         ]
       },
@@ -877,7 +877,7 @@
       "registry_name": "on_player_dies",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/OnPlayerDiesProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/OnPlayerDiesProcedure.java"
         ],
         "dependencies": [
           {
@@ -904,8 +904,8 @@
       "registry_name": "death_package",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/DeathPackageItem.java",
-          "src/main/java/grimmsmod/item/inventory/DeathPackageInventoryCapability.java",
+          "src/main/java/grimm/grimmsmod/item/DeathPackageItem.java",
+          "src/main/java/grimm/grimmsmod/item/inventory/DeathPackageInventoryCapability.java",
           "src/main/resources/assets/grimms/models/item/death_package.json"
         ]
       },
@@ -919,8 +919,8 @@
       "registry_name": "death_package_gui",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/client/gui/DeathPackageGUIScreen.java",
-          "src/main/java/grimmsmod/world/inventory/DeathPackageGUIMenu.java"
+          "src/main/java/grimm/grimmsmod/world/inventory/DeathPackageGUIMenu.java",
+          "src/main/java/grimm/grimmsmod/client/gui/DeathPackageGUIScreen.java"
         ]
       },
       "path": "~/Gui"
@@ -933,7 +933,7 @@
       "registry_name": "death_package_rightclicked",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/DeathPackageRightclickedProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/DeathPackageRightclickedProcedure.java"
         ],
         "dependencies": [
           {
@@ -956,7 +956,7 @@
       "registry_name": "on_player_respawn",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/OnPlayerRespawnProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/OnPlayerRespawnProcedure.java"
         ],
         "dependencies": [
           {
@@ -975,7 +975,7 @@
       "registry_name": "soulbound",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/enchantment/SoulboundEnchantment.java"
+          "src/main/java/grimm/grimmsmod/enchantment/SoulboundEnchantment.java"
         ]
       },
       "path": "~/Enchantments"
@@ -1027,7 +1027,7 @@
       "registry_name": "on_player_tick",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/OnPlayerTickProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/OnPlayerTickProcedure.java"
         ],
         "dependencies": [
           {
@@ -1050,7 +1050,7 @@
       "registry_name": "stats_hud",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/client/screens/StatsHUDOverlay.java"
+          "src/main/java/grimm/grimmsmod/client/screens/StatsHUDOverlay.java"
         ]
       },
       "path": "~/HUD"
@@ -1064,7 +1064,7 @@
       "metadata": {
         "return_type": "string",
         "files": [
-          "src/main/java/grimmsmod/procedures/MoneyTextValueProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/MoneyTextValueProcedure.java"
         ],
         "dependencies": [
           {
@@ -1088,7 +1088,7 @@
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/grimmsmod/procedures/GetShowHUDProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/GetShowHUDProcedure.java"
         ],
         "dependencies": []
       },
@@ -1103,7 +1103,7 @@
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/grimmsmod/procedures/GetShowCorHUDProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/GetShowCorHUDProcedure.java"
         ],
         "dependencies": []
       },
@@ -1118,7 +1118,7 @@
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/grimmsmod/procedures/GetShowMoneyHUDProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/GetShowMoneyHUDProcedure.java"
         ],
         "dependencies": []
       },
@@ -1133,7 +1133,7 @@
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/grimmsmod/procedures/GetShowPlayerHUDProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/GetShowPlayerHUDProcedure.java"
         ],
         "dependencies": []
       },
@@ -1148,7 +1148,7 @@
       "metadata": {
         "return_type": "entity",
         "files": [
-          "src/main/java/grimmsmod/procedures/GetPlayerAsEntityProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/GetPlayerAsEntityProcedure.java"
         ],
         "dependencies": [
           {
@@ -1168,7 +1168,7 @@
       "metadata": {
         "return_type": "string",
         "files": [
-          "src/main/java/grimmsmod/procedures/CoordsTextValueProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/CoordsTextValueProcedure.java"
         ],
         "dependencies": [
           {
@@ -1195,7 +1195,7 @@
       "registry_name": "sharp",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/enchantment/SharpEnchantment.java"
+          "src/main/java/grimm/grimmsmod/enchantment/SharpEnchantment.java"
         ]
       },
       "path": "~/Enchantments"
@@ -1208,7 +1208,7 @@
       "registry_name": "bleeding",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/potion/BleedingMobEffect.java"
+          "src/main/java/grimm/grimmsmod/potion/BleedingMobEffect.java"
         ]
       },
       "path": "~/Effects"
@@ -1234,7 +1234,7 @@
       "registry_name": "bleeding_on_effect_active_tick",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/BleedingOnEffectActiveTickProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/BleedingOnEffectActiveTickProcedure.java"
         ],
         "dependencies": [
           {
@@ -1261,7 +1261,7 @@
       "registry_name": "init_player_datamap",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/InitPlayerDatamapProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/InitPlayerDatamapProcedure.java"
         ],
         "dependencies": [
           {
@@ -1284,7 +1284,7 @@
       "registry_name": "set_abilities_command",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/SetAbilitiesCommandProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/SetAbilitiesCommandProcedure.java"
         ],
         "dependencies": [
           {
@@ -1307,7 +1307,7 @@
       "registry_name": "set_ability_number_command",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/command/SetAbilityNumberCommandCommand.java"
+          "src/main/java/grimm/grimmsmod/command/SetAbilityNumberCommandCommand.java"
         ]
       },
       "path": "~/Command"
@@ -1320,7 +1320,7 @@
       "registry_name": "set_data_element",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/SetDataElementProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/SetDataElementProcedure.java"
         ],
         "dependencies": [
           {
@@ -1355,7 +1355,7 @@
       "registry_name": "change_number_data_element",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/ChangeNumberDataElementProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/ChangeNumberDataElementProcedure.java"
         ],
         "dependencies": [
           {
@@ -1391,7 +1391,7 @@
       "metadata": {
         "return_type": "string",
         "files": [
-          "src/main/java/grimmsmod/procedures/PrestigepointsTextValueProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/PrestigepointsTextValueProcedure.java"
         ],
         "dependencies": [
           {
@@ -1410,7 +1410,7 @@
       "registry_name": "on_map_load",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/OnMapLoadProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/OnMapLoadProcedure.java"
         ],
         "dependencies": [
           {
@@ -1429,9 +1429,9 @@
       "registry_name": "prestige_upgrades_gui",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/network/PrestigeUpgradesGUIButtonMessage.java",
-          "src/main/java/grimmsmod/world/inventory/PrestigeUpgradesGUIMenu.java",
-          "src/main/java/grimmsmod/client/gui/PrestigeUpgradesGUIScreen.java"
+          "src/main/java/grimm/grimmsmod/client/gui/PrestigeUpgradesGUIScreen.java",
+          "src/main/java/grimm/grimmsmod/world/inventory/PrestigeUpgradesGUIMenu.java",
+          "src/main/java/grimm/grimmsmod/network/PrestigeUpgradesGUIButtonMessage.java"
         ]
       },
       "path": "~/Gui"
@@ -1445,7 +1445,7 @@
       "metadata": {
         "return_type": "string",
         "files": [
-          "src/main/java/grimmsmod/procedures/PrestigeUpgradeTextValueProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/PrestigeUpgradeTextValueProcedure.java"
         ],
         "dependencies": [
           {
@@ -1468,7 +1468,7 @@
       "registry_name": "upgrade_prestige_abiliy",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/UpgradePrestigeAbiliyProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/UpgradePrestigeAbiliyProcedure.java"
         ],
         "dependencies": [
           {
@@ -1491,7 +1491,7 @@
       "registry_name": "xp_boost",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/enchantment/XpBoostEnchantment.java"
+          "src/main/java/grimm/grimmsmod/enchantment/XpBoostEnchantment.java"
         ]
       },
       "path": "~/Enchantments"
@@ -1504,14 +1504,9 @@
       "registry_name": "prestige_upgrade_gui_next",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/PrestigeUpgradeGUINextProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/PrestigeUpgradeGUINextProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "guistate",
-            "type": "map"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procs"
     },
@@ -1523,7 +1518,7 @@
       "registry_name": "open_prestige_upgrade_gui",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/OpenPrestigeUpgradeGUIProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/OpenPrestigeUpgradeGUIProcedure.java"
         ],
         "dependencies": [
           {
@@ -1558,8 +1553,8 @@
       "registry_name": "test_dummy",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/client/renderer/TestDummyRenderer.java",
-          "src/main/java/grimmsmod/entity/TestDummyEntity.java",
+          "src/main/java/grimm/grimmsmod/entity/TestDummyEntity.java",
+          "src/main/java/grimm/grimmsmod/client/renderer/TestDummyRenderer.java",
           "src/main/resources/assets/grimms/models/item/test_dummy_spawn_egg.json"
         ]
       },
@@ -1573,7 +1568,7 @@
       "registry_name": "test_dummy_entity_is_hurt",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/TestDummyEntityIsHurtProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/TestDummyEntityIsHurtProcedure.java"
         ],
         "dependencies": [
           {
@@ -1600,9 +1595,9 @@
       "registry_name": "transmutation_gui",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/network/TransmutationGUISlotMessage.java",
-          "src/main/java/grimmsmod/client/gui/TransmutationGUIScreen.java",
-          "src/main/java/grimmsmod/world/inventory/TransmutationGUIMenu.java"
+          "src/main/java/grimm/grimmsmod/network/TransmutationGUISlotMessage.java",
+          "src/main/java/grimm/grimmsmod/world/inventory/TransmutationGUIMenu.java",
+          "src/main/java/grimm/grimmsmod/client/gui/TransmutationGUIScreen.java"
         ]
       },
       "path": "~/Gui"
@@ -1616,7 +1611,7 @@
       "metadata": {
         "return_type": "string",
         "files": [
-          "src/main/java/grimmsmod/procedures/TVTextValueProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/TVTextValueProcedure.java"
         ],
         "dependencies": [
           {
@@ -1639,7 +1634,7 @@
       "registry_name": "transmutation_gui_while_this_gui_is_open_tick",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/TransmutationGUIWhileThisGUIIsOpenTickProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/TransmutationGUIWhileThisGUIIsOpenTickProcedure.java"
         ],
         "dependencies": [
           {
@@ -1666,7 +1661,7 @@
       "registry_name": "transmutation_gui_item_taken_from_slot",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/TransmutationGUIItemTakenFromSlotProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/TransmutationGUIItemTakenFromSlotProcedure.java"
         ],
         "dependencies": [
           {
@@ -1689,7 +1684,7 @@
       "registry_name": "open_transmutation_gui",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/OpenTransmutationGUIProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/OpenTransmutationGUIProcedure.java"
         ],
         "dependencies": [
           {
@@ -1724,7 +1719,7 @@
       "registry_name": "transmutation_tablet",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/TransmutationTabletItem.java",
+          "src/main/java/grimm/grimmsmod/item/TransmutationTabletItem.java",
           "src/main/resources/assets/grimms/models/item/transmutation_tablet.json"
         ]
       },
@@ -1764,7 +1759,7 @@
       "registry_name": "add_xp_to_item",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/AddXpToItemProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/AddXpToItemProcedure.java"
         ],
         "dependencies": [
           {
@@ -1787,7 +1782,7 @@
       "registry_name": "add_xp_to_item_command",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/command/AddXpToItemCommandCommand.java"
+          "src/main/java/grimm/grimmsmod/command/AddXpToItemCommandCommand.java"
         ]
       },
       "path": "~/Command"
@@ -1801,7 +1796,7 @@
       "metadata": {
         "files": [
           "src/main/resources/data/grimms/loot_tables/blocks/land_mine.json",
-          "src/main/java/grimmsmod/block/LandMineBlock.java",
+          "src/main/java/grimm/grimmsmod/block/LandMineBlock.java",
           "src/main/resources/assets/grimms/models/block/land_mine.json",
           "src/main/resources/assets/grimms/blockstates/land_mine.json",
           "src/main/resources/assets/grimms/models/item/land_mine.json"
@@ -1817,7 +1812,7 @@
       "registry_name": "land_mine_entity_collides_in_the_block",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/LandMineEntityCollidesInTheBlockProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/LandMineEntityCollidesInTheBlockProcedure.java"
         ],
         "dependencies": [
           {
@@ -1889,9 +1884,9 @@
         "files": [
           "src/main/resources/assets/grimms/blockstates/forgery_table.json",
           "src/main/resources/assets/grimms/models/item/forgery_table.json",
-          "src/main/java/grimmsmod/block/entity/ForgeryTableBlockEntity.java",
-          "src/main/java/grimmsmod/block/ForgeryTableBlock.java",
+          "src/main/java/grimm/grimmsmod/block/ForgeryTableBlock.java",
           "src/main/resources/assets/grimms/models/block/forgery_table.json",
+          "src/main/java/grimm/grimmsmod/block/entity/ForgeryTableBlockEntity.java",
           "src/main/resources/data/grimms/loot_tables/blocks/forgery_table.json"
         ]
       },
@@ -1905,9 +1900,9 @@
       "registry_name": "forgery_table_gui",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/world/inventory/ForgeryTableGUIMenu.java",
-          "src/main/java/grimmsmod/network/ForgeryTableGUIButtonMessage.java",
-          "src/main/java/grimmsmod/client/gui/ForgeryTableGUIScreen.java"
+          "src/main/java/grimm/grimmsmod/network/ForgeryTableGUIButtonMessage.java",
+          "src/main/java/grimm/grimmsmod/world/inventory/ForgeryTableGUIMenu.java",
+          "src/main/java/grimm/grimmsmod/client/gui/ForgeryTableGUIScreen.java"
         ]
       },
       "path": "~/Gui"
@@ -1972,7 +1967,7 @@
       "registry_name": "init_transmutation_values",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/InitTransmutationValuesProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/InitTransmutationValuesProcedure.java"
         ],
         "dependencies": []
       },
@@ -1986,7 +1981,7 @@
       "registry_name": "init_craftings_cache",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/InitCraftingsCacheProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/InitCraftingsCacheProcedure.java"
         ],
         "dependencies": []
       },
@@ -2000,8 +1995,8 @@
       "registry_name": "steel_dust",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/SteelDustItem.java",
-          "src/main/resources/assets/grimms/models/item/steel_dust.json"
+          "src/main/resources/assets/grimms/models/item/steel_dust.json",
+          "src/main/java/grimm/grimmsmod/item/SteelDustItem.java"
         ]
       },
       "path": "~/Items"
@@ -2014,8 +2009,8 @@
       "registry_name": "coal_dust",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/CoalDustItem.java",
-          "src/main/resources/assets/grimms/models/item/coal_dust.json"
+          "src/main/resources/assets/grimms/models/item/coal_dust.json",
+          "src/main/java/grimm/grimmsmod/item/CoalDustItem.java"
         ]
       },
       "path": "~/Items"
@@ -2029,7 +2024,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/grimms/models/item/iron_dust.json",
-          "src/main/java/grimmsmod/item/IronDustItem.java"
+          "src/main/java/grimm/grimmsmod/item/IronDustItem.java"
         ]
       },
       "path": "~/Items"
@@ -2043,7 +2038,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/grimms/models/item/mortar_and_pestle.json",
-          "src/main/java/grimmsmod/item/MortarAndPestleItem.java"
+          "src/main/java/grimm/grimmsmod/item/MortarAndPestleItem.java"
         ]
       },
       "path": "~/Items"
@@ -2056,7 +2051,7 @@
       "registry_name": "mortar",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/MortarItem.java",
+          "src/main/java/grimm/grimmsmod/item/MortarItem.java",
           "src/main/resources/assets/grimms/models/item/mortar.json"
         ]
       },
@@ -2161,8 +2156,8 @@
       "registry_name": "forgery_table_recipe_type",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/jei_recipes/ForgeryTableRecipeTypeRecipeCategory.java",
-          "src/main/java/grimmsmod/jei_recipes/ForgeryTableRecipeTypeRecipe.java"
+          "src/main/java/grimm/grimmsmod/jei_recipes/ForgeryTableRecipeTypeRecipeCategory.java",
+          "src/main/java/grimm/grimmsmod/jei_recipes/ForgeryTableRecipeTypeRecipe.java"
         ]
       },
       "path": "~/JeiIntegration"
@@ -2175,7 +2170,7 @@
       "registry_name": "forgery_table_forge_button",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/ForgeryTableForgeButtonProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/ForgeryTableForgeButtonProcedure.java"
         ],
         "dependencies": [
           {
@@ -2195,11 +2190,11 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/grimms/blockstates/refinery.json",
+          "src/main/java/grimm/grimmsmod/block/entity/RefineryBlockEntity.java",
           "src/main/resources/assets/grimms/models/block/refinery.json",
+          "src/main/java/grimm/grimmsmod/block/RefineryBlock.java",
           "src/main/resources/data/grimms/loot_tables/blocks/refinery.json",
-          "src/main/java/grimmsmod/block/entity/RefineryBlockEntity.java",
-          "src/main/resources/assets/grimms/models/item/refinery.json",
-          "src/main/java/grimmsmod/block/RefineryBlock.java"
+          "src/main/resources/assets/grimms/models/item/refinery.json"
         ]
       },
       "path": "~/Block"
@@ -2212,8 +2207,8 @@
       "registry_name": "refinery_gui",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/world/inventory/RefineryGUIMenu.java",
-          "src/main/java/grimmsmod/client/gui/RefineryGUIScreen.java"
+          "src/main/java/grimm/grimmsmod/world/inventory/RefineryGUIMenu.java",
+          "src/main/java/grimm/grimmsmod/client/gui/RefineryGUIScreen.java"
         ]
       },
       "path": "~/Gui"
@@ -2226,8 +2221,8 @@
       "registry_name": "distillery_gui",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/world/inventory/DistilleryGUIMenu.java",
-          "src/main/java/grimmsmod/client/gui/DistilleryGUIScreen.java"
+          "src/main/java/grimm/grimmsmod/world/inventory/DistilleryGUIMenu.java",
+          "src/main/java/grimm/grimmsmod/client/gui/DistilleryGUIScreen.java"
         ]
       },
       "path": "~/Gui"
@@ -2240,11 +2235,11 @@
       "registry_name": "distillery",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/block/entity/DistilleryBlockEntity.java",
           "src/main/resources/assets/grimms/models/item/distillery.json",
+          "src/main/java/grimm/grimmsmod/block/entity/DistilleryBlockEntity.java",
+          "src/main/java/grimm/grimmsmod/block/DistilleryBlock.java",
           "src/main/resources/data/grimms/loot_tables/blocks/distillery.json",
           "src/main/resources/assets/grimms/blockstates/distillery.json",
-          "src/main/java/grimmsmod/block/DistilleryBlock.java",
           "src/main/resources/assets/grimms/models/block/distillery.json"
         ]
       },
@@ -2258,8 +2253,8 @@
       "registry_name": "refinery_recipe_type",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/jei_recipes/RefineryRecipeTypeRecipe.java",
-          "src/main/java/grimmsmod/jei_recipes/RefineryRecipeTypeRecipeCategory.java"
+          "src/main/java/grimm/grimmsmod/jei_recipes/RefineryRecipeTypeRecipeCategory.java",
+          "src/main/java/grimm/grimmsmod/jei_recipes/RefineryRecipeTypeRecipe.java"
         ]
       },
       "path": "~/JeiIntegration"
@@ -2272,8 +2267,8 @@
       "registry_name": "distillery_recipe_type",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/jei_recipes/DistilleryRecipeTypeRecipe.java",
-          "src/main/java/grimmsmod/jei_recipes/DistilleryRecipeTypeRecipeCategory.java"
+          "src/main/java/grimm/grimmsmod/jei_recipes/DistilleryRecipeTypeRecipe.java",
+          "src/main/java/grimm/grimmsmod/jei_recipes/DistilleryRecipeTypeRecipeCategory.java"
         ]
       },
       "path": "~/JeiIntegration"
@@ -2286,7 +2281,7 @@
       "registry_name": "init_lifetime_stats",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/InitLifetimeStatsProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/InitLifetimeStatsProcedure.java"
         ],
         "dependencies": [
           {
@@ -2305,7 +2300,7 @@
       "registry_name": "tin_can",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/TinCanItem.java",
+          "src/main/java/grimm/grimmsmod/item/TinCanItem.java",
           "src/main/resources/assets/grimms/models/item/tin_can.json"
         ]
       },
@@ -2319,7 +2314,7 @@
       "registry_name": "metal_pipe_living_entity_is_hit_with_tool",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/MetalPipeLivingEntityIsHitWithToolProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/MetalPipeLivingEntityIsHitWithToolProcedure.java"
         ],
         "dependencies": [
           {
@@ -2354,7 +2349,7 @@
       "registry_name": "metal_pipe",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/MetalPipeItem.java",
+          "src/main/java/grimm/grimmsmod/item/MetalPipeItem.java",
           "src/main/resources/assets/grimms/models/item/metal_pipe.json"
         ]
       },
@@ -2368,7 +2363,7 @@
       "registry_name": "dizziness",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/potion/DizzinessMobEffect.java"
+          "src/main/java/grimm/grimmsmod/potion/DizzinessMobEffect.java"
         ]
       },
       "path": "~/Effects"
@@ -2407,7 +2402,7 @@
       "registry_name": "super_dizziness",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/potion/SuperDizzinessMobEffect.java"
+          "src/main/java/grimm/grimmsmod/potion/SuperDizzinessMobEffect.java"
         ]
       },
       "path": "~/Effects"
@@ -2420,7 +2415,7 @@
       "registry_name": "seizure",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/potion/SeizureMobEffect.java"
+          "src/main/java/grimm/grimmsmod/potion/SeizureMobEffect.java"
         ]
       },
       "path": "~/Effects"
@@ -2433,7 +2428,7 @@
       "registry_name": "true_sight",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/potion/TrueSightMobEffect.java"
+          "src/main/java/grimm/grimmsmod/potion/TrueSightMobEffect.java"
         ]
       },
       "path": "~/Effects"
@@ -2446,8 +2441,8 @@
       "registry_name": "tv_liquidator_gui",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/world/inventory/TVLiquidatorGUIMenu.java",
-          "src/main/java/grimmsmod/client/gui/TVLiquidatorGUIScreen.java"
+          "src/main/java/grimm/grimmsmod/client/gui/TVLiquidatorGUIScreen.java",
+          "src/main/java/grimm/grimmsmod/world/inventory/TVLiquidatorGUIMenu.java"
         ]
       },
       "path": "~/Gui"
@@ -2460,7 +2455,7 @@
       "registry_name": "tv_liquidator_block_is_placed_by",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/TVLiquidatorBlockIsPlacedByProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/TVLiquidatorBlockIsPlacedByProcedure.java"
         ],
         "dependencies": [
           {
@@ -2496,10 +2491,10 @@
       "metadata": {
         "files": [
           "src/main/resources/data/grimms/loot_tables/blocks/tv_liquidator.json",
-          "src/main/java/grimmsmod/block/entity/TVLiquidatorBlockEntity.java",
           "src/main/resources/assets/grimms/models/item/tv_liquidator.json",
           "src/main/resources/assets/grimms/blockstates/tv_liquidator.json",
-          "src/main/java/grimmsmod/block/TVLiquidatorBlock.java",
+          "src/main/java/grimm/grimmsmod/block/TVLiquidatorBlock.java",
+          "src/main/java/grimm/grimmsmod/block/entity/TVLiquidatorBlockEntity.java",
           "src/main/resources/assets/grimms/models/block/tv_liquidator.json"
         ]
       },
@@ -2513,7 +2508,7 @@
       "registry_name": "tv_liquidator_on_tick_update",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/TVLiquidatorOnTickUpdateProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/TVLiquidatorOnTickUpdateProcedure.java"
         ],
         "dependencies": [
           {
@@ -2648,7 +2643,7 @@
       "registry_name": "basic_cobblestone_generator_on_tick_update",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/BasicCobblestoneGeneratorOnTickUpdateProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/BasicCobblestoneGeneratorOnTickUpdateProcedure.java"
         ],
         "dependencies": [
           {
@@ -2681,9 +2676,9 @@
         "files": [
           "src/main/resources/assets/grimms/models/block/basic_cobblestone_generator.json",
           "src/main/resources/assets/grimms/models/item/basic_cobblestone_generator.json",
-          "src/main/java/grimmsmod/block/BasicCobblestoneGeneratorBlock.java",
           "src/main/resources/data/grimms/loot_tables/blocks/basic_cobblestone_generator.json",
-          "src/main/java/grimmsmod/block/entity/BasicCobblestoneGeneratorBlockEntity.java",
+          "src/main/java/grimm/grimmsmod/block/BasicCobblestoneGeneratorBlock.java",
+          "src/main/java/grimm/grimmsmod/block/entity/BasicCobblestoneGeneratorBlockEntity.java",
           "src/main/resources/assets/grimms/blockstates/basic_cobblestone_generator.json"
         ]
       },
@@ -2697,7 +2692,7 @@
       "registry_name": "heavy_metal_pipe",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/HeavyMetalPipeItem.java",
+          "src/main/java/grimm/grimmsmod/item/HeavyMetalPipeItem.java",
           "src/main/resources/assets/grimms/models/item/heavy_metal_pipe.json"
         ]
       },
@@ -2711,7 +2706,7 @@
       "registry_name": "heavy_metal_pipe_living_entity_is_hit_with_tool",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/HeavyMetalPipeLivingEntityIsHitWithToolProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/HeavyMetalPipeLivingEntityIsHitWithToolProcedure.java"
         ],
         "dependencies": [
           {
@@ -2746,7 +2741,7 @@
       "registry_name": "dump_cache",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/DumpCacheProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/DumpCacheProcedure.java"
         ],
         "dependencies": [
           {
@@ -2765,7 +2760,7 @@
       "registry_name": "dump_cache_command",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/command/DumpCacheCommandCommand.java"
+          "src/main/java/grimm/grimmsmod/command/DumpCacheCommandCommand.java"
         ]
       },
       "path": "~/Command"
@@ -2791,8 +2786,8 @@
       "registry_name": "basic_cobblestone_generator_gui",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/client/gui/BasicCobblestoneGeneratorGUIScreen.java",
-          "src/main/java/grimmsmod/world/inventory/BasicCobblestoneGeneratorGUIMenu.java"
+          "src/main/java/grimm/grimmsmod/world/inventory/BasicCobblestoneGeneratorGUIMenu.java",
+          "src/main/java/grimm/grimmsmod/client/gui/BasicCobblestoneGeneratorGUIScreen.java"
         ]
       },
       "path": "~/Gui"
@@ -2806,7 +2801,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/grimms/models/item/tempered_steel.json",
-          "src/main/java/grimmsmod/item/TemperedSteelItem.java"
+          "src/main/java/grimm/grimmsmod/item/TemperedSteelItem.java"
         ]
       },
       "path": "~/Items"
@@ -2819,7 +2814,7 @@
       "registry_name": "volt_meter_rightclicked_on_block",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/VoltMeterRightclickedOnBlockProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/VoltMeterRightclickedOnBlockProcedure.java"
         ],
         "dependencies": [
           {
@@ -2854,7 +2849,7 @@
       "registry_name": "volt_meter",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/VoltMeterItem.java",
+          "src/main/java/grimm/grimmsmod/item/VoltMeterItem.java",
           "src/main/resources/assets/grimms/models/item/volt_meter.json"
         ]
       },
@@ -2868,9 +2863,26 @@
       "registry_name": "heavy_blaster_on_tick_update",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/HeavyBlasterOnTickUpdateProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/HeavyBlasterOnTickUpdateProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Procs"
     },
@@ -2884,7 +2896,8 @@
         "files": [
           "src/main/resources/assets/grimms/blockstates/heavy_blaster.json",
           "src/main/resources/assets/grimms/models/item/heavy_blaster.json",
-          "src/main/java/grimmsmod/block/HeavyBlasterBlock.java",
+          "src/main/java/grimm/grimmsmod/block/HeavyBlasterBlock.java",
+          "src/main/java/grimm/grimmsmod/block/entity/HeavyBlasterBlockEntity.java",
           "src/main/resources/data/grimms/loot_tables/blocks/heavy_blaster.json",
           "src/main/resources/assets/grimms/models/block/heavy_blaster.json"
         ]
@@ -2899,7 +2912,7 @@
       "registry_name": "loot_crate_block_destroyed_by_player",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/LootCrateBlockDestroyedByPlayerProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/LootCrateBlockDestroyedByPlayerProcedure.java"
         ],
         "dependencies": []
       },
@@ -2913,9 +2926,9 @@
       "registry_name": "loot_crate",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/block/LootCrateBlock.java",
           "src/main/resources/assets/grimms/blockstates/loot_crate.json",
           "src/main/resources/assets/grimms/models/item/loot_crate.json",
+          "src/main/java/grimm/grimmsmod/block/LootCrateBlock.java",
           "src/main/resources/assets/grimms/models/block/loot_crate.json",
           "src/main/resources/data/grimms/loot_tables/blocks/loot_crate.json"
         ]
@@ -2930,7 +2943,7 @@
       "registry_name": "superior_experiance_bottle_rightclicked",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/SuperiorExperianceBottleRightclickedProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/SuperiorExperianceBottleRightclickedProcedure.java"
         ],
         "dependencies": [
           {
@@ -2954,7 +2967,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/grimms/models/item/superior_experiance_bottle.json",
-          "src/main/java/grimmsmod/item/SuperiorExperianceBottleItem.java"
+          "src/main/java/grimm/grimmsmod/item/SuperiorExperianceBottleItem.java"
         ]
       },
       "path": "~/Items"
@@ -2967,7 +2980,7 @@
       "registry_name": "dump_map_stats",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/DumpMapStatsProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/DumpMapStatsProcedure.java"
         ],
         "dependencies": [
           {
@@ -2990,7 +3003,7 @@
       "registry_name": "dump_map_stats_command",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/command/DumpMapStatsCommandCommand.java"
+          "src/main/java/grimm/grimmsmod/command/DumpMapStatsCommandCommand.java"
         ]
       },
       "path": "~/Command"
@@ -3029,7 +3042,7 @@
       "registry_name": "iridium_ingot",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/IridiumIngotItem.java",
+          "src/main/java/grimm/grimmsmod/item/IridiumIngotItem.java",
           "src/main/resources/assets/grimms/models/item/iridium_ingot.json"
         ]
       },
@@ -3046,11 +3059,11 @@
           "src/main/resources/data/grimms/neoforge/biome_modifier/iridium_ore_biome_modifier.json",
           "src/main/resources/assets/grimms/models/block/iridium_ore.json",
           "src/main/resources/assets/grimms/blockstates/iridium_ore.json",
-          "src/main/java/grimmsmod/block/IridiumOreBlock.java",
           "src/main/resources/assets/grimms/models/item/iridium_ore.json",
           "src/main/resources/data/grimms/worldgen/configured_feature/iridium_ore.json",
           "src/main/resources/data/grimms/loot_tables/blocks/iridium_ore.json",
-          "src/main/resources/data/grimms/worldgen/placed_feature/iridium_ore.json"
+          "src/main/resources/data/grimms/worldgen/placed_feature/iridium_ore.json",
+          "src/main/java/grimm/grimmsmod/block/IridiumOreBlock.java"
         ]
       },
       "path": "~/Packs"
@@ -3064,9 +3077,9 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/grimms/models/item/iridium_block.json",
-          "src/main/java/grimmsmod/block/IridiumBlockBlock.java",
           "src/main/resources/data/grimms/loot_tables/blocks/iridium_block.json",
           "src/main/resources/assets/grimms/models/block/iridium_block.json",
+          "src/main/java/grimm/grimmsmod/block/IridiumBlockBlock.java",
           "src/main/resources/assets/grimms/blockstates/iridium_block.json"
         ]
       },
@@ -3119,8 +3132,8 @@
       "registry_name": "silver_ingot",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/SilverIngotItem.java",
-          "src/main/resources/assets/grimms/models/item/silver_ingot.json"
+          "src/main/resources/assets/grimms/models/item/silver_ingot.json",
+          "src/main/java/grimm/grimmsmod/item/SilverIngotItem.java"
         ]
       },
       "path": "~/Packs"
@@ -3136,9 +3149,9 @@
           "src/main/resources/assets/grimms/models/block/silver_ore.json",
           "src/main/resources/data/grimms/worldgen/configured_feature/silver_ore.json",
           "src/main/resources/data/grimms/loot_tables/blocks/silver_ore.json",
+          "src/main/java/grimm/grimmsmod/block/SilverOreBlock.java",
           "src/main/resources/assets/grimms/blockstates/silver_ore.json",
           "src/main/resources/assets/grimms/models/item/silver_ore.json",
-          "src/main/java/grimmsmod/block/SilverOreBlock.java",
           "src/main/resources/data/grimms/neoforge/biome_modifier/silver_ore_biome_modifier.json",
           "src/main/resources/data/grimms/worldgen/placed_feature/silver_ore.json"
         ]
@@ -3154,8 +3167,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/grimms/models/item/silver_block.json",
+          "src/main/java/grimm/grimmsmod/block/SilverBlockBlock.java",
           "src/main/resources/data/grimms/loot_tables/blocks/silver_block.json",
-          "src/main/java/grimmsmod/block/SilverBlockBlock.java",
           "src/main/resources/assets/grimms/models/block/silver_block.json",
           "src/main/resources/assets/grimms/blockstates/silver_block.json"
         ]
@@ -3209,8 +3222,8 @@
       "registry_name": "uranium_ingot",
       "metadata": {
         "files": [
-          "src/main/resources/assets/grimms/models/item/uranium_ingot.json",
-          "src/main/java/grimmsmod/item/UraniumIngotItem.java"
+          "src/main/java/grimm/grimmsmod/item/UraniumIngotItem.java",
+          "src/main/resources/assets/grimms/models/item/uranium_ingot.json"
         ]
       },
       "path": "~/Packs"
@@ -3225,9 +3238,9 @@
         "files": [
           "src/main/resources/data/grimms/loot_tables/blocks/uranium_ore.json",
           "src/main/resources/assets/grimms/blockstates/uranium_ore.json",
-          "src/main/java/grimmsmod/block/UraniumOreBlock.java",
           "src/main/resources/data/grimms/neoforge/biome_modifier/uranium_ore_biome_modifier.json",
           "src/main/resources/data/grimms/worldgen/configured_feature/uranium_ore.json",
+          "src/main/java/grimm/grimmsmod/block/UraniumOreBlock.java",
           "src/main/resources/assets/grimms/models/block/uranium_ore.json",
           "src/main/resources/assets/grimms/models/item/uranium_ore.json",
           "src/main/resources/data/grimms/worldgen/placed_feature/uranium_ore.json"
@@ -3243,10 +3256,10 @@
       "registry_name": "uranium_block",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/block/UraniumBlockBlock.java",
           "src/main/resources/assets/grimms/models/block/uranium_block.json",
           "src/main/resources/data/grimms/loot_tables/blocks/uranium_block.json",
           "src/main/resources/assets/grimms/models/item/uranium_block.json",
+          "src/main/java/grimm/grimmsmod/block/UraniumBlockBlock.java",
           "src/main/resources/assets/grimms/blockstates/uranium_block.json"
         ]
       },
@@ -3299,7 +3312,7 @@
       "registry_name": "thorium_ingot",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/item/ThoriumIngotItem.java",
+          "src/main/java/grimm/grimmsmod/item/ThoriumIngotItem.java",
           "src/main/resources/assets/grimms/models/item/thorium_ingot.json"
         ]
       },
@@ -3319,7 +3332,7 @@
           "src/main/resources/assets/grimms/models/block/thorium_ore.json",
           "src/main/resources/data/grimms/neoforge/biome_modifier/thorium_ore_biome_modifier.json",
           "src/main/resources/assets/grimms/models/item/thorium_ore.json",
-          "src/main/java/grimmsmod/block/ThoriumOreBlock.java",
+          "src/main/java/grimm/grimmsmod/block/ThoriumOreBlock.java",
           "src/main/resources/assets/grimms/blockstates/thorium_ore.json"
         ]
       },
@@ -3334,7 +3347,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/grimms/blockstates/thorium_block.json",
-          "src/main/java/grimmsmod/block/ThoriumBlockBlock.java",
+          "src/main/java/grimm/grimmsmod/block/ThoriumBlockBlock.java",
           "src/main/resources/data/grimms/loot_tables/blocks/thorium_block.json",
           "src/main/resources/assets/grimms/models/item/thorium_block.json",
           "src/main/resources/assets/grimms/models/block/thorium_block.json"
@@ -3390,7 +3403,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/grimms/models/item/lead_ingot.json",
-          "src/main/java/grimmsmod/item/LeadIngotItem.java"
+          "src/main/java/grimm/grimmsmod/item/LeadIngotItem.java"
         ]
       },
       "path": "~/Packs"
@@ -3407,8 +3420,8 @@
           "src/main/resources/data/grimms/neoforge/biome_modifier/lead_ore_biome_modifier.json",
           "src/main/resources/data/grimms/worldgen/configured_feature/lead_ore.json",
           "src/main/resources/data/grimms/worldgen/placed_feature/lead_ore.json",
+          "src/main/java/grimm/grimmsmod/block/LeadOreBlock.java",
           "src/main/resources/data/grimms/loot_tables/blocks/lead_ore.json",
-          "src/main/java/grimmsmod/block/LeadOreBlock.java",
           "src/main/resources/assets/grimms/blockstates/lead_ore.json",
           "src/main/resources/assets/grimms/models/block/lead_ore.json"
         ]
@@ -3424,7 +3437,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/grimms/models/item/lead_block.json",
-          "src/main/java/grimmsmod/block/LeadBlockBlock.java",
+          "src/main/java/grimm/grimmsmod/block/LeadBlockBlock.java",
           "src/main/resources/data/grimms/loot_tables/blocks/lead_block.json",
           "src/main/resources/assets/grimms/blockstates/lead_block.json",
           "src/main/resources/assets/grimms/models/block/lead_block.json"
@@ -3479,7 +3492,7 @@
       "registry_name": "init_radiation_cache",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/InitRadiationCacheProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/InitRadiationCacheProcedure.java"
         ],
         "dependencies": []
       },
@@ -3493,9 +3506,642 @@
       "registry_name": "init_misc_cache",
       "metadata": {
         "files": [
-          "src/main/java/grimmsmod/procedures/InitMiscCacheProcedure.java"
+          "src/main/java/grimm/grimmsmod/procedures/InitMiscCacheProcedure.java"
         ],
         "dependencies": []
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "SentientItemHandle",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sentient_item_handle",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/SentientItemHandleProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "CreateBarHandle",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "create_bar_handle",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/CreateBarHandleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "fill",
+            "type": "number"
+          },
+          {
+            "name": "max",
+            "type": "number"
+          },
+          {
+            "name": "mlen",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "OpenItemAttributionMenu",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_item_attribution_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/network/OpenItemAttributionMenuMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "ItemAttributionMenuGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "item_attribution_menu_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/world/inventory/ItemAttributionMenuGUIMenu.java",
+          "src/main/java/grimm/grimmsmod/client/gui/ItemAttributionMenuGUIScreen.java"
+        ]
+      },
+      "path": "~/Gui"
+    },
+    {
+      "name": "Salt",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "salt",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/SaltItem.java",
+          "src/main/resources/assets/grimms/models/item/salt.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "DistilleryOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "distillery_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/DistilleryOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "RefineryOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "refinery_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/RefineryOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "HeavyBlasterGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_blaster_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/world/inventory/HeavyBlasterGUIMenu.java",
+          "src/main/java/grimm/grimmsmod/client/gui/HeavyBlasterGUIScreen.java"
+        ]
+      },
+      "path": "~/Gui"
+    },
+    {
+      "name": "GrimmsModDeco",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grimms_mod_deco",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/CreativeTabs"
+    },
+    {
+      "name": "Screw",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "screw",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/ScrewItem.java",
+          "src/main/resources/assets/grimms/models/item/screw.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "GalvanizedSteel",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "galvanized_steel",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/grimms/models/item/galvanized_steel.json",
+          "src/main/java/grimm/grimmsmod/item/GalvanizedSteelItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "GalvanizedScrew",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "galvanized_screw",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/grimms/models/item/galvanized_screw.json",
+          "src/main/java/grimm/grimmsmod/item/GalvanizedScrewItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SteelTrim",
+      "type": "trimmaterial",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_trim",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/trim_material/steel_trim.json"
+        ]
+      },
+      "path": "~/Trims"
+    },
+    {
+      "name": "GalvanizedSteelTrim",
+      "type": "trimmaterial",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "galvanized_steel_trim",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/trim_material/galvanized_steel_trim.json"
+        ]
+      },
+      "path": "~/Trims"
+    },
+    {
+      "name": "UraniumTrim",
+      "type": "trimmaterial",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "uranium_trim",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/trim_material/uranium_trim.json"
+        ]
+      },
+      "path": "~/Trims"
+    },
+    {
+      "name": "ThoriumTrim",
+      "type": "trimmaterial",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thorium_trim",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/trim_material/thorium_trim.json"
+        ]
+      },
+      "path": "~/Trims"
+    },
+    {
+      "name": "IridiumTrim",
+      "type": "trimmaterial",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iridium_trim",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/trim_material/iridium_trim.json"
+        ]
+      },
+      "path": "~/Trims"
+    },
+    {
+      "name": "LeadTrim",
+      "type": "trimmaterial",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lead_trim",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/trim_material/lead_trim.json"
+        ]
+      },
+      "path": "~/Trims"
+    },
+    {
+      "name": "PhotographOfMotorcar",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "photograph_of_motorcar",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/PhotographOfMotorcarItem.java",
+          "src/main/resources/assets/grimms/models/item/photograph_of_motorcar.json"
+        ]
+      },
+      "path": "~/Special"
+    },
+    {
+      "name": "LittleJohn",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "little_john",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/advancements/little_john.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "MathExam",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "math_exam",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/MathExamItem.java",
+          "src/main/java/grimm/grimmsmod/item/inventory/MathExamInventoryCapability.java",
+          "src/main/resources/assets/grimms/models/item/math_exam.json"
+        ]
+      },
+      "path": "~/Special"
+    },
+    {
+      "name": "MathExamGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "math_exam_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/world/inventory/MathExamGUIMenu.java",
+          "src/main/java/grimm/grimmsmod/client/gui/MathExamGUIScreen.java",
+          "src/main/java/grimm/grimmsmod/network/MathExamGUIButtonMessage.java"
+        ]
+      },
+      "path": "~/Gui"
+    },
+    {
+      "name": "LittleTimmy",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "little_timmy",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/advancements/little_timmy.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "MathExamQuestionTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "math_exam_question_text_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/MathExamQuestionTextValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "MathExamSubmitButton",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "math_exam_submit_button",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/MathExamSubmitButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "Comrade",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "comrade",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/advancements/comrade.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "PlutoniumIngot",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plutonium_ingot",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/PlutoniumIngotItem.java",
+          "src/main/resources/assets/grimms/models/item/plutonium_ingot.json"
+        ]
+      },
+      "path": "~/Packs"
+    },
+    {
+      "name": "PlutoniumOre",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plutonium_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/worldgen/configured_feature/plutonium_ore.json",
+          "src/main/resources/data/grimms/neoforge/biome_modifier/plutonium_ore_biome_modifier.json",
+          "src/main/resources/data/grimms/loot_tables/blocks/plutonium_ore.json",
+          "src/main/resources/data/grimms/worldgen/placed_feature/plutonium_ore.json",
+          "src/main/resources/assets/grimms/models/block/plutonium_ore.json",
+          "src/main/java/grimm/grimmsmod/block/PlutoniumOreBlock.java",
+          "src/main/resources/assets/grimms/blockstates/plutonium_ore.json",
+          "src/main/resources/assets/grimms/models/item/plutonium_ore.json"
+        ]
+      },
+      "path": "~/Packs"
+    },
+    {
+      "name": "PlutoniumBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plutonium_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/loot_tables/blocks/plutonium_block.json",
+          "src/main/resources/assets/grimms/blockstates/plutonium_block.json",
+          "src/main/resources/assets/grimms/models/block/plutonium_block.json",
+          "src/main/java/grimm/grimmsmod/block/PlutoniumBlockBlock.java",
+          "src/main/resources/assets/grimms/models/item/plutonium_block.json"
+        ]
+      },
+      "path": "~/Packs"
+    },
+    {
+      "name": "PlutoniumOreBlockRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plutonium_ore_block_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/plutonium_ore_block_recipe.json"
+        ]
+      },
+      "path": "~/Packs"
+    },
+    {
+      "name": "PlutoniumBlockOreRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plutonium_block_ore_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/plutonium_block_ore_recipe.json"
+        ]
+      },
+      "path": "~/Packs"
+    },
+    {
+      "name": "PlutoniumOreSmelting",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plutonium_ore_smelting",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/plutonium_ore_smelting.json"
+        ]
+      },
+      "path": "~/Packs"
+    },
+    {
+      "name": "Dosimeter",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dosimeter",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/DosimeterItem.java",
+          "src/main/resources/assets/grimms/models/item/dosimeter.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "GetRadiationTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_radiation_text_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/GetRadiationTextValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "PlayerHasDosimeter",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_has_dosimeter",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/PlayerHasDosimeterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "GameplayHUD",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gameplay_hud",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/client/screens/GameplayHUDOverlay.java"
+        ]
+      },
+      "path": "~/HUD"
+    },
+    {
+      "name": "PlutoniumTrim",
+      "type": "trimmaterial",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plutonium_trim",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/trim_material/plutonium_trim.json"
+        ]
+      },
+      "path": "~/Trims"
+    },
+    {
+      "name": "SaltBucket",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "salt_bucket",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/SaltBucketItem.java",
+          "src/main/resources/assets/grimms/models/item/salt_bucket.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SaltRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "salt_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/salt_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "GetLastTickRadsTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_last_tick_rads_text_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/GetLastTickRadsTextValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Procs"
     }
@@ -3571,6 +4217,8 @@
       "CUSTOM:Placeholder"
     ],
     "BLOCKS:minecraft:needs_diamond_tool": [
+      "~CUSTOM:PlutoniumBlock",
+      "~CUSTOM:PlutoniumOre",
       "~CUSTOM:LeadBlock",
       "~CUSTOM:LeadOre",
       "~CUSTOM:ThoriumBlock",
@@ -3583,6 +4231,8 @@
       "~CUSTOM:IridiumOre"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:PlutoniumBlock",
+      "~CUSTOM:PlutoniumOre",
       "~CUSTOM:LeadBlock",
       "~CUSTOM:LeadOre",
       "~CUSTOM:ThoriumBlock",
@@ -3638,32 +4288,39 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "advancements.victim.title": "Victim",
-      "item.grimmsmod.handheld_microscope": "Handheld Microscope",
       "item.grimmsmod.microscope": "Microscope",
+      "item.grimmsmod.handheld_microscope": "Handheld Microscope",
+      "advancements.victim.title": "Victim",
+      "gui.grimms.math_exam_gui.button_submit": "Submit",
       "item.grimmsmod.scalpel": "Scalpel",
       "advancements.millionare.title": "Millionare",
       "gui.grimms.transmutation_gui.itemid": "Item registry name",
+      "trim_material.grimms.plutonium_trim": "Plutonium",
       "advancements.prestige.title": "Prestige",
       "gui.grimms.forgery_table_gui.button_forge": "Forge",
       "advancements.transmuter.title": "Transmuter",
       "advancements.subpar_hammeration.descr": "Not there yet!",
+      "block.grimms.plutonium_ore": "Plutonium Ore",
       "death.attack.bleeding_damage.player": "%1$s lost too much blood whilst trying to escape %2$s",
       "gui.grimmsmod.stats_gui.label_empty1": "/",
+      "trim_material.grimms.thorium_trim": "Thorium",
       "death.attack.item_level_damage_boost.item": "%1$s was killed by %2$s using %3$s",
       "advancements.install_grimms_mod_special.descr": "I wonder what this could be?",
+      "key.grimms.open_item_attribution_menu": "Open Item Attribution Menu",
       "advancements.murderer.descr": "Kill a fellow player",
       "block.grimms.tv_liquidator": "TV Liquidator",
       "advancements.level_up_2.title": "Level Up 2",
       "item.grimmsmod.builders_wand": "Builders Wand",
       "gui.grimms.prestige_upgrades_gui.button_upgrade": "Upgrade",
       "advancements.level_up.descr": "Level up for the first time",
+      "advancements.little_timmy.title": "Little Timmy",
       "item.grimms.tin_can": "Tin Can",
       "advancements.transmutation_professor.descr": "Have 1M TV",
       "gui.grimms.transmutation_gui.label_liquidate_item": "Liquidate Item",
       "effect.grimms.bleeding": "Bleeding",
       "item.grimms.katana": "Katana",
       "block.grimms.iridium_ore": "Iridium Ore",
+      "item.grimms.salt_bucket": "Salt Bucket",
       "item.grimms.diamond_hammer": "Diamond Hammer",
       "block.grimms.loot_crate": "Loot Crate",
       "item.grimms.test_dummy_spawn_egg": "Test Dummy Spawn Egg",
@@ -3673,8 +4330,11 @@
       "block.grimms.distillery": "Distillery",
       "block.grimms.lead_block": "Block of Lead",
       "item.grimms.heavy_metal_pipe": "Heavy Metal Pipe",
+      "item.grimms.salt": "Salt",
+      "item_group.grimms.grimms_mod_deco": "Grimm\u0027s Mod Deco",
       "item.grimms.fancier_clock": "Fancier Clock",
       "item.grimms.fancy_clock": "Fancy Clock",
+      "item.grimms.galvanized_screw": "Galvanized Screw",
       "gui.grimms.stats_gui.label_empty1": "/",
       "item.grimms.wooden_hammer": "Wooden Hammer",
       "item.grimms.iron_dust": "Iron Dust",
@@ -3685,26 +4345,34 @@
       "item.grimms.microscope": "Microscope",
       "effect.grimms.seizure": "Seizure",
       "gui.grimms.transmutation_gui.label_tv": "TV:",
+      "gui.grimms.refinery_gui.label_blaze_powder": "\u003c\u003d\u003d Blaze Powder",
+      "advancements.little_john.title": "Little John",
       "advancements.rich_guy.title": "Rich Guy",
       "item_group.grimms.grimms_mod": "Grimm\u0027s Mod",
+      "trim_material.grimms.lead_trim": "Lead",
       "item.grimms.handheld_microscope": "Handheld Microscope",
       "item.grimmsmod.fancy_clock": "Fancy Clock",
       "death.attack.prestige_damage_boost": "%1$s died",
       "item.grimms.mortar": "Mortar",
       "advancements.level_up.title": "Level Up",
+      "block.grimms.plutonium_block": "Block of Plutonium",
       "item.grimms.metal_pipe": "Metal Pipe",
+      "item.grimms.photograph_of_motorcar": "Photograph Of Motorcar",
       "item.grimms.iridium_ingot": "Iridium",
       "item.grimms.disinfectant_scalpel": "Disinfectant Scalpel",
       "item.grimms.volt_meter": "Volt Meter",
       "block.grimms.iridium_block": "Block of Iridium",
       "advancements.prank_em_john.descr": "Metal pipe go bonk!",
       "effect.grimms.super_dizziness": "Super Dizziness",
+      "advancements.comrade.title": "Comrade",
+      "trim_material.grimms.iridium_trim": "Iridium",
       "item.grimms.lead_ingot": "Lead",
       "death.attack.prestige_damage_boost.item": "%1$s was killed by %2$s\u0027s prestige boost using %3$s",
       "advancements.install_grimms_mod_special.title": "Grimms Mod Specials",
       "item.grimms.iron_hammer": "Iron Hammer",
       "advancements.grimms_mod_titles.title": "Grimms Mod Titles",
       "item.grimms.thorium_ingot": "Thorium",
+      "item.grimms.screw": "Screw",
       "effect.grimms.true_sight": "True Sight",
       "item.grimms.thrash": "Thrash",
       "item.grimmsmod.multi_use_scalpel": "Multi Use Scalpel",
@@ -3718,6 +4386,7 @@
       "block.grimms.thorium_block": "Block of Thorium",
       "subtitles.metalpipehit": "Ow my ear hurt",
       "item.grimms.uranium_ingot": "Uranium",
+      "trim_material.grimms.steel_trim": "Steel",
       "death.attack.prestige_damage_boost.player": "%1$s was killed by while trying to escape %2$s\u0027s prestige boost",
       "block.grimms.uranium_ore": "Uranium Ore",
       "advancements.level_up_2.descr": "Level up to level 45",
@@ -3726,6 +4395,7 @@
       "item.grimms.tempered_steel": "Tempered Steel",
       "item_group.grimmsmod.grimms_mod": "Grimm\u0027s Mod",
       "advancements.transmuter.descr": "Have 1K TV",
+      "gui.grimms.math_exam_gui.answer": "Answer here",
       "item.grimmsmod.placeholder": "Placeholder",
       "item.grimms.mortar_and_pestle": "Mortar And Pestle",
       "advancements.transmutation_professor.title": "Transmutation Professor",
@@ -3733,6 +4403,7 @@
       "gui.grimms.prestige_upgrades_gui.label_name_na_level0_maxlevel0": "Name: N/A Level:0 MaxLevel:0",
       "advancements.millionare.descr": "Have $1M",
       "block.grimms.thorium_ore": "Thorium Ore",
+      "trim_material.grimms.uranium_trim": "Uranium",
       "death.attack.item_level_damage_boost.player": "%1$s died whilst trying to escape %2$s",
       "advancements.victim.descr": "Get murdered by a fellow player",
       "gui.grimmsmod.stats_gui.button_prestige": "Prestige",
@@ -3740,6 +4411,7 @@
       "advancements.murderer.title": "Murderer",
       "gui.grimms.prestige_upgrades_gui.button_next": "Next",
       "advancements.grimms_mod_titles.descr": "Titles, gained by doing a specific action",
+      "item.grimms.math_exam": "Math Exam",
       "gui.grimms.stats_gui.button_prestige": "Prestige",
       "item.grimms.builders_wand": "Builders Wand",
       "item.grimms.placeholder": "Placeholder",
@@ -3749,19 +4421,25 @@
       "gui.grimms.stats_gui.button_open_prestige_upgrades": "Open Prestige Upgrades",
       "item.grimms.multi_use_scalpel": "Multi Use Scalpel",
       "advancements.billionare.title": "Billionare",
+      "item.grimms.galvanized_steel": "Galvanized Steel",
       "item.grimms.transmutation_tablet": "Transmutation Tablet",
       "gui.grimms.prestige_upgrades_gui.sid": "0",
       "effect.grimms.dizziness": "Dizziness",
       "block.grimms.lead_ore": "Lead Ore",
       "block.grimms.heavy_blaster": "Heavy Blaster",
+      "item.grimms.plutonium_ingot": "Plutonium",
+      "item.grimms.dosimeter": "Dosimeter",
       "enchantment.grimms.sharp": "Sharp",
       "block.grimms.silver_ore": "Silver Ore",
+      "advancements.little_john.descr": "Time to illegally expand my 2m^2 Apartment!",
       "gui.grimms.prestige_upgrades_gui.prestigeupgradeid": "N/A",
       "item.grimms.superior_experiance_bottle": "Superior Experiance Bottle",
       "key.grimms.open_stats": "Open Stats",
       "key.grimmsmod.open_stats": "Open Stats",
       "item_group.grimms.grimms_mod_special": "Grimms Mod Special",
       "advancements.rich_guy.descr": "Have $10K",
+      "advancements.comrade.descr": "For hitting metal 17 times, you won this photograph of motorcar!",
+      "advancements.little_timmy.descr": "Get a perfect math exam score",
       "item.grimms.death_package": "Death Package",
       "block.grimms.forgery_table": "Forgery Table",
       "item.grimms.silver_ingot": "Silver",
@@ -3770,6 +4448,7 @@
       "advancements.serious_hammeration.title": "Serious Hammeration",
       "enchantment.grimms.lifesteal": "Lifesteal",
       "advancements.prestige.descr": "Prestige for the first time for special benefits!",
+      "trim_material.grimms.galvanized_steel_trim": "Galvanized Steel",
       "item.grimms.coal_dust": "Coal Dust",
       "gui.grimms.stats_gui.label_empty": "/",
       "item_group.grimmsmod.grimms_mod_special": "Grimms Mod Special",
@@ -3861,16 +4540,20 @@
       {
         "name": "Code",
         "children": []
+      },
+      {
+        "name": "Trims",
+        "children": []
       }
     ]
   },
   "workspaceSettings": {
     "modid": "grimms",
     "modName": "Grimm\u0027s Mod",
-    "version": "4",
+    "version": "5",
     "description": "Grimm\u0027s newest and bestest Mod!",
     "author": "tyuXX",
-    "websiteURL": "https://gsdistance.org",
+    "websiteURL": "https://modrinth.com/mod/gsm",
     "license": "All Rights Reserved",
     "serverSideOnly": false,
     "modPicture": "grimsmod",
@@ -3882,7 +4565,7 @@
     ],
     "currentGenerator": "neoforge-1.20.6",
     "credits": "tyuXX",
-    "modElementsPackage": "grimmsmod"
+    "modElementsPackage": "grimm.grimmsmod"
   },
   "mcreatorVersion": 202400232117
 }

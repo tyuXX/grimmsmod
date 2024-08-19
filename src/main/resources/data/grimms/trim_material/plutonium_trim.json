@@ -1,0 +1,9 @@
+{
+  "asset_name": "plutonium_trim",
+  "description": {
+    "color": "#003333",
+    "translate": "trim_material.grimms.plutonium_trim"
+  },
+  "ingredient": "grimms:plutonium_ingot",
+  "item_model_index": 0.0
+}

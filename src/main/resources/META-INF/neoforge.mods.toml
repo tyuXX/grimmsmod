@@ -4,9 +4,9 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="grimms"
-version="4"
+version="5"
 displayName="Grimm's Mod"
-displayURL="https://gsdistance.org"
+displayURL="https://modrinth.com/mod/gsm"
 logoFile="logo.png"
 credits="tyuXX"
 authors="tyuXX"
