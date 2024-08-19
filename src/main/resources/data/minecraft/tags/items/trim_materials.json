@@ -7,6 +7,8 @@
     "grimms:thorium_ingot",
     "grimms:iridium_ingot",
     "grimms:lead_ingot",
-    "grimms:plutonium_ingot"
+    "grimms:plutonium_ingot",
+    "grimms:tungsten_ingot",
+    "grimms:tungsten_carbide_ingot"
   ]
 }

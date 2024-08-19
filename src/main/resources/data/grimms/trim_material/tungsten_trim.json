@@ -1,0 +1,9 @@
+{
+  "asset_name": "tungsten_trim",
+  "description": {
+    "color": "#B2B2B2",
+    "translate": "trim_material.grimms.tungsten_trim"
+  },
+  "ingredient": "grimms:tungsten_ingot",
+  "item_model_index": 0.0
+}

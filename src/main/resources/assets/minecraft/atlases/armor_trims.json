@@ -58,7 +58,9 @@
         "thorium_trim": "trims/color_palettes/thorium_trim",
         "iridium_trim": "trims/color_palettes/iridium_trim",
         "lead_trim": "trims/color_palettes/lead_trim",
-        "plutonium_trim": "trims/color_palettes/plutonium_trim"
+        "plutonium_trim": "trims/color_palettes/plutonium_trim",
+        "tungsten_trim": "trims/color_palettes/tungsten_trim",
+        "tungsten_carbide_trim": "trims/color_palettes/tungsten_carbide_trim"
       }
     }
   ]

@@ -1,0 +1,48 @@
+{
+  "_fv": 66,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Steel"
+      },
+      {
+        "value": "CUSTOM:Screw"
+      },
+      {
+        "value": "CUSTOM:Steel"
+      },
+      {
+        "value": "Items.LAVA_BUCKET"
+      },
+      {
+        "value": "CUSTOM:BackpackT1"
+      },
+      {
+        "value": "Items.LAVA_BUCKET"
+      },
+      {
+        "value": "CUSTOM:Steel"
+      },
+      {
+        "value": "CUSTOM:Steel"
+      },
+      {
+        "value": "CUSTOM:Steel"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Voidpack"
+    },
+    "name": "voidpack_recipe",
+    "namespace": "mod"
+  }
+}

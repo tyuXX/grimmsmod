@@ -1,0 +1,48 @@
+{
+  "_fv": 66,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:IridiumScrew"
+      },
+      {
+        "value": "CUSTOM:IridiumIngot"
+      },
+      {
+        "value": "CUSTOM:IridiumScrew"
+      },
+      {
+        "value": "CUSTOM:IridiumIngot"
+      },
+      {
+        "value": "CUSTOM:BackpackT5"
+      },
+      {
+        "value": "CUSTOM:IridiumIngot"
+      },
+      {
+        "value": "CUSTOM:IridiumIngot"
+      },
+      {
+        "value": "CUSTOM:IridiumIngot"
+      },
+      {
+        "value": "CUSTOM:IridiumIngot"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:BackpackT6"
+    },
+    "name": "backpack_t_6_recipe",
+    "namespace": "mod"
+  }
+}

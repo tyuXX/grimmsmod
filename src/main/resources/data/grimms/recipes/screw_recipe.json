@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "grimms:screw_blueprint"
+    },
+    {
+      "tag": "grimms:hammers"
+    },
+    {
+      "item": "grimms:steel"
+    }
+  ],
+  "result": {
+    "id": "grimms:screw",
+    "count": 9
+  }
+}

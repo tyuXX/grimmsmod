@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bcb",
+    "bbb"
+  ],
+  "key": {
+    "a": {
+      "item": "grimms:iridium_screw"
+    },
+    "b": {
+      "item": "grimms:iridium_ingot"
+    },
+    "c": {
+      "item": "grimms:backpack_t_5"
+    }
+  },
+  "result": {
+    "id": "grimms:backpack_t_6",
+    "count": 1
+  }
+}

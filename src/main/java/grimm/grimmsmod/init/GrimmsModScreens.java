@@ -9,6 +9,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
+import grimm.grimmsmod.client.gui.VoidpackGUIScreen;
 import grimm.grimmsmod.client.gui.TransmutationGUIScreen;
 import grimm.grimmsmod.client.gui.TVLiquidatorGUIScreen;
 import grimm.grimmsmod.client.gui.StatsGUIScreen;
@@ -21,6 +22,12 @@ import grimm.grimmsmod.client.gui.ForgeryTableGUIScreen;
 import grimm.grimmsmod.client.gui.DistilleryGUIScreen;
 import grimm.grimmsmod.client.gui.DeathPackageGUIScreen;
 import grimm.grimmsmod.client.gui.BasicCobblestoneGeneratorGUIScreen;
+import grimm.grimmsmod.client.gui.BackpackT6GUIScreen;
+import grimm.grimmsmod.client.gui.BackpackT5GUIScreen;
+import grimm.grimmsmod.client.gui.BackpackT4GUIScreen;
+import grimm.grimmsmod.client.gui.BackpackT3GUIScreen;
+import grimm.grimmsmod.client.gui.BackpackT2GUIScreen;
+import grimm.grimmsmod.client.gui.BackpackT1GUIScreen;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class GrimmsModScreens {
@@ -38,5 +45,12 @@ public class GrimmsModScreens {
 		event.register(GrimmsModMenus.ITEM_ATTRIBUTION_MENU_GUI.get(), ItemAttributionMenuGUIScreen::new);
 		event.register(GrimmsModMenus.HEAVY_BLASTER_GUI.get(), HeavyBlasterGUIScreen::new);
 		event.register(GrimmsModMenus.MATH_EXAM_GUI.get(), MathExamGUIScreen::new);
+		event.register(GrimmsModMenus.BACKPACK_T_1_GUI.get(), BackpackT1GUIScreen::new);
+		event.register(GrimmsModMenus.BACKPACK_T_2_GUI.get(), BackpackT2GUIScreen::new);
+		event.register(GrimmsModMenus.BACKPACK_T_3_GUI.get(), BackpackT3GUIScreen::new);
+		event.register(GrimmsModMenus.VOIDPACK_GUI.get(), VoidpackGUIScreen::new);
+		event.register(GrimmsModMenus.BACKPACK_T_4_GUI.get(), BackpackT4GUIScreen::new);
+		event.register(GrimmsModMenus.BACKPACK_T_5_GUI.get(), BackpackT5GUIScreen::new);
+		event.register(GrimmsModMenus.BACKPACK_T_6_GUI.get(), BackpackT6GUIScreen::new);
 	}
 }

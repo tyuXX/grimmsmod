@@ -11,6 +11,7 @@ import net.neoforged.neoforge.common.extensions.IMenuTypeExtension;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.core.registries.Registries;
 
+import grimm.grimmsmod.world.inventory.VoidpackGUIMenu;
 import grimm.grimmsmod.world.inventory.TransmutationGUIMenu;
 import grimm.grimmsmod.world.inventory.TVLiquidatorGUIMenu;
 import grimm.grimmsmod.world.inventory.StatsGUIMenu;
@@ -23,6 +24,12 @@ import grimm.grimmsmod.world.inventory.ForgeryTableGUIMenu;
 import grimm.grimmsmod.world.inventory.DistilleryGUIMenu;
 import grimm.grimmsmod.world.inventory.DeathPackageGUIMenu;
 import grimm.grimmsmod.world.inventory.BasicCobblestoneGeneratorGUIMenu;
+import grimm.grimmsmod.world.inventory.BackpackT6GUIMenu;
+import grimm.grimmsmod.world.inventory.BackpackT5GUIMenu;
+import grimm.grimmsmod.world.inventory.BackpackT4GUIMenu;
+import grimm.grimmsmod.world.inventory.BackpackT3GUIMenu;
+import grimm.grimmsmod.world.inventory.BackpackT2GUIMenu;
+import grimm.grimmsmod.world.inventory.BackpackT1GUIMenu;
 import grimm.grimmsmod.GrimmsMod;
 
 public class GrimmsModMenus {
@@ -40,4 +47,11 @@ public class GrimmsModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<ItemAttributionMenuGUIMenu>> ITEM_ATTRIBUTION_MENU_GUI = REGISTRY.register("item_attribution_menu_gui", () -> IMenuTypeExtension.create(ItemAttributionMenuGUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<HeavyBlasterGUIMenu>> HEAVY_BLASTER_GUI = REGISTRY.register("heavy_blaster_gui", () -> IMenuTypeExtension.create(HeavyBlasterGUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<MathExamGUIMenu>> MATH_EXAM_GUI = REGISTRY.register("math_exam_gui", () -> IMenuTypeExtension.create(MathExamGUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<BackpackT1GUIMenu>> BACKPACK_T_1_GUI = REGISTRY.register("backpack_t_1_gui", () -> IMenuTypeExtension.create(BackpackT1GUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<BackpackT2GUIMenu>> BACKPACK_T_2_GUI = REGISTRY.register("backpack_t_2_gui", () -> IMenuTypeExtension.create(BackpackT2GUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<BackpackT3GUIMenu>> BACKPACK_T_3_GUI = REGISTRY.register("backpack_t_3_gui", () -> IMenuTypeExtension.create(BackpackT3GUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<VoidpackGUIMenu>> VOIDPACK_GUI = REGISTRY.register("voidpack_gui", () -> IMenuTypeExtension.create(VoidpackGUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<BackpackT4GUIMenu>> BACKPACK_T_4_GUI = REGISTRY.register("backpack_t_4_gui", () -> IMenuTypeExtension.create(BackpackT4GUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<BackpackT5GUIMenu>> BACKPACK_T_5_GUI = REGISTRY.register("backpack_t_5_gui", () -> IMenuTypeExtension.create(BackpackT5GUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<BackpackT6GUIMenu>> BACKPACK_T_6_GUI = REGISTRY.register("backpack_t_6_gui", () -> IMenuTypeExtension.create(BackpackT6GUIMenu::new));
 }

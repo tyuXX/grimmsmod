@@ -1,0 +1,16 @@
+{
+  "_fv": 66,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "heavy_blaster_recipe_type",
+    "result": {
+      "value": "CUSTOM:GalvanizedSteel"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:TemperedSteel"
+      }
+    ]
+  }
+}

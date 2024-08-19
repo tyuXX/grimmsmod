@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "grimms:tin_can"
+    },
+    {
+      "tag": "grimms:canbetinned"
+    }
+  ],
+  "result": {
+    "id": "grimms:full_tin_can",
+    "count": 1
+  }
+}

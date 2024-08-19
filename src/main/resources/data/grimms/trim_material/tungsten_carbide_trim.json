@@ -1,0 +1,9 @@
+{
+  "asset_name": "tungsten_carbide_trim",
+  "description": {
+    "color": "#595959",
+    "translate": "trim_material.grimms.tungsten_carbide_trim"
+  },
+  "ingredient": "grimms:tungsten_carbide_ingot",
+  "item_model_index": 0.0
+}

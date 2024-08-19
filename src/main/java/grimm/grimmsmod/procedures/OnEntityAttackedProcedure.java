@@ -1,5 +1,6 @@
 package grimm.grimmsmod.procedures;
 
+import net.neoforged.neoforge.items.ItemHandlerHelper;
 import net.neoforged.neoforge.event.entity.living.LivingAttackEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -12,6 +13,7 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
@@ -19,6 +21,8 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.tags.TagKey;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.nbt.DoubleTag;
@@ -29,6 +33,7 @@ import javax.annotation.Nullable;
 
 import grimm.grimmsmod.network.GrimmsModVariables;
 import grimm.grimmsmod.init.GrimmsModMobEffects;
+import grimm.grimmsmod.init.GrimmsModItems;
 import grimm.grimmsmod.init.GrimmsModEnchantments;
 
 @EventBusSubscriber
@@ -48,6 +53,15 @@ public class OnEntityAttackedProcedure {
 		if (damagesource == null || entity == null || immediatesourceentity == null || sourceentity == null)
 			return InteractionResult.PASS;
 		double tmp = 0;
+		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == GrimmsModItems.IRON_HAMMER.get() && entity instanceof IronGolem) {
+			if (!(sourceentity instanceof ServerPlayer _plr3 && _plr3.level() instanceof ServerLevel && _plr3.getAdvancements().getOrStartProgress(_plr3.server.getAdvancements().get(new ResourceLocation("grimms:comrade"))).isDone())) {
+				if (sourceentity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(GrimmsModItems.PHOTOGRAPH_OF_MOTORCAR.get()).copy();
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			}
+		}
 		if (!((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
 			tmp = tmp + (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:dodgechance");
 		}

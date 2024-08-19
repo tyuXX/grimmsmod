@@ -1,0 +1,48 @@
+{
+  "_fv": 66,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:TungstenCarbideScrew"
+      },
+      {
+        "value": "CUSTOM:PlutoniumIngot"
+      },
+      {
+        "value": "CUSTOM:TungstenCarbideScrew"
+      },
+      {
+        "value": "CUSTOM:UraniumIngot"
+      },
+      {
+        "value": "CUSTOM:FullTinCan"
+      },
+      {
+        "value": "CUSTOM:UraniumIngot"
+      },
+      {
+        "value": "CUSTOM:ThoriumIngot"
+      },
+      {
+        "value": "CUSTOM:ThoriumIngot"
+      },
+      {
+        "value": "CUSTOM:ThoriumIngot"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:EternalTinCan"
+    },
+    "name": "eternal_tin_can_recipe",
+    "namespace": "mod"
+  }
+}

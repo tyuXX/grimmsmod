@@ -19,6 +19,8 @@ import java.util.List;
 
 import grimm.grimmsmod.jei_recipes.RefineryRecipeTypeRecipeCategory;
 import grimm.grimmsmod.jei_recipes.RefineryRecipeTypeRecipe;
+import grimm.grimmsmod.jei_recipes.HeavyBlasterRecipeTypeRecipeCategory;
+import grimm.grimmsmod.jei_recipes.HeavyBlasterRecipeTypeRecipe;
 import grimm.grimmsmod.jei_recipes.ForgeryTableRecipeTypeRecipeCategory;
 import grimm.grimmsmod.jei_recipes.ForgeryTableRecipeTypeRecipe;
 import grimm.grimmsmod.jei_recipes.DistilleryRecipeTypeRecipeCategory;
@@ -29,6 +31,7 @@ public class GrimmsModJeiPlugin implements IModPlugin {
 	public static mezz.jei.api.recipe.RecipeType<ForgeryTableRecipeTypeRecipe> ForgeryTableRecipeType_Type = new mezz.jei.api.recipe.RecipeType<>(ForgeryTableRecipeTypeRecipeCategory.UID, ForgeryTableRecipeTypeRecipe.class);
 	public static mezz.jei.api.recipe.RecipeType<RefineryRecipeTypeRecipe> RefineryRecipeType_Type = new mezz.jei.api.recipe.RecipeType<>(RefineryRecipeTypeRecipeCategory.UID, RefineryRecipeTypeRecipe.class);
 	public static mezz.jei.api.recipe.RecipeType<DistilleryRecipeTypeRecipe> DistilleryRecipeType_Type = new mezz.jei.api.recipe.RecipeType<>(DistilleryRecipeTypeRecipeCategory.UID, DistilleryRecipeTypeRecipe.class);
+	public static mezz.jei.api.recipe.RecipeType<HeavyBlasterRecipeTypeRecipe> HeavyBlasterRecipeType_Type = new mezz.jei.api.recipe.RecipeType<>(HeavyBlasterRecipeTypeRecipeCategory.UID, HeavyBlasterRecipeTypeRecipe.class);
 
 	@Override
 	public ResourceLocation getPluginUid() {
@@ -40,6 +43,7 @@ public class GrimmsModJeiPlugin implements IModPlugin {
 		registration.addRecipeCategories(new ForgeryTableRecipeTypeRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
 		registration.addRecipeCategories(new RefineryRecipeTypeRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
 		registration.addRecipeCategories(new DistilleryRecipeTypeRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+		registration.addRecipeCategories(new HeavyBlasterRecipeTypeRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
 	}
 
 	@Override
@@ -51,6 +55,8 @@ public class GrimmsModJeiPlugin implements IModPlugin {
 		registration.addRecipes(RefineryRecipeType_Type, RefineryRecipeTypeRecipes);
 		List<DistilleryRecipeTypeRecipe> DistilleryRecipeTypeRecipes = recipeManager.getAllRecipesFor(DistilleryRecipeTypeRecipe.Type.INSTANCE).stream().map(RecipeHolder::value).collect(Collectors.toList());
 		registration.addRecipes(DistilleryRecipeType_Type, DistilleryRecipeTypeRecipes);
+		List<HeavyBlasterRecipeTypeRecipe> HeavyBlasterRecipeTypeRecipes = recipeManager.getAllRecipesFor(HeavyBlasterRecipeTypeRecipe.Type.INSTANCE).stream().map(RecipeHolder::value).collect(Collectors.toList());
+		registration.addRecipes(HeavyBlasterRecipeType_Type, HeavyBlasterRecipeTypeRecipes);
 	}
 
 	@Override
@@ -58,5 +64,6 @@ public class GrimmsModJeiPlugin implements IModPlugin {
 		registration.addRecipeCatalyst(new ItemStack(GrimmsModBlocks.FORGERY_TABLE.get().asItem()), ForgeryTableRecipeType_Type);
 		registration.addRecipeCatalyst(new ItemStack(GrimmsModBlocks.REFINERY.get().asItem()), RefineryRecipeType_Type);
 		registration.addRecipeCatalyst(new ItemStack(GrimmsModBlocks.DISTILLERY.get().asItem()), DistilleryRecipeType_Type);
+		registration.addRecipeCatalyst(new ItemStack(GrimmsModBlocks.HEAVY_BLASTER.get().asItem()), HeavyBlasterRecipeType_Type);
 	}
 }

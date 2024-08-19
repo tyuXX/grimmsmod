@@ -1,0 +1,12 @@
+{
+  "type": "grimms:heavy_blaster_recipe_type",
+  "ingredients": [
+    {
+      "item": "grimms:tungsten_ingot"
+    }
+  ],
+  "output": {
+    "id": "grimms:tungsten_carbide_ingot",
+    "count": 1
+  }
+}

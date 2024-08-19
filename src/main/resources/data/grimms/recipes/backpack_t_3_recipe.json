@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "aba",
+    "bcb",
+    "bbb"
+  ],
+  "key": {
+    "a": {
+      "item": "grimms:gold_screw"
+    },
+    "b": {
+      "item": "minecraft:gold_ingot"
+    },
+    "c": {
+      "item": "grimms:backpack_t_2"
+    }
+  },
+  "result": {
+    "id": "grimms:backpack_t_3",
+    "count": 1
+  }
+}

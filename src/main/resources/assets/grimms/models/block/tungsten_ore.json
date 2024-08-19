@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "grimms:block/tungsten_ore",
+    "particle": "grimms:block/tungsten_ore"
+  },
+  "render_type": "solid"
+}

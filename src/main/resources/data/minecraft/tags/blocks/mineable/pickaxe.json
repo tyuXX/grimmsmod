@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
+    "grimms:tin_block",
+    "grimms:tin_ore",
+    "grimms:tungsten_block",
+    "grimms:tungsten_ore",
     "grimms:plutonium_block",
     "grimms:plutonium_ore",
     "grimms:lead_block",

@@ -3,12 +3,12 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "handheldmicroscope",
+    "texture": "backpackt5",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Handheld Microscope",
-    "rarity": "COMMON",
+    "name": "Backpack T5",
+    "rarity": "UNCOMMON",
     "creativeTabs": [
       {
         "value": "CUSTOM:GrimmsMod"
@@ -34,8 +34,8 @@
     "glowCondition": {
       "fixedValue": false
     },
-    "guiBoundTo": "<NONE>",
-    "inventorySize": 9,
+    "guiBoundTo": "BackpackT5GUI",
+    "inventorySize": 44,
     "inventoryStackSize": 64,
     "enableRanged": false,
     "shootConstantly": false,

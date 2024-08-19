@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "grimms:tin_ingot"
+    }
+  },
+  "result": {
+    "id": "grimms:tin_block",
+    "count": 1
+  }
+}

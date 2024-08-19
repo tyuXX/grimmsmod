@@ -11,6 +11,10 @@ import net.minecraft.world.level.block.Block;
 
 import grimm.grimmsmod.block.UraniumOreBlock;
 import grimm.grimmsmod.block.UraniumBlockBlock;
+import grimm.grimmsmod.block.TungstenOreBlock;
+import grimm.grimmsmod.block.TungstenBlockBlock;
+import grimm.grimmsmod.block.TinOreBlock;
+import grimm.grimmsmod.block.TinBlockBlock;
 import grimm.grimmsmod.block.ThoriumOreBlock;
 import grimm.grimmsmod.block.ThoriumBlockBlock;
 import grimm.grimmsmod.block.TVLiquidatorBlock;
@@ -53,6 +57,10 @@ public class GrimmsModBlocks {
 	public static final DeferredHolder<Block, Block> LEAD_BLOCK = REGISTRY.register("lead_block", LeadBlockBlock::new);
 	public static final DeferredHolder<Block, Block> PLUTONIUM_ORE = REGISTRY.register("plutonium_ore", PlutoniumOreBlock::new);
 	public static final DeferredHolder<Block, Block> PLUTONIUM_BLOCK = REGISTRY.register("plutonium_block", PlutoniumBlockBlock::new);
+	public static final DeferredHolder<Block, Block> TUNGSTEN_ORE = REGISTRY.register("tungsten_ore", TungstenOreBlock::new);
+	public static final DeferredHolder<Block, Block> TUNGSTEN_BLOCK = REGISTRY.register("tungsten_block", TungstenBlockBlock::new);
+	public static final DeferredHolder<Block, Block> TIN_ORE = REGISTRY.register("tin_ore", TinOreBlock::new);
+	public static final DeferredHolder<Block, Block> TIN_BLOCK = REGISTRY.register("tin_block", TinBlockBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

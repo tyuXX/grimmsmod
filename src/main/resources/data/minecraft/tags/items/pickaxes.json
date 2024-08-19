@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "grimms:iridium_hammer",
     "grimms:netherite_hammer",
     "grimms:diamond_hammer",
     "grimms:iron_hammer",

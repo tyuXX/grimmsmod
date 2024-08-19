@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    "eee"
+  ],
+  "key": {
+    "a": {
+      "item": "grimms:tungsten_carbide_screw"
+    },
+    "b": {
+      "item": "grimms:plutonium_ingot"
+    },
+    "c": {
+      "item": "grimms:uranium_ingot"
+    },
+    "d": {
+      "item": "grimms:full_tin_can"
+    },
+    "e": {
+      "item": "grimms:thorium_ingot"
+    }
+  },
+  "result": {
+    "id": "grimms:eternal_tin_can",
+    "count": 1
+  }
+}

@@ -1,14 +1,11 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "pattern": [
-    "a"
-  ],
-  "key": {
-    "a": {
+  "ingredients": [
+    {
       "item": "grimms:salt_bucket"
     }
-  },
+  ],
   "result": {
     "id": "grimms:salt",
     "count": 2

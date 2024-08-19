@@ -16,27 +16,43 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
+import grimm.grimmsmod.item.inventory.VoidpackInventoryCapability;
 import grimm.grimmsmod.item.inventory.MathExamInventoryCapability;
 import grimm.grimmsmod.item.inventory.DeathPackageInventoryCapability;
+import grimm.grimmsmod.item.inventory.BackpackT6InventoryCapability;
+import grimm.grimmsmod.item.inventory.BackpackT5InventoryCapability;
+import grimm.grimmsmod.item.inventory.BackpackT4InventoryCapability;
+import grimm.grimmsmod.item.inventory.BackpackT3InventoryCapability;
+import grimm.grimmsmod.item.inventory.BackpackT2InventoryCapability;
+import grimm.grimmsmod.item.inventory.BackpackT1InventoryCapability;
 import grimm.grimmsmod.item.WoodenHammerItem;
 import grimm.grimmsmod.item.VoltMeterItem;
+import grimm.grimmsmod.item.VoidpackItem;
 import grimm.grimmsmod.item.UraniumIngotItem;
+import grimm.grimmsmod.item.TungstenIngotItem;
+import grimm.grimmsmod.item.TungstenCarbideScrewItem;
+import grimm.grimmsmod.item.TungstenCarbideIngotItem;
 import grimm.grimmsmod.item.TransmutationTabletItem;
+import grimm.grimmsmod.item.TinScrewItem;
+import grimm.grimmsmod.item.TinIngotItem;
 import grimm.grimmsmod.item.TinCanItem;
 import grimm.grimmsmod.item.ThrashItem;
 import grimm.grimmsmod.item.ThoriumIngotItem;
 import grimm.grimmsmod.item.TemperedSteelItem;
 import grimm.grimmsmod.item.SuperiorExperianceBottleItem;
+import grimm.grimmsmod.item.StickOCraftingItem;
 import grimm.grimmsmod.item.SteelItem;
 import grimm.grimmsmod.item.SteelDustItem;
 import grimm.grimmsmod.item.SilverIngotItem;
 import grimm.grimmsmod.item.ScrewItem;
+import grimm.grimmsmod.item.ScrewBlueprintItem;
 import grimm.grimmsmod.item.ScalpelItem;
 import grimm.grimmsmod.item.SaltItem;
 import grimm.grimmsmod.item.SaltBucketItem;
 import grimm.grimmsmod.item.PlutoniumIngotItem;
 import grimm.grimmsmod.item.PlaceholderItem;
 import grimm.grimmsmod.item.PhotographOfMotorcarItem;
+import grimm.grimmsmod.item.NetheriteScrewItem;
 import grimm.grimmsmod.item.NetheriteHammerItem;
 import grimm.grimmsmod.item.MultiUseScalpelItem;
 import grimm.grimmsmod.item.MortarItem;
@@ -49,19 +65,30 @@ import grimm.grimmsmod.item.LeadIngotItem;
 import grimm.grimmsmod.item.KatanaItem;
 import grimm.grimmsmod.item.IronHammerItem;
 import grimm.grimmsmod.item.IronDustItem;
+import grimm.grimmsmod.item.IridiumScrewItem;
 import grimm.grimmsmod.item.IridiumIngotItem;
+import grimm.grimmsmod.item.IridiumHammerItem;
 import grimm.grimmsmod.item.HeavyMetalPipeItem;
-import grimm.grimmsmod.item.HandheldMicroscopeItem;
+import grimm.grimmsmod.item.GoldScrewItem;
 import grimm.grimmsmod.item.GalvanizedSteelItem;
 import grimm.grimmsmod.item.GalvanizedScrewItem;
+import grimm.grimmsmod.item.FullTinCanItem;
 import grimm.grimmsmod.item.FancyClockItem;
 import grimm.grimmsmod.item.FancierClockItem;
+import grimm.grimmsmod.item.EternalTinCanItem;
 import grimm.grimmsmod.item.DosimeterItem;
 import grimm.grimmsmod.item.DisinfectantScalpelItem;
 import grimm.grimmsmod.item.DiamondHammerItem;
 import grimm.grimmsmod.item.DeathPackageItem;
 import grimm.grimmsmod.item.CoalDustItem;
 import grimm.grimmsmod.item.BuildersWandItem;
+import grimm.grimmsmod.item.BlueprintItem;
+import grimm.grimmsmod.item.BackpackT6Item;
+import grimm.grimmsmod.item.BackpackT5Item;
+import grimm.grimmsmod.item.BackpackT4Item;
+import grimm.grimmsmod.item.BackpackT3Item;
+import grimm.grimmsmod.item.BackpackT2Item;
+import grimm.grimmsmod.item.BackpackT1Item;
 import grimm.grimmsmod.GrimmsMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
@@ -73,7 +100,6 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> PLACEHOLDER = REGISTRY.register("placeholder", PlaceholderItem::new);
 	public static final DeferredHolder<Item, Item> LOGO = REGISTRY.register("logo", LogoItem::new);
 	public static final DeferredHolder<Item, Item> MICROSCOPE = REGISTRY.register("microscope", MicroscopeItem::new);
-	public static final DeferredHolder<Item, Item> HANDHELD_MICROSCOPE = REGISTRY.register("handheld_microscope", HandheldMicroscopeItem::new);
 	public static final DeferredHolder<Item, Item> SCALPEL = REGISTRY.register("scalpel", ScalpelItem::new);
 	public static final DeferredHolder<Item, Item> MULTI_USE_SCALPEL = REGISTRY.register("multi_use_scalpel", MultiUseScalpelItem::new);
 	public static final DeferredHolder<Item, Item> DISINFECTANT_SCALPEL = REGISTRY.register("disinfectant_scalpel", DisinfectantScalpelItem::new);
@@ -132,6 +158,31 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> PLUTONIUM_BLOCK = block(GrimmsModBlocks.PLUTONIUM_BLOCK);
 	public static final DeferredHolder<Item, Item> DOSIMETER = REGISTRY.register("dosimeter", DosimeterItem::new);
 	public static final DeferredHolder<Item, Item> SALT_BUCKET = REGISTRY.register("salt_bucket", SaltBucketItem::new);
+	public static final DeferredHolder<Item, Item> BACKPACK_T_1 = REGISTRY.register("backpack_t_1", BackpackT1Item::new);
+	public static final DeferredHolder<Item, Item> BACKPACK_T_2 = REGISTRY.register("backpack_t_2", BackpackT2Item::new);
+	public static final DeferredHolder<Item, Item> BACKPACK_T_3 = REGISTRY.register("backpack_t_3", BackpackT3Item::new);
+	public static final DeferredHolder<Item, Item> STICK_O_CRAFTING = REGISTRY.register("stick_o_crafting", StickOCraftingItem::new);
+	public static final DeferredHolder<Item, Item> VOIDPACK = REGISTRY.register("voidpack", VoidpackItem::new);
+	public static final DeferredHolder<Item, Item> IRIDIUM_HAMMER = REGISTRY.register("iridium_hammer", IridiumHammerItem::new);
+	public static final DeferredHolder<Item, Item> BACKPACK_T_4 = REGISTRY.register("backpack_t_4", BackpackT4Item::new);
+	public static final DeferredHolder<Item, Item> BACKPACK_T_5 = REGISTRY.register("backpack_t_5", BackpackT5Item::new);
+	public static final DeferredHolder<Item, Item> BACKPACK_T_6 = REGISTRY.register("backpack_t_6", BackpackT6Item::new);
+	public static final DeferredHolder<Item, Item> SCREW_BLUEPRINT = REGISTRY.register("screw_blueprint", ScrewBlueprintItem::new);
+	public static final DeferredHolder<Item, Item> BLUEPRINT = REGISTRY.register("blueprint", BlueprintItem::new);
+	public static final DeferredHolder<Item, Item> GOLD_SCREW = REGISTRY.register("gold_screw", GoldScrewItem::new);
+	public static final DeferredHolder<Item, Item> TUNGSTEN_INGOT = REGISTRY.register("tungsten_ingot", TungstenIngotItem::new);
+	public static final DeferredHolder<Item, Item> TUNGSTEN_ORE = block(GrimmsModBlocks.TUNGSTEN_ORE);
+	public static final DeferredHolder<Item, Item> TUNGSTEN_BLOCK = block(GrimmsModBlocks.TUNGSTEN_BLOCK);
+	public static final DeferredHolder<Item, Item> TUNGSTEN_CARBIDE_INGOT = REGISTRY.register("tungsten_carbide_ingot", TungstenCarbideIngotItem::new);
+	public static final DeferredHolder<Item, Item> TUNGSTEN_CARBIDE_SCREW = REGISTRY.register("tungsten_carbide_screw", TungstenCarbideScrewItem::new);
+	public static final DeferredHolder<Item, Item> IRIDIUM_SCREW = REGISTRY.register("iridium_screw", IridiumScrewItem::new);
+	public static final DeferredHolder<Item, Item> NETHERITE_SCREW = REGISTRY.register("netherite_screw", NetheriteScrewItem::new);
+	public static final DeferredHolder<Item, Item> TIN_INGOT = REGISTRY.register("tin_ingot", TinIngotItem::new);
+	public static final DeferredHolder<Item, Item> TIN_ORE = block(GrimmsModBlocks.TIN_ORE);
+	public static final DeferredHolder<Item, Item> TIN_BLOCK = block(GrimmsModBlocks.TIN_BLOCK);
+	public static final DeferredHolder<Item, Item> TIN_SCREW = REGISTRY.register("tin_screw", TinScrewItem::new);
+	public static final DeferredHolder<Item, Item> ETERNAL_TIN_CAN = REGISTRY.register("eternal_tin_can", EternalTinCanItem::new);
+	public static final DeferredHolder<Item, Item> FULL_TIN_CAN = REGISTRY.register("full_tin_can", FullTinCanItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
@@ -139,6 +190,13 @@ public class GrimmsModItems {
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
 		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new DeathPackageInventoryCapability(stack), DEATH_PACKAGE.get());
 		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new MathExamInventoryCapability(stack), MATH_EXAM.get());
+		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new BackpackT1InventoryCapability(stack), BACKPACK_T_1.get());
+		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new BackpackT2InventoryCapability(stack), BACKPACK_T_2.get());
+		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new BackpackT3InventoryCapability(stack), BACKPACK_T_3.get());
+		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new VoidpackInventoryCapability(stack), VOIDPACK.get());
+		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new BackpackT4InventoryCapability(stack), BACKPACK_T_4.get());
+		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new BackpackT5InventoryCapability(stack), BACKPACK_T_5.get());
+		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new BackpackT6InventoryCapability(stack), BACKPACK_T_6.get());
 	}
 
 	private static DeferredHolder<Item, Item> block(DeferredHolder<Block, Block> block) {

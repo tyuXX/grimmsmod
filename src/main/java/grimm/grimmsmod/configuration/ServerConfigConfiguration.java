@@ -37,7 +37,9 @@ public class ServerConfigConfiguration {
 		CVALUES = BUILDER.comment("Use format {recipe type}${supported number of {input registry name}/{input registry name}}>{output registry name}").defineList("Crafting's",
 				List.of("forgery$minecraft:air/minecraft:air/minecraft:air/grimms:steel/grimms:steel/minecraft:stick/minecraft:air/minecraft:air/minecraft:air>grimms:katana",
 						"forgery$minecraft:air/minecraft:air/minecraft:air/grimms:tempered_steel/grimms:tempered_steel/grimms:tempered_steel/minecraft:air/minecraft:air/minecraft:air>grimms:heavy_metal_pipe",
-						"distillery$minecraft:water_bucket>grimms:salt_bucket", "heavyblaster$grimms:steel>grimms:tempered_steel", "heavyblaster$grimms:tempered_steel>grimms:galvanized_steel"),
+						"distillery$minecraft:water_bucket>grimms:salt_bucket", "heavyblaster$grimms:steel>grimms:tempered_steel", "heavyblaster$grimms:tempered_steel>grimms:galvanized_steel",
+						"forgery$grimms:iridium_ingot/grimms:iridium_ingot/minecraft:air/grimms:iridium_ingot/minecraft:stick/minecraft:stick/grimms:iridium_ingot/grimms:iridium_ingot/minecraft:air>grimms:iridium_hammer",
+						"heavyblaster$grimms:tungsten_ingot>grimms:tungsten_carbide_ingot"),
 				entry -> true);
 		RADVALUES = BUILDER.comment("Use format {registry name}/{value}").defineList("Radiation Value's",
 				List.of("grimms:uranium_ingot/0.01", "grimms:thorium_ingot/0.02", "grimms:plutonium_ingot/0.1", "grimms:uranium_block/0.09", "grimms:thorium_block/0.18", "grimms:plutonium_block/0.9"), entry -> true);

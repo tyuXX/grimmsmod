@@ -11,6 +11,7 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.core.registries.BuiltInRegistries;
 
 import grimm.grimmsmod.jei_recipes.RefineryRecipeTypeRecipe;
+import grimm.grimmsmod.jei_recipes.HeavyBlasterRecipeTypeRecipe;
 import grimm.grimmsmod.jei_recipes.ForgeryTableRecipeTypeRecipe;
 import grimm.grimmsmod.jei_recipes.DistilleryRecipeTypeRecipe;
 import grimm.grimmsmod.GrimmsMod;
@@ -27,6 +28,7 @@ public class GrimmsModRecipeTypes {
 			SERIALIZERS.register("forgery_table_recipe_type", () -> ForgeryTableRecipeTypeRecipe.Serializer.INSTANCE);
 			SERIALIZERS.register("refinery_recipe_type", () -> RefineryRecipeTypeRecipe.Serializer.INSTANCE);
 			SERIALIZERS.register("distillery_recipe_type", () -> DistilleryRecipeTypeRecipe.Serializer.INSTANCE);
+			SERIALIZERS.register("heavy_blaster_recipe_type", () -> HeavyBlasterRecipeTypeRecipe.Serializer.INSTANCE);
 		});
 	}
 }

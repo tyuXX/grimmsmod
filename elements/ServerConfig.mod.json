@@ -182,7 +182,9 @@
               "forgery$minecraft:air/minecraft:air/minecraft:air/grimms:tempered_steel/grimms:tempered_steel/grimms:tempered_steel/minecraft:air/minecraft:air/minecraft:air>grimms:heavy_metal_pipe",
               "distillery$minecraft:water_bucket>grimms:salt_bucket",
               "heavyblaster$grimms:steel>grimms:tempered_steel",
-              "heavyblaster$grimms:tempered_steel>grimms:galvanized_steel"
+              "heavyblaster$grimms:tempered_steel>grimms:galvanized_steel",
+              "forgery$grimms:iridium_ingot/grimms:iridium_ingot/minecraft:air/grimms:iridium_ingot/minecraft:stick/minecraft:stick/grimms:iridium_ingot/grimms:iridium_ingot/minecraft:air>grimms:iridium_hammer",
+              "heavyblaster$grimms:tungsten_ingot>grimms:tungsten_carbide_ingot"
             ]
           },
           {

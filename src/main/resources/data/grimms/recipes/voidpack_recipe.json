@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "grimms:steel"
+    },
+    "b": {
+      "item": "grimms:screw"
+    },
+    "c": {
+      "item": "minecraft:lava_bucket"
+    },
+    "d": {
+      "item": "grimms:backpack_t_1"
+    }
+  },
+  "result": {
+    "id": "grimms:voidpack",
+    "count": 1
+  }
+}

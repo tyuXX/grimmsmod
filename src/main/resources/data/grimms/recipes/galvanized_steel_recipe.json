@@ -1,0 +1,12 @@
+{
+  "type": "grimms:heavy_blaster_recipe_type",
+  "ingredients": [
+    {
+      "item": "grimms:tempered_steel"
+    }
+  ],
+  "output": {
+    "id": "grimms:galvanized_steel",
+    "count": 1
+  }
+}

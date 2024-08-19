@@ -1,0 +1,48 @@
+{
+  "_fv": 66,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:TinScrew"
+      },
+      {
+        "value": "CUSTOM:TinIngot"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:TinIngot"
+      },
+      {
+        "value": "TAG:mod:hammers"
+      },
+      {
+        "value": "CUSTOM:TinIngot"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:TinIngot"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:TinCan"
+    },
+    "name": "tin_can_recipe",
+    "namespace": "mod"
+  }
+}

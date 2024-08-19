@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ab ",
+    "bcb",
+    " b "
+  ],
+  "key": {
+    "a": {
+      "item": "grimms:tin_screw"
+    },
+    "b": {
+      "item": "grimms:tin_ingot"
+    },
+    "c": {
+      "tag": "grimms:hammers"
+    }
+  },
+  "result": {
+    "id": "grimms:tin_can",
+    "count": 1
+  }
+}

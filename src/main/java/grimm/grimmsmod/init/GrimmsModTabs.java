@@ -21,7 +21,6 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.FANCY_CLOCK.get());
 				tabData.accept(GrimmsModItems.FANCIER_CLOCK.get());
 				tabData.accept(GrimmsModItems.MICROSCOPE.get());
-				tabData.accept(GrimmsModItems.HANDHELD_MICROSCOPE.get());
 				tabData.accept(GrimmsModItems.SCALPEL.get());
 				tabData.accept(GrimmsModItems.MULTI_USE_SCALPEL.get());
 				tabData.accept(GrimmsModItems.DISINFECTANT_SCALPEL.get());
@@ -73,6 +72,31 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModBlocks.PLUTONIUM_BLOCK.get().asItem());
 				tabData.accept(GrimmsModItems.DOSIMETER.get());
 				tabData.accept(GrimmsModItems.SALT_BUCKET.get());
+				tabData.accept(GrimmsModItems.BACKPACK_T_1.get());
+				tabData.accept(GrimmsModItems.BACKPACK_T_2.get());
+				tabData.accept(GrimmsModItems.BACKPACK_T_3.get());
+				tabData.accept(GrimmsModItems.STICK_O_CRAFTING.get());
+				tabData.accept(GrimmsModItems.VOIDPACK.get());
+				tabData.accept(GrimmsModItems.IRIDIUM_HAMMER.get());
+				tabData.accept(GrimmsModItems.BACKPACK_T_4.get());
+				tabData.accept(GrimmsModItems.BACKPACK_T_5.get());
+				tabData.accept(GrimmsModItems.BACKPACK_T_6.get());
+				tabData.accept(GrimmsModItems.SCREW_BLUEPRINT.get());
+				tabData.accept(GrimmsModItems.BLUEPRINT.get());
+				tabData.accept(GrimmsModItems.GOLD_SCREW.get());
+				tabData.accept(GrimmsModItems.TUNGSTEN_INGOT.get());
+				tabData.accept(GrimmsModBlocks.TUNGSTEN_ORE.get().asItem());
+				tabData.accept(GrimmsModBlocks.TUNGSTEN_BLOCK.get().asItem());
+				tabData.accept(GrimmsModItems.TUNGSTEN_CARBIDE_INGOT.get());
+				tabData.accept(GrimmsModItems.TUNGSTEN_CARBIDE_SCREW.get());
+				tabData.accept(GrimmsModItems.IRIDIUM_SCREW.get());
+				tabData.accept(GrimmsModItems.NETHERITE_SCREW.get());
+				tabData.accept(GrimmsModItems.TIN_INGOT.get());
+				tabData.accept(GrimmsModBlocks.TIN_ORE.get().asItem());
+				tabData.accept(GrimmsModBlocks.TIN_BLOCK.get().asItem());
+				tabData.accept(GrimmsModItems.TIN_SCREW.get());
+				tabData.accept(GrimmsModItems.ETERNAL_TIN_CAN.get());
+				tabData.accept(GrimmsModItems.FULL_TIN_CAN.get());
 			})
 
 					.build());

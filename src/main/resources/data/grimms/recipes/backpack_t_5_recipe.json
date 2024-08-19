@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bcb",
+    "bbb"
+  ],
+  "key": {
+    "a": {
+      "item": "grimms:netherite_screw"
+    },
+    "b": {
+      "item": "grimms:galvanized_steel"
+    },
+    "c": {
+      "item": "grimms:backpack_t_4"
+    }
+  },
+  "result": {
+    "id": "grimms:backpack_t_5",
+    "count": 1
+  }
+}

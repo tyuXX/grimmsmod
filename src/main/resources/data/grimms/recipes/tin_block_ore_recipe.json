@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "grimms:tin_block"
+    }
+  ],
+  "result": {
+    "id": "grimms:tin_ingot",
+    "count": 9
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "grimms:screw_blueprint"
+    },
+    {
+      "tag": "grimms:hammers"
+    },
+    {
+      "item": "grimms:tungsten_carbide_ingot"
+    }
+  ],
+  "result": {
+    "id": "grimms:tungsten_carbide_screw",
+    "count": 9
+  }
+}
