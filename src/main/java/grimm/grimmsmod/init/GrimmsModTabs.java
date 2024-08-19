@@ -46,6 +46,7 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModBlocks.BASIC_COBBLESTONE_GENERATOR.get().asItem());
 				tabData.accept(GrimmsModItems.HEAVY_METAL_PIPE.get());
 				tabData.accept(GrimmsModItems.TEMPERED_STEEL.get());
+				tabData.accept(GrimmsModItems.VOLT_METER.get());
 				tabData.accept(GrimmsModBlocks.HEAVY_BLASTER.get().asItem());
 				tabData.accept(GrimmsModItems.SUPERIOR_EXPERIANCE_BOTTLE.get());
 				tabData.accept(GrimmsModItems.IRIDIUM_INGOT.get());

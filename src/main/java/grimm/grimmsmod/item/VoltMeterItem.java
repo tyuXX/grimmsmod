@@ -10,7 +10,7 @@ import grimm.grimmsmod.procedures.VoltMeterRightclickedOnBlockProcedure;
 
 public class VoltMeterItem extends Item {
 	public VoltMeterItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
 	}
 
 	@Override
