@@ -22,6 +22,7 @@ import net.minecraft.client.Minecraft;
 import grimm.grimmsmod.procedures.MoneyTextValueProcedure;
 import grimm.grimmsmod.procedures.GetShowPlayerHUDProcedure;
 import grimm.grimmsmod.procedures.GetShowHUDProcedure;
+import grimm.grimmsmod.procedures.GetShowDayCounterProcedure;
 import grimm.grimmsmod.procedures.GetShowCorHUDProcedure;
 import grimm.grimmsmod.procedures.GetPlayerAsEntityProcedure;
 import grimm.grimmsmod.procedures.GetDayCounterTextValueProcedure;
@@ -52,9 +53,10 @@ public class StatsHUDOverlay {
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 						CoordsTextValueProcedure.execute(x, y, z), 6, 17, -1, false);
-			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+			if (GetShowDayCounterProcedure.execute())
+				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					GetDayCounterTextValueProcedure.execute(world), 6, 26, -1, false);
+						GetDayCounterTextValueProcedure.execute(world), 6, 26, -1, false);
 			if (GetPlayerAsEntityProcedure.execute(entity) instanceof LivingEntity livingEntity) {
 				if (GetShowPlayerHUDProcedure.execute())
 					renderEntityInInventoryFollowsAngle(event.getGuiGraphics(), w - 33, 55, 30, 0f, 0, livingEntity);

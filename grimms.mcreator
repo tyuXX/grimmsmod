@@ -5510,6 +5510,61 @@
         ]
       },
       "path": "~/Procs"
+    },
+    {
+      "name": "GetShowDayCounter",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_show_day_counter",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/GetShowDayCounterProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "TransferMoney",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transfer_money",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/TransferMoneyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "TransferMoneyCommand",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transfer_money_command",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/command/TransferMoneyCommandCommand.java"
+        ]
+      },
+      "path": "~/Command"
     }
   ],
   "variable_elements": [
@@ -5810,8 +5865,8 @@
       "trim_material.grimms.plutonium_trim": "Plutonium",
       "advancements.prestige.title": "Prestige",
       "item.grimms.tungsten_ingot": "Tungsten",
-      "block.grimms.plutonium_ore": "Plutonium Ore",
       "advancements.subpar_hammeration.descr": "Not there yet!",
+      "block.grimms.plutonium_ore": "Plutonium Ore",
       "death.attack.item_level_damage_boost.item": "%1$s was killed by %2$s using %3$s",
       "advancements.heavy_duty.title": "Heavy Duty",
       "advancements.murderer.descr": "Kill a fellow player",
@@ -5829,8 +5884,8 @@
       "item_group.grimms.grimms_mod_deco": "Grimm\u0027s Mod Deco",
       "item.grimms.fancier_clock": "Fancier Clock",
       "item.grimms.fancy_clock": "Fancy Clock",
-      "item.grimms.iron_dust": "Iron Dust",
       "item.grimms.wooden_hammer": "Wooden Hammer",
+      "item.grimms.iron_dust": "Iron Dust",
       "item.grimms.netherite_screw": "Netherite Screw",
       "item.grimms.netherite_hammer": "Netherite Hammer",
       "item.grimms.microscope": "Microscope",
@@ -5839,9 +5894,9 @@
       "advancements.rich_guy.title": "Rich Guy",
       "trim_material.grimms.lead_trim": "Lead",
       "death.attack.radiation_damage_type.item": "%1$s was irradiated by %2$s using %3$s",
-      "item.grimms.champagne_bottle": "Champagne Bottle",
-      "item.grimms.mortar": "Mortar",
       "death.attack.prestige_damage_boost": "%1$s died",
+      "item.grimms.mortar": "Mortar",
+      "item.grimms.champagne_bottle": "Champagne Bottle",
       "block.grimms.plutonium_block": "Block of Plutonium",
       "item.grimms.soda_bottle": "Soda Bottle",
       "item.grimms.photograph_of_motorcar": "Photograph Of Motorcar",
@@ -5854,8 +5909,8 @@
       "item.grimms.screw": "Screw",
       "item.grimms.whetstone": "Whetstone",
       "item.grimmsmod.multi_use_scalpel": "Multi Use Scalpel",
-      "block.grimms.silver_block": "Block of Silver",
       "item.grimms.steel_dust": "Steel Dust",
+      "block.grimms.silver_block": "Block of Silver",
       "advancements.packed_up.title": "Packed Up",
       "death.attack.bleeding_damage": "%1$s lost too much blood",
       "trim_material.grimms.tungsten_carbide_trim": "Tungsten Carbide",
@@ -6121,7 +6176,7 @@
   "workspaceSettings": {
     "modid": "grimms",
     "modName": "Grimm\u0027s Mod",
-    "version": "5.1",
+    "version": "5.1H",
     "description": "Grimm\u0027s newest and bestest Mod!",
     "author": "tyuXX",
     "websiteURL": "https://modrinth.com/mod/gsm",
