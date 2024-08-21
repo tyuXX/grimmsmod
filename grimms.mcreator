@@ -5083,13 +5083,88 @@
         ]
       },
       "path": "~/JeiIntegration/Recipes"
+    },
+    {
+      "name": "MainMenuHUD",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_menu_hud",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/client/screens/MainMenuHUDOverlay.java"
+        ]
+      },
+      "path": "~/HUD"
+    },
+    {
+      "name": "GetVersionTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_version_text_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/GetVersionTextValueProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "GetGrimmsVersion",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_grimms_version",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/GetGrimmsVersionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "GrimmsVersion",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grimms_version",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/command/GrimmsVersionCommand.java"
+        ]
+      },
+      "path": "~/Command"
+    },
+    {
+      "name": "GetMainMenuTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_main_menu_text_value",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/GetMainMenuTextValueProcedure.java"
+        ],
+        "dependencies": [],
+        "return_type": "string"
+      },
+      "path": "~/Procs"
     }
   ],
   "variable_elements": [
     {
       "name": "worldtick",
       "type": "number",
-      "scope": "map",
+      "scope": "world",
       "value": "0"
     },
     {
@@ -5258,13 +5333,13 @@
   "language_map": {
     "en_us": {
       "item.grimmsmod.handheld_microscope": "Handheld Microscope",
-      "item.grimmsmod.scalpel": "Scalpel",
       "advancements.millionare.title": "Millionare",
+      "item.grimmsmod.scalpel": "Scalpel",
       "trim_material.grimms.plutonium_trim": "Plutonium",
       "advancements.prestige.title": "Prestige",
       "item.grimms.tungsten_ingot": "Tungsten",
-      "advancements.subpar_hammeration.descr": "Not there yet!",
       "block.grimms.plutonium_ore": "Plutonium Ore",
+      "advancements.subpar_hammeration.descr": "Not there yet!",
       "death.attack.item_level_damage_boost.item": "%1$s was killed by %2$s using %3$s",
       "advancements.murderer.descr": "Kill a fellow player",
       "item.grimmsmod.builders_wand": "Builders Wand",
@@ -5281,8 +5356,8 @@
       "item_group.grimms.grimms_mod_deco": "Grimm\u0027s Mod Deco",
       "item.grimms.fancier_clock": "Fancier Clock",
       "item.grimms.fancy_clock": "Fancy Clock",
-      "item.grimms.wooden_hammer": "Wooden Hammer",
       "item.grimms.iron_dust": "Iron Dust",
+      "item.grimms.wooden_hammer": "Wooden Hammer",
       "item.grimms.netherite_screw": "Netherite Screw",
       "item.grimms.netherite_hammer": "Netherite Hammer",
       "item.grimms.microscope": "Microscope",
@@ -5290,8 +5365,8 @@
       "advancements.little_john.title": "Little John",
       "advancements.rich_guy.title": "Rich Guy",
       "trim_material.grimms.lead_trim": "Lead",
-      "death.attack.prestige_damage_boost": "%1$s died",
       "item.grimms.mortar": "Mortar",
+      "death.attack.prestige_damage_boost": "%1$s died",
       "block.grimms.plutonium_block": "Block of Plutonium",
       "item.grimms.photograph_of_motorcar": "Photograph Of Motorcar",
       "advancements.prank_em_john.descr": "Metal pipe go bonk!",
@@ -5302,8 +5377,8 @@
       "advancements.install_grimms_mod_special.title": "Grimms Mod Specials",
       "item.grimms.screw": "Screw",
       "item.grimmsmod.multi_use_scalpel": "Multi Use Scalpel",
-      "item.grimms.steel_dust": "Steel Dust",
       "block.grimms.silver_block": "Block of Silver",
+      "item.grimms.steel_dust": "Steel Dust",
       "death.attack.bleeding_damage": "%1$s lost too much blood",
       "trim_material.grimms.tungsten_carbide_trim": "Tungsten Carbide",
       "key.categories.grimmsmod": "Grimm\u0027s Mod Keybinds",
@@ -5367,6 +5442,7 @@
       "item.grimms.tin_can": "Tin Can",
       "advancements.transmutation_professor.descr": "Have 1M TV",
       "item.grimms.katana": "Katana",
+      "gui.grimms.main_menu_hud.label_testlol": "testlol",
       "block.grimms.iridium_ore": "Iridium Ore",
       "item.grimms.salt_bucket": "Salt Bucket",
       "item.grimms.diamond_hammer": "Diamond Hammer",
@@ -5550,7 +5626,7 @@
   "workspaceSettings": {
     "modid": "grimms",
     "modName": "Grimm\u0027s Mod",
-    "version": "5",
+    "version": "6",
     "description": "Grimm\u0027s newest and bestest Mod!",
     "author": "tyuXX",
     "websiteURL": "https://modrinth.com/mod/gsm",

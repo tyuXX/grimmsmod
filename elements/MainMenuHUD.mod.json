@@ -1,0 +1,52 @@
+{
+  "_fv": 66,
+  "_type": "overlay",
+  "definition": {
+    "priority": "HIGHEST",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_version_text_value",
+          "text": {
+            "fixedValue": "",
+            "name": "GetVersionTextValue"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 6,
+          "y": 8
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_main_menu_text_value",
+          "text": {
+            "fixedValue": "",
+            "name": "GetMainMenuTextValue"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 6,
+          "y": 17
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "MainMenu",
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

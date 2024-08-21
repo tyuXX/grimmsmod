@@ -41,7 +41,7 @@ public class OnPlayerTickProcedure {
 			return;
 		String ShaderLocation = "";
 		double radsontick = 0;
-		if (GrimmsModVariables.MapVariables.get(world).worldtick % 2000 == 0) {
+		if (GrimmsModVariables.WorldVariables.get(world).worldtick % 2000 == 0) {
 			if (((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:level")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) >= 2) {
 				if (entity instanceof ServerPlayer _player) {
 					AdvancementHolder _adv = _player.server.getAdvancements().get(new ResourceLocation("grimms:level_up"));
@@ -141,7 +141,7 @@ public class OnPlayerTickProcedure {
 		}
 		if (world.isClientSide()) {
 			if (entity instanceof LivingEntity _livEnt30 && _livEnt30.hasEffect(GrimmsModMobEffects.SEIZURE)) {
-				if (GrimmsModVariables.MapVariables.get(world).worldtick % 5 == 0) {
+				if (GrimmsModVariables.WorldVariables.get(world).worldtick % 5 == 0) {
 					ShaderLocation = "minecraft:shaders/post/invert.json";
 				} else {
 					ShaderLocation = "n/a";

@@ -23,7 +23,7 @@ public class OnWorldTickProcedure {
 	}
 
 	private static void execute(@Nullable Event event, LevelAccessor world) {
-		GrimmsModVariables.MapVariables.get(world).worldtick = GrimmsModVariables.MapVariables.get(world).worldtick + 1;
-		GrimmsModVariables.MapVariables.get(world).syncData(world);
+		GrimmsModVariables.WorldVariables.get(world).worldtick = GrimmsModVariables.WorldVariables.get(world).worldtick + 1;
+		GrimmsModVariables.WorldVariables.get(world).syncData(world);
 	}
 }

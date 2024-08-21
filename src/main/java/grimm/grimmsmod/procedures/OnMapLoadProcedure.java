@@ -6,7 +6,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ByteTag;
 import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
@@ -26,12 +26,14 @@ public class OnMapLoadProcedure {
 	}
 
 	private static void execute(@Nullable Event event, LevelAccessor world) {
-		GrimmsModVariables.cache = new CompoundTag();
-		InitCraftingsCacheProcedure.execute();
-		InitTransmutationValuesProcedure.execute();
-		InitRadiationCacheProcedure.execute();
-		InitMiscCacheProcedure.execute();
-		GrimmsMod.LOGGER
-				.info(("Grimm's mod succsessfully loaded in World:" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())));
+		if (!GrimmsModVariables.cache.contains("init")) {
+			InitCraftingsCacheProcedure.execute();
+			InitTransmutationValuesProcedure.execute();
+			InitRadiationCacheProcedure.execute();
+			InitMiscCacheProcedure.execute();
+			GrimmsModVariables.cache.put("init", ByteTag.valueOf(true));
+			GrimmsMod.LOGGER.info(
+					("Grimm's mod succsessfully loaded in World:" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())));
+		}
 	}
 }

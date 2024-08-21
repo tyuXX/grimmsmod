@@ -21,6 +21,7 @@ import net.minecraft.client.Minecraft;
 
 import grimm.grimmsmod.procedures.MoneyTextValueProcedure;
 import grimm.grimmsmod.procedures.GetShowPlayerHUDProcedure;
+import grimm.grimmsmod.procedures.GetShowHUDProcedure;
 import grimm.grimmsmod.procedures.GetShowCorHUDProcedure;
 import grimm.grimmsmod.procedures.GetPlayerAsEntityProcedure;
 import grimm.grimmsmod.procedures.CoordsTextValueProcedure;
@@ -42,7 +43,7 @@ public class StatsHUDOverlay {
 			y = entity.getY();
 			z = entity.getZ();
 		}
-		if (true) {
+		if (GetShowHUDProcedure.execute()) {
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 					MoneyTextValueProcedure.execute(world, entity), 6, 8, -16738048, false);

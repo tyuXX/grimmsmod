@@ -13,7 +13,7 @@ public class BleedingOnEffectActiveTickProcedure {
 	public static void execute(LevelAccessor world, Entity entity, double amplifier) {
 		if (entity == null)
 			return;
-		if (GrimmsModVariables.MapVariables.get(world).worldtick % 20 == 0) {
+		if (GrimmsModVariables.WorldVariables.get(world).worldtick % 20 == 0) {
 			entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("grimms:bleeding_damage")))), (float) amplifier);
 		}
 	}

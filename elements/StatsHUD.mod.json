@@ -61,6 +61,9 @@
     ],
     "baseTexture": "",
     "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "GetShowHUD"
+    },
     "gridSettings": {
       "sx": 18,
       "sy": 18,
