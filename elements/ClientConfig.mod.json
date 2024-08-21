@@ -73,6 +73,23 @@
             "varname": "hud",
             "enablecomment": false,
             "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "Shows the current day in the top left corner.",
+            "vardisplay": "Day counter HUD",
+            "varname": "dayhud",
+            "enablecomment": true,
+            "stringlist": []
           }
         ]
       }

@@ -2,8 +2,12 @@ package grimm.grimmsmod.procedures;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.nbt.DoubleTag;
+import net.minecraft.advancements.AdvancementProgress;
+import net.minecraft.advancements.AdvancementHolder;
 
 import grimm.grimmsmod.network.GrimmsModVariables;
 import grimm.grimmsmod.configuration.ServerConfigConfiguration;
@@ -12,6 +16,7 @@ public class XpHandleProcedure {
 	public static void execute(LevelAccessor world, Entity entity, double xpamount) {
 		if (entity == null)
 			return;
+		boolean leveledup = false;
 		ChangeNumberDataElementProcedure.execute(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, false, xpamount, "grimm:xp");
 		while (((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:xp")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) >= Math
 				.round(Math.pow(((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:level")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) * 10, 1.3))) {
@@ -31,8 +36,33 @@ public class XpHandleProcedure {
 											+ (new java.text.DecimalFormat("##").format((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:level")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D)))),
 									false);
 			}
+			leveledup = true;
 			if (!ServerConfigConfiguration.INSTLEVELUP.get()) {
 				break;
+			}
+		}
+		if (leveledup) {
+			if (entity instanceof ServerPlayer _player) {
+				AdvancementHolder _adv = _player.server.getAdvancements().get(new ResourceLocation("grimms:level_up"));
+				if (_adv != null) {
+					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+					if (!_ap.isDone()) {
+						for (String criteria : _ap.getRemainingCriteria())
+							_player.getAdvancements().award(_adv, criteria);
+					}
+				}
+			}
+			if (35 < ((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:level")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D)) {
+				if (entity instanceof ServerPlayer _player) {
+					AdvancementHolder _adv = _player.server.getAdvancements().get(new ResourceLocation("grimms:level_up_2"));
+					if (_adv != null) {
+						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+						if (!_ap.isDone()) {
+							for (String criteria : _ap.getRemainingCriteria())
+								_player.getAdvancements().award(_adv, criteria);
+						}
+					}
+				}
 			}
 		}
 		{

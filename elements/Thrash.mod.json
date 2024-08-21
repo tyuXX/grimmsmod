@@ -11,7 +11,7 @@
     "rarity": "COMMON",
     "creativeTabs": [
       {
-        "value": "CUSTOM:GrimmsModSpecial"
+        "value": "CUSTOM:GrimmsMod"
       }
     ],
     "stackSize": 64,
@@ -29,7 +29,9 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "Aww your tool broke, how sad."
+      ]
     },
     "glowCondition": {
       "fixedValue": false

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " ab",
+    "abb"
+  ],
+  "key": {
+    "a": {
+      "item": "grimms:tungsten_carbide_ingot"
+    },
+    "b": {
+      "item": "grimms:steel"
+    }
+  },
+  "result": {
+    "id": "grimms:whetstone",
+    "count": 1
+  }
+}

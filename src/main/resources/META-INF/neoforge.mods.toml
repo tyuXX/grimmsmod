@@ -4,7 +4,7 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="grimms"
-version="6"
+version="5.1"
 displayName="Grimm's Mod"
 displayURL="https://modrinth.com/mod/gsm"
 logoFile="logo.png"
@@ -31,15 +31,18 @@ description="Grimm's newest and bestest Mod!"
 
 
 [[dependencies.grimms]]
+    modId="curios_api"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.grimms]]
     modId="jei"
     type="optional"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 
-
-[[mixins]]
-    config="mixins.grimms.json"
 
 # Start of user code block dependencies configuration
 # End of user code block dependencies configuration

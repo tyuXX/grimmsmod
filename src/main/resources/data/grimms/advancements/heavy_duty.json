@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "id": "grimms:backpack_t_4"
+    },
+    "title": {
+      "translate": "advancements.heavy_duty.title"
+    },
+    "description": {
+      "translate": "advancements.heavy_duty.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "heavy_duty_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "grimms:backpack_t_4"
+            ],
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "grimms:packed_up"
+}

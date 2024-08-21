@@ -9,6 +9,8 @@ import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.nbt.DoubleTag;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -36,12 +38,24 @@ public class OnTooltipRenderedProcedure {
 	private static void execute(@Nullable Event event, ItemStack itemstack, List<Component> tooltip) {
 		if (tooltip == null)
 			return;
+		if (itemstack.is(ItemTags.create(new ResourceLocation("grimms:cantrot")))) {
+			tooltip.add(Component.literal("Can't rot."));
+		} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:rot") > 0) {
+			tooltip.add(
+					Component
+							.literal(
+									("\u00A72Rotten "
+											+ new java.text.DecimalFormat("##.##")
+													.format((itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:rot") * 100) / ((double) ServerConfigConfiguration.ROTTIME.get()
+															* ((itemstack.has(DataComponents.FOOD) ? itemstack.getFoodProperties(null).nutrition() : 0) + (itemstack.has(DataComponents.FOOD) ? itemstack.getFoodProperties(null).saturation() : 0))))
+											+ "%")));
+		}
 		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("grimms:itemlvlinit")) {
 			tooltip.add(Component.literal(("\u00A77Item Level: " + new java.text.DecimalFormat("##").format(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:lvl")))));
 			tooltip.add(Component.literal(("\u00A77Xp: " + new java.text.DecimalFormat("##").format(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:xp")) + "/" + new java.text.DecimalFormat("##")
 					.format(Math.pow(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:lvl") * (double) ServerConfigConfiguration.LVLMULT.get(), (double) ServerConfigConfiguration.LVLEXPO.get())))));
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("grimms:sentient")) {
-				tooltip.add(Component.literal("\u00A72Sentient"));
+				tooltip.add(Component.literal("\u00A7bSentient"));
 			}
 		}
 		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:kills") > 0) {

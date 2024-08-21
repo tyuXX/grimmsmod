@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "Level Up 2",
-    "achievementDescription": "Level up to level 45",
+    "achievementDescription": "Level up to level 35",
     "achievementIcon": {
       "value": "Items.EXPERIENCE_BOTTLE"
     },

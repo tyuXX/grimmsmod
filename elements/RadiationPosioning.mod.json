@@ -1,0 +1,19 @@
+{
+  "_fv": 66,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Radiation Posioning",
+    "icon": "radiationpoisoning",
+    "color": {
+      "value": -16764109,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "mobEffectCategory": "HARMFUL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onActiveTick": {
+      "name": "RadiationPosioningOnEffectActiveTick"
+    }
+  }
+}

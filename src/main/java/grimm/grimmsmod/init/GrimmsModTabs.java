@@ -24,6 +24,7 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.SCALPEL.get());
 				tabData.accept(GrimmsModItems.MULTI_USE_SCALPEL.get());
 				tabData.accept(GrimmsModItems.DISINFECTANT_SCALPEL.get());
+				tabData.accept(GrimmsModItems.THRASH.get());
 				tabData.accept(GrimmsModItems.WOODEN_HAMMER.get());
 				tabData.accept(GrimmsModItems.IRON_HAMMER.get());
 				tabData.accept(GrimmsModItems.DIAMOND_HAMMER.get());
@@ -68,6 +69,8 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.SCREW.get());
 				tabData.accept(GrimmsModItems.GALVANIZED_STEEL.get());
 				tabData.accept(GrimmsModItems.GALVANIZED_SCREW.get());
+				tabData.accept(GrimmsModItems.PHOTOGRAPH_OF_MOTORCAR.get());
+				tabData.accept(GrimmsModItems.MATH_EXAM.get());
 				tabData.accept(GrimmsModItems.PLUTONIUM_INGOT.get());
 				tabData.accept(GrimmsModBlocks.PLUTONIUM_ORE.get().asItem());
 				tabData.accept(GrimmsModBlocks.PLUTONIUM_BLOCK.get().asItem());
@@ -76,7 +79,6 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.BACKPACK_T_1.get());
 				tabData.accept(GrimmsModItems.BACKPACK_T_2.get());
 				tabData.accept(GrimmsModItems.BACKPACK_T_3.get());
-				tabData.accept(GrimmsModItems.STICK_O_CRAFTING.get());
 				tabData.accept(GrimmsModItems.VOIDPACK.get());
 				tabData.accept(GrimmsModItems.IRIDIUM_HAMMER.get());
 				tabData.accept(GrimmsModItems.BACKPACK_T_4.get());
@@ -98,19 +100,23 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.TIN_SCREW.get());
 				tabData.accept(GrimmsModItems.ETERNAL_TIN_CAN.get());
 				tabData.accept(GrimmsModItems.FULL_TIN_CAN.get());
+				tabData.accept(GrimmsModItems.WHETSTONE.get());
+				tabData.accept(GrimmsModItems.STICK_O_CRAFTING.get());
+				tabData.accept(GrimmsModItems.SODA_BOTTLE.get());
+				tabData.accept(GrimmsModItems.SODA_BOTTLE_2.get());
+				tabData.accept(GrimmsModItems.PULLUP_TAB.get());
+				tabData.accept(GrimmsModItems.CHAMPAGNE_BOTTLE.get());
+				tabData.accept(GrimmsModItems.TIN_SODA_BOTTLE.get());
+				tabData.accept(GrimmsModItems.ROTTEN_FOOD.get());
 			})
 
 					.build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRIMMS_MOD_SPECIAL = REGISTRY.register("grimms_mod_special",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.grimms.grimms_mod_special")).icon(() -> new ItemStack(GrimmsModItems.BUILDERS_WAND.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(GrimmsModItems.BUILDERS_WAND.get());
-				tabData.accept(GrimmsModItems.PLACEHOLDER.get());
 				tabData.accept(GrimmsModItems.LOGO.get());
-				tabData.accept(GrimmsModItems.THRASH.get());
 				tabData.accept(GrimmsModItems.TEST_DUMMY_SPAWN_EGG.get());
 				tabData.accept(GrimmsModBlocks.LOOT_CRATE.get().asItem());
-				tabData.accept(GrimmsModItems.PHOTOGRAPH_OF_MOTORCAR.get());
-				tabData.accept(GrimmsModItems.MATH_EXAM.get());
 			})
 
 					.build());

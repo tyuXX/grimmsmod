@@ -1,0 +1,7 @@
+{
+  "parent": "grimms:custom/whetstone",
+  "textures": {
+    "0": "grimms:block/whetstone",
+    "particle": "grimms:item/placeholder"
+  }
+}

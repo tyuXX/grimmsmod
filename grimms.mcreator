@@ -650,7 +650,7 @@
           "src/main/java/grimm/grimmsmod/item/ThrashItem.java"
         ]
       },
-      "path": "~/Special"
+      "path": "~/Items"
     },
     {
       "name": "WoodenHammer",
@@ -2900,7 +2900,24 @@
         "files": [
           "src/main/java/grimm/grimmsmod/procedures/LootCrateBlockDestroyedByPlayerProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Procs"
     },
@@ -3800,7 +3817,7 @@
           "src/main/resources/assets/grimms/models/item/photograph_of_motorcar.json"
         ]
       },
-      "path": "~/Special"
+      "path": "~/Items"
     },
     {
       "name": "LittleJohn",
@@ -3828,7 +3845,7 @@
           "src/main/resources/assets/grimms/models/item/math_exam.json"
         ]
       },
-      "path": "~/Special"
+      "path": "~/Items"
     },
     {
       "name": "MathExamGUI",
@@ -4214,20 +4231,6 @@
           "src/main/java/grimm/grimmsmod/item/BackpackT3Item.java",
           "src/main/resources/assets/grimms/models/item/backpack_t_3.json",
           "src/main/java/grimm/grimmsmod/item/inventory/BackpackT3InventoryCapability.java"
-        ]
-      },
-      "path": "~/Items"
-    },
-    {
-      "name": "StickOCrafting",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stick_o_crafting",
-      "metadata": {
-        "files": [
-          "src/main/java/grimm/grimmsmod/item/StickOCraftingItem.java",
-          "src/main/resources/assets/grimms/models/item/stick_o_crafting.json"
         ]
       },
       "path": "~/Items"
@@ -5158,6 +5161,355 @@
         "return_type": "string"
       },
       "path": "~/Procs"
+    },
+    {
+      "name": "OnItemBreaks",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_item_breaks",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/OnItemBreaksProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Events"
+    },
+    {
+      "name": "PackedUp",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "packed_up",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/advancements/packed_up.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "HeavyDuty",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_duty",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/advancements/heavy_duty.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "SuperiorBackpack",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "superior_backpack",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/advancements/superior_backpack.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "DisinfectantScalpelRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disinfectant_scalpel_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/disinfectant_scalpel_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Whetstone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "whetstone",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/WhetstoneItem.java",
+          "src/main/resources/assets/grimms/models/item/whetstone.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "WhetstoneRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "whetstone_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/whetstone_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "WhetstoneRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "whetstone_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/WhetstoneRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "RadiationPosioningOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "radiation_posioning_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/RadiationPosioningOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "RadiationPosioning",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "radiation_posioning",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/potion/RadiationPosioningMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "RadiationDamageType",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "radiation_damage_type",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/damage_type/radiation_damage_type.json"
+        ]
+      },
+      "path": "~/DamageTypes"
+    },
+    {
+      "name": "StickOCraftingSlot",
+      "type": "curiosslot",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stick_o_crafting_slot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/curios/tags/items/stick_o_crafting_slot.json"
+        ]
+      },
+      "path": "~/Curios"
+    },
+    {
+      "name": "StickOCrafting",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stick_o_crafting",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/StickOCraftingItem.java",
+          "src/main/resources/assets/grimms/models/item/stick_o_crafting.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "OpenCraftingMenuOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_crafting_menu_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/OpenCraftingMenuOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "OpenCraftingMenu",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_crafting_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/network/OpenCraftingMenuMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "SodaBottle",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soda_bottle",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/SodaBottleItem.java",
+          "src/main/resources/assets/grimms/models/item/soda_bottle.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SodaBottle2",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soda_bottle_2",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/SodaBottle2Item.java",
+          "src/main/resources/assets/grimms/models/item/soda_bottle_2.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "PullupTab",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pullup_tab",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/grimms/models/item/pullup_tab.json",
+          "src/main/java/grimm/grimmsmod/item/PullupTabItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "ChampagneBottle",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "champagne_bottle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/grimms/models/item/champagne_bottle.json",
+          "src/main/java/grimm/grimmsmod/item/ChampagneBottleItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "TinSodaBottle",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tin_soda_bottle",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/TinSodaBottleItem.java",
+          "src/main/resources/assets/grimms/models/item/tin_soda_bottle.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "RottenFood",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rotten_food",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/RottenFoodItem.java",
+          "src/main/resources/assets/grimms/models/item/rotten_food.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "GetDayCounterTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_day_counter_text_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/GetDayCounterTextValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procs"
     }
   ],
   "variable_elements": [
@@ -5227,9 +5579,6 @@
     }
   ],
   "tag_elements": {
-    "ITEMS:mod:forcesoulbound": [
-      "CUSTOM:Placeholder"
-    ],
     "BLOCKS:minecraft:needs_diamond_tool": [
       "~CUSTOM:TinBlock",
       "~CUSTOM:TinOre",
@@ -5248,24 +5597,11 @@
       "~CUSTOM:IridiumBlock",
       "~CUSTOM:IridiumOre"
     ],
-    "BLOCKS:minecraft:mineable/pickaxe": [
-      "~CUSTOM:TinBlock",
-      "~CUSTOM:TinOre",
-      "~CUSTOM:TungstenBlock",
-      "~CUSTOM:TungstenOre",
-      "~CUSTOM:PlutoniumBlock",
-      "~CUSTOM:PlutoniumOre",
-      "~CUSTOM:LeadBlock",
-      "~CUSTOM:LeadOre",
-      "~CUSTOM:ThoriumBlock",
-      "~CUSTOM:ThoriumOre",
-      "~CUSTOM:UraniumBlock",
-      "~CUSTOM:UraniumOre",
-      "~CUSTOM:SilverBlock",
-      "~CUSTOM:SilverOre",
-      "~CUSTOM:IridiumBlock",
-      "~CUSTOM:IridiumOre",
-      "~CUSTOM:LandMine"
+    "ITEMS:minecraft:enchantable/durability": [
+      "~CUSTOM:Whetstone"
+    ],
+    "ITEMS:mod:sharpenable": [
+      "CUSTOM:Placeholder"
     ],
     "ITEMS:minecraft:pickaxes": [
       "~CUSTOM:IridiumHammer",
@@ -5289,6 +5625,36 @@
       "CUSTOM:BackpackT5",
       "CUSTOM:BackpackT6"
     ],
+    "ITEMS:minecraft:meat": [
+      "~CUSTOM:FullTinCan"
+    ],
+    "ITEMS:mod:cantrot": [
+      "CUSTOM:EternalTinCan",
+      "CUSTOM:FullTinCan",
+      "CUSTOM:RottenFood"
+    ],
+    "ITEMS:mod:forcesoulbound": [
+      "CUSTOM:Placeholder"
+    ],
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:TinBlock",
+      "~CUSTOM:TinOre",
+      "~CUSTOM:TungstenBlock",
+      "~CUSTOM:TungstenOre",
+      "~CUSTOM:PlutoniumBlock",
+      "~CUSTOM:PlutoniumOre",
+      "~CUSTOM:LeadBlock",
+      "~CUSTOM:LeadOre",
+      "~CUSTOM:ThoriumBlock",
+      "~CUSTOM:ThoriumOre",
+      "~CUSTOM:UraniumBlock",
+      "~CUSTOM:UraniumOre",
+      "~CUSTOM:SilverBlock",
+      "~CUSTOM:SilverOre",
+      "~CUSTOM:IridiumBlock",
+      "~CUSTOM:IridiumOre",
+      "~CUSTOM:LandMine"
+    ],
     "ENTITIES:mod:bloodmoonentity": [
       "EntityZombie",
       "EntitySkeleton",
@@ -5298,10 +5664,116 @@
       "CUSTOM:ItemLevelDamageBoost",
       "CUSTOM:PrestigeDamageBoost"
     ],
+    "ITEMS:mod:nothrash": [
+      "CUSTOM:Katana"
+    ],
     "ITEMS:minecraft:swords": [
       "~CUSTOM:HeavyMetalPipe",
       "~CUSTOM:MetalPipe",
       "~CUSTOM:Katana"
+    ],
+    "ITEMS:mod:lootcratedrop": [
+      "CUSTOM:Steel",
+      "CUSTOM:TemperedSteel",
+      "CUSTOM:SuperiorExperianceBottle",
+      "CUSTOM:IridiumIngot",
+      "CUSTOM:SilverIngot",
+      "CUSTOM:UraniumIngot",
+      "CUSTOM:ThoriumIngot",
+      "CUSTOM:LeadIngot",
+      "CUSTOM:GalvanizedSteel",
+      "CUSTOM:PlutoniumIngot",
+      "CUSTOM:TungstenIngot",
+      "CUSTOM:TungstenCarbideIngot",
+      "CUSTOM:TinIngot",
+      "Items.DYE#4",
+      "Items.COAL#0",
+      "Items.IRON_INGOT",
+      "Items.IRON_NUGGET",
+      "Items.COPPER_INGOT",
+      "Items.GOLD_INGOT",
+      "Items.GOLD_NUGGET",
+      "Items.DIAMOND",
+      "Items.NETHERITE_INGOT",
+      "Items.EMERALD",
+      "Items.QUARTZ",
+      "Items.NETHER_STAR",
+      "Items.AMETHYST_SHARD",
+      "Items.ECHO_SHARD",
+      "Items.TOTEM_OF_UNDYING",
+      "Items.SPYGLASS",
+      "Items.WOODEN_SWORD",
+      "Items.WOODEN_SHOVEL",
+      "Items.WOODEN_PICKAXE",
+      "Items.WOODEN_AXE",
+      "Items.WOODEN_HOE",
+      "Items.STONE_SWORD",
+      "Items.STONE_SHOVEL",
+      "Items.STONE_PICKAXE",
+      "Items.STONE_AXE",
+      "Items.STONE_HOE",
+      "Items.IRON_SWORD",
+      "Items.IRON_SHOVEL",
+      "Items.IRON_PICKAXE",
+      "Items.IRON_AXE",
+      "Items.IRON_HOE",
+      "Items.GOLDEN_SWORD",
+      "Items.GOLDEN_SHOVEL",
+      "Items.GOLDEN_PICKAXE",
+      "Items.GOLDEN_AXE",
+      "Items.GOLDEN_HOE",
+      "Items.DIAMOND_SWORD",
+      "Items.DIAMOND_SHOVEL",
+      "Items.DIAMOND_PICKAXE",
+      "Items.DIAMOND_AXE",
+      "Items.DIAMOND_HOE",
+      "Items.NETHERITE_SWORD",
+      "Items.NETHERITE_SHOVEL",
+      "Items.NETHERITE_PICKAXE",
+      "Items.NETHERITE_AXE",
+      "Items.NETHERITE_HOE",
+      "Items.TRIDENT",
+      "Items.LEATHER_HELMET",
+      "Items.LEATHER_CHESTPLATE",
+      "Items.LEATHER_LEGGINGS",
+      "Items.LEATHER_BOOTS",
+      "Items.CHAINMAIL_HELMET",
+      "Items.CHAINMAIL_CHESTPLATE",
+      "Items.CHAINMAIL_LEGGINGS",
+      "Items.CHAINMAIL_BOOTS",
+      "Items.TURTLE_HELMET",
+      "Items.IRON_HELMET",
+      "Items.IRON_CHESTPLATE",
+      "Items.IRON_LEGGINGS",
+      "Items.IRON_BOOTS",
+      "Items.GOLDEN_HELMET",
+      "Items.GOLDEN_CHESTPLATE",
+      "Items.GOLDEN_LEGGINGS",
+      "Items.GOLDEN_BOOTS",
+      "Items.DIAMOND_HELMET",
+      "Items.DIAMOND_CHESTPLATE",
+      "Items.DIAMOND_LEGGINGS",
+      "Items.DIAMOND_BOOTS",
+      "Items.NETHERITE_HELMET",
+      "Items.NETHERITE_CHESTPLATE",
+      "Items.NETHERITE_LEGGINGS",
+      "Items.NETHERITE_BOOTS",
+      "Items.ELYTRA",
+      "Items.LEATHER_HORSE_ARMOR",
+      "Items.IRON_HORSE_ARMOR",
+      "Items.GOLDEN_HORSE_ARMOR",
+      "Items.DIAMOND_HORSE_ARMOR",
+      "Items.WOLF_ARMOR",
+      "CUSTOM:Thrash",
+      "CUSTOM:WoodenHammer",
+      "CUSTOM:IronHammer",
+      "CUSTOM:DiamondHammer",
+      "CUSTOM:NetheriteHammer",
+      "CUSTOM:MathExam",
+      "CUSTOM:BackpackT2",
+      "CUSTOM:BackpackT3",
+      "CUSTOM:IridiumHammer",
+      "CUSTOM:BackpackT4"
     ],
     "DAMAGE_TYPES:mod:sharpdamage": [
       "ANVIL",
@@ -5333,14 +5805,15 @@
   "language_map": {
     "en_us": {
       "item.grimmsmod.handheld_microscope": "Handheld Microscope",
-      "advancements.millionare.title": "Millionare",
       "item.grimmsmod.scalpel": "Scalpel",
+      "advancements.millionare.title": "Millionare",
       "trim_material.grimms.plutonium_trim": "Plutonium",
       "advancements.prestige.title": "Prestige",
       "item.grimms.tungsten_ingot": "Tungsten",
       "block.grimms.plutonium_ore": "Plutonium Ore",
       "advancements.subpar_hammeration.descr": "Not there yet!",
       "death.attack.item_level_damage_boost.item": "%1$s was killed by %2$s using %3$s",
+      "advancements.heavy_duty.title": "Heavy Duty",
       "advancements.murderer.descr": "Kill a fellow player",
       "item.grimmsmod.builders_wand": "Builders Wand",
       "advancements.level_up.descr": "Level up for the first time",
@@ -5365,9 +5838,12 @@
       "advancements.little_john.title": "Little John",
       "advancements.rich_guy.title": "Rich Guy",
       "trim_material.grimms.lead_trim": "Lead",
+      "death.attack.radiation_damage_type.item": "%1$s was irradiated by %2$s using %3$s",
+      "item.grimms.champagne_bottle": "Champagne Bottle",
       "item.grimms.mortar": "Mortar",
       "death.attack.prestige_damage_boost": "%1$s died",
       "block.grimms.plutonium_block": "Block of Plutonium",
+      "item.grimms.soda_bottle": "Soda Bottle",
       "item.grimms.photograph_of_motorcar": "Photograph Of Motorcar",
       "advancements.prank_em_john.descr": "Metal pipe go bonk!",
       "advancements.comrade.title": "Comrade",
@@ -5376,17 +5852,21 @@
       "death.attack.prestige_damage_boost.item": "%1$s was killed by %2$s\u0027s prestige boost using %3$s",
       "advancements.install_grimms_mod_special.title": "Grimms Mod Specials",
       "item.grimms.screw": "Screw",
+      "item.grimms.whetstone": "Whetstone",
       "item.grimmsmod.multi_use_scalpel": "Multi Use Scalpel",
       "block.grimms.silver_block": "Block of Silver",
       "item.grimms.steel_dust": "Steel Dust",
+      "advancements.packed_up.title": "Packed Up",
       "death.attack.bleeding_damage": "%1$s lost too much blood",
       "trim_material.grimms.tungsten_carbide_trim": "Tungsten Carbide",
       "key.categories.grimmsmod": "Grimm\u0027s Mod Keybinds",
       "gui.grimms.tv_liquidator_gui.label_liquidate": "Liquidate",
+      "curios.identifier.stick_o_crafting_slot": "Stick O Crafting Slot",
       "block.grimms.uranium_ore": "Uranium Ore",
-      "advancements.level_up_2.descr": "Level up to level 45",
+      "advancements.level_up_2.descr": "Level up to level 35",
       "advancements.subpar_hammeration.title": "Subpar Hammeration",
       "item.grimms.tempered_steel": "Tempered Steel",
+      "advancements.superior_backpack.title": "Superior Backpack",
       "gui.grimms.math_exam_gui.answer": "Answer here",
       "block.grimms.tungsten_block": "Block of Tungsten",
       "advancements.millionare.descr": "Have $1M",
@@ -5415,14 +5895,17 @@
       "item_group.grimms.grimms_mod_special": "Grimms Mod Special",
       "advancements.rich_guy.descr": "Have $10K",
       "advancements.comrade.descr": "For hitting metal 17 times, you won this photograph of motorcar!",
+      "item.grimms.tin_soda_bottle": "Tin Soda Bottle",
       "block.grimms.land_mine": "Land Mine",
       "death.attack.bleeding_damage.item": "%1$s was bled to death by %2$s using %3$s",
+      "key.grimms.open_crafting_menu": "Open Crafting Menu",
       "enchantment.grimms.lifesteal": "Lifesteal",
       "item.grimms.coal_dust": "Coal Dust",
       "gui.grimms.stats_gui.label_empty": "/",
       "item_group.grimmsmod.grimms_mod_special": "Grimms Mod Special",
       "gui.grimmsmod.stats_gui.label_empty": "/",
       "item.grimms.tungsten_carbide_screw": "Tungsten Carbide Screw",
+      "item.grimms.pullup_tab": "Pullup Tab",
       "item.grimmsmod.microscope": "Microscope",
       "advancements.victim.title": "Victim",
       "gui.grimms.math_exam_gui.button_submit": "Submit",
@@ -5489,6 +5972,7 @@
       "item_group.grimmsmod.grimms_mod": "Grimm\u0027s Mod",
       "advancements.transmuter.descr": "Have 1K TV",
       "item.grimmsmod.placeholder": "Placeholder",
+      "item.grimms.soda_bottle_2": "Soda Bottle 2",
       "item.grimms.mortar_and_pestle": "Mortar And Pestle",
       "advancements.transmutation_professor.title": "Transmutation Professor",
       "item.grimmsmod.fancier_clock": "Fancier Clock",
@@ -5502,9 +5986,12 @@
       "item.grimms.eternal_tin_can": "Eternal Tin Can",
       "advancements.murderer.title": "Murderer",
       "item.grimms.tin_screw": "Tin Screw",
+      "advancements.packed_up.descr": "Craft yourself a backpack",
+      "effect.grimms.radiation_posioning": "Radiation Posioning",
       "item.grimms.screw_blueprint": "Screw Blueprint",
       "advancements.grimms_mod_titles.descr": "Titles, gained by doing a specific action",
       "item.grimms.math_exam": "Math Exam",
+      "death.attack.radiation_damage_type.player": "%1$s got too irradiated whilst trying to escape %2$s",
       "item.grimms.placeholder": "Placeholder",
       "item.grimms.builders_wand": "Builders Wand",
       "enchantment.grimms.soulbound": "Soulbound",
@@ -5515,15 +6002,19 @@
       "block.grimms.silver_ore": "Silver Ore",
       "gui.grimms.prestige_upgrades_gui.prestigeupgradeid": "N/A",
       "key.grimms.open_stats": "Open Stats",
+      "item.grimms.rotten_food": "Rotten Food",
       "advancements.little_timmy.descr": "Get a perfect math exam score",
       "item.grimms.death_package": "Death Package",
       "block.grimms.forgery_table": "Forgery Table",
       "item.grimms.silver_ingot": "Silver",
+      "advancements.heavy_duty.descr": "That\u0027s some serious leg power to carry all that!",
       "advancements.serious_hammeration.title": "Serious Hammeration",
       "item.grimms.stick_o_crafting": "Stick O\u0027 Crafting",
       "advancements.prestige.descr": "Prestige for the first time for special benefits!",
       "trim_material.grimms.galvanized_steel_trim": "Galvanized Steel",
       "item.grimms.iridium_screw": "Iridium Screw",
+      "advancements.superior_backpack.descr": "The ultimate backpack to rule them all!",
+      "death.attack.radiation_damage_type": "%1$s got too irradiated.",
       "item.grimms.steel": "Steel",
       "item.grimmsmod.logo": "Logo",
       "advancements.install_grimms_mod.title": "Install Grimm\u0027s Mod"
@@ -5620,13 +6111,17 @@
       {
         "name": "Trims",
         "children": []
+      },
+      {
+        "name": "Curios",
+        "children": []
       }
     ]
   },
   "workspaceSettings": {
     "modid": "grimms",
     "modName": "Grimm\u0027s Mod",
-    "version": "6",
+    "version": "5.1",
     "description": "Grimm\u0027s newest and bestest Mod!",
     "author": "tyuXX",
     "websiteURL": "https://modrinth.com/mod/gsm",
@@ -5637,6 +6132,7 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
+      "curios_api",
       "jei"
     ],
     "currentGenerator": "neoforge-1.20.6",

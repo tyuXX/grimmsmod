@@ -9,11 +9,7 @@
     "states": [],
     "name": "Placeholder",
     "rarity": "COMMON",
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:GrimmsModSpecial"
-      }
-    ],
+    "creativeTabs": [],
     "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,

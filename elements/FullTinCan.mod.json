@@ -29,7 +29,9 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "Fresh as ever!"
+      ]
     },
     "glowCondition": {
       "fixedValue": false
@@ -49,7 +51,7 @@
     "eatResultItem": {
       "value": "CUSTOM:TinCan"
     },
-    "isMeat": false,
+    "isMeat": true,
     "isAlwaysEdible": true,
     "animation": "eat"
   }

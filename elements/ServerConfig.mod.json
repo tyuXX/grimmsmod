@@ -232,6 +232,57 @@
             "varname": "radenable",
             "enablecomment": false,
             "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 1000.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Radiation Limit",
+            "varname": "radpoislim",
+            "enablecomment": false,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Enable rotten food",
+            "varname": "rotenable",
+            "enablecomment": false,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 1500.0,
+            "textDefault": "",
+            "comment": "Rot time of food as ticks, tihs is multipilied my food value + saturation",
+            "vardisplay": "Rot time",
+            "varname": "rottime",
+            "enablecomment": true,
+            "stringlist": []
           }
         ]
       }

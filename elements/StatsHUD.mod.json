@@ -57,6 +57,23 @@
           "x": 6,
           "y": 17
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_day_counter_text_value",
+          "text": {
+            "fixedValue": "",
+            "name": "GetDayCounterTextValue"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 6,
+          "y": 26
+        }
       }
     ],
     "baseTexture": "",

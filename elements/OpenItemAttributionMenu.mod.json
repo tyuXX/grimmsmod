@@ -2,7 +2,7 @@
   "_fv": 66,
   "_type": "keybind",
   "definition": {
-    "triggerKey": "Z",
+    "triggerKey": "X",
     "keyBindingName": "Open Item Attribution Menu",
     "keyBindingCategoryKey": "grimmsmod"
   }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "abb"
+  ],
+  "key": {
+    "a": {
+      "item": "grimms:iridium_ingot"
+    },
+    "b": {
+      "item": "grimms:silver_ingot"
+    }
+  },
+  "result": {
+    "id": "grimms:disinfectant_scalpel",
+    "count": 1
+  }
+}
