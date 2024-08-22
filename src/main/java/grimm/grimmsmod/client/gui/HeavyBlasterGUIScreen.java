@@ -60,6 +60,7 @@ public class HeavyBlasterGUIScreen extends AbstractContainerScreen<HeavyBlasterG
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+		guiGraphics.drawString(this.font, Component.translatable("gui.grimms.heavy_blaster_gui.label_coal_dust"), 60, 61, -12829636, false);
 	}
 
 	@Override

@@ -283,6 +283,23 @@
             "varname": "rottime",
             "enablecomment": true,
             "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Enable Invulnerability ticks",
+            "varname": "invul",
+            "enablecomment": false,
+            "stringlist": []
           }
         ]
       }

@@ -21,6 +21,7 @@ public class ServerConfigConfiguration {
 	public static final ModConfigSpec.ConfigValue<Double> RADPOISLIM;
 	public static final ModConfigSpec.ConfigValue<Boolean> ROTENABLE;
 	public static final ModConfigSpec.ConfigValue<Double> ROTTIME;
+	public static final ModConfigSpec.ConfigValue<Boolean> INVUL;
 	static {
 		BUILDER.push("Performance");
 		INSTLEVELUP = BUILDER.comment("Use a while loop so no leftover xp is left").define("Instant Level Up", true);
@@ -52,6 +53,7 @@ public class ServerConfigConfiguration {
 		RADPOISLIM = BUILDER.define("Radiation Limit", (double) 1000);
 		ROTENABLE = BUILDER.define("Enable rotten food", true);
 		ROTTIME = BUILDER.comment("Rot time of food as ticks, tihs is multipilied my food value + saturation").define("Rot time", (double) 1500);
+		INVUL = BUILDER.define("Enable Invulnerability ticks", true);
 		BUILDER.pop();
 
 		SPEC = BUILDER.build();

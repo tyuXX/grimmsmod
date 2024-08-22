@@ -38,6 +38,7 @@ import grimm.grimmsmod.network.GrimmsModVariables;
 import grimm.grimmsmod.init.GrimmsModMobEffects;
 import grimm.grimmsmod.init.GrimmsModItems;
 import grimm.grimmsmod.init.GrimmsModEnchantments;
+import grimm.grimmsmod.configuration.ServerConfigConfiguration;
 
 @EventBusSubscriber
 public class OnEntityAttackedProcedure {
@@ -123,6 +124,9 @@ public class OnEntityAttackedProcedure {
 		ItemXpHandleProcedure.execute(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY, amount);
 		ItemXpHandleProcedure.execute(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY, amount);
 		ItemXpHandleProcedure.execute(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY, amount);
+		if (!ServerConfigConfiguration.INVUL.get()) {
+			entity.invulnerableTime = 0;
+		}
 		return InteractionResult.SUCCESS;
 	}
 }
