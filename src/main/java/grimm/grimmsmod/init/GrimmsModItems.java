@@ -96,6 +96,7 @@ import grimm.grimmsmod.item.BackpackT4Item;
 import grimm.grimmsmod.item.BackpackT3Item;
 import grimm.grimmsmod.item.BackpackT2Item;
 import grimm.grimmsmod.item.BackpackT1Item;
+import grimm.grimmsmod.item.AlloyedIngotItem;
 import grimm.grimmsmod.GrimmsMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
@@ -197,6 +198,7 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> CHAMPAGNE_BOTTLE = REGISTRY.register("champagne_bottle", ChampagneBottleItem::new);
 	public static final DeferredHolder<Item, Item> TIN_SODA_BOTTLE = REGISTRY.register("tin_soda_bottle", TinSodaBottleItem::new);
 	public static final DeferredHolder<Item, Item> ROTTEN_FOOD = REGISTRY.register("rotten_food", RottenFoodItem::new);
+	public static final DeferredHolder<Item, Item> ALLOYED_INGOT = REGISTRY.register("alloyed_ingot", AlloyedIngotItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

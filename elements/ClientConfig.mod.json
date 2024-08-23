@@ -94,7 +94,7 @@
         ]
       }
     ],
-    "file": "grimmsmod_client",
+    "file": "grimm\\\\grimmsmod_client",
     "configType": 2
   }
 }

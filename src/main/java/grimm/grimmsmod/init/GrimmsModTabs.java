@@ -108,6 +108,7 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.CHAMPAGNE_BOTTLE.get());
 				tabData.accept(GrimmsModItems.TIN_SODA_BOTTLE.get());
 				tabData.accept(GrimmsModItems.ROTTEN_FOOD.get());
+				tabData.accept(GrimmsModItems.ALLOYED_INGOT.get());
 			})
 
 					.build());
