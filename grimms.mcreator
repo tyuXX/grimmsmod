@@ -1492,7 +1492,16 @@
         "files": [
           "src/main/java/grimm/grimmsmod/procedures/PrestigeUpgradeGUINextProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
       },
       "path": "~/Procs"
     },
@@ -5579,6 +5588,76 @@
         ]
       },
       "path": "~/Items"
+    },
+    {
+      "name": "CompositeGem",
+      "type": "dyeable_item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "composite_gem",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/grimms/models/item/composite_gem.json",
+          "src/main/java/grimm/grimmsmod/item/CompositeGemItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "CompositeGalloyIngot",
+      "type": "dyeable_item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "composite_galloy_ingot",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/CompositeGalloyIngotItem.java",
+          "src/main/resources/assets/grimms/models/item/composite_galloy_ingot.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "TinSodaBottleRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tin_soda_bottle_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/tin_soda_bottle_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "MainMenuHUDDisplayOverlayIngame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_menu_hud_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/MainMenuHUDDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "InitPrestigeUpgradeCache",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "init_prestige_upgrade_cache",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/InitPrestigeUpgradeCacheProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs"
     }
   ],
   "variable_elements": [
@@ -5695,6 +5774,8 @@
       "CUSTOM:BackpackT6"
     ],
     "ITEMS:minecraft:dyeable": [
+      "~CUSTOM:CompositeGalloyIngot",
+      "~CUSTOM:CompositeGem",
       "~CUSTOM:AlloyedIngot"
     ],
     "ITEMS:minecraft:meat": [
@@ -6053,6 +6134,7 @@
       "gui.grimms.prestige_upgrades_gui.label_name_na_level0_maxlevel0": "Name: N/A Level:0 MaxLevel:0",
       "block.grimms.thorium_ore": "Thorium Ore",
       "trim_material.grimms.uranium_trim": "Uranium",
+      "item.grimms.composite_galloy_ingot": "Composite Galloy Ingot",
       "death.attack.item_level_damage_boost.player": "%1$s died whilst trying to escape %2$s",
       "advancements.victim.descr": "Get murdered by a fellow player",
       "gui.grimmsmod.stats_gui.button_prestige": "Prestige",
@@ -6074,6 +6156,7 @@
       "block.grimms.lead_ore": "Lead Ore",
       "block.grimms.heavy_blaster": "Heavy Blaster",
       "block.grimms.silver_ore": "Silver Ore",
+      "item.grimms.composite_gem": "Composite Gem",
       "gui.grimms.prestige_upgrades_gui.prestigeupgradeid": "N/A",
       "key.grimms.open_stats": "Open Stats",
       "item.grimms.rotten_food": "Rotten Food",

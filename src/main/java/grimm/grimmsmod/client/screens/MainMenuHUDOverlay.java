@@ -14,6 +14,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.client.gui.screens.TitleScreen;
 import net.minecraft.client.Minecraft;
 
+import grimm.grimmsmod.procedures.MainMenuHUDDisplayOverlayIngameProcedure;
 import grimm.grimmsmod.procedures.GetVersionTextValueProcedure;
 import grimm.grimmsmod.procedures.GetMainMenuTextValueProcedure;
 
@@ -35,7 +36,7 @@ public class MainMenuHUDOverlay {
 				y = entity.getY();
 				z = entity.getZ();
 			}
-			if (true) {
+			if (MainMenuHUDDisplayOverlayIngameProcedure.execute()) {
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 						GetVersionTextValueProcedure.execute(), 6, 8, -1, false);

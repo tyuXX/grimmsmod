@@ -13,5 +13,7 @@ public class RegisterColor {
 	@SubscribeEvent
 	public static void onItemColorRegister(RegisterColorHandlersEvent.Item event) {
 		event.register((stack, tintIndex) -> tintIndex > 0 ? -1 : DyedItemColor.getOrDefault(stack, -1), GrimmsModItems.ALLOYED_INGOT.get());
+		event.register((stack, tintIndex) -> tintIndex > 0 ? -1 : DyedItemColor.getOrDefault(stack, -1), GrimmsModItems.COMPOSITE_GEM.get());
+		event.register((stack, tintIndex) -> tintIndex > 0 ? -1 : DyedItemColor.getOrDefault(stack, -1), GrimmsModItems.COMPOSITE_GALLOY_INGOT.get());
 	}
 }

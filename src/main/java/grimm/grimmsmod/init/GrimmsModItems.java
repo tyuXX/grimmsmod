@@ -86,6 +86,8 @@ import grimm.grimmsmod.item.DosimeterItem;
 import grimm.grimmsmod.item.DisinfectantScalpelItem;
 import grimm.grimmsmod.item.DiamondHammerItem;
 import grimm.grimmsmod.item.DeathPackageItem;
+import grimm.grimmsmod.item.CompositeGemItem;
+import grimm.grimmsmod.item.CompositeGalloyIngotItem;
 import grimm.grimmsmod.item.CoalDustItem;
 import grimm.grimmsmod.item.ChampagneBottleItem;
 import grimm.grimmsmod.item.BuildersWandItem;
@@ -199,6 +201,8 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> TIN_SODA_BOTTLE = REGISTRY.register("tin_soda_bottle", TinSodaBottleItem::new);
 	public static final DeferredHolder<Item, Item> ROTTEN_FOOD = REGISTRY.register("rotten_food", RottenFoodItem::new);
 	public static final DeferredHolder<Item, Item> ALLOYED_INGOT = REGISTRY.register("alloyed_ingot", AlloyedIngotItem::new);
+	public static final DeferredHolder<Item, Item> COMPOSITE_GEM = REGISTRY.register("composite_gem", CompositeGemItem::new);
+	public static final DeferredHolder<Item, Item> COMPOSITE_GALLOY_INGOT = REGISTRY.register("composite_galloy_ingot", CompositeGalloyIngotItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

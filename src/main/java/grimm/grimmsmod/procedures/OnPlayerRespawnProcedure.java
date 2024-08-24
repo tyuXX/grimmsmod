@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.nbt.DoubleTag;
 
 import javax.annotation.Nullable;
 
@@ -40,5 +41,10 @@ public class OnPlayerRespawnProcedure {
 			_vars.deathpackage = new ItemStack(Blocks.AIR);
 			_vars.syncPlayerVariables(entity);
 		}
+		if (entity instanceof Player _player)
+			_player.giveExperienceLevels((int) (((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:lastdeathxp")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D)
+					* (((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.get("prestige:keepxp")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) / 10)));
+		SetDataElementProcedure.execute(DoubleTag.valueOf(0), entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, false, "grimm:lastdeathxp");
+		ChangeNumberDataElementProcedure.execute(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, false, 1, "deaths");
 	}
 }

@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "grimms:composite_galloy_ingot",
+    "grimms:composite_gem",
     "grimms:alloyed_ingot"
   ]
 }

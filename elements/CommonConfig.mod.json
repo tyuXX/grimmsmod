@@ -3,7 +3,7 @@
   "_type": "config",
   "definition": {
     "pools": [],
-    "file": "grimm\\\\grimmsmod_common",
+    "file": "grimm\\\\common",
     "configType": 0
   }
 }

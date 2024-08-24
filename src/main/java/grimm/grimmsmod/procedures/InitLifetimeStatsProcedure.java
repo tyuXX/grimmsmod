@@ -13,5 +13,6 @@ public class InitLifetimeStatsProcedure {
 		entity.getData(GrimmsModVariables.PLAYER_VARIABLES).lifetimestats.put("grimm:lobotomized", ByteTag.valueOf(false));
 		entity.getData(GrimmsModVariables.PLAYER_VARIABLES).lifetimestats.put("grimm:rads", DoubleTag.valueOf(0));
 		entity.getData(GrimmsModVariables.PLAYER_VARIABLES).lifetimestats.put("grimm:radslasttick", DoubleTag.valueOf(0));
+		entity.getData(GrimmsModVariables.PLAYER_VARIABLES).lifetimestats.put("menu:prestigeid", DoubleTag.valueOf(0));
 	}
 }

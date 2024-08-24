@@ -147,5 +147,6 @@ public class OnPlayerDiesProcedure {
 				itemid = itemid + 1;
 			}
 		}
+		SetDataElementProcedure.execute(DoubleTag.valueOf((entity instanceof Player _plr ? _plr.experienceLevel : 0)), entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, entity, false, "grimm:lastdeathxp");
 	}
 }

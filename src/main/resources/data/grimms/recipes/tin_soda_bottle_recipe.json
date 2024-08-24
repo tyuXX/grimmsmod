@@ -2,23 +2,23 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "ab ",
-    "bcb",
-    " b "
+    "aba",
+    "aca",
+    "aaa"
   ],
   "key": {
     "a": {
-      "item": "grimms:tin_screw"
+      "item": "grimms:tin_ingot"
     },
     "b": {
-      "item": "grimms:tin_ingot"
+      "item": "grimms:tin_screw"
     },
     "c": {
       "tag": "grimms:hammers"
     }
   },
   "result": {
-    "id": "grimms:tin_can",
-    "count": 4
+    "id": "grimms:tin_soda_bottle",
+    "count": 7
   }
 }

@@ -10,10 +10,10 @@ public class InitMiscCacheProcedure {
 		ListTag tmp;
 		tmp = new ListTag();
 		tmp.addTag(0, StringTag.valueOf("prestige:keepinventory"));
-		tmp.addTag(0, StringTag.valueOf("prestige:dexterious"));
-		tmp.addTag(0, StringTag.valueOf("prestige:powerful"));
-		tmp.addTag(0, StringTag.valueOf("prestige:cure"));
-		tmp.addTag(0, StringTag.valueOf("prestige:forger"));
+		tmp.addTag(1, StringTag.valueOf("prestige:dexterious"));
+		tmp.addTag(2, StringTag.valueOf("prestige:powerful"));
+		tmp.addTag(3, StringTag.valueOf("prestige:cure"));
+		tmp.addTag(4, StringTag.valueOf("prestige:forger"));
 		GrimmsModVariables.cache.put("menu:prestige", tmp);
 	}
 }

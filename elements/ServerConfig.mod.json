@@ -300,11 +300,62 @@
             "varname": "invul",
             "enablecomment": false,
             "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "Enables the alloying table along with alloyed ingot composite gem and the compostie galloy ingot.",
+            "vardisplay": "Enable Mixing",
+            "varname": "mixenable",
+            "enablecomment": true,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Enable Thirst",
+            "varname": "thirstenable",
+            "enablecomment": false,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Enable Tempenture",
+            "varname": "tempenable",
+            "enablecomment": false,
+            "stringlist": []
           }
         ]
       }
     ],
-    "file": "grimm\\\\grimmsmod_server",
+    "file": "grimm\\\\server",
     "configType": 1
   }
 }

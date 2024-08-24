@@ -1,0 +1,67 @@
+{
+  "_fv": 66,
+  "_type": "dyeable_item",
+  "definition": {
+    "renderType": 0,
+    "texture": "compositegalloyingot",
+    "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
+    "name": "Composite Galloy Ingot",
+    "rarity": "UNCOMMON",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:GrimmsMod"
+      }
+    ],
+    "stackSize": 64,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": [
+        "Sir, what the heck is this?"
+      ]
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "enableRanged": false,
+    "shootConstantly": false,
+    "rangedItemChargesPower": false,
+    "projectile": {
+      "value": "Arrow"
+    },
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "none",
+    "overlayTexture": "compositegalloyingotoverlay",
+    "isDyeable": true,
+    "defaultColor": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "canWaterRemoveColor": false,
+    "canLavaRemoveColor": false,
+    "canPowderSnowRemoveColor": false
+  }
+}

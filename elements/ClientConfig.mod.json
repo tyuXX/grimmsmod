@@ -90,11 +90,28 @@
             "varname": "dayhud",
             "enablecomment": true,
             "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Main menu HUD",
+            "varname": "menuhud",
+            "enablecomment": false,
+            "stringlist": []
           }
         ]
       }
     ],
-    "file": "grimm\\\\grimmsmod_client",
+    "file": "grimm\\\\client",
     "configType": 2
   }
 }

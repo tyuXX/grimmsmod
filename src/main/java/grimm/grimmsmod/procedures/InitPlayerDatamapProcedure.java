@@ -74,6 +74,18 @@ public class InitPlayerDatamapProcedure {
 			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.put("max:prestige:forger", DoubleTag.valueOf(1));
 			init = init + 1;
 		}
+		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.contains("prestige:keepxp")) {
+			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.put("prestige:keepxp", DoubleTag.valueOf(0));
+			init = init + 1;
+		}
+		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.contains("name:prestige:keepxp")) {
+			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.put("name:prestige:keepxp", StringTag.valueOf("Keep xp on death 10% per level"));
+			init = init + 1;
+		}
+		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.contains("max:prestige:keepxp")) {
+			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.put("max:prestige:keepxp", DoubleTag.valueOf(10));
+			init = init + 1;
+		}
 		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.contains("grimm:level")) {
 			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.put("grimm:level", DoubleTag.valueOf(1));
 			init = init + 1;
@@ -92,6 +104,10 @@ public class InitPlayerDatamapProcedure {
 		}
 		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.contains("grimm:mentalstability")) {
 			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.put("grimm:mentalstability", DoubleTag.valueOf(0));
+			init = init + 1;
+		}
+		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.contains("grimm:lastdeathxp")) {
+			entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.put("grimm:lastdeathxp", DoubleTag.valueOf(0));
 			init = init + 1;
 		}
 		if (!entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.contains("kills")) {

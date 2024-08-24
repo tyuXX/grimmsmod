@@ -22,6 +22,9 @@ public class ServerConfigConfiguration {
 	public static final ModConfigSpec.ConfigValue<Boolean> ROTENABLE;
 	public static final ModConfigSpec.ConfigValue<Double> ROTTIME;
 	public static final ModConfigSpec.ConfigValue<Boolean> INVUL;
+	public static final ModConfigSpec.ConfigValue<Boolean> MIXENABLE;
+	public static final ModConfigSpec.ConfigValue<Boolean> THIRSTENABLE;
+	public static final ModConfigSpec.ConfigValue<Boolean> TEMPENABLE;
 	static {
 		BUILDER.push("Performance");
 		INSTLEVELUP = BUILDER.comment("Use a while loop so no leftover xp is left").define("Instant Level Up", true);
@@ -54,6 +57,9 @@ public class ServerConfigConfiguration {
 		ROTENABLE = BUILDER.define("Enable rotten food", true);
 		ROTTIME = BUILDER.comment("Rot time of food as ticks, tihs is multipilied my food value + saturation").define("Rot time", (double) 1500);
 		INVUL = BUILDER.define("Enable Invulnerability ticks", true);
+		MIXENABLE = BUILDER.comment("Enables the alloying table along with alloyed ingot composite gem and the compostie galloy ingot.").define("Enable Mixing", true);
+		THIRSTENABLE = BUILDER.define("Enable Thirst", true);
+		TEMPENABLE = BUILDER.define("Enable Tempenture", true);
 		BUILDER.pop();
 
 		SPEC = BUILDER.build();

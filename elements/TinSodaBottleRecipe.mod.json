@@ -3,7 +3,7 @@
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
-    "recipeRetstackSize": 4,
+    "recipeRetstackSize": 7,
     "group": "",
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -12,13 +12,13 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
+        "value": "CUSTOM:TinIngot"
+      },
+      {
         "value": "CUSTOM:TinScrew"
       },
       {
         "value": "CUSTOM:TinIngot"
-      },
-      {
-        "value": ""
       },
       {
         "value": "CUSTOM:TinIngot"
@@ -30,19 +30,19 @@
         "value": "CUSTOM:TinIngot"
       },
       {
-        "value": ""
+        "value": "CUSTOM:TinIngot"
       },
       {
         "value": "CUSTOM:TinIngot"
       },
       {
-        "value": ""
+        "value": "CUSTOM:TinIngot"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:TinCan"
+      "value": "CUSTOM:TinSodaBottle"
     },
-    "name": "tin_can_recipe",
+    "name": "tin_soda_bottle_recipe",
     "namespace": "mod"
   }
 }

@@ -10,6 +10,7 @@ public class ClientConfigConfiguration {
 	public static final ModConfigSpec.ConfigValue<Boolean> CORHUD;
 	public static final ModConfigSpec.ConfigValue<Boolean> HUD;
 	public static final ModConfigSpec.ConfigValue<Boolean> DAYHUD;
+	public static final ModConfigSpec.ConfigValue<Boolean> MENUHUD;
 	static {
 		BUILDER.push("HUD");
 		MHUD = BUILDER.comment("Enables the HUD that shows your money on the top left corner.").define("Money HUD", true);
@@ -17,6 +18,7 @@ public class ClientConfigConfiguration {
 		CORHUD = BUILDER.comment("Shows your coordinates below the money. HUD.").define("Coordinates HUD", true);
 		HUD = BUILDER.define("Show HUD", true);
 		DAYHUD = BUILDER.comment("Shows the current day in the top left corner.").define("Day counter HUD", true);
+		MENUHUD = BUILDER.define("Main menu HUD", true);
 		BUILDER.pop();
 
 		SPEC = BUILDER.build();

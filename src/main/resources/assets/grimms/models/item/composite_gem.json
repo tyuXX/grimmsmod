@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "grimms:item/compositegem",
+    "layer1": "grimms:item/compositegemoverlay"
+  }
+}
