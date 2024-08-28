@@ -32,7 +32,7 @@ public class FullTinCanItem extends Item {
 
 	@Override
 	public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
-		ItemStack retval = new ItemStack(GrimmsModItems.TIN_CAN.get());
+		ItemStack retval = new ItemStack(GrimmsModItems.PULLUP_TAB.get());
 		super.finishUsingItem(itemstack, world, entity);
 		if (itemstack.isEmpty()) {
 			return retval;

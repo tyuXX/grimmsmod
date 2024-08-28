@@ -49,7 +49,7 @@
     "nutritionalValue": 6,
     "saturation": 0.3,
     "eatResultItem": {
-      "value": "CUSTOM:TinCan"
+      "value": "CUSTOM:PullupTab"
     },
     "isMeat": true,
     "isAlwaysEdible": true,

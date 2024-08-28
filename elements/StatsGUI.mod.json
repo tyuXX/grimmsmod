@@ -23,7 +23,7 @@
             "falpha": 0.0
           },
           "x": 114,
-          "y": 44
+          "y": 53
         }
       },
       {
@@ -39,7 +39,7 @@
             "falpha": 0.0
           },
           "x": 114,
-          "y": 62
+          "y": 71
         }
       },
       {
@@ -54,7 +54,7 @@
             "falpha": 0.0
           },
           "x": 177,
-          "y": 62
+          "y": 71
         }
       },
       {
@@ -70,7 +70,7 @@
             "falpha": 0.0
           },
           "x": 186,
-          "y": 62
+          "y": 71
         }
       },
       {
@@ -86,7 +86,7 @@
             "falpha": 0.0
           },
           "x": 114,
-          "y": 89
+          "y": 98
         }
       },
       {
@@ -102,7 +102,7 @@
             "falpha": 0.0
           },
           "x": 204,
-          "y": 107
+          "y": 116
         }
       },
       {
@@ -118,7 +118,7 @@
             "falpha": 0.0
           },
           "x": 114,
-          "y": 107
+          "y": 116
         }
       },
       {
@@ -133,7 +133,7 @@
             "falpha": 0.0
           },
           "x": 195,
-          "y": 107
+          "y": 116
         }
       },
       {
@@ -163,6 +163,51 @@
           "width": 140,
           "height": 20,
           "x": 114,
+          "y": 170
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_level",
+          "text": {
+            "fixedValue": "Level"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 114,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_prestige",
+          "text": {
+            "fixedValue": "Prestige"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 114,
+          "y": 89
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_stats",
+          "text": "Stats",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OpenStatisticsGUI"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 267,
           "y": 170
         }
       }

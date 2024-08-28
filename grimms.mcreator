@@ -5658,6 +5658,75 @@
         "dependencies": []
       },
       "path": "~/Procs"
+    },
+    {
+      "name": "StatisticsGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "statistics_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/client/gui/StatisticsGUIScreen.java",
+          "src/main/java/grimm/grimmsmod/world/inventory/StatisticsGUIMenu.java"
+        ]
+      },
+      "path": "~/Gui"
+    },
+    {
+      "name": "OpenStatisticsGUI",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_statistics_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/OpenStatisticsGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "GetDeathsTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_deaths_text_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/GetDeathsTextValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
     }
   ],
   "variable_elements": [
@@ -5963,8 +6032,8 @@
       "trim_material.grimms.plutonium_trim": "Plutonium",
       "advancements.prestige.title": "Prestige",
       "item.grimms.tungsten_ingot": "Tungsten",
-      "advancements.subpar_hammeration.descr": "Not there yet!",
       "block.grimms.plutonium_ore": "Plutonium Ore",
+      "advancements.subpar_hammeration.descr": "Not there yet!",
       "death.attack.item_level_damage_boost.item": "%1$s was killed by %2$s using %3$s",
       "advancements.heavy_duty.title": "Heavy Duty",
       "advancements.murderer.descr": "Kill a fellow player",
@@ -5992,9 +6061,9 @@
       "advancements.rich_guy.title": "Rich Guy",
       "trim_material.grimms.lead_trim": "Lead",
       "death.attack.radiation_damage_type.item": "%1$s was irradiated by %2$s using %3$s",
-      "death.attack.prestige_damage_boost": "%1$s died",
-      "item.grimms.mortar": "Mortar",
       "item.grimms.champagne_bottle": "Champagne Bottle",
+      "item.grimms.mortar": "Mortar",
+      "death.attack.prestige_damage_boost": "%1$s died",
       "block.grimms.plutonium_block": "Block of Plutonium",
       "item.grimms.soda_bottle": "Soda Bottle",
       "item.grimms.photograph_of_motorcar": "Photograph Of Motorcar",
@@ -6027,11 +6096,13 @@
       "gui.grimms.prestige_upgrades_gui.button_next": "Next",
       "gui.grimms.stats_gui.button_prestige": "Prestige",
       "block.grimms.basic_cobblestone_generator": "Basic Cobblestone Generator",
+      "gui.grimms.statistics_gui.label_map": "Map",
       "advancements.install_grimms_mod.descr": "Install Grimm\u0027s Mod on minecraft, reworked, remade, updated",
       "item.grimms.multi_use_scalpel": "Multi Use Scalpel",
       "item.grimms.alloyed_ingot": "Alloyed Ingot",
       "advancements.billionare.title": "Billionare",
       "item.grimms.galvanized_steel": "Galvanized Steel",
+      "gui.grimms.statistics_gui.label_personal": "Personal",
       "item.grimms.backpack_t_1": "Backpack T1",
       "item.grimms.transmutation_tablet": "Transmutation Tablet",
       "item.grimms.backpack_t_2": "Backpack T 2",
@@ -6124,6 +6195,7 @@
       "trim_material.grimms.steel_trim": "Steel",
       "death.attack.prestige_damage_boost.player": "%1$s was killed by while trying to escape %2$s\u0027s prestige boost",
       "item.grimms.scalpel": "Scalpel",
+      "gui.grimms.stats_gui.label_level": "Level",
       "item_group.grimmsmod.grimms_mod": "Grimm\u0027s Mod",
       "advancements.transmuter.descr": "Have 1K TV",
       "item.grimmsmod.placeholder": "Placeholder",
@@ -6147,9 +6219,11 @@
       "item.grimms.screw_blueprint": "Screw Blueprint",
       "advancements.grimms_mod_titles.descr": "Titles, gained by doing a specific action",
       "item.grimms.math_exam": "Math Exam",
+      "gui.grimms.stats_gui.button_stats": "Stats",
       "death.attack.radiation_damage_type.player": "%1$s got too irradiated whilst trying to escape %2$s",
       "item.grimms.placeholder": "Placeholder",
       "item.grimms.builders_wand": "Builders Wand",
+      "gui.grimms.stats_gui.label_prestige": "Prestige",
       "enchantment.grimms.soulbound": "Soulbound",
       "gui.grimms.stats_gui.button_open_prestige_upgrades": "Open Prestige Upgrades",
       "effect.grimms.dizziness": "Dizziness",

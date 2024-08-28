@@ -15,6 +15,7 @@ import grimm.grimmsmod.world.inventory.VoidpackGUIMenu;
 import grimm.grimmsmod.world.inventory.TransmutationGUIMenu;
 import grimm.grimmsmod.world.inventory.TVLiquidatorGUIMenu;
 import grimm.grimmsmod.world.inventory.StatsGUIMenu;
+import grimm.grimmsmod.world.inventory.StatisticsGUIMenu;
 import grimm.grimmsmod.world.inventory.RefineryGUIMenu;
 import grimm.grimmsmod.world.inventory.PrestigeUpgradesGUIMenu;
 import grimm.grimmsmod.world.inventory.MathExamGUIMenu;
@@ -54,4 +55,5 @@ public class GrimmsModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<BackpackT4GUIMenu>> BACKPACK_T_4_GUI = REGISTRY.register("backpack_t_4_gui", () -> IMenuTypeExtension.create(BackpackT4GUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<BackpackT5GUIMenu>> BACKPACK_T_5_GUI = REGISTRY.register("backpack_t_5_gui", () -> IMenuTypeExtension.create(BackpackT5GUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<BackpackT6GUIMenu>> BACKPACK_T_6_GUI = REGISTRY.register("backpack_t_6_gui", () -> IMenuTypeExtension.create(BackpackT6GUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<StatisticsGUIMenu>> STATISTICS_GUI = REGISTRY.register("statistics_gui", () -> IMenuTypeExtension.create(StatisticsGUIMenu::new));
 }

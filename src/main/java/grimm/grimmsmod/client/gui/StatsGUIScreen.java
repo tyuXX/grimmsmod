@@ -30,6 +30,7 @@ public class StatsGUIScreen extends AbstractContainerScreen<StatsGUIMenu> {
 	private final Player entity;
 	Button button_prestige;
 	Button button_open_prestige_upgrades;
+	Button button_stats;
 
 	public StatsGUIScreen(StatsGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -73,24 +74,26 @@ public class StatsGUIScreen extends AbstractContainerScreen<StatsGUIMenu> {
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font,
 
-				LevelTextValueProcedure.execute(entity), 15, 7, -12829636, false);
+				LevelTextValueProcedure.execute(entity), 15, 16, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				XpTextValueProcedure.execute(entity), 15, 25, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.grimms.stats_gui.label_empty"), 78, 25, -12829636, false);
+				XpTextValueProcedure.execute(entity), 15, 34, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.grimms.stats_gui.label_empty"), 78, 34, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				XpReqTextValueProcedure.execute(entity), 87, 25, -12829636, false);
+				XpReqTextValueProcedure.execute(entity), 87, 34, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				PrestigeTextValueProcedure.execute(entity), 15, 52, -12829636, false);
+				PrestigeTextValueProcedure.execute(entity), 15, 61, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				PrestigeReqTextValueProcedure.execute(entity), 105, 70, -12829636, false);
+				PrestigeReqTextValueProcedure.execute(entity), 105, 79, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				LevelTextValueProcedure.execute(entity), 15, 70, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.grimms.stats_gui.label_empty1"), 96, 70, -12829636, false);
+				LevelTextValueProcedure.execute(entity), 15, 79, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.grimms.stats_gui.label_empty1"), 96, 79, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.grimms.stats_gui.label_level"), 15, 7, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.grimms.stats_gui.label_prestige"), 15, 52, -12829636, false);
 	}
 
 	@Override
@@ -112,5 +115,13 @@ public class StatsGUIScreen extends AbstractContainerScreen<StatsGUIMenu> {
 		}).bounds(this.leftPos + 15, this.topPos + 133, 140, 20).build();
 		guistate.put("button:button_open_prestige_upgrades", button_open_prestige_upgrades);
 		this.addRenderableWidget(button_open_prestige_upgrades);
+		button_stats = Button.builder(Component.translatable("gui.grimms.stats_gui.button_stats"), e -> {
+			if (true) {
+				PacketDistributor.sendToServer(new StatsGUIButtonMessage(2, x, y, z));
+				StatsGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
+		}).bounds(this.leftPos + 168, this.topPos + 133, 51, 20).build();
+		guistate.put("button:button_stats", button_stats);
+		this.addRenderableWidget(button_stats);
 	}
 }

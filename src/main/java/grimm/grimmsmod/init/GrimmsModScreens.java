@@ -13,6 +13,7 @@ import grimm.grimmsmod.client.gui.VoidpackGUIScreen;
 import grimm.grimmsmod.client.gui.TransmutationGUIScreen;
 import grimm.grimmsmod.client.gui.TVLiquidatorGUIScreen;
 import grimm.grimmsmod.client.gui.StatsGUIScreen;
+import grimm.grimmsmod.client.gui.StatisticsGUIScreen;
 import grimm.grimmsmod.client.gui.RefineryGUIScreen;
 import grimm.grimmsmod.client.gui.PrestigeUpgradesGUIScreen;
 import grimm.grimmsmod.client.gui.MathExamGUIScreen;
@@ -52,5 +53,6 @@ public class GrimmsModScreens {
 		event.register(GrimmsModMenus.BACKPACK_T_4_GUI.get(), BackpackT4GUIScreen::new);
 		event.register(GrimmsModMenus.BACKPACK_T_5_GUI.get(), BackpackT5GUIScreen::new);
 		event.register(GrimmsModMenus.BACKPACK_T_6_GUI.get(), BackpackT6GUIScreen::new);
+		event.register(GrimmsModMenus.STATISTICS_GUI.get(), StatisticsGUIScreen::new);
 	}
 }
