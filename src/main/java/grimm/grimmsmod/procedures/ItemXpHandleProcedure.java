@@ -12,7 +12,7 @@ import grimm.grimmsmod.configuration.ServerConfigConfiguration;
 public class ItemXpHandleProcedure {
 	public static void execute(ItemStack itemstack, double xpamount) {
 		double levelups = 0;
-		if (!(itemstack.getItem() == Blocks.AIR.asItem()) && !itemstack.is(ItemTags.create(new ResourceLocation("grimms:notlevelable")))) {
+		if (!(itemstack.getItem() == Blocks.AIR.asItem()) && !itemstack.is(ItemTags.create(new ResourceLocation("grimms:notlevelable"))) && itemstack.getMaxDamage() > 0) {
 			if (!itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("grimms:itemlvlinit")) {
 				{
 					final String _tagName = "grimms:itemlvlinit";

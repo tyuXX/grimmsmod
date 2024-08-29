@@ -5727,6 +5727,222 @@
         ]
       },
       "path": "~/Procs"
+    },
+    {
+      "name": "AlternativeDim1",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "alternative_dim_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/dimension/alternative_dim_1.json",
+          "src/main/java/grimm/grimmsmod/world/dimension/AlternativeDim1Dimension.java",
+          "src/main/resources/data/grimms/dimension_type/alternative_dim_1.json"
+        ]
+      },
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "AlternativeDim2",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "alternative_dim_2",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/world/dimension/AlternativeDim2Dimension.java",
+          "src/main/resources/data/grimms/dimension_type/alternative_dim_2.json",
+          "src/main/resources/data/grimms/dimension/alternative_dim_2.json"
+        ]
+      },
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "AlternativeDim3",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "alternative_dim_3",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/world/dimension/AlternativeDim3Dimension.java",
+          "src/main/resources/data/grimms/dimension_type/alternative_dim_3.json",
+          "src/main/resources/data/grimms/dimension/alternative_dim_3.json"
+        ]
+      },
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "InterdimensionalTrapezoid",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "interdimensional_trapezoid",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/InterdimensionalTrapezoidItem.java",
+          "src/main/resources/assets/grimms/models/item/interdimensional_trapezoid.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "InterdimensionalTrapezoidRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "interdimensional_trapezoid_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/InterdimensionalTrapezoidRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "Error",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "error",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/ErrorItem.java",
+          "src/main/resources/assets/grimms/models/item/error.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "ErrorB",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "error_b",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/grimms/models/item/error_b.json",
+          "src/main/java/grimm/grimmsmod/item/ErrorBItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "DevelopmentChamberGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "development_chamber_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/world/inventory/DevelopmentChamberGUIMenu.java",
+          "src/main/java/grimm/grimmsmod/client/gui/DevelopmentChamberGUIScreen.java"
+        ]
+      },
+      "path": "~/Gui"
+    },
+    {
+      "name": "DevelopmentChamberOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "development_chamber_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/DevelopmentChamberOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "DevelopmentChamber",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "development_chamber",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/grimms/blockstates/development_chamber.json",
+          "src/main/resources/assets/grimms/models/item/development_chamber.json",
+          "src/main/java/grimm/grimmsmod/block/entity/DevelopmentChamberBlockEntity.java",
+          "src/main/resources/data/grimms/loot_tables/blocks/development_chamber.json",
+          "src/main/java/grimm/grimmsmod/block/DevelopmentChamberBlock.java",
+          "src/main/resources/assets/grimms/models/block/development_chamber.json"
+        ]
+      },
+      "path": "~/Block"
+    },
+    {
+      "name": "ThrashSpecialInformation",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thrash_special_information",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/ThrashSpecialInformationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "ThrashItemInInventoryTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thrash_item_in_inventory_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/ThrashItemInInventoryTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Procs"
     }
   ],
   "variable_elements": [
@@ -5815,6 +6031,7 @@
       "~CUSTOM:IridiumOre"
     ],
     "ITEMS:minecraft:enchantable/durability": [
+      "~CUSTOM:InterdimensionalTrapezoid",
       "~CUSTOM:Whetstone"
     ],
     "ITEMS:mod:sharpenable": [
@@ -5849,6 +6066,11 @@
     ],
     "ITEMS:minecraft:meat": [
       "~CUSTOM:FullTinCan"
+    ],
+    "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.END_STONE",
+      "~Blocks.NETHERRACK",
+      "~Blocks.STONE#0"
     ],
     "ITEMS:mod:cantrot": [
       "CUSTOM:EternalTinCan",
@@ -6032,11 +6254,12 @@
       "trim_material.grimms.plutonium_trim": "Plutonium",
       "advancements.prestige.title": "Prestige",
       "item.grimms.tungsten_ingot": "Tungsten",
-      "advancements.subpar_hammeration.descr": "Not there yet!",
       "block.grimms.plutonium_ore": "Plutonium Ore",
+      "advancements.subpar_hammeration.descr": "Not there yet!",
       "death.attack.item_level_damage_boost.item": "%1$s was killed by %2$s using %3$s",
       "advancements.heavy_duty.title": "Heavy Duty",
       "advancements.murderer.descr": "Kill a fellow player",
+      "item.grimms.interdimensional_trapezoid": "Interdimensional Trapezoid",
       "item.grimmsmod.builders_wand": "Builders Wand",
       "advancements.level_up.descr": "Level up for the first time",
       "advancements.little_timmy.title": "Little Timmy",
@@ -6061,9 +6284,9 @@
       "advancements.rich_guy.title": "Rich Guy",
       "trim_material.grimms.lead_trim": "Lead",
       "death.attack.radiation_damage_type.item": "%1$s was irradiated by %2$s using %3$s",
-      "death.attack.prestige_damage_boost": "%1$s died",
-      "item.grimms.mortar": "Mortar",
       "item.grimms.champagne_bottle": "Champagne Bottle",
+      "item.grimms.mortar": "Mortar",
+      "death.attack.prestige_damage_boost": "%1$s died",
       "block.grimms.plutonium_block": "Block of Plutonium",
       "item.grimms.soda_bottle": "Soda Bottle",
       "item.grimms.photograph_of_motorcar": "Photograph Of Motorcar",
@@ -6103,6 +6326,7 @@
       "advancements.billionare.title": "Billionare",
       "item.grimms.galvanized_steel": "Galvanized Steel",
       "gui.grimms.statistics_gui.label_personal": "Personal",
+      "item.grimms.error_b": "Error",
       "item.grimms.backpack_t_1": "Backpack T1",
       "item.grimms.transmutation_tablet": "Transmutation Tablet",
       "item.grimms.backpack_t_2": "Backpack T 2",
@@ -6176,6 +6400,7 @@
       "item.grimms.metal_pipe": "Metal Pipe",
       "item.grimms.iridium_ingot": "Iridium",
       "item.grimms.disinfectant_scalpel": "Disinfectant Scalpel",
+      "gui.grimms.development_chamber_gui.label_put_thrash_here_to_develop_it": "Put thrash here to.. develop it?",
       "item.grimms.volt_meter": "Volt Meter",
       "block.grimms.iridium_block": "Block of Iridium",
       "effect.grimms.super_dizziness": "Super Dizziness",
@@ -6190,6 +6415,7 @@
       "block.grimms.tungsten_ore": "Tungsten Ore",
       "item.grimms.logo": "Logo",
       "block.grimms.thorium_block": "Block of Thorium",
+      "item.grimms.error": "Error",
       "subtitles.metalpipehit": "Ow my ear hurt",
       "item.grimms.uranium_ingot": "Uranium",
       "trim_material.grimms.steel_trim": "Steel",
@@ -6226,6 +6452,7 @@
       "gui.grimms.stats_gui.label_prestige": "Prestige",
       "enchantment.grimms.soulbound": "Soulbound",
       "gui.grimms.stats_gui.button_open_prestige_upgrades": "Open Prestige Upgrades",
+      "block.grimms.development_chamber": "Mark IX Methane Generator",
       "effect.grimms.dizziness": "Dizziness",
       "block.grimms.lead_ore": "Lead Ore",
       "block.grimms.heavy_blaster": "Heavy Blaster",
@@ -6345,6 +6572,10 @@
       },
       {
         "name": "Curios",
+        "children": []
+      },
+      {
+        "name": "Dimensions",
         "children": []
       }
     ]

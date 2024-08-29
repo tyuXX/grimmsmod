@@ -3,11 +3,11 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "thrash",
+    "texture": "error",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Thrash",
+    "name": "Error",
     "rarity": "COMMON",
     "creativeTabs": [
       {
@@ -29,8 +29,9 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "ThrashSpecialInformation"
+      "fixedValue": [
+        "Uhh, sorry. We'll get John to fix that for you."
+      ]
     },
     "glowCondition": {
       "fixedValue": false
@@ -38,9 +39,6 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onItemInInventoryTick": {
-      "name": "ThrashItemInInventoryTick"
-    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

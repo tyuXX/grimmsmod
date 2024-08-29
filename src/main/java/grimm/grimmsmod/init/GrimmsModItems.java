@@ -74,6 +74,7 @@ import grimm.grimmsmod.item.IronDustItem;
 import grimm.grimmsmod.item.IridiumScrewItem;
 import grimm.grimmsmod.item.IridiumIngotItem;
 import grimm.grimmsmod.item.IridiumHammerItem;
+import grimm.grimmsmod.item.InterdimensionalTrapezoidItem;
 import grimm.grimmsmod.item.HeavyMetalPipeItem;
 import grimm.grimmsmod.item.GoldScrewItem;
 import grimm.grimmsmod.item.GalvanizedSteelItem;
@@ -82,6 +83,8 @@ import grimm.grimmsmod.item.FullTinCanItem;
 import grimm.grimmsmod.item.FancyClockItem;
 import grimm.grimmsmod.item.FancierClockItem;
 import grimm.grimmsmod.item.EternalTinCanItem;
+import grimm.grimmsmod.item.ErrorItem;
+import grimm.grimmsmod.item.ErrorBItem;
 import grimm.grimmsmod.item.DosimeterItem;
 import grimm.grimmsmod.item.DisinfectantScalpelItem;
 import grimm.grimmsmod.item.DiamondHammerItem;
@@ -203,6 +206,10 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> ALLOYED_INGOT = REGISTRY.register("alloyed_ingot", AlloyedIngotItem::new);
 	public static final DeferredHolder<Item, Item> COMPOSITE_GEM = REGISTRY.register("composite_gem", CompositeGemItem::new);
 	public static final DeferredHolder<Item, Item> COMPOSITE_GALLOY_INGOT = REGISTRY.register("composite_galloy_ingot", CompositeGalloyIngotItem::new);
+	public static final DeferredHolder<Item, Item> INTERDIMENSIONAL_TRAPEZOID = REGISTRY.register("interdimensional_trapezoid", InterdimensionalTrapezoidItem::new);
+	public static final DeferredHolder<Item, Item> ERROR = REGISTRY.register("error", ErrorItem::new);
+	public static final DeferredHolder<Item, Item> ERROR_B = REGISTRY.register("error_b", ErrorBItem::new);
+	public static final DeferredHolder<Item, Item> DEVELOPMENT_CHAMBER = block(GrimmsModBlocks.DEVELOPMENT_CHAMBER);
 
 	// Start of user code block custom items
 	// End of user code block custom items

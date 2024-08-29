@@ -111,6 +111,10 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.ALLOYED_INGOT.get());
 				tabData.accept(GrimmsModItems.COMPOSITE_GEM.get());
 				tabData.accept(GrimmsModItems.COMPOSITE_GALLOY_INGOT.get());
+				tabData.accept(GrimmsModItems.INTERDIMENSIONAL_TRAPEZOID.get());
+				tabData.accept(GrimmsModItems.ERROR.get());
+				tabData.accept(GrimmsModItems.ERROR_B.get());
+				tabData.accept(GrimmsModBlocks.DEVELOPMENT_CHAMBER.get().asItem());
 			})
 
 					.build());

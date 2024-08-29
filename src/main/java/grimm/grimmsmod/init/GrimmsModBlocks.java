@@ -32,6 +32,7 @@ import grimm.grimmsmod.block.IridiumBlockBlock;
 import grimm.grimmsmod.block.HeavyBlasterBlock;
 import grimm.grimmsmod.block.ForgeryTableBlock;
 import grimm.grimmsmod.block.DistilleryBlock;
+import grimm.grimmsmod.block.DevelopmentChamberBlock;
 import grimm.grimmsmod.block.BasicCobblestoneGeneratorBlock;
 import grimm.grimmsmod.GrimmsMod;
 
@@ -61,6 +62,7 @@ public class GrimmsModBlocks {
 	public static final DeferredHolder<Block, Block> TUNGSTEN_BLOCK = REGISTRY.register("tungsten_block", TungstenBlockBlock::new);
 	public static final DeferredHolder<Block, Block> TIN_ORE = REGISTRY.register("tin_ore", TinOreBlock::new);
 	public static final DeferredHolder<Block, Block> TIN_BLOCK = REGISTRY.register("tin_block", TinBlockBlock::new);
+	public static final DeferredHolder<Block, Block> DEVELOPMENT_CHAMBER = REGISTRY.register("development_chamber", DevelopmentChamberBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

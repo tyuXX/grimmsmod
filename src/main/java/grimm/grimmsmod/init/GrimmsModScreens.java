@@ -21,6 +21,7 @@ import grimm.grimmsmod.client.gui.ItemAttributionMenuGUIScreen;
 import grimm.grimmsmod.client.gui.HeavyBlasterGUIScreen;
 import grimm.grimmsmod.client.gui.ForgeryTableGUIScreen;
 import grimm.grimmsmod.client.gui.DistilleryGUIScreen;
+import grimm.grimmsmod.client.gui.DevelopmentChamberGUIScreen;
 import grimm.grimmsmod.client.gui.DeathPackageGUIScreen;
 import grimm.grimmsmod.client.gui.BasicCobblestoneGeneratorGUIScreen;
 import grimm.grimmsmod.client.gui.BackpackT6GUIScreen;
@@ -54,5 +55,6 @@ public class GrimmsModScreens {
 		event.register(GrimmsModMenus.BACKPACK_T_5_GUI.get(), BackpackT5GUIScreen::new);
 		event.register(GrimmsModMenus.BACKPACK_T_6_GUI.get(), BackpackT6GUIScreen::new);
 		event.register(GrimmsModMenus.STATISTICS_GUI.get(), StatisticsGUIScreen::new);
+		event.register(GrimmsModMenus.DEVELOPMENT_CHAMBER_GUI.get(), DevelopmentChamberGUIScreen::new);
 	}
 }

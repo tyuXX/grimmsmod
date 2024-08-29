@@ -23,6 +23,7 @@ import grimm.grimmsmod.world.inventory.ItemAttributionMenuGUIMenu;
 import grimm.grimmsmod.world.inventory.HeavyBlasterGUIMenu;
 import grimm.grimmsmod.world.inventory.ForgeryTableGUIMenu;
 import grimm.grimmsmod.world.inventory.DistilleryGUIMenu;
+import grimm.grimmsmod.world.inventory.DevelopmentChamberGUIMenu;
 import grimm.grimmsmod.world.inventory.DeathPackageGUIMenu;
 import grimm.grimmsmod.world.inventory.BasicCobblestoneGeneratorGUIMenu;
 import grimm.grimmsmod.world.inventory.BackpackT6GUIMenu;
@@ -56,4 +57,5 @@ public class GrimmsModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<BackpackT5GUIMenu>> BACKPACK_T_5_GUI = REGISTRY.register("backpack_t_5_gui", () -> IMenuTypeExtension.create(BackpackT5GUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<BackpackT6GUIMenu>> BACKPACK_T_6_GUI = REGISTRY.register("backpack_t_6_gui", () -> IMenuTypeExtension.create(BackpackT6GUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<StatisticsGUIMenu>> STATISTICS_GUI = REGISTRY.register("statistics_gui", () -> IMenuTypeExtension.create(StatisticsGUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<DevelopmentChamberGUIMenu>> DEVELOPMENT_CHAMBER_GUI = REGISTRY.register("development_chamber_gui", () -> IMenuTypeExtension.create(DevelopmentChamberGUIMenu::new));
 }

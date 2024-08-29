@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "grimms:interdimensional_trapezoid",
     "grimms:whetstone"
   ]
 }
