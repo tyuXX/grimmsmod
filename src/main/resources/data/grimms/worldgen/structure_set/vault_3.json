@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "grimms:vault_3",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 30,
+    "separation": 2,
+    "salt": 445888756
+  }
+}

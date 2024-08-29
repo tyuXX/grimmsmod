@@ -23,7 +23,7 @@ import grimm.grimmsmod.procedures.BuildersWandItemInHandTickProcedureProcedure;
 
 public class BuildersWandItem extends Item {
 	public BuildersWandItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC));
 	}
 
 	@Override

@@ -20,7 +20,7 @@ import grimm.grimmsmod.procedures.DumpCacheProcedure;
 public class DumpCacheCommandCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("dumpcachecommand").requires(s -> s.hasPermission(4)).executes(arguments -> {
+		event.getDispatcher().register(Commands.literal("g_dumpcache").requires(s -> s.hasPermission(4)).executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();

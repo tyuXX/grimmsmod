@@ -40,7 +40,7 @@ import grimm.grimmsmod.block.entity.DevelopmentChamberBlockEntity;
 
 public class DevelopmentChamberBlock extends Block implements EntityBlock {
 	public DevelopmentChamberBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.GRAVEL).strength(1f, 10f));
+		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.EMPTY).strength(1f, 10f));
 	}
 
 	@Override

@@ -9,13 +9,19 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.item.ItemProperties;
 
+import grimm.grimmsmod.procedures.LockAndKeyPropertyValueProviderProcedure;
 import grimm.grimmsmod.item.inventory.VoidpackInventoryCapability;
 import grimm.grimmsmod.item.inventory.MathExamInventoryCapability;
 import grimm.grimmsmod.item.inventory.DeathPackageInventoryCapability;
@@ -25,6 +31,7 @@ import grimm.grimmsmod.item.inventory.BackpackT4InventoryCapability;
 import grimm.grimmsmod.item.inventory.BackpackT3InventoryCapability;
 import grimm.grimmsmod.item.inventory.BackpackT2InventoryCapability;
 import grimm.grimmsmod.item.inventory.BackpackT1InventoryCapability;
+import grimm.grimmsmod.item.WrittenPaperItem;
 import grimm.grimmsmod.item.WoodenHammerItem;
 import grimm.grimmsmod.item.WhetstoneItem;
 import grimm.grimmsmod.item.VoltMeterItem;
@@ -66,7 +73,11 @@ import grimm.grimmsmod.item.MortarAndPestleItem;
 import grimm.grimmsmod.item.MicroscopeItem;
 import grimm.grimmsmod.item.MetalPipeItem;
 import grimm.grimmsmod.item.MathExamItem;
+import grimm.grimmsmod.item.MailItem;
+import grimm.grimmsmod.item.LootBagItem;
 import grimm.grimmsmod.item.LogoItem;
+import grimm.grimmsmod.item.LockpickItem;
+import grimm.grimmsmod.item.LockAndKeyItem;
 import grimm.grimmsmod.item.LeadIngotItem;
 import grimm.grimmsmod.item.KatanaItem;
 import grimm.grimmsmod.item.IronHammerItem;
@@ -88,6 +99,8 @@ import grimm.grimmsmod.item.ErrorBItem;
 import grimm.grimmsmod.item.DosimeterItem;
 import grimm.grimmsmod.item.DisinfectantScalpelItem;
 import grimm.grimmsmod.item.DiamondHammerItem;
+import grimm.grimmsmod.item.DespawnWandItem;
+import grimm.grimmsmod.item.DebugWandItem;
 import grimm.grimmsmod.item.DeathPackageItem;
 import grimm.grimmsmod.item.CompositeGemItem;
 import grimm.grimmsmod.item.CompositeGalloyIngotItem;
@@ -210,6 +223,15 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> ERROR = REGISTRY.register("error", ErrorItem::new);
 	public static final DeferredHolder<Item, Item> ERROR_B = REGISTRY.register("error_b", ErrorBItem::new);
 	public static final DeferredHolder<Item, Item> DEVELOPMENT_CHAMBER = block(GrimmsModBlocks.DEVELOPMENT_CHAMBER);
+	public static final DeferredHolder<Item, Item> LOCK_AND_KEY = REGISTRY.register("lock_and_key", LockAndKeyItem::new);
+	public static final DeferredHolder<Item, Item> VAULT_OPEN = block(GrimmsModBlocks.VAULT_OPEN);
+	public static final DeferredHolder<Item, Item> VAULT_CLOSED = block(GrimmsModBlocks.VAULT_CLOSED);
+	public static final DeferredHolder<Item, Item> LOCKPICK = REGISTRY.register("lockpick", LockpickItem::new);
+	public static final DeferredHolder<Item, Item> DESPAWN_WAND = REGISTRY.register("despawn_wand", DespawnWandItem::new);
+	public static final DeferredHolder<Item, Item> DEBUG_WAND = REGISTRY.register("debug_wand", DebugWandItem::new);
+	public static final DeferredHolder<Item, Item> LOOT_BAG = REGISTRY.register("loot_bag", LootBagItem::new);
+	public static final DeferredHolder<Item, Item> MAIL = REGISTRY.register("mail", MailItem::new);
+	public static final DeferredHolder<Item, Item> WRITTEN_PAPER = REGISTRY.register("written_paper", WrittenPaperItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
@@ -228,5 +250,16 @@ public class GrimmsModItems {
 
 	private static DeferredHolder<Item, Item> block(DeferredHolder<Block, Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
+	}
+
+	@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+	public static class ItemsClientSideHandler {
+		@SubscribeEvent
+		@OnlyIn(Dist.CLIENT)
+		public static void clientLoad(FMLClientSetupEvent event) {
+			event.enqueueWork(() -> {
+				ItemProperties.register(LOCK_AND_KEY.get(), new ResourceLocation("grimms:lock_and_key_bound"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) LockAndKeyPropertyValueProviderProcedure.execute(itemStackToRender));
+			});
+		}
 	}
 }

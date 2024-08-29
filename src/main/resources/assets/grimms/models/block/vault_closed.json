@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "grimms:block/vaultside",
+    "up": "grimms:block/vaultside",
+    "north": "grimms:block/vaultfrontclosed",
+    "east": "grimms:block/vaultside",
+    "south": "grimms:block/vaultside",
+    "west": "grimms:block/vaultside",
+    "particle": "grimms:block/vaultside"
+  },
+  "render_type": "solid"
+}

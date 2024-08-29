@@ -21,7 +21,7 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 public class TransferMoneyCommandCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("transfermoney")
+		event.getDispatcher().register(Commands.literal("g_transfermoney")
 
 				.then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("amount", DoubleArgumentType.doubleArg()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();

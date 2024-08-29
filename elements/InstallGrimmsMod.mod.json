@@ -7,7 +7,7 @@
     "achievementIcon": {
       "value": "CUSTOM:FancyClock"
     },
-    "background": "Default",
+    "background": "vaultfrontopen.png",
     "disableDisplay": false,
     "showPopup": false,
     "announceToChat": false,

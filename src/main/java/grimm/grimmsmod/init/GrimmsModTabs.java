@@ -115,6 +115,11 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.ERROR.get());
 				tabData.accept(GrimmsModItems.ERROR_B.get());
 				tabData.accept(GrimmsModBlocks.DEVELOPMENT_CHAMBER.get().asItem());
+				tabData.accept(GrimmsModItems.LOCK_AND_KEY.get());
+				tabData.accept(GrimmsModBlocks.VAULT_OPEN.get().asItem());
+				tabData.accept(GrimmsModItems.LOCKPICK.get());
+				tabData.accept(GrimmsModItems.MAIL.get());
+				tabData.accept(GrimmsModItems.WRITTEN_PAPER.get());
 			})
 
 					.build());
@@ -124,6 +129,9 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.LOGO.get());
 				tabData.accept(GrimmsModItems.TEST_DUMMY_SPAWN_EGG.get());
 				tabData.accept(GrimmsModBlocks.LOOT_CRATE.get().asItem());
+				tabData.accept(GrimmsModItems.DESPAWN_WAND.get());
+				tabData.accept(GrimmsModItems.DEBUG_WAND.get());
+				tabData.accept(GrimmsModItems.LOOT_BAG.get());
 			})
 
 					.build());

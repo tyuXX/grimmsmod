@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "grimms:lost_vault_1",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 30,
+    "separation": 2,
+    "salt": 2085933011
+  }
+}

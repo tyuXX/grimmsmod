@@ -85,7 +85,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "GROUND"
+      "value": "EMPTY"
     },
     "breakSound": {
       "value": ""
@@ -110,7 +110,7 @@
     "guiBoundTo": "DevelopmentChamberGUI",
     "openGUIOnRightClick": true,
     "inventorySize": 1,
-    "inventoryStackSize": 64,
+    "inventoryStackSize": 1,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [],

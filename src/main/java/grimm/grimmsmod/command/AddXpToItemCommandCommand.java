@@ -22,7 +22,7 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 public class AddXpToItemCommandCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("addxptoitemcommand").requires(s -> s.hasPermission(4)).then(Commands.argument("value", DoubleArgumentType.doubleArg(0)).executes(arguments -> {
+		event.getDispatcher().register(Commands.literal("g_addxptoitem").requires(s -> s.hasPermission(4)).then(Commands.argument("value", DoubleArgumentType.doubleArg(0)).executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();

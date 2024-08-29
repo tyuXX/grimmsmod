@@ -18,7 +18,7 @@ import grimm.grimmsmod.procedures.GetGrimmsVersionProcedure;
 public class GrimmsVersionCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("grimmsversion")
+		event.getDispatcher().register(Commands.literal("g_version")
 
 				.executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();

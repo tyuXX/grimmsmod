@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "grimms:bx_secure_vault_2",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 25,
+    "separation": 2,
+    "salt": 693211819
+  }
+}

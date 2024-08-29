@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "grimms:item/lockandkey"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "grimms:lock_and_key_bound": 1
+      },
+      "model": "grimms:item/lock_and_key_0"
+    }
+  ]
+}

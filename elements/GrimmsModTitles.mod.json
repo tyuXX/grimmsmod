@@ -7,10 +7,10 @@
     "achievementIcon": {
       "value": "CUSTOM:FancierClock"
     },
-    "background": "Default",
+    "background": "vaultfrontclosed.png",
     "disableDisplay": false,
-    "showPopup": true,
-    "announceToChat": true,
+    "showPopup": false,
+    "announceToChat": false,
     "hideIfNotCompleted": false,
     "rewardLoot": [],
     "rewardRecipes": [],

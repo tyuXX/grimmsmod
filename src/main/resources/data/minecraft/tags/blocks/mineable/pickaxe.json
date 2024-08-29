@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "grimms:vault_open",
     "grimms:tin_block",
     "grimms:tin_ore",
     "grimms:tungsten_block",

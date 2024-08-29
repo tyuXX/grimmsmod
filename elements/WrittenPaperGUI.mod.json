@@ -1,0 +1,51 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 142,
+    "height": 53,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "N/A",
+          "name": "papertext",
+          "width": 120,
+          "height": 20,
+          "x": 150,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_text",
+          "text": {
+            "fixedValue": "Text"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 150,
+          "y": 98
+        }
+      }
+    ],
+    "onClosed": {
+      "name": "WrittenPaperGUIThisGUIIsClosed"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

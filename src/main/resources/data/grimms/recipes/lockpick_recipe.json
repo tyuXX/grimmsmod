@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  a",
+    " a ",
+    "b  "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "grimms:steel"
+    }
+  },
+  "result": {
+    "id": "grimms:lockpick",
+    "count": 8
+  }
+}

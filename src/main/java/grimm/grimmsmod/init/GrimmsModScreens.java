@@ -9,7 +9,9 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
+import grimm.grimmsmod.client.gui.WrittenPaperGUIScreen;
 import grimm.grimmsmod.client.gui.VoidpackGUIScreen;
+import grimm.grimmsmod.client.gui.VaultGUIScreen;
 import grimm.grimmsmod.client.gui.TransmutationGUIScreen;
 import grimm.grimmsmod.client.gui.TVLiquidatorGUIScreen;
 import grimm.grimmsmod.client.gui.StatsGUIScreen;
@@ -17,6 +19,7 @@ import grimm.grimmsmod.client.gui.StatisticsGUIScreen;
 import grimm.grimmsmod.client.gui.RefineryGUIScreen;
 import grimm.grimmsmod.client.gui.PrestigeUpgradesGUIScreen;
 import grimm.grimmsmod.client.gui.MathExamGUIScreen;
+import grimm.grimmsmod.client.gui.KeyGUIScreen;
 import grimm.grimmsmod.client.gui.ItemAttributionMenuGUIScreen;
 import grimm.grimmsmod.client.gui.HeavyBlasterGUIScreen;
 import grimm.grimmsmod.client.gui.ForgeryTableGUIScreen;
@@ -56,5 +59,8 @@ public class GrimmsModScreens {
 		event.register(GrimmsModMenus.BACKPACK_T_6_GUI.get(), BackpackT6GUIScreen::new);
 		event.register(GrimmsModMenus.STATISTICS_GUI.get(), StatisticsGUIScreen::new);
 		event.register(GrimmsModMenus.DEVELOPMENT_CHAMBER_GUI.get(), DevelopmentChamberGUIScreen::new);
+		event.register(GrimmsModMenus.VAULT_GUI.get(), VaultGUIScreen::new);
+		event.register(GrimmsModMenus.KEY_GUI.get(), KeyGUIScreen::new);
+		event.register(GrimmsModMenus.WRITTEN_PAPER_GUI.get(), WrittenPaperGUIScreen::new);
 	}
 }

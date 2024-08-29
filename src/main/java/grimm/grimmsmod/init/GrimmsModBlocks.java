@@ -9,6 +9,8 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 
 import net.minecraft.world.level.block.Block;
 
+import grimm.grimmsmod.block.VaultOpenBlock;
+import grimm.grimmsmod.block.VaultClosedBlock;
 import grimm.grimmsmod.block.UraniumOreBlock;
 import grimm.grimmsmod.block.UraniumBlockBlock;
 import grimm.grimmsmod.block.TungstenOreBlock;
@@ -63,6 +65,8 @@ public class GrimmsModBlocks {
 	public static final DeferredHolder<Block, Block> TIN_ORE = REGISTRY.register("tin_ore", TinOreBlock::new);
 	public static final DeferredHolder<Block, Block> TIN_BLOCK = REGISTRY.register("tin_block", TinBlockBlock::new);
 	public static final DeferredHolder<Block, Block> DEVELOPMENT_CHAMBER = REGISTRY.register("development_chamber", DevelopmentChamberBlock::new);
+	public static final DeferredHolder<Block, Block> VAULT_OPEN = REGISTRY.register("vault_open", VaultOpenBlock::new);
+	public static final DeferredHolder<Block, Block> VAULT_CLOSED = REGISTRY.register("vault_closed", VaultClosedBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

@@ -7,10 +7,10 @@
     "achievementIcon": {
       "value": "CUSTOM:BuildersWand"
     },
-    "background": "grimsmod.png",
+    "background": "blueprint.png",
     "disableDisplay": false,
-    "showPopup": true,
-    "announceToChat": true,
+    "showPopup": false,
+    "announceToChat": false,
     "hideIfNotCompleted": false,
     "rewardLoot": [],
     "rewardRecipes": [],

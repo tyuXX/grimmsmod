@@ -1,6 +1,6 @@
 {
   "display": {
-    "background": "grimms:textures/screens/grimsmod.png",
+    "background": "grimms:textures/screens/blueprint.png",
     "icon": {
       "id": "grimms:builders_wand"
     },
@@ -11,8 +11,8 @@
       "translate": "advancements.install_grimms_mod_special.descr"
     },
     "frame": "challenge",
-    "show_toast": true,
-    "announce_to_chat": true,
+    "show_toast": false,
+    "announce_to_chat": false,
     "hidden": false
   },
   "criteria": {

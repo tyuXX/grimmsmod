@@ -23,8 +23,8 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 public class SetAbilityNumberCommandCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(
-				Commands.literal("setabilitynumbercommand").requires(s -> s.hasPermission(4)).then(Commands.argument("ability", StringArgumentType.string()).then(Commands.argument("value", DoubleArgumentType.doubleArg()).executes(arguments -> {
+		event.getDispatcher()
+				.register(Commands.literal("g_setabilitynumber").requires(s -> s.hasPermission(4)).then(Commands.argument("ability", StringArgumentType.string()).then(Commands.argument("value", DoubleArgumentType.doubleArg()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();

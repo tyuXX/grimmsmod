@@ -11,7 +11,9 @@ import net.neoforged.neoforge.common.extensions.IMenuTypeExtension;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.core.registries.Registries;
 
+import grimm.grimmsmod.world.inventory.WrittenPaperGUIMenu;
 import grimm.grimmsmod.world.inventory.VoidpackGUIMenu;
+import grimm.grimmsmod.world.inventory.VaultGUIMenu;
 import grimm.grimmsmod.world.inventory.TransmutationGUIMenu;
 import grimm.grimmsmod.world.inventory.TVLiquidatorGUIMenu;
 import grimm.grimmsmod.world.inventory.StatsGUIMenu;
@@ -19,6 +21,7 @@ import grimm.grimmsmod.world.inventory.StatisticsGUIMenu;
 import grimm.grimmsmod.world.inventory.RefineryGUIMenu;
 import grimm.grimmsmod.world.inventory.PrestigeUpgradesGUIMenu;
 import grimm.grimmsmod.world.inventory.MathExamGUIMenu;
+import grimm.grimmsmod.world.inventory.KeyGUIMenu;
 import grimm.grimmsmod.world.inventory.ItemAttributionMenuGUIMenu;
 import grimm.grimmsmod.world.inventory.HeavyBlasterGUIMenu;
 import grimm.grimmsmod.world.inventory.ForgeryTableGUIMenu;
@@ -58,4 +61,7 @@ public class GrimmsModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<BackpackT6GUIMenu>> BACKPACK_T_6_GUI = REGISTRY.register("backpack_t_6_gui", () -> IMenuTypeExtension.create(BackpackT6GUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<StatisticsGUIMenu>> STATISTICS_GUI = REGISTRY.register("statistics_gui", () -> IMenuTypeExtension.create(StatisticsGUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<DevelopmentChamberGUIMenu>> DEVELOPMENT_CHAMBER_GUI = REGISTRY.register("development_chamber_gui", () -> IMenuTypeExtension.create(DevelopmentChamberGUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<VaultGUIMenu>> VAULT_GUI = REGISTRY.register("vault_gui", () -> IMenuTypeExtension.create(VaultGUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<KeyGUIMenu>> KEY_GUI = REGISTRY.register("key_gui", () -> IMenuTypeExtension.create(KeyGUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<WrittenPaperGUIMenu>> WRITTEN_PAPER_GUI = REGISTRY.register("written_paper_gui", () -> IMenuTypeExtension.create(WrittenPaperGUIMenu::new));
 }

@@ -1,6 +1,6 @@
 {
   "display": {
-    "background": "minecraft:textures/block/stone.png",
+    "background": "grimms:textures/screens/vaultfrontopen.png",
     "icon": {
       "id": "grimms:fancy_clock"
     },
