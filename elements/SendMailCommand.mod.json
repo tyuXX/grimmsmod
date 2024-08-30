@@ -3,7 +3,7 @@
   "_type": "command",
   "definition": {
     "commandName": "g_sendmail",
-    "type": "STANDARD",
+    "type": "MULTIPLAYER_ONLY",
     "permissionLevel": "No requirement",
     "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"entity\"><field name=\"name\">player</field><field name=\"type\">player</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">SendMail</field></block></statement></block></next></block></xml>"
   }

@@ -6772,6 +6772,19 @@
         ]
       },
       "path": "~/Structures"
+    },
+    {
+      "name": "InterdimensionalTrapezoidRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "interdimensional_trapezoid_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/interdimensional_trapezoid_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
     }
   ],
   "variable_elements": [
@@ -6934,6 +6947,9 @@
     ],
     "ITEMS:mod:lockpicks": [
       "CUSTOM:Lockpick"
+    ],
+    "BLOCKS:minecraft:mineable/axe": [
+      "~CUSTOM:LootCrate"
     ],
     "ENTITIES:mod:bloodmoonentity": [
       "EntityZombie",

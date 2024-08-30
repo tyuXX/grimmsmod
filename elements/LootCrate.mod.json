@@ -46,7 +46,7 @@
         "value": "CUSTOM:GrimmsModSpecial"
       }
     ],
-    "destroyTool": "Not specified",
+    "destroyTool": "axe",
     "customDrop": {
       "value": "Blocks.AIR"
     },

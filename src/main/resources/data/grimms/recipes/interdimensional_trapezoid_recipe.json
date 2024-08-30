@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " ab",
+    "ccc"
+  ],
+  "key": {
+    "a": {
+      "item": "grimms:error_b"
+    },
+    "b": {
+      "item": "minecraft:ender_eye"
+    },
+    "c": {
+      "item": "grimms:error"
+    }
+  },
+  "result": {
+    "id": "grimms:interdimensional_trapezoid",
+    "count": 1
+  }
+}

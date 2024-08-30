@@ -9,11 +9,11 @@
         "value": "Blocks.STRUCTURE_BLOCK"
       }
     ],
-    "spacing": 5,
-    "separation": 2,
+    "spacing": 100,
+    "separation": 10,
     "restrictionBiomes": [
       {
-        "value": "#minecraft:is_end"
+        "value": "end_highlands"
       }
     ],
     "terrainAdaptation": "none",

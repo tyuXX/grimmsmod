@@ -3,6 +3,7 @@ package grimm.grimmsmod.procedures;
 import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
@@ -12,6 +13,7 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 
 import io.netty.buffer.Unpooled;
@@ -26,13 +28,17 @@ public class WrittenPaperRightclickedProcedure {
 		ItemStack tmp = ItemStack.EMPTY;
 		if (entity.isShiftKeyDown()) {
 			tmp = new ItemStack(GrimmsModItems.MAIL.get());
-			tmp.applyComponents(itemstack.getComponents());
-			itemstack.shrink(1);
+			{
+				final String _tagName = "grimms:papertext";
+				final String _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("grimms:papertext"));
+				CustomData.update(DataComponents.CUSTOM_DATA, tmp, tag -> tag.putString(_tagName, _tagValue));
+			}
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = tmp.copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
+			itemstack.shrink(1);
 		} else {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);

@@ -23,4 +23,6 @@
  * - Add BXTrap Vault1 structure
  * - Add BXSecure Vault1 structure
  * - Add BXSecure Vault2 structure
+ * - Add Lootbag
+ * - Nerf lootcrate
  */

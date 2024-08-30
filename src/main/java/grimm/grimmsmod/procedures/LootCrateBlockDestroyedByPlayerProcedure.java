@@ -13,7 +13,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 
 public class LootCrateBlockDestroyedByPlayerProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		for (int index0 = 0; index0 < (int) Math.round(Mth.nextDouble(RandomSource.create(), 1, 5)); index0++) {
+		for (int index0 = 0; index0 < (int) Math.round(Mth.nextDouble(RandomSource.create(), 1, 3)); index0++) {
 			if (world instanceof ServerLevel _level) {
 				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(
 						(BuiltInRegistries.ITEM.getOrCreateTag(ItemTags.create(new ResourceLocation("grimms:lootcratedrop"))).getRandomElement(RandomSource.create()).orElseGet(() -> BuiltInRegistries.ITEM.wrapAsHolder(Items.AIR)).value())));
