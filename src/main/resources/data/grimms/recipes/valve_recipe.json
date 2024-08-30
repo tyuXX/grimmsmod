@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "aba",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "grimms:steel"
+    },
+    "b": {
+      "item": "grimms:screw"
+    }
+  },
+  "result": {
+    "id": "grimms:valve",
+    "count": 4
+  }
+}

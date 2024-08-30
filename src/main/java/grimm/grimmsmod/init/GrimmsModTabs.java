@@ -120,6 +120,14 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.LOCKPICK.get());
 				tabData.accept(GrimmsModItems.MAIL.get());
 				tabData.accept(GrimmsModItems.WRITTEN_PAPER.get());
+				tabData.accept(GrimmsModItems.PRESSURE_TANK.get());
+				tabData.accept(GrimmsModItems.VARIABLE_PRESSURE_TANK.get());
+				tabData.accept(GrimmsModItems.VALVE.get());
+				tabData.accept(GrimmsModItems.PIPE.get());
+				tabData.accept(GrimmsModItems.RESISTOR.get());
+				tabData.accept(GrimmsModItems.HEATING_ELEMENT.get());
+				tabData.accept(GrimmsModItems.COOLING_ELEMENT.get());
+				tabData.accept(GrimmsModItems.COPPER_WIRE.get());
 			})
 
 					.build());

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a  ",
+    "bbb"
+  ],
+  "key": {
+    "a": {
+      "tag": "grimms:hammers"
+    },
+    "b": {
+      "item": "grimms:steel"
+    }
+  },
+  "result": {
+    "id": "grimms:pipe",
+    "count": 6
+  }
+}

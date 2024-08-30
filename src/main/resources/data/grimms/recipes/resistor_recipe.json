@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "grimms:copper_wire"
+    },
+    "b": {
+      "item": "grimms:coal_dust"
+    }
+  },
+  "result": {
+    "id": "grimms:resistor",
+    "count": 2
+  }
+}

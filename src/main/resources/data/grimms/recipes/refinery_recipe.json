@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bcb",
+    "ddd"
+  ],
+  "key": {
+    "a": {
+      "item": "grimms:pipe"
+    },
+    "b": {
+      "item": "grimms:pressure_tank"
+    },
+    "c": {
+      "item": "grimms:variable_pressure_tank"
+    },
+    "d": {
+      "item": "minecraft:smooth_stone"
+    }
+  },
+  "result": {
+    "id": "grimms:refinery",
+    "count": 1
+  }
+}

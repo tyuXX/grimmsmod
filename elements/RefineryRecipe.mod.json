@@ -1,0 +1,48 @@
+{
+  "_fv": 66,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Pipe"
+      },
+      {
+        "value": "CUSTOM:Pipe"
+      },
+      {
+        "value": "CUSTOM:Pipe"
+      },
+      {
+        "value": "CUSTOM:PressureTank"
+      },
+      {
+        "value": "CUSTOM:VariablePressureTank"
+      },
+      {
+        "value": "CUSTOM:PressureTank"
+      },
+      {
+        "value": "Blocks.SMOOTH_STONE"
+      },
+      {
+        "value": "Blocks.SMOOTH_STONE"
+      },
+      {
+        "value": "Blocks.SMOOTH_STONE"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Refinery"
+    },
+    "name": "refinery_recipe",
+    "namespace": "mod"
+  }
+}

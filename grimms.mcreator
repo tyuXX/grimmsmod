@@ -6785,6 +6785,235 @@
         ]
       },
       "path": "~/Recipes"
+    },
+    {
+      "name": "PressureTank",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pressure_tank",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/PressureTankItem.java",
+          "src/main/resources/assets/grimms/models/item/pressure_tank.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "VariablePressureTank",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "variable_pressure_tank",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/VariablePressureTankItem.java",
+          "src/main/resources/assets/grimms/models/item/variable_pressure_tank.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Valve",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "valve",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/grimms/models/item/valve.json",
+          "src/main/java/grimm/grimmsmod/item/ValveItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "PressureTankRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pressure_tank_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/pressure_tank_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "ValveRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "valve_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/valve_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "VariablePressureTankRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "variable_pressure_tank_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/variable_pressure_tank_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "RefineryRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "refinery_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/refinery_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Pipe",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipe",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/PipeItem.java",
+          "src/main/resources/assets/grimms/models/item/pipe.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "PipeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipe_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/pipe_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "HeavyBlasterRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_blaster_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/heavy_blaster_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Resistor",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "resistor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/grimms/models/item/resistor.json",
+          "src/main/java/grimm/grimmsmod/item/ResistorItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "HeatingElement",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heating_element",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/HeatingElementItem.java",
+          "src/main/resources/assets/grimms/models/item/heating_element.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "CoolingElement",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooling_element",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/grimms/models/item/cooling_element.json",
+          "src/main/java/grimm/grimmsmod/item/CoolingElementItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "CopperWire",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_wire",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/CopperWireItem.java",
+          "src/main/resources/assets/grimms/models/item/copper_wire.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "ResistorRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "resistor_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/resistor_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "CopperWireRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_wire_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/copper_wire_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "HeatingElementRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heating_element_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/heating_element_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
     }
   ],
   "variable_elements": [
@@ -7110,6 +7339,7 @@
       "block.grimms.plutonium_ore": "Plutonium Ore",
       "advancements.subpar_hammeration.descr": "Not there yet!",
       "death.attack.item_level_damage_boost.item": "%1$s was killed by %2$s using %3$s",
+      "item.grimms.resistor": "Resistor",
       "advancements.heavy_duty.title": "Heavy Duty",
       "item.grimms.lockpick": "Lockpick",
       "advancements.murderer.descr": "Kill a fellow player",
@@ -7137,6 +7367,7 @@
       "item.grimms.microscope": "Microscope",
       "effect.grimms.seizure": "Seizure",
       "advancements.little_john.title": "Little John",
+      "item.grimms.copper_wire": "Copper Wire",
       "advancements.rich_guy.title": "Rich Guy",
       "trim_material.grimms.lead_trim": "Lead",
       "death.attack.radiation_damage_type.item": "%1$s was irradiated by %2$s using %3$s",
@@ -7146,6 +7377,7 @@
       "block.grimms.plutonium_block": "Block of Plutonium",
       "item.grimms.soda_bottle": "Soda Bottle",
       "item.grimms.photograph_of_motorcar": "Photograph Of Motorcar",
+      "item.grimms.variable_pressure_tank": "Variable Pressure Tank",
       "gui.grimms.key_gui.label_set_password": "Set Password",
       "advancements.prank_em_john.descr": "Metal pipe go bonk!",
       "advancements.comrade.title": "Comrade",
@@ -7158,6 +7390,7 @@
       "item.grimmsmod.multi_use_scalpel": "Multi Use Scalpel",
       "item.grimms.steel_dust": "Steel Dust",
       "block.grimms.silver_block": "Block of Silver",
+      "item.grimms.pressure_tank": "Pressure Tank",
       "advancements.packed_up.title": "Packed Up",
       "death.attack.bleeding_damage": "%1$s lost too much blood",
       "trim_material.grimms.tungsten_carbide_trim": "Tungsten Carbide",
@@ -7190,9 +7423,11 @@
       "item.grimms.backpack_t_2": "Backpack T 2",
       "gui.grimms.prestige_upgrades_gui.sid": "0",
       "item.grimms.backpack_t_3": "Backpack T3",
+      "item.grimms.heating_element": "Heating Element",
       "item.grimms.plutonium_ingot": "Plutonium",
       "item.grimms.dosimeter": "Dosimeter",
       "enchantment.grimms.sharp": "Sharp",
+      "item.grimms.cooling_element": "Cooling Element",
       "advancements.little_john.descr": "Time to illegally expand my 2m^2 Apartment!",
       "item.grimms.backpack_t_4": "Backpack T4",
       "item.grimms.backpack_t_5": "Backpack T5",
@@ -7254,6 +7489,7 @@
       "gui.grimms.refinery_gui.label_blaze_powder": "\u003c\u003d\u003d Blaze Powder",
       "item.grimms.despawn_wand": "Despawn Wand",
       "item_group.grimms.grimms_mod": "Grimm\u0027s Mod",
+      "item.grimms.pipe": "Pipe",
       "item.grimmsmod.fancy_clock": "Fancy Clock",
       "advancements.level_up.title": "Level Up",
       "item.grimms.full_tin_can": "Full Tin Can",
@@ -7320,6 +7556,7 @@
       "block.grimms.lead_ore": "Lead Ore",
       "block.grimms.heavy_blaster": "Heavy Blaster",
       "block.grimms.silver_ore": "Silver Ore",
+      "item.grimms.valve": "Valve",
       "item.grimms.composite_gem": "Composite Gem",
       "gui.grimms.prestige_upgrades_gui.prestigeupgradeid": "N/A",
       "key.grimms.open_stats": "Open Stats",

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "grimms:pressure_tank"
+    },
+    {
+      "item": "grimms:valve"
+    },
+    {
+      "tag": "grimms:hammers"
+    }
+  ],
+  "result": {
+    "id": "grimms:variable_pressure_tank",
+    "count": 1
+  }
+}

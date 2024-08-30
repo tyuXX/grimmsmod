@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "grimms:steel"
+    },
+    "b": {
+      "tag": "grimms:hammers"
+    }
+  },
+  "result": {
+    "id": "grimms:pressure_tank",
+    "count": 1
+  }
+}

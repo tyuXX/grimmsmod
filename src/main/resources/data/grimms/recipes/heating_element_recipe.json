@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aba",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "grimms:resistor"
+    },
+    "b": {
+      "item": "grimms:copper_wire"
+    }
+  },
+  "result": {
+    "id": "grimms:heating_element",
+    "count": 1
+  }
+}

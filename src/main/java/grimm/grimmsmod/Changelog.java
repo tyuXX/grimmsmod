@@ -25,4 +25,7 @@
  * - Add BXSecure Vault2 structure
  * - Add Lootbag
  * - Nerf lootcrate
+ * 
+ * - Add Pressure tank, Variable Pressure tank, pipe and valve
+ * - Add resistor, heating element, cooling element and copper wire
  */

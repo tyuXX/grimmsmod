@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aca",
+    "ddd"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:bricks"
+    },
+    "b": {
+      "item": "grimms:variable_pressure_tank"
+    },
+    "c": {
+      "item": "grimms:pressure_tank"
+    },
+    "d": {
+      "item": "minecraft:smooth_stone"
+    }
+  },
+  "result": {
+    "id": "grimms:heavy_blaster",
+    "count": 1
+  }
+}
