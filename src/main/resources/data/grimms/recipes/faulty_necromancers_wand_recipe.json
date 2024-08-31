@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  a",
+    " b ",
+    "b  "
+  ],
+  "key": {
+    "a": {
+      "item": "grimms:rotten_food"
+    },
+    "b": {
+      "item": "grimms:charred_bone"
+    }
+  },
+  "result": {
+    "id": "grimms:faulty_necromancers_wand",
+    "count": 1
+  }
+}

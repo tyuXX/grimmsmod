@@ -7014,6 +7014,195 @@
         ]
       },
       "path": "~/Recipes"
+    },
+    {
+      "name": "FaultyNecromancersWandRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "faulty_necromancers_wand_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/FaultyNecromancersWandRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "FaultyNecromancersWand",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "faulty_necromancers_wand",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/FaultyNecromancersWandItem.java",
+          "src/main/resources/assets/grimms/models/item/faulty_necromancers_wand.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "CleanBone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clean_bone",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/CleanBoneItem.java",
+          "src/main/resources/assets/grimms/models/item/clean_bone.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "CharredBone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charred_bone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/grimms/models/item/charred_bone.json",
+          "src/main/java/grimm/grimmsmod/item/CharredBoneItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "OldBone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "old_bone",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/OldBoneItem.java",
+          "src/main/resources/assets/grimms/models/item/old_bone.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "FaultyNecromancersWandRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "faulty_necromancers_wand_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/faulty_necromancers_wand_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "SoulPiercer",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_piercer",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/SoulPiercerItem.java",
+          "src/main/resources/assets/grimms/models/item/soul_piercer.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "CharredBoneRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charred_bone_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/recipes/charred_bone_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "LongSword",
+      "type": "dyeable_item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "long_sword",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/grimms/models/item/long_sword.json",
+          "src/main/java/grimm/grimmsmod/item/LongSwordItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "BeforeEntityHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "before_entity_hurt",
+      "metadata": {
+        "return_type": "actionresulttype",
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/BeforeEntityHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Events"
     }
   ],
   "variable_elements": [
@@ -7105,6 +7294,7 @@
       "~CUSTOM:VaultOpen"
     ],
     "ITEMS:minecraft:enchantable/durability": [
+      "~CUSTOM:FaultyNecromancersWand",
       "~CUSTOM:InterdimensionalTrapezoid",
       "~CUSTOM:Whetstone"
     ],
@@ -7134,6 +7324,7 @@
       "CUSTOM:BackpackT6"
     ],
     "ITEMS:minecraft:dyeable": [
+      "~CUSTOM:LongSword",
       "~CUSTOM:CompositeGalloyIngot",
       "~CUSTOM:CompositeGem",
       "~CUSTOM:AlloyedIngot"
@@ -7180,11 +7371,6 @@
     "BLOCKS:minecraft:mineable/axe": [
       "~CUSTOM:LootCrate"
     ],
-    "ENTITIES:mod:bloodmoonentity": [
-      "EntityZombie",
-      "EntitySkeleton",
-      "EntityCreeper"
-    ],
     "DAMAGE_TYPES:mod:nonrecurrabledamage": [
       "CUSTOM:ItemLevelDamageBoost",
       "CUSTOM:PrestigeDamageBoost"
@@ -7193,6 +7379,7 @@
       "CUSTOM:Katana"
     ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:SoulPiercer",
       "~CUSTOM:HeavyMetalPipe",
       "~CUSTOM:MetalPipe",
       "~CUSTOM:Katana"
@@ -7332,12 +7519,14 @@
       "item.grimmsmod.handheld_microscope": "Handheld Microscope",
       "item.grimmsmod.scalpel": "Scalpel",
       "advancements.millionare.title": "Millionare",
+      "item.grimms.soul_piercer": "Soul Piercer",
       "trim_material.grimms.plutonium_trim": "Plutonium",
       "advancements.prestige.title": "Prestige",
       "item.grimms.tungsten_ingot": "Tungsten",
       "gui.grimms.key_gui.password": "N/A",
       "block.grimms.plutonium_ore": "Plutonium Ore",
       "advancements.subpar_hammeration.descr": "Not there yet!",
+      "item.grimms.old_bone": "Old Bone",
       "death.attack.item_level_damage_boost.item": "%1$s was killed by %2$s using %3$s",
       "item.grimms.resistor": "Resistor",
       "advancements.heavy_duty.title": "Heavy Duty",
@@ -7379,7 +7568,9 @@
       "item.grimms.photograph_of_motorcar": "Photograph Of Motorcar",
       "item.grimms.variable_pressure_tank": "Variable Pressure Tank",
       "gui.grimms.key_gui.label_set_password": "Set Password",
+      "item.grimms.long_sword": "Long Sword",
       "advancements.prank_em_john.descr": "Metal pipe go bonk!",
+      "item.grimms.faulty_necromancers_wand": "Faulty Necromancers Wand",
       "advancements.comrade.title": "Comrade",
       "trim_material.grimms.iridium_trim": "Iridium",
       "item.grimms.lead_ingot": "Lead",
@@ -7405,6 +7596,7 @@
       "gui.grimms.math_exam_gui.answer": "Answer here",
       "block.grimms.tungsten_block": "Block of Tungsten",
       "advancements.millionare.descr": "Have $1M",
+      "item.grimms.clean_bone": "Clean Bone",
       "item.grimms.iridium_hammer": "Iridium Hammer",
       "gui.grimms.prestige_upgrades_gui.button_next": "Next",
       "gui.grimms.stats_gui.button_prestige": "Prestige",
@@ -7559,6 +7751,7 @@
       "item.grimms.valve": "Valve",
       "item.grimms.composite_gem": "Composite Gem",
       "gui.grimms.prestige_upgrades_gui.prestigeupgradeid": "N/A",
+      "item.grimms.charred_bone": "Charred Bone",
       "key.grimms.open_stats": "Open Stats",
       "item.grimms.rotten_food": "Rotten Food",
       "advancements.little_timmy.descr": "Get a perfect math exam score",
@@ -7702,7 +7895,7 @@
   "workspaceSettings": {
     "modid": "grimms",
     "modName": "Grimm\u0027s Mod",
-    "version": "5.3",
+    "version": "6rc1",
     "description": "Grimm\u0027s newest and bestest Mod!",
     "author": "tyuXX",
     "websiteURL": "https://modrinth.com/mod/gsm",

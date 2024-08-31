@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "grimms:soul_piercer",
     "grimms:heavy_metal_pipe",
     "grimms:metal_pipe",
     "grimms:katana"

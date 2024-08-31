@@ -15,5 +15,6 @@ public class RegisterColor {
 		event.register((stack, tintIndex) -> tintIndex > 0 ? -1 : DyedItemColor.getOrDefault(stack, -1), GrimmsModItems.ALLOYED_INGOT.get());
 		event.register((stack, tintIndex) -> tintIndex > 0 ? -1 : DyedItemColor.getOrDefault(stack, -1), GrimmsModItems.COMPOSITE_GEM.get());
 		event.register((stack, tintIndex) -> tintIndex > 0 ? -1 : DyedItemColor.getOrDefault(stack, -1), GrimmsModItems.COMPOSITE_GALLOY_INGOT.get());
+		event.register((stack, tintIndex) -> tintIndex > 0 ? -1 : DyedItemColor.getOrDefault(stack, -1), GrimmsModItems.LONG_SWORD.get());
 	}
 }

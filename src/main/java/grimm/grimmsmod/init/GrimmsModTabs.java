@@ -128,6 +128,12 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.HEATING_ELEMENT.get());
 				tabData.accept(GrimmsModItems.COOLING_ELEMENT.get());
 				tabData.accept(GrimmsModItems.COPPER_WIRE.get());
+				tabData.accept(GrimmsModItems.FAULTY_NECROMANCERS_WAND.get());
+				tabData.accept(GrimmsModItems.CLEAN_BONE.get());
+				tabData.accept(GrimmsModItems.CHARRED_BONE.get());
+				tabData.accept(GrimmsModItems.OLD_BONE.get());
+				tabData.accept(GrimmsModItems.SOUL_PIERCER.get());
+				tabData.accept(GrimmsModItems.LONG_SWORD.get());
 			})
 
 					.build());

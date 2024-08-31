@@ -1,0 +1,22 @@
+{
+  "_fv": 66,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 1.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "CUSTOM:CleanBone"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:CharredBone"
+    },
+    "name": "charred_bone_recipe",
+    "namespace": "mod"
+  }
+}
