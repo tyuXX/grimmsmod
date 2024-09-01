@@ -33,7 +33,7 @@ public class OnMapLoadProcedure {
 			InitMiscCacheProcedure.execute();
 			GrimmsModVariables.cache.put("init", ByteTag.valueOf(true));
 			GrimmsMod.LOGGER.info(
-					("Grimm's mod succsessfully loaded in World:" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())));
+					("Grimm's mod succsessfully loaded in World " + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())));
 		}
 	}
 }

@@ -1,20 +1,6 @@
 {
   "mod_elements": [
     {
-      "name": "OnGameStart",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "on_game_start",
-      "metadata": {
-        "files": [
-          "src/main/java/grimm/grimmsmod/procedures/OnGameStartProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Events"
-    },
-    {
       "name": "CommonConfig",
       "type": "config",
       "compiles": true,
@@ -7177,6 +7163,48 @@
         ]
       },
       "path": "~/Items"
+    },
+    {
+      "name": "OnClientLoaded",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_client_loaded",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/OnClientLoadedProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Events"
+    },
+    {
+      "name": "OnServerLoaded",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_server_loaded",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/OnServerLoadedProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Events"
+    },
+    {
+      "name": "OnModLoaded",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_mod_loaded",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/OnModLoadedProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Events"
     }
   ],
   "variable_elements": [
@@ -7230,6 +7258,18 @@
     },
     {
       "name": "cache",
+      "type": "datamap",
+      "scope": "global",
+      "value": "new CompoundTag()"
+    },
+    {
+      "name": "serverconfig",
+      "type": "datamap",
+      "scope": "global",
+      "value": "new CompoundTag()"
+    },
+    {
+      "name": "clientconfig",
       "type": "datamap",
       "scope": "global",
       "value": "new CompoundTag()"
@@ -7864,7 +7904,7 @@
   "workspaceSettings": {
     "modid": "grimms",
     "modName": "Grimm\u0027s Mod",
-    "version": "6rc1",
+    "version": "6",
     "description": "Grimm\u0027s newest and bestest Mod!",
     "author": "tyuXX",
     "websiteURL": "https://modrinth.com/mod/gsm",
