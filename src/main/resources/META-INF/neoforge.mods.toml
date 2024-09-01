@@ -31,12 +31,6 @@ description="Grimm's newest and bestest Mod!"
 
 
 [[dependencies.grimms]]
-    modId="curios_api"
-    type="optional"
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.grimms]]
     modId="jei"
     type="optional"
     versionRange="[0,)"

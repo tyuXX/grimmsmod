@@ -1,9 +1,0 @@
-{
-  "_fv": 66,
-  "_type": "curiosslot",
-  "definition": {
-    "texture": "portable_crafter.png",
-    "name": "Stick O Crafting Slot",
-    "amount": 1
-  }
-}

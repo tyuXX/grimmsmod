@@ -5333,33 +5333,6 @@
       "path": "~/DamageTypes"
     },
     {
-      "name": "StickOCraftingSlot",
-      "type": "curiosslot",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stick_o_crafting_slot",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/curios/tags/items/stick_o_crafting_slot.json"
-        ]
-      },
-      "path": "~/Curios"
-    },
-    {
-      "name": "StickOCrafting",
-      "type": "curiosbauble",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stick_o_crafting",
-      "metadata": {
-        "files": [
-          "src/main/java/grimm/grimmsmod/item/StickOCraftingItem.java",
-          "src/main/resources/assets/grimms/models/item/stick_o_crafting.json"
-        ]
-      },
-      "path": "~/Items"
-    },
-    {
       "name": "OpenCraftingMenuOnKeyPressed",
       "type": "procedure",
       "compiles": true,
@@ -6794,8 +6767,8 @@
       "registry_name": "pressure_tank",
       "metadata": {
         "files": [
-          "src/main/java/grimm/grimmsmod/item/PressureTankItem.java",
-          "src/main/resources/assets/grimms/models/item/pressure_tank.json"
+          "src/main/resources/assets/grimms/models/item/pressure_tank.json",
+          "src/main/java/grimm/grimmsmod/item/PressureTankItem.java"
         ]
       },
       "path": "~/Items"
@@ -6808,8 +6781,8 @@
       "registry_name": "variable_pressure_tank",
       "metadata": {
         "files": [
-          "src/main/java/grimm/grimmsmod/item/VariablePressureTankItem.java",
-          "src/main/resources/assets/grimms/models/item/variable_pressure_tank.json"
+          "src/main/resources/assets/grimms/models/item/variable_pressure_tank.json",
+          "src/main/java/grimm/grimmsmod/item/VariablePressureTankItem.java"
         ]
       },
       "path": "~/Items"
@@ -6822,8 +6795,8 @@
       "registry_name": "valve",
       "metadata": {
         "files": [
-          "src/main/resources/assets/grimms/models/item/valve.json",
-          "src/main/java/grimm/grimmsmod/item/ValveItem.java"
+          "src/main/java/grimm/grimmsmod/item/ValveItem.java",
+          "src/main/resources/assets/grimms/models/item/valve.json"
         ]
       },
       "path": "~/Items"
@@ -6888,8 +6861,8 @@
       "registry_name": "pipe",
       "metadata": {
         "files": [
-          "src/main/java/grimm/grimmsmod/item/PipeItem.java",
-          "src/main/resources/assets/grimms/models/item/pipe.json"
+          "src/main/resources/assets/grimms/models/item/pipe.json",
+          "src/main/java/grimm/grimmsmod/item/PipeItem.java"
         ]
       },
       "path": "~/Items"
@@ -6928,8 +6901,8 @@
       "registry_name": "resistor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/grimms/models/item/resistor.json",
-          "src/main/java/grimm/grimmsmod/item/ResistorItem.java"
+          "src/main/java/grimm/grimmsmod/item/ResistorItem.java",
+          "src/main/resources/assets/grimms/models/item/resistor.json"
         ]
       },
       "path": "~/Items"
@@ -6942,8 +6915,8 @@
       "registry_name": "heating_element",
       "metadata": {
         "files": [
-          "src/main/java/grimm/grimmsmod/item/HeatingElementItem.java",
-          "src/main/resources/assets/grimms/models/item/heating_element.json"
+          "src/main/resources/assets/grimms/models/item/heating_element.json",
+          "src/main/java/grimm/grimmsmod/item/HeatingElementItem.java"
         ]
       },
       "path": "~/Items"
@@ -6956,8 +6929,8 @@
       "registry_name": "cooling_element",
       "metadata": {
         "files": [
-          "src/main/resources/assets/grimms/models/item/cooling_element.json",
-          "src/main/java/grimm/grimmsmod/item/CoolingElementItem.java"
+          "src/main/java/grimm/grimmsmod/item/CoolingElementItem.java",
+          "src/main/resources/assets/grimms/models/item/cooling_element.json"
         ]
       },
       "path": "~/Items"
@@ -7076,8 +7049,8 @@
       "registry_name": "clean_bone",
       "metadata": {
         "files": [
-          "src/main/java/grimm/grimmsmod/item/CleanBoneItem.java",
-          "src/main/resources/assets/grimms/models/item/clean_bone.json"
+          "src/main/resources/assets/grimms/models/item/clean_bone.json",
+          "src/main/java/grimm/grimmsmod/item/CleanBoneItem.java"
         ]
       },
       "path": "~/Items"
@@ -7104,8 +7077,8 @@
       "registry_name": "old_bone",
       "metadata": {
         "files": [
-          "src/main/java/grimm/grimmsmod/item/OldBoneItem.java",
-          "src/main/resources/assets/grimms/models/item/old_bone.json"
+          "src/main/resources/assets/grimms/models/item/old_bone.json",
+          "src/main/java/grimm/grimmsmod/item/OldBoneItem.java"
         ]
       },
       "path": "~/Items"
@@ -7158,8 +7131,8 @@
       "registry_name": "long_sword",
       "metadata": {
         "files": [
-          "src/main/resources/assets/grimms/models/item/long_sword.json",
-          "src/main/java/grimm/grimmsmod/item/LongSwordItem.java"
+          "src/main/java/grimm/grimmsmod/item/LongSwordItem.java",
+          "src/main/resources/assets/grimms/models/item/long_sword.json"
         ]
       },
       "path": "~/Items"
@@ -7203,6 +7176,20 @@
         ]
       },
       "path": "~/Events"
+    },
+    {
+      "name": "StickOCrafting",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stick_o_crafting",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/item/StickOCraftingItem.java",
+          "src/main/resources/assets/grimms/models/item/stick_o_crafting.json"
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -7345,6 +7332,9 @@
     "ITEMS:mod:forcesoulbound": [
       "CUSTOM:Placeholder"
     ],
+    "ITEMS:mod:lockpicks": [
+      "CUSTOM:Lockpick"
+    ],
     "BLOCKS:minecraft:mineable/pickaxe": [
       "~CUSTOM:VaultOpen",
       "~CUSTOM:TinBlock",
@@ -7364,9 +7354,6 @@
       "~CUSTOM:IridiumBlock",
       "~CUSTOM:IridiumOre",
       "~CUSTOM:LandMine"
-    ],
-    "ITEMS:mod:lockpicks": [
-      "CUSTOM:Lockpick"
     ],
     "BLOCKS:minecraft:mineable/axe": [
       "~CUSTOM:LootCrate"
@@ -7567,10 +7554,10 @@
       "item.grimms.soda_bottle": "Soda Bottle",
       "item.grimms.photograph_of_motorcar": "Photograph Of Motorcar",
       "item.grimms.variable_pressure_tank": "Variable Pressure Tank",
-      "gui.grimms.key_gui.label_set_password": "Set Password",
       "item.grimms.long_sword": "Long Sword",
-      "advancements.prank_em_john.descr": "Metal pipe go bonk!",
+      "gui.grimms.key_gui.label_set_password": "Set Password",
       "item.grimms.faulty_necromancers_wand": "Faulty Necromancers Wand",
+      "advancements.prank_em_john.descr": "Metal pipe go bonk!",
       "advancements.comrade.title": "Comrade",
       "trim_material.grimms.iridium_trim": "Iridium",
       "item.grimms.lead_ingot": "Lead",
@@ -7587,7 +7574,6 @@
       "trim_material.grimms.tungsten_carbide_trim": "Tungsten Carbide",
       "key.categories.grimmsmod": "Grimm\u0027s Mod Keybinds",
       "gui.grimms.tv_liquidator_gui.label_liquidate": "Liquidate",
-      "curios.identifier.stick_o_crafting_slot": "Stick O Crafting Slot",
       "block.grimms.uranium_ore": "Uranium Ore",
       "advancements.level_up_2.descr": "Level up to level 35",
       "advancements.subpar_hammeration.title": "Subpar Hammeration",
@@ -7762,7 +7748,7 @@
       "advancements.serious_hammeration.title": "Serious Hammeration",
       "item.grimms.lock_and_key": "Lock And Key",
       "item.grimms.written_paper": "Written Paper",
-      "item.grimms.stick_o_crafting": "Stick O\u0027 Crafting",
+      "item.grimms.stick_o_crafting": "Stick \u0027O Crafting",
       "advancements.prestige.descr": "Prestige for the first time for special benefits!",
       "trim_material.grimms.galvanized_steel_trim": "Galvanized Steel",
       "item.grimms.iridium_screw": "Iridium Screw",
@@ -7879,10 +7865,6 @@
         "children": []
       },
       {
-        "name": "Curios",
-        "children": []
-      },
-      {
         "name": "Dimensions",
         "children": []
       },
@@ -7906,7 +7888,6 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "curios_api",
       "jei"
     ],
     "currentGenerator": "neoforge-1.20.6",

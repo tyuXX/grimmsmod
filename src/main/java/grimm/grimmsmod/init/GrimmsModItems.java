@@ -223,7 +223,6 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> ETERNAL_TIN_CAN = REGISTRY.register("eternal_tin_can", EternalTinCanItem::new);
 	public static final DeferredHolder<Item, Item> FULL_TIN_CAN = REGISTRY.register("full_tin_can", FullTinCanItem::new);
 	public static final DeferredHolder<Item, Item> WHETSTONE = REGISTRY.register("whetstone", WhetstoneItem::new);
-	public static final DeferredHolder<Item, Item> STICK_O_CRAFTING = REGISTRY.register("stick_o_crafting", StickOCraftingItem::new);
 	public static final DeferredHolder<Item, Item> SODA_BOTTLE = REGISTRY.register("soda_bottle", SodaBottleItem::new);
 	public static final DeferredHolder<Item, Item> SODA_BOTTLE_2 = REGISTRY.register("soda_bottle_2", SodaBottle2Item::new);
 	public static final DeferredHolder<Item, Item> PULLUP_TAB = REGISTRY.register("pullup_tab", PullupTabItem::new);
@@ -260,6 +259,7 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> OLD_BONE = REGISTRY.register("old_bone", OldBoneItem::new);
 	public static final DeferredHolder<Item, Item> SOUL_PIERCER = REGISTRY.register("soul_piercer", SoulPiercerItem::new);
 	public static final DeferredHolder<Item, Item> LONG_SWORD = REGISTRY.register("long_sword", LongSwordItem::new);
+	public static final DeferredHolder<Item, Item> STICK_O_CRAFTING = REGISTRY.register("stick_o_crafting", StickOCraftingItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

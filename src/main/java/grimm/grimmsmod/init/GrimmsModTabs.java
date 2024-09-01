@@ -101,7 +101,6 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.ETERNAL_TIN_CAN.get());
 				tabData.accept(GrimmsModItems.FULL_TIN_CAN.get());
 				tabData.accept(GrimmsModItems.WHETSTONE.get());
-				tabData.accept(GrimmsModItems.STICK_O_CRAFTING.get());
 				tabData.accept(GrimmsModItems.SODA_BOTTLE.get());
 				tabData.accept(GrimmsModItems.SODA_BOTTLE_2.get());
 				tabData.accept(GrimmsModItems.PULLUP_TAB.get());
@@ -134,6 +133,7 @@ public class GrimmsModTabs {
 				tabData.accept(GrimmsModItems.OLD_BONE.get());
 				tabData.accept(GrimmsModItems.SOUL_PIERCER.get());
 				tabData.accept(GrimmsModItems.LONG_SWORD.get());
+				tabData.accept(GrimmsModItems.STICK_O_CRAFTING.get());
 			})
 
 					.build());

@@ -1,18 +1,19 @@
 {
   "_fv": 66,
-  "_type": "curiosbauble",
+  "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "portable_crafter",
     "customModelName": "Normal",
-    "name": "Stick O' Crafting",
+    "customProperties": {},
+    "states": [],
+    "name": "Stick 'O Crafting",
     "rarity": "COMMON",
-    "slotType": "StickOCraftingSlot",
-    "baubleModel": "Default",
-    "baubleModelTexture": "",
-    "creativeTab": {
-      "value": "CUSTOM:GrimmsMod"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:GrimmsMod"
+      }
+    ],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
@@ -26,26 +27,26 @@
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
-    "addSlot": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": []
     },
-    "hasGlow": false,
-    "customProperties": {},
-    "states": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "slotAmount": 1,
     "onRightClickedInAir": {
       "name": "StickOCraftingRightclicked"
     },
+    "enableRanged": false,
+    "shootConstantly": false,
+    "rangedItemChargesPower": false,
+    "projectile": {
+      "value": "Arrow"
+    },
     "isFood": false,
-    "friendlyPigs": false,
-    "enderMask": false,
-    "rotateModel": false,
-    "translateModel": false,
     "nutritionalValue": 4,
     "saturation": 0.3,
     "eatResultItem": {
@@ -53,7 +54,6 @@
     },
     "isMeat": false,
     "isAlwaysEdible": false,
-    "hasModel": false,
     "animation": "none"
   }
 }
