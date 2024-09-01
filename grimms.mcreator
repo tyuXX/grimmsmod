@@ -1,19 +1,6 @@
 {
   "mod_elements": [
     {
-      "name": "CommonConfig",
-      "type": "config",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "common_config",
-      "metadata": {
-        "files": [
-          "src/main/java/grimm/grimmsmod/configuration/CommonConfigConfiguration.java"
-        ]
-      },
-      "path": "~/Config"
-    },
-    {
       "name": "ClientConfig",
       "type": "config",
       "compiles": true,
