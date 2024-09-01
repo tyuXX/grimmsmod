@@ -7,7 +7,6 @@ Wiki, just click the wiki page on this github repo.
 
 
 For anyone that wants to fork it the plugins used on making it are here:
-https://mcreator.net/plugin/90992/nerdys-curios-api-plugin
 https://mcreator.net/plugin/108844/file-manager-nerdy-edition
 https://mcreator.net/plugin/103347/just-enough-recipes
 https://mcreator.net/plugin/105286/player-poses
