@@ -9,19 +9,14 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 import net.neoforged.api.distmarker.Dist;
 
-import net.minecraft.nbt.ByteTag;
-
 import javax.annotation.Nullable;
 
 import java.util.List;
 
 import java.io.IOException;
 import java.io.FileWriter;
-import java.io.FileReader;
 import java.io.File;
-import java.io.BufferedReader;
 
-import grimm.grimmsmod.network.GrimmsModVariables;
 import grimm.grimmsmod.GrimmsMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -81,26 +76,7 @@ public class OnClientLoadedProcedure {
 				}
 			}
 		}
-		{
-			try {
-				BufferedReader bufferedReader = new BufferedReader(new FileReader(tmp));
-				StringBuilder jsonstringbuilder = new StringBuilder();
-				String line;
-				while ((line = bufferedReader.readLine()) != null) {
-					jsonstringbuilder.append(line);
-				}
-				bufferedReader.close();
-				tmp2 = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-				GrimmsModVariables.config.put("client:menuhud", ByteTag.valueOf(tmp2.get("Enable Main menu HUD").getAsBoolean()));
-				GrimmsModVariables.config.put("client:gamehud", ByteTag.valueOf(tmp2.get("Enable Ingame HUD").getAsBoolean()));
-				GrimmsModVariables.config.put("client:moneyhud", ByteTag.valueOf(tmp2.get("Enable Money HUD").getAsBoolean()));
-				GrimmsModVariables.config.put("client:playerhud", ByteTag.valueOf(tmp2.get("Enable Player HUD").getAsBoolean()));
-				GrimmsModVariables.config.put("client:coordshud", ByteTag.valueOf(tmp2.get("Enable Coordinates HUD").getAsBoolean()));
-				GrimmsModVariables.config.put("client:daychud", ByteTag.valueOf(tmp2.get("Enable Day Counter HUD").getAsBoolean()));
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-		GrimmsMod.LOGGER.info("Grimm's mod Client side loaded.");
+		ReloadClientConfigProcedure.execute();
+		GrimmsMod.LOGGER.info("Grimm's Mod Client side loaded.");
 	}
 }

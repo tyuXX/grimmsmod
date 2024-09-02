@@ -1,9 +1,11 @@
 package grimm.grimmsmod.procedures;
 
-import grimm.grimmsmod.configuration.ClientConfigConfiguration;
+import net.minecraft.nbt.ByteTag;
+
+import grimm.grimmsmod.network.GrimmsModVariables;
 
 public class GetShowDayCounterProcedure {
 	public static boolean execute() {
-		return ClientConfigConfiguration.DAYHUD.get();
+		return (GrimmsModVariables.config.get("client:daychud")) instanceof ByteTag _byteTag ? _byteTag.getAsByte() == 1 : false;
 	}
 }

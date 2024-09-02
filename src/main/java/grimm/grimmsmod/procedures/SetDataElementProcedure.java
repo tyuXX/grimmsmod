@@ -10,9 +10,6 @@ public class SetDataElementProcedure {
 	public static void execute(Tag dataelement, CompoundTag datamap, Entity entity, boolean sync, String key) {
 		if (dataelement == null || datamap == null || entity == null || key == null)
 			return;
-		if (datamap.contains(key)) {
-			datamap.remove(key);
-		}
 		datamap.put(key, dataelement);
 		if (sync) {
 			{

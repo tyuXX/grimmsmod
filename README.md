@@ -12,7 +12,6 @@ https://mcreator.net/plugin/103347/just-enough-recipes
 https://mcreator.net/plugin/105286/player-poses
 https://mcreator.net/plugin/93491/custom-fog-plugin-forge-1182-1192
 https://mcreator.net/plugin/105698/redwires-plugin
-https://mcreator.net/plugin/93503/metadata-editor
 https://mcreator.net/plugin/92306/item-tooltips
 https://mcreator.net/plugin/108097/dyeable
 https://mcreator.net/plugin/107323/new-procedures-plus

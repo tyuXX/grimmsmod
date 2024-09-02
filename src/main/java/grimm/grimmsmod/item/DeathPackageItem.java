@@ -18,11 +18,10 @@ import net.minecraft.network.FriendlyByteBuf;
 import io.netty.buffer.Unpooled;
 
 import grimm.grimmsmod.world.inventory.DeathPackageGUIMenu;
-import grimm.grimmsmod.procedures.DeathPackageRightclickedProcedure;
 
 public class DeathPackageItem extends Item {
 	public DeathPackageItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC));
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
 	}
 
 	@Override
@@ -32,7 +31,7 @@ public class DeathPackageItem extends Item {
 			serverPlayer.openMenu(new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return Component.literal("Death Package");
+					return Component.literal("Placeholder");
 				}
 
 				@Override
@@ -47,7 +46,6 @@ public class DeathPackageItem extends Item {
 				buf.writeByte(hand == InteractionHand.MAIN_HAND ? 0 : 1);
 			});
 		}
-		DeathPackageRightclickedProcedure.execute(entity, ar.getObject());
 		return ar;
 	}
 }

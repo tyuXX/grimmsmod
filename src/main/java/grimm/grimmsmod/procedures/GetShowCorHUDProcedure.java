@@ -1,9 +1,11 @@
 package grimm.grimmsmod.procedures;
 
-import grimm.grimmsmod.configuration.ClientConfigConfiguration;
+import net.minecraft.nbt.ByteTag;
+
+import grimm.grimmsmod.network.GrimmsModVariables;
 
 public class GetShowCorHUDProcedure {
 	public static boolean execute() {
-		return ClientConfigConfiguration.CORHUD.get();
+		return (GrimmsModVariables.config.get("client:coordshud")) instanceof ByteTag _byteTag ? _byteTag.getAsByte() == 1 : false;
 	}
 }

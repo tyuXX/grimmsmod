@@ -1,19 +1,6 @@
 {
   "mod_elements": [
     {
-      "name": "ClientConfig",
-      "type": "config",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "client_config",
-      "metadata": {
-        "files": [
-          "src/main/java/grimm/grimmsmod/configuration/ClientConfigConfiguration.java"
-        ]
-      },
-      "path": "~/Config"
-    },
-    {
       "name": "ServerConfig",
       "type": "config",
       "compiles": true,
@@ -878,29 +865,6 @@
         ]
       },
       "path": "~/Gui"
-    },
-    {
-      "name": "DeathPackageRightclicked",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "death_package_rightclicked",
-      "metadata": {
-        "files": [
-          "src/main/java/grimm/grimmsmod/procedures/DeathPackageRightclickedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/Procs"
     },
     {
       "name": "OnPlayerRespawn",
@@ -1921,34 +1885,6 @@
         ]
       },
       "path": "~/Recipes"
-    },
-    {
-      "name": "InitTransmutationValues",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "init_transmutation_values",
-      "metadata": {
-        "files": [
-          "src/main/java/grimm/grimmsmod/procedures/InitTransmutationValuesProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Procs/InitSession"
-    },
-    {
-      "name": "InitCraftingsCache",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "init_craftings_cache",
-      "metadata": {
-        "files": [
-          "src/main/java/grimm/grimmsmod/procedures/InitCraftingsCacheProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Procs/InitSession"
     },
     {
       "name": "SteelDust",
@@ -3427,20 +3363,6 @@
         ]
       },
       "path": "~/Packs"
-    },
-    {
-      "name": "InitRadiationCache",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "init_radiation_cache",
-      "metadata": {
-        "files": [
-          "src/main/java/grimm/grimmsmod/procedures/InitRadiationCacheProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Procs/InitSession"
     },
     {
       "name": "InitMiscCache",
@@ -5551,20 +5473,6 @@
       "path": "~/Procs"
     },
     {
-      "name": "InitPrestigeUpgradeCache",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "init_prestige_upgrade_cache",
-      "metadata": {
-        "files": [
-          "src/main/java/grimm/grimmsmod/procedures/InitPrestigeUpgradeCacheProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Procs/InitSession"
-    },
-    {
       "name": "StatisticsGUI",
       "type": "gui",
       "compiles": true,
@@ -7378,6 +7286,137 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "ReloadClientConfig",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reload_client_config",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/ReloadClientConfigProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "ReloadClientConfigCommand",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reload_client_config_command",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/command/ReloadClientConfigCommandCommand.java"
+        ]
+      },
+      "path": "~/Command"
+    },
+    {
+      "name": "InitCache",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "init_cache",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/InitCacheProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs/InitSession"
+    },
+    {
+      "name": "InitCacheFile",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "init_cache_file",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/InitCacheFileProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "filepath",
+            "type": "string"
+          }
+        ]
+      },
+      "path": "~/Procs/InitSession"
+    },
+    {
+      "name": "ReloadCache",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reload_cache",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/command/ReloadCacheCommand.java"
+        ]
+      },
+      "path": "~/Command"
+    },
+    {
+      "name": "SetDataElementNoSync",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_data_element_no_sync",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/SetDataElementNoSyncProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "dataelement",
+            "type": "dataelement"
+          },
+          {
+            "name": "datamap",
+            "type": "datamap"
+          },
+          {
+            "name": "key",
+            "type": "string"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "ChangeNumberDataElementNoSync",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "change_number_data_element_no_sync",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/ChangeNumberDataElementNoSyncProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "datamap",
+            "type": "datamap"
+          },
+          {
+            "name": "value",
+            "type": "number"
+          },
+          {
+            "name": "key",
+            "type": "string"
           }
         ]
       },
@@ -7726,8 +7765,8 @@
       "advancements.little_timmy.title": "Little Timmy",
       "gui.grimms.transmutation_gui.label_liquidate_item": "Liquidate Item",
       "effect.grimms.bleeding": "Bleeding",
-      "item.grimms.tin_ingot": "Tin",
       "item.grimms.debug_wand": "Debug Wand",
+      "item.grimms.tin_ingot": "Tin",
       "block.grimms.loot_crate": "Loot Crate",
       "block.grimms.distillery": "Distillery",
       "block.grimms.lead_block": "Block of Lead",
@@ -7755,10 +7794,10 @@
       "item.grimms.soda_bottle": "Soda Bottle",
       "item.grimms.photograph_of_motorcar": "Photograph Of Motorcar",
       "item.grimms.variable_pressure_tank": "Variable Pressure Tank",
-      "gui.grimms.key_gui.label_set_password": "Set Password",
       "item.grimms.long_sword": "Long Sword",
-      "advancements.prank_em_john.descr": "Metal pipe go bonk!",
+      "gui.grimms.key_gui.label_set_password": "Set Password",
       "item.grimms.faulty_necromancers_wand": "Faulty Necromancers Wand",
+      "advancements.prank_em_john.descr": "Metal pipe go bonk!",
       "advancements.comrade.title": "Comrade",
       "trim_material.grimms.iridium_trim": "Iridium",
       "item.grimms.lead_ingot": "Lead",
@@ -7957,7 +7996,7 @@
       "gamerule.itemXPExponent.description": "Calculated with (level * xpmult) ^ (xpexpo/10)",
       "item.grimms.rotten_food": "Rotten Food",
       "advancements.little_timmy.descr": "Get a perfect math exam score",
-      "item.grimms.death_package": "Death Package",
+      "item.grimms.death_package": "Placeholder",
       "block.grimms.forgery_table": "Forgery Table",
       "item.grimms.silver_ingot": "Silver",
       "advancements.heavy_duty.descr": "That\u0027s some serious leg power to carry all that!",

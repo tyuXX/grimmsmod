@@ -3,12 +3,12 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "mail",
+    "texture": "placeholder",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Death Package",
-    "rarity": "EPIC",
+    "name": "Placeholder",
+    "rarity": "COMMON",
     "creativeTabs": [],
     "stackSize": 1,
     "enchantability": 0,
@@ -33,9 +33,6 @@
     "guiBoundTo": "DeathPackageGUI",
     "inventorySize": 44,
     "inventoryStackSize": 64,
-    "onRightClickedInAir": {
-      "name": "DeathPackageRightclicked"
-    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

@@ -1,12 +1,13 @@
 package grimm.grimmsmod.procedures;
 
 import net.neoforged.neoforge.items.ItemHandlerHelper;
+import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
@@ -15,6 +16,7 @@ import net.minecraft.nbt.DoubleTag;
 import javax.annotation.Nullable;
 
 import grimm.grimmsmod.network.GrimmsModVariables;
+import grimm.grimmsmod.init.GrimmsModItems;
 
 @EventBusSubscriber
 public class OnPlayerRespawnProcedure {
@@ -30,15 +32,26 @@ public class OnPlayerRespawnProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
+		double itemid = 0;
 		InitLifetimeStatsProcedure.execute(entity);
-		if (entity instanceof Player _player) {
-			ItemStack _setstack = entity.getData(GrimmsModVariables.PLAYER_VARIABLES).deathpackage.copy();
-			_setstack.setCount(1);
-			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+		for (int index0 = 0; index0 < 44; index0++) {
+			if (entity instanceof Player _player) {
+				ItemStack _setstack = (new Object() {
+					public ItemStack getItemStack(int sltid, ItemStack _isc) {
+						IItemHandler _itemHandler = _isc.getCapability(Capabilities.ItemHandler.ITEM, null);
+						if (_itemHandler != null)
+							return _itemHandler.getStackInSlot(sltid).copy();
+						return ItemStack.EMPTY;
+					}
+				}.getItemStack((int) itemid, entity.getData(GrimmsModVariables.PLAYER_VARIABLES).deathpackage)).copy();
+				_setstack.setCount(1);
+				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+			}
+			itemid = itemid + 1;
 		}
 		{
 			GrimmsModVariables.PlayerVariables _vars = entity.getData(GrimmsModVariables.PLAYER_VARIABLES);
-			_vars.deathpackage = new ItemStack(Blocks.AIR);
+			_vars.deathpackage = new ItemStack(GrimmsModItems.DEATH_PACKAGE.get());
 			_vars.syncPlayerVariables(entity);
 		}
 		if (entity instanceof Player _player)

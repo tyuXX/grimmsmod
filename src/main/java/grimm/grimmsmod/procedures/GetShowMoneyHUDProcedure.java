@@ -1,9 +1,11 @@
 package grimm.grimmsmod.procedures;
 
-import grimm.grimmsmod.configuration.ClientConfigConfiguration;
+import net.minecraft.nbt.ByteTag;
+
+import grimm.grimmsmod.network.GrimmsModVariables;
 
 public class GetShowMoneyHUDProcedure {
 	public static boolean execute() {
-		return ClientConfigConfiguration.MHUD.get();
+		return (GrimmsModVariables.config.get("client:moneyhud")) instanceof ByteTag _byteTag ? _byteTag.getAsByte() == 1 : false;
 	}
 }
