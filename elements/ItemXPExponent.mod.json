@@ -1,0 +1,12 @@
+{
+  "_fv": 66,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Item XP Exponent",
+    "description": "Calculated with (level * xpmult) ^ (xpexpo/10)",
+    "category": "PLAYER",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 11
+  }
+}

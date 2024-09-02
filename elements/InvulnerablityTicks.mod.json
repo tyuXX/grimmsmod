@@ -1,0 +1,12 @@
+{
+  "_fv": 66,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Lenght of invulnerablity",
+    "description": "Lenght of invulnerablity for entities in ticks",
+    "category": "MISC",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 10
+  }
+}

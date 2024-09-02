@@ -14,13 +14,13 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.commands.Commands;
 
-import grimm.grimmsmod.procedures.DumpMapStatsProcedure;
+import grimm.grimmsmod.procedures.DumpConfigProcedure;
 
 @EventBusSubscriber
-public class DumpMapStatsCommandCommand {
+public class DumpConfigCommandCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("g_dumpmapstats").requires(s -> s.hasPermission(4)).executes(arguments -> {
+		event.getDispatcher().register(Commands.literal("g_dumpconfig").requires(s -> s.hasPermission(4)).executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -32,7 +32,7 @@ public class DumpMapStatsCommandCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			DumpMapStatsProcedure.execute(entity);
+			DumpConfigProcedure.execute(entity);
 			return 0;
 		}));
 	}

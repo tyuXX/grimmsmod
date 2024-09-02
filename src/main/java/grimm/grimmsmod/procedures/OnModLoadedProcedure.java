@@ -40,6 +40,7 @@ public class OnModLoadedProcedure {
 			} catch (IOException exception) {
 				exception.printStackTrace();
 			}
+			tmp2.addProperty("comment", "the config version");
 			tmp2.addProperty("version", new Object() {
 				String getValue(String modid) {
 					String val = "";

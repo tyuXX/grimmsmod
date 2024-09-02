@@ -4,6 +4,6 @@
  * - Add Soulpiercer
  * - Add Longsword
  * 
- * - Change config functions.
- * - Start migrating to the json configs
+ * - Migrate to the json configs.
+ * - Fix soulbound and keepinventory
  */

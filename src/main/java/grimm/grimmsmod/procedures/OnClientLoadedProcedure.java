@@ -9,14 +9,19 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 import net.neoforged.api.distmarker.Dist;
 
+import net.minecraft.nbt.ByteTag;
+
 import javax.annotation.Nullable;
 
 import java.util.List;
 
 import java.io.IOException;
 import java.io.FileWriter;
+import java.io.FileReader;
 import java.io.File;
+import java.io.BufferedReader;
 
+import grimm.grimmsmod.network.GrimmsModVariables;
 import grimm.grimmsmod.GrimmsMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -54,6 +59,17 @@ public class OnClientLoadedProcedure {
 					return val;
 				}
 			}.getValue("grimms"));
+			tmp2.addProperty("Enable Main menu HUD", true);
+			tmp2.addProperty("Enable Ingame HUD Comment", "Completely disable or enable the Grimm's HUD.");
+			tmp2.addProperty("Enable Ingame HUD", true);
+			tmp2.addProperty("Enable Money HUD Comment", "Enables the HUD that shows your money on the top left corner.");
+			tmp2.addProperty("Enable Money HUD", true);
+			tmp2.addProperty("Enable Player HUD Comment", "Shows the player on the top right corner.");
+			tmp2.addProperty("Enable Player HUD", true);
+			tmp2.addProperty("Enable Coordinates HUD Comment", "Shows your coordinates below the money. HUD.");
+			tmp2.addProperty("Enable Coordinates HUD", true);
+			tmp2.addProperty("Enable Day Counter HUD comment", "Shows the current day in the top left corner.");
+			tmp2.addProperty("Enable Day Counter HUD", true);
 			{
 				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {
@@ -63,6 +79,26 @@ public class OnClientLoadedProcedure {
 				} catch (IOException exception) {
 					exception.printStackTrace();
 				}
+			}
+		}
+		{
+			try {
+				BufferedReader bufferedReader = new BufferedReader(new FileReader(tmp));
+				StringBuilder jsonstringbuilder = new StringBuilder();
+				String line;
+				while ((line = bufferedReader.readLine()) != null) {
+					jsonstringbuilder.append(line);
+				}
+				bufferedReader.close();
+				tmp2 = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+				GrimmsModVariables.config.put("client:menuhud", ByteTag.valueOf(tmp2.get("Enable Main menu HUD").getAsBoolean()));
+				GrimmsModVariables.config.put("client:gamehud", ByteTag.valueOf(tmp2.get("Enable Ingame HUD").getAsBoolean()));
+				GrimmsModVariables.config.put("client:moneyhud", ByteTag.valueOf(tmp2.get("Enable Money HUD").getAsBoolean()));
+				GrimmsModVariables.config.put("client:playerhud", ByteTag.valueOf(tmp2.get("Enable Player HUD").getAsBoolean()));
+				GrimmsModVariables.config.put("client:coordshud", ByteTag.valueOf(tmp2.get("Enable Coordinates HUD").getAsBoolean()));
+				GrimmsModVariables.config.put("client:daychud", ByteTag.valueOf(tmp2.get("Enable Day Counter HUD").getAsBoolean()));
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
 		}
 		GrimmsMod.LOGGER.info("Grimm's mod Client side loaded.");

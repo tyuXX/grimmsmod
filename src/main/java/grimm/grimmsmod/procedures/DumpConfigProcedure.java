@@ -4,7 +4,7 @@ import net.minecraft.world.entity.Entity;
 
 import grimm.grimmsmod.network.GrimmsModVariables;
 
-public class DumpMapStatsProcedure {
+public class DumpConfigProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
