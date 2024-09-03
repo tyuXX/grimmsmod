@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "grimms:lockpick"
+    "grimms:lockpick",
+    "grimms:debug_wand"
   ]
 }

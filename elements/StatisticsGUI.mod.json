@@ -55,6 +55,22 @@
           "x": 132,
           "y": 107
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_kills_text_value",
+          "text": {
+            "fixedValue": "",
+            "name": "GetKillsTextValue"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 132,
+          "y": 62
+        }
       }
     ],
     "gridSettings": {

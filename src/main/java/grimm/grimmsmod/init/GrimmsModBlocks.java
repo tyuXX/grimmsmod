@@ -35,6 +35,7 @@ import grimm.grimmsmod.block.HeavyBlasterBlock;
 import grimm.grimmsmod.block.ForgeryTableBlock;
 import grimm.grimmsmod.block.DistilleryBlock;
 import grimm.grimmsmod.block.DevelopmentChamberBlock;
+import grimm.grimmsmod.block.BasicGraveBlock;
 import grimm.grimmsmod.block.BasicCobblestoneGeneratorBlock;
 import grimm.grimmsmod.GrimmsMod;
 
@@ -67,6 +68,7 @@ public class GrimmsModBlocks {
 	public static final DeferredHolder<Block, Block> DEVELOPMENT_CHAMBER = REGISTRY.register("development_chamber", DevelopmentChamberBlock::new);
 	public static final DeferredHolder<Block, Block> VAULT_OPEN = REGISTRY.register("vault_open", VaultOpenBlock::new);
 	public static final DeferredHolder<Block, Block> VAULT_CLOSED = REGISTRY.register("vault_closed", VaultClosedBlock::new);
+	public static final DeferredHolder<Block, Block> BASIC_GRAVE = REGISTRY.register("basic_grave", BasicGraveBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

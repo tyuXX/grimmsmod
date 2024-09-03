@@ -23,6 +23,7 @@ import grimm.grimmsmod.block.entity.HeavyBlasterBlockEntity;
 import grimm.grimmsmod.block.entity.ForgeryTableBlockEntity;
 import grimm.grimmsmod.block.entity.DistilleryBlockEntity;
 import grimm.grimmsmod.block.entity.DevelopmentChamberBlockEntity;
+import grimm.grimmsmod.block.entity.BasicGraveBlockEntity;
 import grimm.grimmsmod.block.entity.BasicCobblestoneGeneratorBlockEntity;
 import grimm.grimmsmod.GrimmsMod;
 
@@ -38,6 +39,7 @@ public class GrimmsModBlockEntities {
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> DEVELOPMENT_CHAMBER = register("development_chamber", GrimmsModBlocks.DEVELOPMENT_CHAMBER, DevelopmentChamberBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> VAULT_OPEN = register("vault_open", GrimmsModBlocks.VAULT_OPEN, VaultOpenBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> VAULT_CLOSED = register("vault_closed", GrimmsModBlocks.VAULT_CLOSED, VaultClosedBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> BASIC_GRAVE = register("basic_grave", GrimmsModBlocks.BASIC_GRAVE, BasicGraveBlockEntity::new);
 
 	private static DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> register(String registryname, DeferredHolder<Block, Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));
@@ -54,5 +56,6 @@ public class GrimmsModBlockEntities {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, DEVELOPMENT_CHAMBER.get(), (blockEntity, side) -> ((DevelopmentChamberBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, VAULT_OPEN.get(), (blockEntity, side) -> ((VaultOpenBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, VAULT_CLOSED.get(), (blockEntity, side) -> ((VaultClosedBlockEntity) blockEntity).getItemHandler());
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, BASIC_GRAVE.get(), (blockEntity, side) -> ((BasicGraveBlockEntity) blockEntity).getItemHandler());
 	}
 }

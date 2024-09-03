@@ -1,0 +1,10 @@
+{
+  "parent": "grimms:custom/basicgrave",
+  "textures": {
+    "all": "minecraft:block/cobblestone",
+    "particle": "minecraft:block/cobblestone",
+    "0": "minecraft:block/coarse_dirt",
+    "1": "minecraft:block/cobblestone"
+  },
+  "render_type": "solid"
+}

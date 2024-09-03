@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "minecraft:coarse_dirt",
+        "1": "minecraft:cobblestone"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -10,8 +10,7 @@
         "files": [
           "src/main/java/grimm/grimmsmod/configuration/ServerConfigConfiguration.java"
         ]
-      },
-      "path": "~/Config"
+      }
     },
     {
       "name": "OnXpPickup",
@@ -3365,20 +3364,6 @@
       "path": "~/Packs"
     },
     {
-      "name": "InitMiscCache",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "init_misc_cache",
-      "metadata": {
-        "files": [
-          "src/main/java/grimm/grimmsmod/procedures/InitMiscCacheProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Procs/InitSession"
-    },
-    {
       "name": "SentientItemHandle",
       "type": "procedure",
       "compiles": true,
@@ -3389,34 +3374,6 @@
           "src/main/java/grimm/grimmsmod/procedures/SentientItemHandleProcedure.java"
         ],
         "dependencies": []
-      },
-      "path": "~/Procs/Handle"
-    },
-    {
-      "name": "CreateBarHandle",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "create_bar_handle",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/grimm/grimmsmod/procedures/CreateBarHandleProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "fill",
-            "type": "number"
-          },
-          {
-            "name": "max",
-            "type": "number"
-          },
-          {
-            "name": "mlen",
-            "type": "number"
-          }
-        ]
       },
       "path": "~/Procs/Handle"
     },
@@ -7090,6 +7047,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -7307,7 +7276,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Procs"
+      "path": "~/Procs/InitSession"
     },
     {
       "name": "ReloadClientConfigCommand",
@@ -7421,6 +7390,141 @@
         ]
       },
       "path": "~/Procs"
+    },
+    {
+      "name": "BasicGrave",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basic_grave",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/block/BasicGraveBlock.java",
+          "src/main/resources/data/grimms/loot_tables/blocks/basic_grave.json",
+          "src/main/java/grimm/grimmsmod/block/entity/BasicGraveBlockEntity.java",
+          "src/main/resources/assets/grimms/blockstates/basic_grave.json",
+          "src/main/resources/assets/grimms/models/item/basic_grave.json",
+          "src/main/resources/assets/grimms/models/block/basic_grave.json"
+        ]
+      },
+      "path": "~/Block"
+    },
+    {
+      "name": "DisableGraveSpawning",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disable_grave_spawning",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/Gamerules"
+    },
+    {
+      "name": "ShoutPrestige",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shout_prestige",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/Gamerules"
+    },
+    {
+      "name": "ShoutLevel",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shout_level",
+      "metadata": {
+        "files": [],
+        "type": "number"
+      },
+      "path": "~/Gamerules"
+    },
+    {
+      "name": "ReloadCommonConfig",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reload_common_config",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/ReloadCommonConfigProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs/InitSession"
+    },
+    {
+      "name": "BasicGraveOnBlockRightClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basic_grave_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/BasicGraveOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "EnableMobGraves",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enable_mob_graves",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/Gamerules"
+    },
+    {
+      "name": "GetKillsTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_kills_text_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/GetKillsTextValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
     }
   ],
   "variable_elements": [
@@ -7483,6 +7587,12 @@
       "type": "datamap",
       "scope": "global",
       "value": "new CompoundTag()"
+    },
+    {
+      "name": "mapversion",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
     }
   ],
   "sound_elements": [
@@ -7518,6 +7628,7 @@
       "~CUSTOM:VaultOpen"
     ],
     "ITEMS:minecraft:enchantable/durability": [
+      "~CUSTOM:Lockpick",
       "~CUSTOM:FaultyNecromancersWand",
       "~CUSTOM:InterdimensionalTrapezoid",
       "~CUSTOM:Whetstone"
@@ -7570,7 +7681,8 @@
       "CUSTOM:Placeholder"
     ],
     "ITEMS:mod:lockpicks": [
-      "CUSTOM:Lockpick"
+      "CUSTOM:Lockpick",
+      "CUSTOM:DebugWand"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
       "~CUSTOM:VaultOpen",
@@ -7758,11 +7870,13 @@
       "gamerule.enableMixing": "Enable Mixing",
       "advancements.murderer.descr": "Kill a fellow player",
       "gamerule.invulnerablityTicks.description": "Lenght of invulnerablity for entities in ticks",
+      "gamerule.shoutLevel": "Shout LevelUp",
       "item.grimms.interdimensional_trapezoid": "Interdimensional Trapezoid",
       "item.grimmsmod.builders_wand": "Builders Wand",
       "gamerule.enableTempenture": "Enable Tempenture",
       "advancements.level_up.descr": "Level up for the first time",
       "advancements.little_timmy.title": "Little Timmy",
+      "gamerule.enableMobGraves.description": "Enables grave\u0027s for non-player entities",
       "gui.grimms.transmutation_gui.label_liquidate_item": "Liquidate Item",
       "effect.grimms.bleeding": "Bleeding",
       "item.grimms.debug_wand": "Debug Wand",
@@ -7785,6 +7899,7 @@
       "advancements.little_john.title": "Little John",
       "item.grimms.copper_wire": "Copper Wire",
       "advancements.rich_guy.title": "Rich Guy",
+      "block.grimms.basic_grave": "Basic Grave",
       "trim_material.grimms.lead_trim": "Lead",
       "death.attack.radiation_damage_type.item": "%1$s was irradiated by %2$s using %3$s",
       "item.grimms.champagne_bottle": "Champagne Bottle",
@@ -7831,6 +7946,7 @@
       "gui.grimms.stats_gui.button_prestige": "Prestige",
       "gui.grimms.written_paper_gui.label_text": "Text",
       "block.grimms.basic_cobblestone_generator": "Basic Cobblestone Generator",
+      "gamerule.enableMobGraves": "Enable mob graves",
       "gui.grimms.statistics_gui.label_map": "Map",
       "advancements.install_grimms_mod.descr": "Install Grimm\u0027s Mod on minecraft, reworked, remade, updated",
       "item.grimms.multi_use_scalpel": "Multi Use Scalpel",
@@ -7871,6 +7987,7 @@
       "gui.grimmsmod.stats_gui.label_empty": "/",
       "gamerule.enableRotting": "Enable food rotting",
       "item.grimms.tungsten_carbide_screw": "Tungsten Carbide Screw",
+      "gamerule.shoutLevel.description": "Sends chat message to all players when someone reaches a multiple of \u003cvalue\u003e in levels",
       "item.grimms.pullup_tab": "Pullup Tab",
       "item.grimmsmod.microscope": "Microscope",
       "advancements.victim.title": "Victim",
@@ -7880,6 +7997,7 @@
       "gui.grimms.transmutation_gui.itemid": "Item registry name",
       "item.grimms.gold_screw": "Gold Screw",
       "gui.grimms.forgery_table_gui.button_forge": "Forge",
+      "gamerule.shoutPrestige.description": "Sends chat message to all players when someone prestiges.",
       "advancements.transmuter.title": "Transmuter",
       "death.attack.bleeding_damage.player": "%1$s lost too much blood whilst trying to escape %2$s",
       "gui.grimmsmod.stats_gui.label_empty1": "/",
@@ -7941,6 +8059,7 @@
       "gui.grimms.written_paper_gui.papertext": "N/A",
       "gamerule.enableRadiation": "Enable radiation",
       "item.grimms.logo": "Logo",
+      "gamerule.disableGraveSpawning": "Disable grave spawning",
       "block.grimms.thorium_block": "Block of Thorium",
       "item.grimms.error": "Error",
       "subtitles.metalpipehit": "Ow my ear hurt",
@@ -7951,6 +8070,7 @@
       "gui.grimms.stats_gui.label_level": "Level",
       "item_group.grimmsmod.grimms_mod": "Grimm\u0027s Mod",
       "advancements.transmuter.descr": "Have 1K TV",
+      "gamerule.disableGraveSpawning.description": "Disables the spawning of grave\u0027s when players die",
       "item.grimmsmod.placeholder": "Placeholder",
       "item.grimms.soda_bottle_2": "Soda Bottle 2",
       "item.grimms.mortar_and_pestle": "Mortar And Pestle",
@@ -7982,6 +8102,7 @@
       "enchantment.grimms.soulbound": "Soulbound",
       "gui.grimms.stats_gui.button_open_prestige_upgrades": "Open Prestige Upgrades",
       "block.grimms.development_chamber": "Mark IX Methane Generator",
+      "gamerule.shoutPrestige": "Shout on prestige",
       "effect.grimms.dizziness": "Dizziness",
       "block.grimms.lead_ore": "Lead Ore",
       "block.grimms.heavy_blaster": "Heavy Blaster",
@@ -8019,10 +8140,6 @@
   "foldersRoot": {
     "name": "~",
     "children": [
-      {
-        "name": "Config",
-        "children": []
-      },
       {
         "name": "Events",
         "children": []

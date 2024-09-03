@@ -11,6 +11,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import java.util.HashMap;
 
 import grimm.grimmsmod.world.inventory.StatisticsGUIMenu;
+import grimm.grimmsmod.procedures.GetKillsTextValueProcedure;
 import grimm.grimmsmod.procedures.GetDeathsTextValueProcedure;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -66,6 +67,9 @@ public class StatisticsGUIScreen extends AbstractContainerScreen<StatisticsGUIMe
 				GetDeathsTextValueProcedure.execute(entity), 6, 16, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.grimms.statistics_gui.label_personal"), 6, 7, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.grimms.statistics_gui.label_map"), 6, 70, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				GetKillsTextValueProcedure.execute(entity), 6, 25, -12829636, false);
 	}
 
 	@Override

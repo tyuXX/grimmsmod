@@ -14,7 +14,7 @@ import java.util.List;
 
 public class LockpickItem extends Item {
 	public LockpickItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
+		super(new Item.Properties().durability(8).rarity(Rarity.COMMON));
 	}
 
 	@Override
@@ -22,5 +22,6 @@ public class LockpickItem extends Item {
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
 		list.add(Component.literal("Can be used on loot vaults, 1/32 chance."));
+		list.add(Component.literal("Can be used on graves, 1/64 chance"));
 	}
 }

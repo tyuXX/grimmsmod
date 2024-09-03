@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "grimms:lockpick",
     "grimms:faulty_necromancers_wand",
     "grimms:interdimensional_trapezoid",
     "grimms:whetstone"

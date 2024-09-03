@@ -1,0 +1,12 @@
+{
+  "_fv": 66,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Shout LevelUp",
+    "description": "Sends chat message to all players when someone reaches a multiple of <value> in levels",
+    "category": "PLAYER",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 10
+  }
+}

@@ -54,6 +54,8 @@ public class OnModLoadedProcedure {
 					return val;
 				}
 			}.getValue("grimms"));
+			tmp2.addProperty("Instant wand placement", false);
+			tmp2.addProperty("Instant LevelUp", true);
 			{
 				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {
@@ -196,7 +198,49 @@ public class OnModLoadedProcedure {
 				exception.printStackTrace();
 			}
 		}
+		tmp = new File((FMLPaths.GAMEDIR.get().toString() + "/grimms/custom/"), File.separator + "prestigemenu");
+		if (!tmp.exists()) {
+			try {
+				tmp.getParentFile().mkdirs();
+				tmp.createNewFile();
+			} catch (IOException exception) {
+				exception.printStackTrace();
+			}
+			try {
+				FileWriter tmpwriter = new FileWriter(tmp, false);
+				BufferedWriter tmpbw = new BufferedWriter(tmpwriter);
+				{
+					tmpbw.write("list");
+					tmpbw.newLine();
+				}
+				{
+					tmpbw.write("prestige:keepinventory");
+					tmpbw.newLine();
+				}
+				{
+					tmpbw.write("prestige:dexterious");
+					tmpbw.newLine();
+				}
+				{
+					tmpbw.write("prestige:powerful");
+					tmpbw.newLine();
+				}
+				{
+					tmpbw.write("prestige:cure");
+					tmpbw.newLine();
+				}
+				{
+					tmpbw.write("prestige:forger");
+					tmpbw.newLine();
+				}
+				tmpbw.close();
+				tmpwriter.close();
+			} catch (IOException exception) {
+				exception.printStackTrace();
+			}
+		}
 		InitCacheProcedure.execute();
+		ReloadCommonConfigProcedure.execute();
 		GrimmsMod.LOGGER.info("Grimm's mod loaded.");
 	}
 }

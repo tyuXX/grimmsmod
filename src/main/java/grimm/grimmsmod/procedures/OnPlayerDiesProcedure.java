@@ -18,6 +18,8 @@ import net.minecraft.advancements.AdvancementHolder;
 
 import javax.annotation.Nullable;
 
+import grimm.grimmsmod.network.GrimmsModVariables;
+
 @EventBusSubscriber
 public class OnPlayerDiesProcedure {
 	@SubscribeEvent
@@ -43,6 +45,7 @@ public class OnPlayerDiesProcedure {
 			final double _tagValue = ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:kills") + 1);
 			CustomData.update(DataComponents.CUSTOM_DATA, (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 		}
+		ChangeNumberDataElementNoSyncProcedure.execute(sourceentity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats, 1, "kills");
 		if (entity instanceof Player && sourceentity instanceof Player) {
 			if (entity instanceof ServerPlayer _player) {
 				AdvancementHolder _adv = _player.server.getAdvancements().get(new ResourceLocation("grimms:victim"));

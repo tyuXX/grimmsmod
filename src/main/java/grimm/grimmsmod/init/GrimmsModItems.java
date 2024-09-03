@@ -260,6 +260,7 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> SOUL_PIERCER = REGISTRY.register("soul_piercer", SoulPiercerItem::new);
 	public static final DeferredHolder<Item, Item> LONG_SWORD = REGISTRY.register("long_sword", LongSwordItem::new);
 	public static final DeferredHolder<Item, Item> STICK_O_CRAFTING = REGISTRY.register("stick_o_crafting", StickOCraftingItem::new);
+	public static final DeferredHolder<Item, Item> BASIC_GRAVE = block(GrimmsModBlocks.BASIC_GRAVE);
 
 	// Start of user code block custom items
 	// End of user code block custom items

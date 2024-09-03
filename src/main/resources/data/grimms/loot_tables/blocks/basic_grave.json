@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "grimms:blocks/basic_grave",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "grimms:basic_grave"
+        }
+      ]
+    }
+  ]
+}
