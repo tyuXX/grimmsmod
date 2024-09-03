@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "minecraft:air",
     "minecraft:end_stone",
     "minecraft:netherrack",
     "minecraft:stone"

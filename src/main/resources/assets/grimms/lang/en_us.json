@@ -86,6 +86,7 @@
   "item.grimms.iridium_hammer": "Iridium Hammer",
   "gui.grimms.prestige_upgrades_gui.button_next": "Next",
   "gui.grimms.stats_gui.button_prestige": "Prestige",
+  "biome.grimms.void_biome": "Void Biome",
   "gui.grimms.written_paper_gui.label_text": "Text",
   "block.grimms.basic_cobblestone_generator": "Basic Cobblestone Generator",
   "gamerule.enableMobGraves": "Enable mob graves",

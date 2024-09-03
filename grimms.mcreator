@@ -7442,6 +7442,34 @@
         ]
       },
       "path": "~/Command"
+    },
+    {
+      "name": "VoidBiome",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_biome",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/worldgen/biome/void_biome.json"
+        ]
+      },
+      "path": "~/Biomes"
+    },
+    {
+      "name": "VoidDimension",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_dimension",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/grimms/dimension_type/void_dimension.json",
+          "src/main/java/grimm/grimmsmod/world/dimension/VoidDimensionDimension.java",
+          "src/main/resources/data/grimms/dimension/void_dimension.json"
+        ]
+      },
+      "path": "~/Dimensions"
     }
   ],
   "variable_elements": [
@@ -7585,6 +7613,7 @@
       "~CUSTOM:FullTinCan"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.AIR",
       "~Blocks.END_STONE",
       "~Blocks.NETHERRACK",
       "~Blocks.STONE#0"
@@ -7856,6 +7885,7 @@
       "item.grimms.iridium_hammer": "Iridium Hammer",
       "gui.grimms.prestige_upgrades_gui.button_next": "Next",
       "gui.grimms.stats_gui.button_prestige": "Prestige",
+      "biome.grimms.void_biome": "Void Biome",
       "gui.grimms.written_paper_gui.label_text": "Text",
       "block.grimms.basic_cobblestone_generator": "Basic Cobblestone Generator",
       "gamerule.enableMobGraves": "Enable mob graves",
@@ -8149,6 +8179,10 @@
       },
       {
         "name": "Gamerules",
+        "children": []
+      },
+      {
+        "name": "Biomes",
         "children": []
       }
     ]
