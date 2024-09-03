@@ -22,6 +22,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.nbt.DoubleTag;
+import net.minecraft.nbt.ByteTag;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.component.DataComponents;
@@ -34,7 +35,6 @@ import javax.annotation.Nullable;
 import grimm.grimmsmod.network.GrimmsModVariables;
 import grimm.grimmsmod.init.GrimmsModMobEffects;
 import grimm.grimmsmod.init.GrimmsModItems;
-import grimm.grimmsmod.configuration.ServerConfigConfiguration;
 
 @EventBusSubscriber
 public class OnPlayerTickProcedure {
@@ -119,7 +119,7 @@ public class OnPlayerTickProcedure {
 		if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler) {
 			for (int _idx = 0; _idx < _modHandler.getSlots(); _idx++) {
 				ItemStack itemstackiterator = _modHandler.getStackInSlot(_idx).copy();
-				if (ServerConfigConfiguration.RADENABLE.get()) {
+				if ((GrimmsModVariables.config.get("common:enabrad")) instanceof ByteTag _byteTag ? _byteTag.getAsByte() == 1 : false) {
 					if (GrimmsModVariables.cache.contains(("rad:" + BuiltInRegistries.ITEM.getKey(itemstackiterator.getItem()).toString()))) {
 						ChangeNumberDataElementProcedure.execute(entity.getData(GrimmsModVariables.PLAYER_VARIABLES).lifetimestats, entity, false,
 								itemstackiterator.getCount() * ((GrimmsModVariables.cache.get(("rad:" + BuiltInRegistries.ITEM.getKey(itemstackiterator.getItem()).toString()))) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D),
@@ -132,7 +132,7 @@ public class OnPlayerTickProcedure {
 		}
 		SetDataElementProcedure.execute(DoubleTag.valueOf(radsontick), entity.getData(GrimmsModVariables.PLAYER_VARIABLES).lifetimestats, entity, false, "grimm:radslasttick");
 		for (int index0 = 0; index0 < 36; index0++) {
-			if (ServerConfigConfiguration.ROTENABLE.get() && !((new Object() {
+			if (((GrimmsModVariables.config.get("common:enabrot")) instanceof ByteTag _byteTag ? _byteTag.getAsByte() == 1 : false) && !((new Object() {
 				public ItemStack getItemStack(int sltid, Entity entity) {
 					if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler) {
 						return _modHandler.getStackInSlot(sltid).copy();
@@ -154,7 +154,14 @@ public class OnPlayerTickProcedure {
 						final double _tagValue = (tmp2.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:rot") + 1);
 						CustomData.update(DataComponents.CUSTOM_DATA, tmp2, tag -> tag.putDouble(_tagName, _tagValue));
 					}
-					if (tmp2.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:rot") > (double) ServerConfigConfiguration.ROTTIME.get()
+					{
+						final String _tagName = "grimms:rotp";
+						final double _tagValue = ((tmp2.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:rot") * 100)
+								/ (((GrimmsModVariables.config.get("common:rottime")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D)
+										* ((tmp2.has(DataComponents.FOOD) ? tmp2.getFoodProperties(null).saturation() : 0) + (tmp2.has(DataComponents.FOOD) ? tmp2.getFoodProperties(null).nutrition() : 0))));
+						CustomData.update(DataComponents.CUSTOM_DATA, tmp2, tag -> tag.putDouble(_tagName, _tagValue));
+					}
+					if (tmp2.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:rot") > ((GrimmsModVariables.config.get("common:rottime")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D)
 							* ((tmp2.has(DataComponents.FOOD) ? tmp2.getFoodProperties(null).saturation() : 0) + (tmp2.has(DataComponents.FOOD) ? tmp2.getFoodProperties(null).nutrition() : 0))) {
 						{
 							final String _tagName = "grimms:rot";
@@ -182,25 +189,29 @@ public class OnPlayerTickProcedure {
 			}
 			tmp = tmp + 1;
 		}
-		if (((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).lifetimestats.get("grimm:rads")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) > (double) ServerConfigConfiguration.RADPOISLIM.get()) {
+		if (((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).lifetimestats.get("grimm:rads")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) > ((GrimmsModVariables.config.get("common:radlim")) instanceof DoubleTag _doubleTag
+				? _doubleTag.getAsDouble()
+				: 0.0D)) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(GrimmsModMobEffects.RADIATION_POSIONING, 60,
 						(int) Math.min(10, Math.round(Math.log10((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).lifetimestats.get("grimm:rads")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D))), true, false));
-			if (((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).lifetimestats.get("grimm:rads")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) > (double) ServerConfigConfiguration.RADPOISLIM.get() * 100) {
+			if (((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).lifetimestats.get("grimm:rads")) instanceof DoubleTag _doubleTag
+					? _doubleTag.getAsDouble()
+					: 0.0D) > ((GrimmsModVariables.config.get("common:radlim")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) * 100) {
 				entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("grimms:radiation_damage_type")))),
 						entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
 			}
 		}
 		if (world.isClientSide()) {
-			if (entity instanceof LivingEntity _livEnt69 && _livEnt69.hasEffect(GrimmsModMobEffects.SEIZURE)) {
+			if (entity instanceof LivingEntity _livEnt80 && _livEnt80.hasEffect(GrimmsModMobEffects.SEIZURE)) {
 				if (GrimmsModVariables.WorldVariables.get(world).worldtick % 5 == 0) {
 					ShaderLocation = "minecraft:shaders/post/invert.json";
 				} else {
 					ShaderLocation = "n/a";
 				}
-			} else if (entity instanceof LivingEntity _livEnt70 && _livEnt70.hasEffect(GrimmsModMobEffects.SUPER_DIZZINESS)) {
+			} else if (entity instanceof LivingEntity _livEnt81 && _livEnt81.hasEffect(GrimmsModMobEffects.SUPER_DIZZINESS)) {
 				ShaderLocation = "minecraft:shaders/post/blur.json";
-			} else if (entity instanceof LivingEntity _livEnt71 && _livEnt71.hasEffect(GrimmsModMobEffects.DIZZINESS)) {
+			} else if (entity instanceof LivingEntity _livEnt82 && _livEnt82.hasEffect(GrimmsModMobEffects.DIZZINESS)) {
 				ShaderLocation = "minecraft:shaders/post/invert.json";
 			} else {
 				ShaderLocation = "n/a";

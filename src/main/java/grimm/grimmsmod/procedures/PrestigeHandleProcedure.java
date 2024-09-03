@@ -10,7 +10,7 @@ import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.AdvancementHolder;
 
 import grimm.grimmsmod.network.GrimmsModVariables;
-import grimm.grimmsmod.configuration.ServerConfigConfiguration;
+import grimm.grimmsmod.init.GrimmsModGameRules;
 
 public class PrestigeHandleProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
@@ -31,7 +31,7 @@ public class PrestigeHandleProcedure {
 					}
 				}
 			}
-			if (ServerConfigConfiguration.SPRESTIGE.get()) {
+			if (world.getLevelData().getGameRules().getBoolean(GrimmsModGameRules.SHOUT_PRESTIGE)) {
 				if (!world.isClientSide() && world.getServer() != null)
 					world.getServer().getPlayerList()
 							.broadcastSystemMessage(

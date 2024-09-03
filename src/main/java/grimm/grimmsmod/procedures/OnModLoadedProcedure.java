@@ -56,6 +56,12 @@ public class OnModLoadedProcedure {
 			}.getValue("grimms"));
 			tmp2.addProperty("Instant wand placement", false);
 			tmp2.addProperty("Instant LevelUp", true);
+			tmp2.addProperty("Enable radiation", true);
+			tmp2.addProperty("Radiation limit", 1000);
+			tmp2.addProperty("Enable thirst", true);
+			tmp2.addProperty("Enable tempenture", true);
+			tmp2.addProperty("Enable rotting", true);
+			tmp2.addProperty("Rot time", 1500);
 			{
 				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {

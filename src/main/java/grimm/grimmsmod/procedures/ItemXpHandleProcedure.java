@@ -1,16 +1,19 @@
 package grimm.grimmsmod.procedures;
 
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.nbt.ByteTag;
 import net.minecraft.core.component.DataComponents;
 
-import grimm.grimmsmod.configuration.ServerConfigConfiguration;
+import grimm.grimmsmod.network.GrimmsModVariables;
+import grimm.grimmsmod.init.GrimmsModGameRules;
 
 public class ItemXpHandleProcedure {
-	public static void execute(ItemStack itemstack, double xpamount) {
+	public static void execute(LevelAccessor world, ItemStack itemstack, double xpamount) {
 		double levelups = 0;
 		if (!(itemstack.getItem() == Blocks.AIR.asItem()) && !itemstack.is(ItemTags.create(new ResourceLocation("grimms:notlevelable"))) && itemstack.getMaxDamage() > 0) {
 			if (!itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("grimms:itemlvlinit")) {
@@ -21,7 +24,7 @@ public class ItemXpHandleProcedure {
 				}
 				{
 					final String _tagName = "grimms:lvl";
-					final double _tagValue = 1;
+					final double _tagValue = 0;
 					CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 			}
@@ -31,11 +34,11 @@ public class ItemXpHandleProcedure {
 				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 			}
 			while (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:xp") >= Math
-					.round(Math.pow(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:lvl") * (double) ServerConfigConfiguration.LVLMULT.get(), (double) ServerConfigConfiguration.LVLEXPO.get()))) {
+					.round(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:lvl") * (world.getLevelData().getGameRules().getInt(GrimmsModGameRules.ITEM_XP_MULTIPILIER)))) {
 				{
 					final String _tagName = "grimms:xp";
-					final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:xp") - Math.round(
-							Math.pow(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:lvl") * (double) ServerConfigConfiguration.LVLMULT.get(), (double) ServerConfigConfiguration.LVLEXPO.get())));
+					final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:xp")
+							- Math.round(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:lvl") * (world.getLevelData().getGameRules().getInt(GrimmsModGameRules.ITEM_XP_MULTIPILIER))));
 					CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 				{
@@ -44,12 +47,17 @@ public class ItemXpHandleProcedure {
 					CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 				levelups = levelups + 1;
-				if (!ServerConfigConfiguration.INSTLEVELUP.get()) {
+				if (!((GrimmsModVariables.config.get("common:instlvlup")) instanceof ByteTag _byteTag ? _byteTag.getAsByte() == 1 : false)) {
 					break;
 				}
 			}
 		}
 		if (levelups > 0) {
+			{
+				final String _tagName = "grimms:xpn";
+				final double _tagValue = Math.round(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:lvl") * (world.getLevelData().getGameRules().getInt(GrimmsModGameRules.ITEM_XP_MULTIPILIER)));
+				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
+			}
 			if (!itemstack.is(ItemTags.create(new ResourceLocation("grimms:customlevelable")))) {
 				{
 					final String _tagName = "grimms:lvlpoints";

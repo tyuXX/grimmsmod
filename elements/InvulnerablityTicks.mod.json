@@ -7,6 +7,6 @@
     "description": "Lenght of invulnerablity for entities in ticks",
     "category": "MISC",
     "defaultValueLogic": false,
-    "defaultValueNumber": 10
+    "defaultValueNumber": 20
   }
 }

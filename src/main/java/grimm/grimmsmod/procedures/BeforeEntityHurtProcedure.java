@@ -7,6 +7,7 @@ import net.neoforged.bus.api.ICancellableEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
@@ -26,22 +27,22 @@ import net.minecraft.core.component.DataComponents;
 import javax.annotation.Nullable;
 
 import grimm.grimmsmod.init.GrimmsModMobEffects;
-import grimm.grimmsmod.configuration.ServerConfigConfiguration;
+import grimm.grimmsmod.init.GrimmsModGameRules;
 
 @EventBusSubscriber
 public class BeforeEntityHurtProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingHurtEvent event) {
 		if (event.getEntity() != null) {
-			execute(event, event.getSource(), event.getEntity(), event.getAmount());
+			execute(event, event.getEntity().level(), event.getSource(), event.getEntity(), event.getAmount());
 		}
 	}
 
-	public static InteractionResult execute(DamageSource damagesource, Entity entity, double amount) {
-		return execute(null, damagesource, entity, amount);
+	public static InteractionResult execute(LevelAccessor world, DamageSource damagesource, Entity entity, double amount) {
+		return execute(null, world, damagesource, entity, amount);
 	}
 
-	private static InteractionResult execute(@Nullable Event event, DamageSource damagesource, Entity entity, double amount) {
+	private static InteractionResult execute(@Nullable Event event, LevelAccessor world, DamageSource damagesource, Entity entity, double amount) {
 		if (damagesource == null || entity == null)
 			return InteractionResult.PASS;
 		double tmp = 0;
@@ -71,13 +72,11 @@ public class BeforeEntityHurtProcedure {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(GrimmsModMobEffects.BLEEDING, 120, 1, true, false));
 		}
-		ItemXpHandleProcedure.execute(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY, amount);
-		ItemXpHandleProcedure.execute(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY, amount);
-		ItemXpHandleProcedure.execute(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY, amount);
-		ItemXpHandleProcedure.execute(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY, amount);
-		if (!ServerConfigConfiguration.INVUL.get()) {
-			entity.invulnerableTime = 0;
-		}
+		ItemXpHandleProcedure.execute(world, entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY, amount);
+		ItemXpHandleProcedure.execute(world, entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY, amount);
+		ItemXpHandleProcedure.execute(world, entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY, amount);
+		ItemXpHandleProcedure.execute(world, entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY, amount);
+		entity.invulnerableTime = (world.getLevelData().getGameRules().getInt(GrimmsModGameRules.INVULNERABLITY_TICKS));
 		return InteractionResult.SUCCESS;
 	}
 }

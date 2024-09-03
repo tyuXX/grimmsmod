@@ -6,11 +6,12 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.nbt.DoubleTag;
+import net.minecraft.nbt.ByteTag;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.AdvancementHolder;
 
 import grimm.grimmsmod.network.GrimmsModVariables;
-import grimm.grimmsmod.configuration.ServerConfigConfiguration;
+import grimm.grimmsmod.init.GrimmsModGameRules;
 
 public class XpHandleProcedure {
 	public static void execute(LevelAccessor world, Entity entity, double xpamount) {
@@ -27,8 +28,9 @@ public class XpHandleProcedure {
 					((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:prestige")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D)
 							* ((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:level")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D),
 					entity.getStringUUID() + "/grimm:money");
-			if (ServerConfigConfiguration.SLEVEL.get()
-					&& Math.round((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:level")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) % (double) ServerConfigConfiguration.SNLEVEL.get() == 0) {
+			if (((GrimmsModVariables.config.get("common:instlvlup")) instanceof ByteTag _byteTag ? _byteTag.getAsByte() == 1 : false)
+					&& Math.round((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentstats.get("grimm:level")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D)
+							% (world.getLevelData().getGameRules().getInt(GrimmsModGameRules.SHOUT_LEVEL)) == 0) {
 				if (!world.isClientSide() && world.getServer() != null)
 					world.getServer().getPlayerList()
 							.broadcastSystemMessage(
@@ -37,7 +39,7 @@ public class XpHandleProcedure {
 									false);
 			}
 			leveledup = true;
-			if (!ServerConfigConfiguration.INSTLEVELUP.get()) {
+			if (!((GrimmsModVariables.config.get("common:instlvlup")) instanceof ByteTag _byteTag ? _byteTag.getAsByte() == 1 : false)) {
 				break;
 			}
 		}

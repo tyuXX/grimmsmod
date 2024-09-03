@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 import grimm.grimmsmod.network.GrimmsModVariables;
-import grimm.grimmsmod.configuration.ServerConfigConfiguration;
 
 @EventBusSubscriber(value = {Dist.CLIENT})
 public class OnTooltipRenderedProcedure {
@@ -41,19 +40,12 @@ public class OnTooltipRenderedProcedure {
 		if (itemstack.is(ItemTags.create(new ResourceLocation("grimms:cantrot")))) {
 			tooltip.add(Component.literal("Can't rot."));
 		} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:rot") > 0) {
-			tooltip.add(
-					Component
-							.literal(
-									("\u00A72Rotten "
-											+ new java.text.DecimalFormat("##.##")
-													.format((itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:rot") * 100) / ((double) ServerConfigConfiguration.ROTTIME.get()
-															* ((itemstack.has(DataComponents.FOOD) ? itemstack.getFoodProperties(null).nutrition() : 0) + (itemstack.has(DataComponents.FOOD) ? itemstack.getFoodProperties(null).saturation() : 0))))
-											+ "%")));
+			tooltip.add(Component.literal(("\u00A72Rotten " + new java.text.DecimalFormat("##.##").format(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:rotp")) + "%")));
 		}
 		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("grimms:itemlvlinit")) {
 			tooltip.add(Component.literal(("\u00A77Item Level: " + new java.text.DecimalFormat("##").format(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:lvl")))));
-			tooltip.add(Component.literal(("\u00A77Xp: " + new java.text.DecimalFormat("##").format(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:xp")) + "/" + new java.text.DecimalFormat("##")
-					.format(Math.pow(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:lvl") * (double) ServerConfigConfiguration.LVLMULT.get(), (double) ServerConfigConfiguration.LVLEXPO.get())))));
+			tooltip.add(Component.literal(("\u00A77Xp: " + new java.text.DecimalFormat("##").format(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:xp")) + "/"
+					+ new java.text.DecimalFormat("##").format(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("grimms:xpn")))));
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("grimms:sentient")) {
 				tooltip.add(Component.literal("\u00A7bSentient"));
 			}

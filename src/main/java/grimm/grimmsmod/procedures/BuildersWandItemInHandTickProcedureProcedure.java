@@ -4,15 +4,16 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.nbt.ByteTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 
-import grimm.grimmsmod.configuration.ServerConfigConfiguration;
+import grimm.grimmsmod.network.GrimmsModVariables;
 
 public class BuildersWandItemInHandTickProcedureProcedure {
 	public static void execute(LevelAccessor world, ItemStack itemstack) {
-		if (ServerConfigConfiguration.INSTWAND.get()) {
+		if ((GrimmsModVariables.config.get("common:instwand")) instanceof ByteTag _byteTag ? _byteTag.getAsByte() == 1 : false) {
 			while (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("running")) {
 				world.setBlock(
 						BlockPos.containing(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("lx"), itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("ly"),

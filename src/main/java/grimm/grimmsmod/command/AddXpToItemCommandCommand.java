@@ -34,7 +34,7 @@ public class AddXpToItemCommandCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			AddXpToItemProcedure.execute(arguments, entity);
+			AddXpToItemProcedure.execute(world, arguments, entity);
 			return 0;
 		})));
 	}
