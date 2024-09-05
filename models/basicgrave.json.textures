@@ -2,8 +2,8 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "minecraft:coarse_dirt",
-        "1": "minecraft:cobblestone"
+        "0": "minecraft:cobblestone",
+        "1": "minecraft:coarse_dirt"
       },
       "name": "default"
     }

@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
       "model": "grimms:block/basic_grave"
+    },
+    "facing=east": {
+      "model": "grimms:block/basic_grave",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "grimms:block/basic_grave",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "grimms:block/basic_grave",
+      "y": 270
     }
   }
 }

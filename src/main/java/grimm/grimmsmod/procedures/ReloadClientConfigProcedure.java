@@ -33,6 +33,7 @@ public class ReloadClientConfigProcedure {
 				GrimmsModVariables.config.put("client:playerhud", ByteTag.valueOf(tmp2.get("Enable Player HUD").getAsBoolean()));
 				GrimmsModVariables.config.put("client:coordshud", ByteTag.valueOf(tmp2.get("Enable Coordinates HUD").getAsBoolean()));
 				GrimmsModVariables.config.put("client:daychud", ByteTag.valueOf(tmp2.get("Enable Day Counter HUD").getAsBoolean()));
+				GrimmsModVariables.config.put("client:blockchud", ByteTag.valueOf(tmp2.get("Enable looked block HUD").getAsBoolean()));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

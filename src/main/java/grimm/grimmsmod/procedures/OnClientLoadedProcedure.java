@@ -65,6 +65,7 @@ public class OnClientLoadedProcedure {
 			tmp2.addProperty("Enable Coordinates HUD", true);
 			tmp2.addProperty("Enable Day Counter HUD comment", "Shows the current day in the top left corner.");
 			tmp2.addProperty("Enable Day Counter HUD", true);
+			tmp2.addProperty("Enable looked block HUD", true);
 			{
 				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {

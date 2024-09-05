@@ -1,0 +1,7 @@
+{
+  "_fv": 66,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"return_logic\"><value name=\"return\"><block type=\"logic_binary_ops\"><field name=\"OP\">AND</field><value name=\"A\"><block type=\"entity_looking_at_block\"><field name=\"fluid_mode\">NONE</field><field name=\"block_mode\">OUTLINE</field><value name=\"entity\"><block type=\"entity_from_deps\"></block></value><value name=\"maxdistance\"><block type=\"get_attribute_whole\"><field name=\"attribute\">FORGE:BLOCK_REACH</field><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block></value></block></value><value name=\"B\"><block type=\"dataelement_get_boolean\"><value name=\"element\"><block type=\"datamap_get_element\"><value name=\"key\"><block type=\"text\"><field name=\"TEXT\">client:blockchud</field></block></value><value name=\"map\"><block type=\"variables_get_datamap\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" is_player_var=\"false\" has_entity=\"false\"></mutation><field name=\"VAR\">global:config</field></block></value></block></value></block></value></block></value></block></next></block></xml>"
+  }
+}

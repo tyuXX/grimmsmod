@@ -77,6 +77,26 @@
           "x": 6,
           "y": 26
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_block_entity_is_looking",
+          "text": {
+            "fixedValue": "",
+            "name": "GetBlockEntityIsLookingAt"
+          },
+          "color": {
+            "value": -6710887,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "IsEntityLookingAtBlock"
+          },
+          "anchorPoint": "CENTER",
+          "x": 213,
+          "y": 107
+        }
       }
     ],
     "baseTexture": "",
