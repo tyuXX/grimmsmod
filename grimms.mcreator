@@ -7528,6 +7528,48 @@
         ]
       },
       "path": "~/Particles"
+    },
+    {
+      "name": "CreateCommonConfig",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "create_common_config",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/CreateCommonConfigProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs/InitSession"
+    },
+    {
+      "name": "CreateClientConfig",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "create_client_config",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/CreateClientConfigProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs/InitSession"
+    },
+    {
+      "name": "CreateServerConfig",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "create_server_config",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/CreateServerConfigProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs/InitSession"
     }
   ],
   "variable_elements": [
@@ -7631,8 +7673,8 @@
       "~CUSTOM:VaultOpen"
     ],
     "ITEMS:minecraft:enchantable/durability": [
-      "~CUSTOM:Lockpick",
       "~CUSTOM:FaultyNecromancersWand",
+      "~CUSTOM:Lockpick",
       "~CUSTOM:InterdimensionalTrapezoid",
       "~CUSTOM:Whetstone"
     ],
@@ -7881,8 +7923,8 @@
       "gamerule.enableMobGraves.description": "Enables grave\u0027s for non-player entities",
       "gui.grimms.transmutation_gui.label_liquidate_item": "Liquidate Item",
       "effect.grimms.bleeding": "Bleeding",
-      "item.grimms.tin_ingot": "Tin",
       "item.grimms.debug_wand": "Debug Wand",
+      "item.grimms.tin_ingot": "Tin",
       "block.grimms.loot_crate": "Loot Crate",
       "block.grimms.distillery": "Distillery",
       "block.grimms.lead_block": "Block of Lead",
@@ -7911,10 +7953,10 @@
       "item.grimms.soda_bottle": "Soda Bottle",
       "item.grimms.photograph_of_motorcar": "Photograph Of Motorcar",
       "item.grimms.variable_pressure_tank": "Variable Pressure Tank",
-      "gui.grimms.key_gui.label_set_password": "Set Password",
       "item.grimms.long_sword": "Long Sword",
-      "item.grimms.faulty_necromancers_wand": "Faulty Necromancers Wand",
+      "gui.grimms.key_gui.label_set_password": "Set Password",
       "advancements.prank_em_john.descr": "Metal pipe go bonk!",
+      "item.grimms.faulty_necromancers_wand": "Faulty Necromancers Wand",
       "advancements.comrade.title": "Comrade",
       "trim_material.grimms.iridium_trim": "Iridium",
       "item.grimms.lead_ingot": "Lead",
