@@ -28,6 +28,7 @@ import java.util.ArrayList;
 import grimm.grimmsmod.network.GrimmsModVariables;
 import grimm.grimmsmod.init.GrimmsModTabs;
 import grimm.grimmsmod.init.GrimmsModSounds;
+import grimm.grimmsmod.init.GrimmsModParticleTypes;
 import grimm.grimmsmod.init.GrimmsModMobEffects;
 import grimm.grimmsmod.init.GrimmsModMenus;
 import grimm.grimmsmod.init.GrimmsModItems;
@@ -57,6 +58,7 @@ public class GrimmsMod {
 		GrimmsModMobEffects.REGISTRY.register(modEventBus);
 		GrimmsModEnchantments.REGISTRY.register(modEventBus);
 		GrimmsModMenus.REGISTRY.register(modEventBus);
+		GrimmsModParticleTypes.REGISTRY.register(modEventBus);
 
 		// Start of user code block mod init
 		// End of user code block mod init
