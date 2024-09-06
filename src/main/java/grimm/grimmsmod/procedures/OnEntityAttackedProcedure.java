@@ -67,7 +67,7 @@ public class OnEntityAttackedProcedure {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(GrimmsModMobEffects.BLEEDING, (int) (60 * (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(GrimmsModEnchantments.SHARP.get())),
 						(int) Math.ceil((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(GrimmsModEnchantments.SHARP.get())
-								/ (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0)),
+								/ Math.max(entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0, 1)),
 						true, false));
 		}
 		if (EnchantmentHelper.getItemEnchantmentLevel(GrimmsModEnchantments.XP_BOOST.get(), (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0) {

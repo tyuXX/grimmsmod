@@ -17,7 +17,10 @@ import java.util.HashMap;
 
 import grimm.grimmsmod.world.inventory.PrestigeUpgradesGUIMenu;
 import grimm.grimmsmod.procedures.PrestigepointsTextValueProcedure;
-import grimm.grimmsmod.procedures.PrestigeUpgradeTextValueProcedure;
+import grimm.grimmsmod.procedures.PrestigeUpgradeNameTextValueProcedure;
+import grimm.grimmsmod.procedures.PrestigeUpgradeMaxLevelTextValueProcedure;
+import grimm.grimmsmod.procedures.PrestigeUpgradeLevelTextValueProcedure;
+import grimm.grimmsmod.procedures.PrestigeUpgradeCostTextValueProcedure;
 import grimm.grimmsmod.network.PrestigeUpgradesGUIButtonMessage;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -86,13 +89,22 @@ public class PrestigeUpgradesGUIScreen extends AbstractContainerScreen<PrestigeU
 				PrestigepointsTextValueProcedure.execute(entity), 19, 12, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				PrestigeUpgradeTextValueProcedure.execute(entity, guistate), 19, 30, -12829636, false);
+				PrestigeUpgradeNameTextValueProcedure.execute(guistate), 19, 30, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				PrestigeUpgradeLevelTextValueProcedure.execute(entity, guistate), 19, 39, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				PrestigeUpgradeMaxLevelTextValueProcedure.execute(guistate), 19, 48, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				PrestigeUpgradeCostTextValueProcedure.execute(guistate), 19, 57, -12829636, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		prestigeupgradeid = new EditBox(this.font, this.leftPos + 20, this.topPos + 58, 118, 18, Component.translatable("gui.grimms.prestige_upgrades_gui.prestigeupgradeid")) {
+		prestigeupgradeid = new EditBox(this.font, this.leftPos + 20, this.topPos + 85, 118, 18, Component.translatable("gui.grimms.prestige_upgrades_gui.prestigeupgradeid")) {
 			@Override
 			public void insertText(String text) {
 				super.insertText(text);
@@ -120,7 +132,7 @@ public class PrestigeUpgradesGUIScreen extends AbstractContainerScreen<PrestigeU
 				PacketDistributor.sendToServer(new PrestigeUpgradesGUIButtonMessage(0, x, y, z));
 				PrestigeUpgradesGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 100, this.topPos + 93, 46, 20).build();
+		}).bounds(this.leftPos + 100, this.topPos + 111, 46, 20).build();
 		guistate.put("button:button_next", button_next);
 		this.addRenderableWidget(button_next);
 		button_upgrade = Button.builder(Component.translatable("gui.grimms.prestige_upgrades_gui.button_upgrade"), e -> {
@@ -128,7 +140,7 @@ public class PrestigeUpgradesGUIScreen extends AbstractContainerScreen<PrestigeU
 				PacketDistributor.sendToServer(new PrestigeUpgradesGUIButtonMessage(1, x, y, z));
 				PrestigeUpgradesGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		}).bounds(this.leftPos + 19, this.topPos + 93, 61, 20).build();
+		}).bounds(this.leftPos + 19, this.topPos + 111, 61, 20).build();
 		guistate.put("button:button_upgrade", button_upgrade);
 		this.addRenderableWidget(button_upgrade);
 	}

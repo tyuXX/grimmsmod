@@ -17,6 +17,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
 import grimm.grimmsmod.network.OpenStatsMessage;
+import grimm.grimmsmod.network.OpenItemAttributionMenuMessage;
 import grimm.grimmsmod.network.OpenCraftingMenuMessage;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -34,7 +35,19 @@ public class GrimmsModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping OPEN_ITEM_ATTRIBUTION_MENU = new KeyMapping("key.grimms.open_item_attribution_menu", GLFW.GLFW_KEY_X, "key.categories.grimmsmod");
+	public static final KeyMapping OPEN_ITEM_ATTRIBUTION_MENU = new KeyMapping("key.grimms.open_item_attribution_menu", GLFW.GLFW_KEY_X, "key.categories.grimmsmod") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				PacketDistributor.sendToServer(new OpenItemAttributionMenuMessage(0, 0));
+				OpenItemAttributionMenuMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 	public static final KeyMapping OPEN_CRAFTING_MENU = new KeyMapping("key.grimms.open_crafting_menu", GLFW.GLFW_KEY_C, "key.categories.grimms") {
 		private boolean isDownOld = false;
 
@@ -62,6 +75,7 @@ public class GrimmsModKeyMappings {
 		public static void onClientTick(ClientTickEvent.Post event) {
 			if (Minecraft.getInstance().screen == null) {
 				OPEN_STATS.consumeClick();
+				OPEN_ITEM_ATTRIBUTION_MENU.consumeClick();
 				OPEN_CRAFTING_MENU.consumeClick();
 			}
 		}

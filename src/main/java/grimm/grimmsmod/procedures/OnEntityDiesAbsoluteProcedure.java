@@ -53,7 +53,7 @@ public class OnEntityDiesAbsoluteProcedure {
 		double tmp3 = 0;
 		tmp = new ItemStack(GrimmsModItems.DEATH_PACKAGE.get());
 		if (!world.getLevelData().getGameRules().getBoolean(GameRules.RULE_KEEPINVENTORY)) {
-			if (((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.get("prestige:keepinventory")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) > 9) {
+			if (((entity.getData(GrimmsModVariables.PLAYER_VARIABLES).persistentabilities.get("prestige:keepinventory")) instanceof DoubleTag _doubleTag ? _doubleTag.getAsDouble() : 0.0D) > 0) {
 				if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler) {
 					for (int _idx = 0; _idx < _modHandler.getSlots(); _idx++) {
 						ItemStack itemstackiterator = _modHandler.getStackInSlot(_idx).copy();

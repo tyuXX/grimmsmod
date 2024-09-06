@@ -58,6 +58,9 @@ public class OnMapLoadProcedure {
 			}.getValue("grimms");
 			GrimmsModVariables.MapVariables.get(world).syncData(world);
 		}
+		if (GrimmsModVariables.cache.isEmpty()) {
+			InitCacheProcedure.execute();
+		}
 		GrimmsMod.LOGGER
 				.info(("Grimm's mod succsessfully loaded in World [" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
 						+ "/" + ((Level) world).dimension().location().toString() + "]"));

@@ -141,11 +141,11 @@ public class GrimmsModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.grimms.grimms_mod_special")).icon(() -> new ItemStack(GrimmsModItems.BUILDERS_WAND.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(GrimmsModItems.BUILDERS_WAND.get());
 				tabData.accept(GrimmsModItems.LOGO.get());
-				tabData.accept(GrimmsModItems.TEST_DUMMY_SPAWN_EGG.get());
 				tabData.accept(GrimmsModBlocks.LOOT_CRATE.get().asItem());
 				tabData.accept(GrimmsModItems.DESPAWN_WAND.get());
 				tabData.accept(GrimmsModItems.DEBUG_WAND.get());
 				tabData.accept(GrimmsModItems.LOOT_BAG.get());
+				tabData.accept(GrimmsModItems.TEST_DUMMY_SPAWN_EGG.get());
 			})
 
 					.build());

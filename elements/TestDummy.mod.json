@@ -4,16 +4,16 @@
   "definition": {
     "mobName": "Test Dummy",
     "mobLabel": "Test Dummy",
-    "mobModelName": "Villager",
-    "mobModelTexture": "grimsmod.png",
+    "mobModelName": "Modeltestdummy",
+    "mobModelTexture": "testdummy.png",
     "transparentModelCondition": {
-      "fixedValue": true
+      "fixedValue": false
     },
     "isShakingCondition": {
       "fixedValue": false
     },
     "solidBoundingBox": {
-      "fixedValue": true
+      "fixedValue": false
     },
     "visualScale": {
       "fixedValue": 1.0
@@ -23,12 +23,12 @@
     },
     "modelLayers": [],
     "modelWidth": 0.6,
-    "modelHeight": 1.95,
+    "modelHeight": 2.0,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -10092391,
+      "value": -1,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
@@ -41,8 +41,8 @@
       }
     ],
     "isBoss": true,
-    "bossBarColor": "PURPLE",
-    "bossBarType": "NOTCHED_20",
+    "bossBarColor": "WHITE",
+    "bossBarType": "PROGRESS",
     "equipmentMainHand": {
       "value": ""
     },
@@ -63,15 +63,15 @@
     },
     "mobBehaviourType": "Creature",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 0,
+    "attackStrength": 3,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
-    "movementSpeed": 0.0,
-    "stepHeight": 0.0,
+    "movementSpeed": 0.3,
+    "stepHeight": 0.6,
     "armorBaseValue": 0.0,
-    "trackingRange": 0,
-    "followRange": 0,
-    "health": 512,
+    "trackingRange": 64,
+    "followRange": 16,
+    "health": 1024,
     "xpAmount": 0,
     "waterMob": false,
     "breatheUnderwater": {
@@ -139,7 +139,7 @@
     "spawnThisMob": false,
     "doesDespawnWhenIdle": false,
     "spawningProbability": 20,
-    "mobSpawningType": "misc",
+    "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 4,
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [],

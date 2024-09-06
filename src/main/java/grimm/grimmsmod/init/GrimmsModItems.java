@@ -151,7 +151,6 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> STEEL = REGISTRY.register("steel", SteelItem::new);
 	public static final DeferredHolder<Item, Item> KATANA = REGISTRY.register("katana", KatanaItem::new);
 	public static final DeferredHolder<Item, Item> DEATH_PACKAGE = REGISTRY.register("death_package", DeathPackageItem::new);
-	public static final DeferredHolder<Item, Item> TEST_DUMMY_SPAWN_EGG = REGISTRY.register("test_dummy_spawn_egg", () -> new DeferredSpawnEggItem(GrimmsModEntities.TEST_DUMMY, -10092391, -1, new Item.Properties()));
 	public static final DeferredHolder<Item, Item> TRANSMUTATION_TABLET = REGISTRY.register("transmutation_tablet", TransmutationTabletItem::new);
 	public static final DeferredHolder<Item, Item> LAND_MINE = block(GrimmsModBlocks.LAND_MINE);
 	public static final DeferredHolder<Item, Item> FORGERY_TABLE = block(GrimmsModBlocks.FORGERY_TABLE);
@@ -261,6 +260,7 @@ public class GrimmsModItems {
 	public static final DeferredHolder<Item, Item> LONG_SWORD = REGISTRY.register("long_sword", LongSwordItem::new);
 	public static final DeferredHolder<Item, Item> STICK_O_CRAFTING = REGISTRY.register("stick_o_crafting", StickOCraftingItem::new);
 	public static final DeferredHolder<Item, Item> BASIC_GRAVE = block(GrimmsModBlocks.BASIC_GRAVE);
+	public static final DeferredHolder<Item, Item> TEST_DUMMY_SPAWN_EGG = REGISTRY.register("test_dummy_spawn_egg", () -> new DeferredSpawnEggItem(GrimmsModEntities.TEST_DUMMY, -1, -1, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

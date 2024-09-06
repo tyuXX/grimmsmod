@@ -21,7 +21,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import grimm.grimmsmod.procedures.TestDummyEntityIsHurtProcedure;
 
 public class TestDummyEntity extends PathfinderMob {
-	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.PURPLE, ServerBossEvent.BossBarOverlay.NOTCHED_20);
+	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.WHITE, ServerBossEvent.BossBarOverlay.PROGRESS);
 
 	public TestDummyEntity(EntityType<TestDummyEntity> type, Level world) {
 		super(type, world);
@@ -57,18 +57,8 @@ public class TestDummyEntity extends PathfinderMob {
 		Entity sourceentity = damagesource.getEntity();
 		Entity immediatesourceentity = damagesource.getDirectEntity();
 
-		TestDummyEntityIsHurtProcedure.execute(world, entity, sourceentity);
+		TestDummyEntityIsHurtProcedure.execute(damagesource, entity, sourceentity);
 		return super.hurt(damagesource, amount);
-	}
-
-	@Override
-	public boolean canCollideWith(Entity entity) {
-		return true;
-	}
-
-	@Override
-	public boolean canBeCollidedWith() {
-		return true;
 	}
 
 	@Override
@@ -99,12 +89,12 @@ public class TestDummyEntity extends PathfinderMob {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0);
-		builder = builder.add(Attributes.MAX_HEALTH, 512);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
+		builder = builder.add(Attributes.MAX_HEALTH, 1024);
 		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 0);
-		builder = builder.add(Attributes.STEP_HEIGHT, 0);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
 		return builder;
 	}
 }

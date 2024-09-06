@@ -11,6 +11,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import java.util.HashMap;
 
 import grimm.grimmsmod.world.inventory.ItemAttributionMenuGUIMenu;
+import grimm.grimmsmod.procedures.GetHeldItemNameProcedure;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
@@ -60,6 +61,9 @@ public class ItemAttributionMenuGUIScreen extends AbstractContainerScreen<ItemAt
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+		guiGraphics.drawString(this.font,
+
+				GetHeldItemNameProcedure.execute(entity), 6, 7, -12829636, false);
 	}
 
 	@Override

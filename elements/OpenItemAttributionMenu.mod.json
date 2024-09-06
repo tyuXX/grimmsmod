@@ -4,6 +4,9 @@
   "definition": {
     "triggerKey": "X",
     "keyBindingName": "Open Item Attribution Menu",
-    "keyBindingCategoryKey": "grimmsmod"
+    "keyBindingCategoryKey": "grimmsmod",
+    "onKeyPressed": {
+      "name": "OpenItemAttributionMenuOnKeyPressed"
+    }
   }
 }

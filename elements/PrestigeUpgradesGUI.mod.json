@@ -22,7 +22,7 @@
           "width": 46,
           "height": 20,
           "x": 96,
-          "y": 143
+          "y": 161
         }
       },
       {
@@ -37,7 +37,7 @@
           "width": 61,
           "height": 20,
           "x": 15,
-          "y": 143
+          "y": 161
         }
       },
       {
@@ -64,16 +64,16 @@
           "width": 120,
           "height": 20,
           "x": 15,
-          "y": 107
+          "y": 134
         }
       },
       {
         "type": "label",
         "data": {
-          "name": "label_proc_prestige_upgrade_text_value",
+          "name": "label_proc_prestige_upgrade_name_text",
           "text": {
             "fixedValue": "",
-            "name": "PrestigeUpgradeTextValue"
+            "name": "PrestigeUpgradeNameTextValue"
           },
           "color": {
             "value": -12829636,
@@ -81,6 +81,54 @@
           },
           "x": 15,
           "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_prestige_upgrade_level_text",
+          "text": {
+            "fixedValue": "",
+            "name": "PrestigeUpgradeLevelTextValue"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 15,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_prestige_upgrade_max_level",
+          "text": {
+            "fixedValue": "",
+            "name": "PrestigeUpgradeMaxLevelTextValue"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 15,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_prestige_upgrade_cost_text",
+          "text": {
+            "fixedValue": "",
+            "name": "PrestigeUpgradeCostTextValue"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 15,
+          "y": 107
         }
       }
     ],

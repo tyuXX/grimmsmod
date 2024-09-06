@@ -1346,30 +1346,6 @@
       "path": "~/Gui"
     },
     {
-      "name": "PrestigeUpgradeTextValue",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "prestige_upgrade_text_value",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/grimm/grimmsmod/procedures/PrestigeUpgradeTextValueProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
-          }
-        ]
-      },
-      "path": "~/Procs"
-    },
-    {
       "name": "UpgradePrestigeAbiliy",
       "type": "procedure",
       "compiles": true,
@@ -1464,21 +1440,6 @@
       "path": "~/Procs"
     },
     {
-      "name": "TestDummy",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "test_dummy",
-      "metadata": {
-        "files": [
-          "src/main/java/grimm/grimmsmod/entity/TestDummyEntity.java",
-          "src/main/java/grimm/grimmsmod/client/renderer/TestDummyRenderer.java",
-          "src/main/resources/assets/grimms/models/item/test_dummy_spawn_egg.json"
-        ]
-      },
-      "path": "~/Entities"
-    },
-    {
       "name": "TestDummyEntityIsHurt",
       "type": "procedure",
       "compiles": true,
@@ -1490,16 +1451,16 @@
         ],
         "dependencies": [
           {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
             "name": "entity",
             "type": "entity"
           },
           {
             "name": "sourceentity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -7570,6 +7531,174 @@
         "dependencies": []
       },
       "path": "~/Procs/InitSession"
+    },
+    {
+      "name": "TestDummy",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_dummy",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/entity/TestDummyEntity.java",
+          "src/main/java/grimm/grimmsmod/client/renderer/TestDummyRenderer.java",
+          "src/main/resources/assets/grimms/models/item/test_dummy_spawn_egg.json"
+        ]
+      },
+      "path": "~/Entities"
+    },
+    {
+      "name": "GetHeldItemName",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_held_item_name",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/GetHeldItemNameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "OpenItemAttributionMenuOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_item_attribution_menu_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/OpenItemAttributionMenuOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "PrestigeUpgradeNameTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prestige_upgrade_name_text_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/PrestigeUpgradeNameTextValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "PrestigeUpgradeLevelTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prestige_upgrade_level_text_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/PrestigeUpgradeLevelTextValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "CreateCustomRegistry",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "create_custom_registry",
+      "metadata": {
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/CreateCustomRegistryProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procs/InitSession"
+    },
+    {
+      "name": "PrestigeUpgradeMaxLevelTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prestige_upgrade_max_level_text_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/PrestigeUpgradeMaxLevelTextValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Procs"
+    },
+    {
+      "name": "PrestigeUpgradeCostTextValue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prestige_upgrade_cost_text_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/grimm/grimmsmod/procedures/PrestigeUpgradeCostTextValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Procs"
     }
   ],
   "variable_elements": [
@@ -7923,8 +8052,8 @@
       "gamerule.enableMobGraves.description": "Enables grave\u0027s for non-player entities",
       "gui.grimms.transmutation_gui.label_liquidate_item": "Liquidate Item",
       "effect.grimms.bleeding": "Bleeding",
-      "item.grimms.debug_wand": "Debug Wand",
       "item.grimms.tin_ingot": "Tin",
+      "item.grimms.debug_wand": "Debug Wand",
       "block.grimms.loot_crate": "Loot Crate",
       "block.grimms.distillery": "Distillery",
       "block.grimms.lead_block": "Block of Lead",
@@ -7953,10 +8082,10 @@
       "item.grimms.soda_bottle": "Soda Bottle",
       "item.grimms.photograph_of_motorcar": "Photograph Of Motorcar",
       "item.grimms.variable_pressure_tank": "Variable Pressure Tank",
-      "item.grimms.long_sword": "Long Sword",
       "gui.grimms.key_gui.label_set_password": "Set Password",
-      "advancements.prank_em_john.descr": "Metal pipe go bonk!",
+      "item.grimms.long_sword": "Long Sword",
       "item.grimms.faulty_necromancers_wand": "Faulty Necromancers Wand",
+      "advancements.prank_em_john.descr": "Metal pipe go bonk!",
       "advancements.comrade.title": "Comrade",
       "trim_material.grimms.iridium_trim": "Iridium",
       "item.grimms.lead_ingot": "Lead",
@@ -8054,8 +8183,8 @@
       "block.grimms.iridium_ore": "Iridium Ore",
       "item.grimms.salt_bucket": "Salt Bucket",
       "item.grimms.diamond_hammer": "Diamond Hammer",
-      "item.grimms.test_dummy_spawn_egg": "Test Dummy Spawn Egg",
       "gui.grimms.heavy_blaster_gui.label_coal_dust": "\u003c\u003d\u003d Coal Dust",
+      "item.grimms.test_dummy_spawn_egg": "Test Dummy Spawn Egg",
       "advancements.serious_hammeration.descr": "Get it? Serious dedication, but hammer? ...? I will see myself out now...",
       "item.grimms.voidpack": "Voidpack",
       "block.grimms.tin_block": "Block of Tin",
@@ -8118,8 +8247,8 @@
       "death.attack.item_level_damage_boost.player": "%1$s died whilst trying to escape %2$s",
       "advancements.victim.descr": "Get murdered by a fellow player",
       "gui.grimmsmod.stats_gui.button_prestige": "Prestige",
-      "entity.grimms.test_dummy": "Test Dummy",
       "block.grimms.vault_closed": "Vault",
+      "entity.grimms.test_dummy": "Test Dummy",
       "item.grimms.eternal_tin_can": "Eternal Tin Can",
       "advancements.murderer.title": "Murderer",
       "item.grimms.tin_screw": "Tin Screw",
