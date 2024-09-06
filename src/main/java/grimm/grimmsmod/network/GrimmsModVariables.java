@@ -143,6 +143,7 @@ public class GrimmsModVariables {
 		public static final String DATA_NAME = "grimms_mapvars";
 		public CompoundTag mapstats = new CompoundTag();
 		public String mapversion = "\"\"";
+		public double maptick = 0;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -153,12 +154,14 @@ public class GrimmsModVariables {
 		public void read(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
 			this.mapstats = nbt.get("mapstats") instanceof CompoundTag mapstats ? mapstats : new CompoundTag();
 			mapversion = nbt.getString("mapversion");
+			maptick = nbt.getDouble("maptick");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
 			nbt.put("mapstats", this.mapstats);
 			nbt.putString("mapversion", mapversion);
+			nbt.putDouble("maptick", maptick);
 			return nbt;
 		}
 

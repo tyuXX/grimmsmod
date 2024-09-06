@@ -3,6 +3,7 @@ package grimm.grimmsmod.procedures;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ByteTag;
 
 import java.io.File;
 
@@ -13,6 +14,7 @@ public class InitCacheProcedure {
 	public static void execute() {
 		GrimmsMod.LOGGER.info("Initializing Grimm's mod cache.");
 		GrimmsModVariables.cache = new CompoundTag();
+		GrimmsModVariables.cache.put("init", ByteTag.valueOf(true));
 		{
 			File dir_files_ = new File((FMLPaths.GAMEDIR.get().toString() + "/grimms/custom/"));
 			if (dir_files_.isDirectory())

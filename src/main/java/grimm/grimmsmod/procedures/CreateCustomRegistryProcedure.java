@@ -177,6 +177,10 @@ public class CreateCustomRegistryProcedure {
 					tmpbw.write("prestige:forger");
 					tmpbw.newLine();
 				}
+				{
+					tmpbw.write("prestige:keepxp");
+					tmpbw.newLine();
+				}
 				tmpbw.close();
 				tmpwriter.close();
 			} catch (IOException exception) {

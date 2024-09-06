@@ -26,6 +26,7 @@ public class OnModLoadedProcedure {
 		File tmp = new File("");
 		com.google.gson.JsonObject tmp2 = new com.google.gson.JsonObject();
 		CreateCommonConfigProcedure.execute();
+		CreateCustomRegistryProcedure.execute();
 		InitCacheProcedure.execute();
 		ReloadCommonConfigProcedure.execute();
 		GrimmsMod.LOGGER.info("Grimm's mod loaded.");

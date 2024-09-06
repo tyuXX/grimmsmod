@@ -58,7 +58,7 @@ public class OnMapLoadProcedure {
 			}.getValue("grimms");
 			GrimmsModVariables.MapVariables.get(world).syncData(world);
 		}
-		if (GrimmsModVariables.cache.isEmpty()) {
+		if (!GrimmsModVariables.cache.contains("init")) {
 			InitCacheProcedure.execute();
 		}
 		GrimmsMod.LOGGER

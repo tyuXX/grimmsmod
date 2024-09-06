@@ -116,7 +116,7 @@ public class OnEntityDiesAbsoluteProcedure {
 					itemid = itemid + 1;
 				}
 			}
-			if (!world.getLevelData().getGameRules().getBoolean(GrimmsModGameRules.DISABLE_GRAVE_SPAWNING)) {
+			if (!world.getLevelData().getGameRules().getBoolean(GrimmsModGameRules.DISABLE_GRAVE_SPAWNING) && y > -64) {
 				if (world.getLevelData().getGameRules().getBoolean(GrimmsModGameRules.ENABLE_MOB_GRAVES) || entity instanceof Player) {
 					itemid = 0;
 					if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler) {

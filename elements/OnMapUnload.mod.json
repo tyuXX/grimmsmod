@@ -1,0 +1,7 @@
+{
+  "_fv": 66,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">minecraft_world_unloaded</field><next><block type=\"controls_if\"><value name=\"IF0\"><block type=\"datamap_contain\"><value name=\"key\"><block type=\"text\"><field name=\"TEXT\">init</field></block></value><value name=\"map\"><block type=\"variables_get_datamap\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" is_player_var=\"false\" has_entity=\"false\"></mutation><field name=\"VAR\">global:cache</field></block></value></block></value><statement name=\"DO0\"><block type=\"datamap_remove\"><value name=\"key\"><block type=\"text\"><field name=\"TEXT\">init</field></block></value><value name=\"map\"><block type=\"variables_get_datamap\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" is_player_var=\"false\" has_entity=\"false\"></mutation><field name=\"VAR\">global:cache</field></block></value></block></statement></block></next></block></xml>"
+  }
+}

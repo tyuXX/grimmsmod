@@ -12,8 +12,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -21,8 +19,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import grimm.grimmsmod.procedures.TestDummyEntityIsHurtProcedure;
 
 public class TestDummyEntity extends PathfinderMob {
-	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.WHITE, ServerBossEvent.BossBarOverlay.PROGRESS);
-
 	public TestDummyEntity(EntityType<TestDummyEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
@@ -59,29 +55,6 @@ public class TestDummyEntity extends PathfinderMob {
 
 		TestDummyEntityIsHurtProcedure.execute(damagesource, entity, sourceentity);
 		return super.hurt(damagesource, amount);
-	}
-
-	@Override
-	public boolean canChangeDimensions() {
-		return false;
-	}
-
-	@Override
-	public void startSeenByPlayer(ServerPlayer player) {
-		super.startSeenByPlayer(player);
-		this.bossInfo.addPlayer(player);
-	}
-
-	@Override
-	public void stopSeenByPlayer(ServerPlayer player) {
-		super.stopSeenByPlayer(player);
-		this.bossInfo.removePlayer(player);
-	}
-
-	@Override
-	public void customServerAiStep() {
-		super.customServerAiStep();
-		this.bossInfo.setProgress(this.getHealth() / this.getMaxHealth());
 	}
 
 	public static void init(SpawnPlacementRegisterEvent event) {
